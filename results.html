@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your ELT Risk Results | Vertical Motion</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://vmleader.com/results.html">
+  <meta name="description" content="Your personalized ELT Risk Scorecard results across five leadership team dimensions.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Your ELT Risk Results">
+  <meta property="og:description" content="Your personalized ELT Risk Scorecard results across five leadership team dimensions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vmleader.com/results.html">
+  <meta property="og:image" content="https://vmleader.com/assets/og/scorecard-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Your ELT Risk Results — Vertical Motion">
+  <meta property="og:site_name" content="Vertical Motion">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your ELT Risk Results">
+  <meta name="twitter:description" content="Your personalized ELT Risk Scorecard results across five leadership team dimensions.">
+  <meta name="twitter:image" content="https://vmleader.com/assets/og/scorecard-og.png">
+  <meta name="twitter:image:alt" content="Your ELT Risk Results — Vertical Motion">
+<style>
+  /* ===========================================================
+     ELT Risk Scorecard — results (LDNA-grounded report layer)
+     Drop-in replacement for results.html. Reads the same
+     sessionStorage key Tom's scorecard.html already writes:
+       elt_scorecard_result = { scores:{A..E}, overall,
+         userData:{name,email,role,revenue,headcount,teamsize,reason},
+         answers:{A1..E4}, timestamp }
+     Report SUBSTANCE is sourced from
+       docs/Team_Read_LDNA_Scoring_Map.md  (the LDNA engine).
+     =========================================================== */
+  :root{
+    --bg:#0B1220; --surface:#111A2E; --surface-2:#16233D; --line:#243353;
+    --ink:#EAF0FB; --ink-soft:#A9B6CE; --ink-mute:#7C8AA6;
+    --teal:#2FB7B0; --navy:#3D6CC0; --gold:#C9A24B;
+    --crit:#E2574C; --high:#E08A3C; --watch:#C9A24B; --solid:#3FA67B;
+    --font-ui:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--font-ui);line-height:1.55;}
+  a{color:var(--teal);}
+  .wrap{max-width:840px;margin:0 auto;padding:40px 22px 80px;}
+  .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 8px;}
+  h1{font-size:30px;line-height:1.15;margin:0 0 6px;font-weight:700;}
+  h2{font-size:20px;margin:40px 0 6px;font-weight:700;}
+  h3{font-size:16px;margin:0 0 6px;font-weight:700;}
+  p{margin:0 0 12px;color:var(--ink-soft);}
+  .muted{color:var(--ink-mute);font-size:13px;}
+  .topbar{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:30px;}
+  .brand{font-weight:700;letter-spacing:.02em;}
+  .brand small{display:block;font-weight:500;font-size:11px;letter-spacing:.16em;color:var(--ink-mute);text-transform:uppercase;}
+  .btn{display:inline-block;border:none;border-radius:10px;padding:14px 22px;font-size:15px;font-weight:600;cursor:pointer;text-decoration:none;}
+  .btn-primary{background:var(--teal);color:#06121A;}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
+  .print{background:transparent;border:1px solid var(--line);color:var(--ink-soft);border-radius:8px;padding:8px 12px;font-size:13px;cursor:pointer;}
+
+  /* hero score */
+  .scorecard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;margin:18px 0 6px;display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
+  .gauge{--v:0;position:relative;width:128px;height:128px;border-radius:50%;flex:none;
+    background:conic-gradient(var(--gaugecol) calc(var(--v)*1%), var(--surface-2) 0);}
+  .gauge::after{content:'';position:absolute;inset:12px;border-radius:50%;background:var(--surface);}
+  .gauge .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:1;}
+  .gauge .num b{font-size:38px;line-height:1;}
+  .gauge .num span{font-size:11px;color:var(--ink-mute);letter-spacing:.1em;}
+  .bandwrap{flex:1;min-width:240px;}
+  .band-pill{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px;margin-bottom:8px;}
+
+  /* dimension breakdown */
+  .dim{border-top:1px solid var(--line);padding:16px 0;}
+  .dim:first-child{border-top:none;}
+  .dim .row{display:flex;align-items:center;gap:14px;}
+  .dim .name{flex:1;font-weight:600;}
+  .dim .tier{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;}
+  .dim .val{width:46px;text-align:right;font-variant-numeric:tabular-nums;font-weight:700;font-size:18px;}
+  .bar{height:8px;border-radius:6px;background:var(--surface-2);margin-top:10px;overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:6px;}
+
+  .lev{background:var(--surface);border:1px solid var(--line);border-left-width:4px;border-radius:12px;padding:18px 20px;margin:14px 0;}
+  .lev h3 .pos{color:var(--ink-mute);font-weight:600;font-size:13px;}
+  .lev .why{color:var(--ink-soft);margin:8px 0;}
+  .lev .names{color:var(--ink);font-size:14px;margin:8px 0 0;padding-top:10px;border-top:1px dashed var(--line);}
+  .lev .names b{color:var(--teal);}
+
+  .callout{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:14px;padding:22px;margin:18px 0;}
+  .callout .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+  .cta{background:var(--surface);border:1px solid var(--teal);border-radius:16px;padding:26px;margin:26px 0;text-align:center;}
+  .cta .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px;}
+  .note{font-size:12.5px;color:var(--ink-mute);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:18px 0;}
+  .foot{border-top:1px solid var(--line);margin-top:50px;padding-top:18px;font-size:12px;color:var(--ink-mute);}
+  sup.star{color:var(--gold);font-weight:700;}
+  @media print{ .noprint{display:none!important;} body{background:#fff;color:#000;} .scorecard,.lev,.callout,.cta,.note,.dim{border-color:#ccc;} }
+
+    /* ===== MOBILE RESPONSIVE SWEEP (launch) ===== */
+    @media (max-width: 880px) {
+      [style*="grid-template-columns"],
+      .adv-stats,.auth-grid,.bk-hero-grid,.book-grid,.call-steps,.course-grid,.cred-grid,.cred-list,.dest-cards,.discover-grid,.ec-hero-grid,.es-hero-grid,.evt-gallery,.feat-grid,.fork-top,.form-grid,.form-row,.founder-card,.founders,.fw-cards,.fw5,.gallery,.hear-grid,.hero-start-grid,.img-split,.inc-grid,.incl-grid,.inside-grid,.inside-head,.lens-grid,.logo-grid,.math-grid,.mc-split,.offer-card,.pain-grid,.path,.pil-grid,.pillar-grid,.pillar3,.price-grid,.prob-grid,.proc-grid,.prog-cards,.proof-grid,.q-grid,.qual-banner,.qual-frame,.qual-list,.reel-grid,.rf-steps,.sec-split,.secret-grid,.shift-grid,.sound-list,.sp-hero-grid,.split,.split-grid,.split2,.start-grid,.stat-band,.stat-grid,.story-grid,.suite-grid,.team-grid,.tgrid,.topic-grid,.tstrip,.values-row,.vm-hero-grid,.vt-grid,.wantrap,.who-grid,.why-grid,.xc-hero-grid,.contact-grid,.footer-grid,.assessment-layout
+        { grid-template-columns: 1fr !important; }
+      section { padding-top: 56px !important; padding-bottom: 56px !important; }
+      h1 { font-size: 2rem !important; line-height: 1.14 !important; }
+      h2 { font-size: 1.55rem !important; }
+      .btn-lg, section .btn, .cta-actions .btn, .price-card .btn,
+      .es-hero-cta .btn, .xc-hero-cta .btn, .rf-hero-cta .btn, .ec-hero-cta .btn, .sp-hero-cta .btn, .bk-hero-grid .btn, .vm-hero-grid .btn
+        { width: 100% !important; justify-content: center !important; }
+      table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem !important; line-height: 1.16 !important; }
+      h2 { font-size: 1.3rem !important; }
+      h3 { font-size: 1.15rem !important; }
+      body { font-size: 0.95rem; }
+      section { padding-top: 42px !important; padding-bottom: 42px !important; }
+      .container { padding-left: 18px !important; padding-right: 18px !important; }
+    }
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZTY3R12GE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZZTY3R12GE');
+</script>
+<!-- VM first-touch attribution + form-conversion tracking -->
+<script>
+(function(){
+  var KEY='vm_first_touch';
+  var sp=new URLSearchParams(location.search);
+  function g(k){return sp.get(k)||'';}
+  var ft=null;
+  try{ft=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+  if(!ft){
+    ft={
+      referrer: document.referrer||'',
+      landing_page: location.pathname+location.search,
+      first_seen: new Date().toISOString(),
+      utm_source: g('utm_source'), utm_medium: g('utm_medium'),
+      utm_campaign: g('utm_campaign'), utm_term: g('utm_term'),
+      utm_content: g('utm_content'), gclid: g('gclid'), fbclid: g('fbclid')
+    };
+    try{localStorage.setItem(KEY,JSON.stringify(ft));}catch(e){}
+  }
+  function channel(a){
+    if(a.utm_source) return a.utm_source+(a.utm_medium?(' / '+a.utm_medium):'');
+    var r=a.referrer; if(!r) return 'direct';
+    try{
+      var h=new URL(r).hostname.replace(/^www\./,'');
+      if(/(^|\.)google\.|(^|\.)bing\.|duckduckgo|(^|\.)yahoo\./.test(h)) return 'organic: '+h;
+      if(h.indexOf('vmleader.com')!==-1) return 'internal';
+      return 'referral: '+h;
+    }catch(e){return r;}
+  }
+  ft.channel=channel(ft);
+  window.VM_ATTRIBUTION=ft;
+  var _fetch=window.fetch;
+  window.fetch=function(url,opts){
+    try{
+      var u=(typeof url==='string')?url:(url&&url.url)||'';
+      if(u.indexOf('script.google.com/macros')!==-1 && opts && typeof opts.body==='string'){
+        var d=JSON.parse(opts.body);
+        if(d && typeof d==='object'){
+          d.attr_referrer=ft.referrer; d.attr_channel=ft.channel;
+          d.attr_landing=ft.landing_page; d.attr_first_seen=ft.first_seen;
+          d.attr_utm_source=ft.utm_source; d.attr_utm_medium=ft.utm_medium;
+          d.attr_utm_campaign=ft.utm_campaign; d.attr_utm_term=ft.utm_term;
+          d.attr_utm_content=ft.utm_content; d.attr_gclid=ft.gclid; d.attr_fbclid=ft.fbclid;
+          opts=Object.assign({},opts,{body:JSON.stringify(d)});
+          if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}
+        }
+      }
+    }catch(e){}
+    return _fetch.call(this,url,opts);
+  };
+})();
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">Vertical Motion<small>ELT Scaling Suite</small></div>
+    <button class="print noprint" onclick="window.print()">Save / print ↧</button>
+  </div>
+
+  <div id="app"><!-- rendered by JS --></div>
+
+  <div class="foot">
+    <p class="muted" id="licline">The Leadership Team Risk Scorecard and the ELT Diagnostic are instruments of Vertical Consulting / The Saunter Group, licensed to Vertical Motion for delivery. © 2026 Vertical Motion.</p>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   CONFIG — set these two and you're live.
+   ===================================================================== */
+const CONFIG = {
+  // Where the primary "Book a Risk Review" button points (Tom/VM's scheduler).
+  BOOK_CALL_URL: "https://verticalmotion.zohobookings.com/#/ELTRiskReview",
+  CONTACT_URL:   "https://vmleader.com/contact.html",
+  DIAGNOSTIC_URL:   "https://eltscale.com", // secondary "Explore the ELT Diagnostic" link — homepage until a dedicated ELT Diagnostic page exists
+  PRACTITIONER_URL: "https://verticalmotion.zohobookings.com/#/ELTRiskReview",
+
+  /* ---- Lead capture (VM's CRM/email tool) ----
+     The visitor always sees their report regardless of capture.
+     Set CRM_ENDPOINT to your CRM's inbound endpoint and pick CRM_MODE.
+     Adapters for the common tools are in buildCrmRequest() below —
+     just tell me which tool and I'll lock the exact payload. */
+  CRM_ENDPOINT: "https://script.google.com/macros/s/AKfycbxMU4VK_ikUEgTLsdGeMZ1rR8r4y7HJWCqvrGDJ_FT091fJpuueeNSZrOCaevAGhvqy/exec",
+  CRM_MODE: "generic_json",  // one of: "generic_json" | "hubspot_forms" | "formspree" | "mailchimp_proxy" | "convertkit"
+  CRM_API_KEY: ""            // only used by adapters that need a key (e.g. ConvertKit form key)
+};
+
+/* ===================== DATA: engine-grounded content =====================
+   Sourced from docs/Team_Read_LDNA_Scoring_Map.md — do not invent here. */
+const DIM = {
+  A:{key:"A", label:"Composition & Fit", weight:25,
+     engine:"archetype-to-role fit on the value-stream field"},
+  B:{key:"B", label:"Coverage & Complementarity", weight:25,
+     engine:"shared blind spots and coverage across the field"},
+  C:{key:"C", label:"Bench Load & Durability", weight:20,
+     engine:"the adaptation model — overextension vs depletion"},
+  D:{key:"D", label:"Decision & Alignment", weight:15,
+     engine:"how the team's composition drives decision behavior"},
+  E:{key:"E", label:"Trust & Conflict", weight:15,
+     engine:"archetype friction patterns under pressure"}
+};
+const ORDER = ["A","B","C","D","E"];
+
+// Tiered "why" copy (preserves Tom's CEO voice; grounded in the LDNA construct).
+const WHY = {
+  A:{ high:"Strong people in mismatched seats create drag the whole company absorbs — leaders spending their energy adapting to the role instead of performing in it.",
+      watch:"Fit is inconsistent. Some leaders are well-matched; others are spending energy adapting rather than performing. Worth mapping before you scale.",
+      solid:"Role fit looks solid — your leaders are broadly well-matched to their strengths. The open question is whether that holds as the roles evolve." },
+  B:{ high:"Your team likely shares more strengths than it covers blind spots — so the gap nobody fills becomes a company-wide gap at exactly the wrong time.",
+      watch:"Coverage is partial — some real complementarity, but likely one or two blind spots nobody on the current team covers well.",
+      solid:"Coverage looks intentional — your leaders appear to complement rather than mirror each other." },
+  C:{ high:"Key-person concentration plus unsustainable adaptation load is the quiet attrition risk: your best leader is carrying a gap between who they are and what the role demands — and that gap is what walks out the door first.",
+      watch:"Some strain and concentration are showing. A key departure would hurt, and the load on one or two leaders is worth watching now, not later.",
+      solid:"The bench looks durable — load appears sustainable and knowledge isn't trapped in one person." },
+  D:{ high:"When decision rights are unclear, everything routes back to you. Real alignment shows up behind closed doors, not in the all-hands.",
+      watch:"Decisions mostly move, but the edges are fuzzy — some calls stall or wait for you, and alignment is broadly there rather than sharp.",
+      solid:"Decisions move cleanly and the team is genuinely aligned on direction." },
+  E:{ high:"Hard truths avoided in the room become rumors in the hall. A team that only ever agrees isn't aligned — it's a liability that hasn't surfaced yet.",
+      watch:"Conflict is handled, but carefully — issues get raised by some people and smoothed by others. Pressure will test whether that holds.",
+      solid:"Conflict is productive — hard truths get put on the table and sharpen the decision." }
+};
+// The routing line that does the work: what only the full ELT Diagnostic can name.
+const NAMES = {
+  A:"The ELT Diagnostic places each leader's natural archetype against their role's demands and shows exactly who is in the wrong seat — and what it's costing them daily.",
+  B:"The ELT Diagnostic maps your team across the value-stream field and names which two leaders share the same blind spot, and which region of the work no one is covering.",
+  C:"The ELT Diagnostic measures each leader's natural-vs-role gap and names whether they're overextended or depleted — two different problems with two different fixes — before it becomes a resignation.",
+  D:"The ELT Diagnostic shows how your team's composition drives its decision behavior — where calls concentrate, where they stall, and which seats should own them.",
+  E:"The ELT Diagnostic shows which archetypes create productive friction and which combinations go quiet, or go personal, under pressure."
+};
+// Cascade narrative, selected by the lowest dimension (people-layer stakes engine).
+const CASCADE = {
+  A:{ title:"The mis-pairing cascade", body:"Left unaddressed: leaders share blind spots → the team keeps missing the same things → the gap nobody covers becomes the thing that breaks." },
+  B:{ title:"The mis-pairing cascade", body:"Left unaddressed: leaders share blind spots → the team keeps missing the same things → the gap nobody covers becomes the thing that breaks." },
+  C:{ title:"The burnout / key-person cascade (~18–24 months)", body:"Left unaddressed: adaptation load builds → decision quality slips → direction drifts → your best leader leaves → the load redistributes onto the rest → the next one leaves." },
+  D:{ title:"Decision paralysis", body:"Left unaddressed: unclear decision rights → cross-team calls stall or wait for you → execution stalls → the team waits instead of acting." },
+  E:{ title:"Conflict goes underground", body:"Left unaddressed: hard truths get avoided → the real issues stay unspoken → quiet erosion sets in → the best people, who have options, leave first." }
+};
+const CASCADE_CLOSE = "The full ELT Diagnostic names exactly which leaders and which pairings — so the work targets the real seam, not a generic offsite.";
+
+/* ===================== TIERS / BAND ===================== */
+function tierOf(s){
+  if(s < 40) return {key:"crit",  label:"Critical Risk",     col:"var(--crit)"};
+  if(s < 50) return {key:"high",  label:"High Risk",         col:"var(--high)"};
+  if(s < 75) return {key:"watch", label:"Watch Closely",     col:"var(--watch)"};
+  return            {key:"solid", label:"Strong Foundation", col:"var(--solid)"};
+}
+function whyTier(s){ return s < 50 ? "high" : (s < 75 ? "watch" : "solid"); }
+function bandOf(scores, overall){
+  const vals = ORDER.map(k=>scores[k]);
+  const anyCrit = vals.some(v=>v<=40);
+  if(anyCrit || overall < 55) return {label:"Bench at Risk", col:"var(--crit)",
+    line:"Two or more areas are carrying more risk than the rest — and that's exactly where your leverage is."};
+  if(overall < 75) return {label:"Team Forming", col:"var(--watch)",
+    line:"The foundation is mostly there; a few areas decide whether the next stage holds."};
+  return {label:"Built to Carry It", col:"var(--solid)",
+    line:"The structure is largely in place — a couple of watch-items, and a clear next move."};
+}
+
+/* ===================== ROUTING (tailored by "what brought you here") =====================
+   Every path leads to the team work — Risk Review → Team Foundations →
+   full team assessment + advisory. No external/architecture routing here. */
+function routeOf(reason){
+  const r = (reason||"").toLowerCase();
+  if(/coach|consultant|client/.test(r))         return "practitioner";
+  if(/breaking/.test(r))                        return "breaking";
+  if(/growth|raise|transition|prepar/.test(r))  return "preparing";
+  return "assessing";
+}
+
+/* ===================== LEAD CAPTURE (silent; never blocks the report) ===================== */
+function buildCrmRequest(payload){
+  const C = CONFIG;
+  switch(C.CRM_MODE){
+    case "formspree":
+      return {url:C.CRM_ENDPOINT, opts:{method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body:JSON.stringify(payload)}};
+    case "hubspot_forms": // CRM_ENDPOINT = https://api.hsforms.com/submissions/v3/integration/submit/{portalId}/{formGuid}
+      return {url:C.CRM_ENDPOINT, opts:{method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({
+        fields:[
+          {name:"email",value:payload.email},{name:"firstname",value:payload.name},
+          {name:"jobtitle",value:payload.role},{name:"company_revenue",value:payload.revenue},
+          {name:"num_employees",value:payload.headcount},{name:"leadership_team_size",value:payload.teamsize},
+          {name:"elt_overall_score",value:payload.overall},{name:"elt_top_risk",value:payload.topRisk},
+          {name:"elt_band",value:payload.band},{name:"what_brought_you",value:payload.reason}
+        ]})}};
+    case "convertkit": // CRM_ENDPOINT = https://api.convertkit.com/v3/forms/{formId}/subscribe ; CRM_API_KEY = public key
+      return {url:C.CRM_ENDPOINT, opts:{method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({
+        api_key:C.CRM_API_KEY, email:payload.email, first_name:payload.name,
+        fields:{role:payload.role,revenue:payload.revenue,headcount:payload.headcount,teamsize:payload.teamsize,
+                elt_overall:payload.overall,elt_top_risk:payload.topRisk,elt_band:payload.band,reason:payload.reason}})}};
+    case "mailchimp_proxy": // Mailchimp needs a server proxy (no CORS from browser); point CRM_ENDPOINT at your proxy.
+    case "generic_json":
+    default:
+      return {url:C.CRM_ENDPOINT, opts:{method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body:JSON.stringify(payload)}};
+  }
+}
+async function captureLead(result, band, topRisk){
+  if(!CONFIG.CRM_ENDPOINT) return; // not wired yet → skip silently; the report still shows
+  try{
+    const ud = result.userData||{};
+    const payload = {source:"elt_risk_scorecard", timestamp:result.timestamp,
+      name:ud.name, email:ud.email, role:ud.role, revenue:ud.revenue,
+      headcount:ud.headcount, teamsize:ud.teamsize, reason:ud.reason,
+      optIn:ud.optIn||false,
+      overall:result.overall, band:band, topRisk:topRisk, scores:result.scores, answers:result.answers};
+    const {url, opts} = buildCrmRequest(payload);
+    await fetch(url, opts);
+  }catch(e){ /* a capture failure must never block the visitor's report */ }
+}
+
+/* ===================== RENDER ===================== */
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));}
+
+function render(result){
+  const {scores, overall} = result;
+  const ud = result.userData||{};
+  const band = bandOf(scores, overall);
+  const ordered = ORDER.slice().sort((a,b)=>scores[a]-scores[b]); // worst first
+  const lowest = ordered[0];
+  const top3 = ordered.slice(0,3);
+  const route = routeOf(ud.reason);
+
+  // hero
+  let html = `
+  <p class="eyebrow">${esc(DIM[lowest] && ud.name ? ud.name+"'s team · " : "")}Your ELT Risk Snapshot</p>
+  <h1>Leadership Team Risk Scorecard</h1>
+  <p>${esc(ud.role||"")}${ud.role?" · ":""}A directional read of how your executive team is composed and how it operates together.</p>
+
+  <div class="scorecard">
+    <div class="gauge" style="--v:${overall};--gaugecol:${band.col}">
+      <div class="num"><b>${overall}</b><span>/ 100</span></div>
+    </div>
+    <div class="bandwrap">
+      <span class="band-pill" style="background:${band.col};color:#06121A">${band.label}</span>
+      <p style="color:var(--ink)">${band.line}</p>
+      <p class="muted">Overall ELT Risk Score<sup class="star">*</sup> — higher is stronger.</p>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:0"><sup class="star">*</sup> A high-level overview from a single perspective — yours. It points; it doesn't name names. The full ELT Diagnostic team report measures every leader directly and is far more accurate.</p>
+
+  <h2>Full dimension breakdown</h2>
+  <p class="muted">All five dimensions, scored 0–100. Below 50 = high risk · 50–74 = watch closely · 75+ = solid foundation.</p>`;
+
+  // dimension bars
+  ORDER.forEach(k=>{
+    const s = scores[k], t = tierOf(s);
+    html += `
+    <div class="dim">
+      <div class="row">
+        <span class="name">${DIM[k].label}</span>
+        <span class="tier" style="background:${t.col};color:#06121A">${t.label}</span>
+        <span class="val">${s}</span>
+      </div>
+      <div class="bar"><i style="width:${s}%;background:${t.col}"></i></div>
+    </div>`;
+  });
+
+  // leverage cards (top 3 lowest)
+  html += `<h2>Your top failure risks</h2>
+  <p class="muted">The three areas with the highest exposure on your team today — and the part of the full read that names them.</p>`;
+  top3.forEach((k,i)=>{
+    const s = scores[k], t = tierOf(s), tier = whyTier(s);
+    html += `
+    <div class="lev" style="border-left-color:${t.col}">
+      <h3>${i+1}. ${DIM[k].label} <span class="pos">· ${s}/100 · ${t.label}</span></h3>
+      <p class="why">${esc(WHY[k][tier])}</p>
+      <p class="names"><b>What the full ELT Diagnostic names:</b> ${esc(NAMES[k])}</p>
+    </div>`;
+  });
+
+  // cascade (binding constraint)
+  const cas = CASCADE[lowest];
+  html += `
+  <div class="callout">
+    <span class="tag">The one to move first · ${DIM[lowest].label}</span>
+    <h3 style="margin-top:6px">${cas.title}</h3>
+    <p>${cas.body}</p>
+    <p style="margin-bottom:0;color:var(--ink)"><strong>${CASCADE_CLOSE}</strong></p>
+  </div>`;
+
+  // routed CTA
+  html += renderCTA(route, DIM[lowest].label);
+
+  // restart + boundary note
+  html += `
+  <div class="note">
+    This snapshot reflects what one leader can see and report today — that's its limit and its honesty. The most expensive team failures hide in exactly what a single-perspective questionnaire can't surface: the blind spot you can't report because you can't see it. The full ELT Diagnostic measures every leader directly (two structured profiles each), then rolls them into a team map of fit, coverage, and load. It is an insight and development instrument grounded in behavioral science — not a clinical, diagnostic, or predictive test.
+  </div>
+  <p class="noprint"><a href="scorecard.html">← Start over</a></p>`;
+
+  document.getElementById("app").innerHTML = html;
+
+  // capture (silent)
+  captureLead(result, band.label, DIM[lowest].label);
+}
+
+function ctaActions(){
+  return `<div class="actions">
+      <a class="btn btn-primary" href="${CONFIG.BOOK_CALL_URL}" target="_blank" rel="noopener">Book a Risk Review →</a>
+      <a class="btn btn-ghost" href="${CONFIG.DIAGNOSTIC_URL}" target="_blank" rel="noopener">Explore the ELT Diagnostic</a>
+    </div>`;
+}
+function renderCTA(route, lowestLabel){
+  const x = esc(lowestLabel);
+  if(route==="practitioner"){
+    return `<div class="cta">
+      <h3>Using this with a client?</h3>
+      <p>The scorecard gives you and your client a shared language for leadership-team risk. The full ELT Diagnostic gives you the underlying map — every leader's archetype, the team's coverage, and where the load sits — and the Team Foundations report and advisory turn it into change. Let's talk about the practitioner path.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="${CONFIG.PRACTITIONER_URL}" target="_blank" rel="noopener">Talk about the practitioner path →</a>
+        <a class="btn btn-ghost" href="${CONFIG.DIAGNOSTIC_URL}" target="_blank" rel="noopener">Explore the ELT Diagnostic</a>
+      </div></div>`;
+  }
+  if(route==="preparing"){
+    return `<div class="cta">
+      <h3>Know your team's exposure before your board and investors do.</h3>
+      <p>Raises and transitions get scrutinized at the team level first. This snapshot flags <strong>${x}</strong>; the full ELT Diagnostic documents every leader and the team's coverage — a Team Foundations report you can take into the room — and the advisory closes the gaps before they're under the microscope.</p>
+      ${ctaActions()}</div>`;
+  }
+  if(route==="breaking"){
+    return `<div class="cta">
+      <h3>When something keeps breaking, look at the team first.</h3>
+      <p>Most operational problems have a leadership-team root cause — who's in which seat, who shares a blind spot, where the load sits. This snapshot flags <strong>${x}</strong>; the full ELT Diagnostic reads every leader directly and names the seam, and the full team assessment and advisory turn that into a team that stops the breakage at the source.</p>
+      ${ctaActions()}</div>`;
+  }
+  // assessing (default)
+  return `<div class="cta">
+    <h3>The next step is to see your team, leader by leader.</h3>
+    <p>This snapshot can see your team is exposed on <strong>${x}</strong>. It can't see which specific leaders are in the wrong seat, or which two share the same blind spot. The full ELT Diagnostic reads every leader directly and maps it — that's the Team Foundations report — and the full team assessment and advisory turn that map into a team that covers itself.</p>
+    ${ctaActions()}</div>`;
+}
+
+/* ===================== BOOT ===================== */
+(function(){
+  let result=null;
+
+  // 1. Try sessionStorage (normal post-submit flow)
+  try{ result = JSON.parse(sessionStorage.getItem("elt_scorecard_result")); }catch(e){}
+
+  // 2. Fall back to URL params (email link flow)
+  if(!result || !result.scores){
+    const p = new URLSearchParams(window.location.search);
+    if(p.get('overall')){
+      result = {
+        overall: parseInt(p.get('overall'))||0,
+        scores: {
+          A: parseInt(p.get('A'))||0,
+          B: parseInt(p.get('B'))||0,
+          C: parseInt(p.get('C'))||0,
+          D: parseInt(p.get('D'))||0,
+          E: parseInt(p.get('E'))||0
+        },
+        userData: {
+          name:   p.get('name')||'',
+          reason: p.get('reason')||''
+        }
+      };
+    }
+  }
+
+  if(!result || !result.scores){
+    document.getElementById("app").innerHTML =
+      `<h1>No results to show yet</h1>
+       <p>Your scorecard results expired or weren't found. Please take the 7-minute scorecard to see your snapshot.</p>
+       <p><a class="btn btn-primary" href="scorecard.html">Take the ELT Risk Scorecard →</a></p>`;
+    return;
+  }
+  render(result);
+})();
+</script>
+</body>
+</html>

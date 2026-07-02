@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELT Risk Scorecard | Vertical Motion</title>
+  <link rel="canonical" href="https://vmleader.com/scorecard.html">
+  <meta name="description" content="Score your executive leadership team across role fit, coverage, load, decisions, and trust. Get your top 3 risks in 7 minutes. Free.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="ELT Risk Scorecard">
+  <meta property="og:description" content="Score your executive leadership team across role fit, coverage, load, decisions, and trust. Get your top 3 risks in 7 minutes. Free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vmleader.com/scorecard.html">
+  <meta property="og:image" content="https://vmleader.com/assets/og/scorecard-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ELT Risk Scorecard — Vertical Motion">
+  <meta property="og:site_name" content="Vertical Motion">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ELT Risk Scorecard">
+  <meta name="twitter:description" content="Score your executive leadership team across role fit, coverage, load, decisions, and trust. Get your top 3 risks in 7 minutes. Free.">
+  <meta name="twitter:image" content="https://vmleader.com/assets/og/scorecard-og.png">
+  <meta name="twitter:image:alt" content="ELT Risk Scorecard — Vertical Motion">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "ELT Risk Assessment",
+      "description": "A free 7-minute assessment scoring executive teams across 5 dimensions and identifying their top 3 leadership failure risks.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Vertical Motion",
+        "url": "https://vmleader.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "serviceType": "Executive Leadership Assessment",
+      "url": "https://vmleader.com/scorecard.html"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does the ELT Risk Scorecard measure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Five dimensions: (A) Composition and Fit, (B) Coverage and Complementarity, (C) Bench Load and Durability, (D) Decision and Alignment, (E) Trust and Conflict. 20 questions total, scored 0-100 per dimension."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I interpret my score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Below 50 = high risk. 50-74 = watch closely. 75+ = solid foundation. Your overall score is a weighted average across all five dimensions."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="vm-favicon.png">
+  <style>
+    :root { --blue:#0693d8; --blue-dk:#057bb5; --blue-soft:#e6f4fb; --gray-vm:#878787; }
+    .nav-cta-group { display:flex; align-items:center; gap:10px; }
+    .nav-links { overflow:visible; }
+    .has-dropdown { position:relative; display:flex; align-items:center; }
+    .dd-trigger { display:inline-flex; align-items:center; gap:5px; font-size:0.8125rem; font-weight:500; color:rgba(255,255,255,0.65); cursor:pointer; transition:color var(--transition); }
+    .dd-trigger:hover, .has-dropdown:hover .dd-trigger { color:#fff; }
+    .dd-trigger .caret { font-size:0.55rem; opacity:0.7; transition:transform var(--transition); }
+    .has-dropdown:hover .dd-trigger .caret { transform:rotate(180deg); }
+    .has-dropdown::after { content:''; position:absolute; top:100%; left:-24px; right:-24px; height:24px; }
+    .dropdown-panel { position:absolute; top:calc(100% + 16px); left:50%; transform:translateX(-50%) translateY(8px); background:#fff; border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow-xl); padding:26px 30px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.18s ease, transform 0.18s ease; z-index:200; }
+    .has-dropdown:hover .dropdown-panel { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+    .dd-grid { display:flex; gap:30px; }
+    .dd-col { display:flex; flex-direction:column; gap:22px; min-width:226px; }
+    .dd-group h6 { font-family:var(--font-body); font-size:0.62rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; padding-left:11px; }
+    .dd-item { display:block; padding:8px 11px; margin:0 -11px; border-radius:11px; transition:background var(--transition); }
+    .dd-item:hover { background:var(--gray-bg); }
+    .dd-item-t { display:block; font-size:0.875rem; font-weight:600; color:var(--ink); line-height:1.25; }
+    .dd-item:hover .dd-item-t { color:var(--blue); }
+    .dd-item-d { display:block; font-size:0.74rem; color:var(--ink-soft); margin-top:2px; line-height:1.3; }
+    .dd-cta { display:block; margin-top:22px; padding-top:15px; border-top:1px solid var(--border); font-family:var(--font-head); font-weight:700; font-size:0.8rem; color:var(--orange); }
+    .pill-free { display:inline-block; font-size:0.55rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#fff; background:var(--blue); padding:2px 6px; border-radius:10px; }
+    @media (max-width:720px) {
+      .has-dropdown { width:100%; flex-direction:column; align-items:flex-start; }
+      .dd-trigger { color:#fff; font-weight:700; font-size:0.95rem; }
+      .dd-trigger .caret, .has-dropdown::after { display:none; }
+      .dropdown-panel { position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; background:transparent; border:none; box-shadow:none; padding:12px 0 4px; }
+      .dd-grid { flex-direction:column; gap:18px; }
+      .dd-group h6 { color:rgba(207,232,239,0.5); }
+      .dd-item { margin:0; padding:8px 0; }
+      .dd-item:hover { background:transparent; }
+      .dd-item-t { color:#fff; }
+      .dd-item-d { color:rgba(207,232,239,0.5); }
+    }
+    .assessment-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 48px;
+      align-items: start;
+    }
+    .sidebar-card {
+      position: sticky;
+      top: 88px;
+      background: var(--gray-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+    }
+    .sidebar-card h4 { font-size: 0.9375rem; color: var(--ink); margin-bottom: 16px; }
+    .sidebar-dim-list { display: flex; flex-direction: column; gap: 10px; }
+    .sidebar-dim {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--white);
+      transition: all var(--transition);
+    }
+    .sidebar-dim.active { border-color: var(--navy); background: rgba(0,0,128,0.04); }
+    .sidebar-dim.done  { border-color: var(--slate); background: var(--icy); }
+    .sidebar-dim-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--border); flex-shrink: 0;
+    }
+    .sidebar-dim.active .sidebar-dim-dot { background: var(--navy); }
+    .sidebar-dim.done  .sidebar-dim-dot { background: var(--slate); }
+    .sidebar-dim span { font-size: 0.8125rem; color: var(--ink-mid); font-weight: 500; }
+    .sidebar-dim.active span { color: var(--navy); font-weight: 600; }
+    .sidebar-dim.done  span { color: var(--slate); }
+
+    #optin-section, #assessment-section, #submitting-section { display: none; }
+    #optin-section.active { display: block; }
+    #assessment-section.active { display: block; }
+    #submitting-section.active { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 0; text-align: center; }
+
+    .category-panel { display: none; }
+    .category-panel.active { display: block; }
+
+    .nav-btn-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (max-width: 880px) {
+      .assessment-layout { grid-template-columns: 1fr; }
+      .sidebar-card { position: static; }
+    }
+    @media (max-width: 480px) {
+      .nav-btn-row { flex-direction: column; gap: 10px; }
+      .nav-btn-row .btn { width: 100%; justify-content: center; }
+      .option-letter { width: 28px; height: 28px; font-size: 0.75rem; flex-shrink: 0; }
+      .option-item { padding: 10px 12px; }
+    }
+  
+    /* ===== MOBILE RESPONSIVE SWEEP (launch) ===== */
+    @media (max-width: 880px) {
+      [style*="grid-template-columns"],
+      .adv-stats,.auth-grid,.bk-hero-grid,.book-grid,.call-steps,.course-grid,.cred-grid,.cred-list,.dest-cards,.discover-grid,.ec-hero-grid,.es-hero-grid,.evt-gallery,.feat-grid,.fork-top,.form-grid,.form-row,.founder-card,.founders,.fw-cards,.fw5,.gallery,.hear-grid,.hero-start-grid,.img-split,.inc-grid,.incl-grid,.inside-grid,.inside-head,.lens-grid,.logo-grid,.math-grid,.mc-split,.offer-card,.pain-grid,.path,.pil-grid,.pillar-grid,.pillar3,.price-grid,.prob-grid,.proc-grid,.prog-cards,.proof-grid,.q-grid,.qual-banner,.qual-frame,.qual-list,.reel-grid,.rf-steps,.sec-split,.secret-grid,.shift-grid,.sound-list,.sp-hero-grid,.split,.split-grid,.split2,.start-grid,.stat-band,.stat-grid,.story-grid,.suite-grid,.team-grid,.tgrid,.topic-grid,.tstrip,.values-row,.vm-hero-grid,.vt-grid,.wantrap,.who-grid,.why-grid,.xc-hero-grid,.contact-grid,.footer-grid,.assessment-layout
+        { grid-template-columns: 1fr !important; }
+      section { padding-top: 56px !important; padding-bottom: 56px !important; }
+      h1 { font-size: 2rem !important; line-height: 1.14 !important; }
+      h2 { font-size: 1.55rem !important; }
+      .btn-lg, section .btn, .cta-actions .btn, .price-card .btn,
+      .es-hero-cta .btn, .xc-hero-cta .btn, .rf-hero-cta .btn, .ec-hero-cta .btn, .sp-hero-cta .btn, .bk-hero-grid .btn, .vm-hero-grid .btn
+        { width: 100% !important; justify-content: center !important; }
+      table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem !important; line-height: 1.16 !important; }
+      h2 { font-size: 1.3rem !important; }
+      h3 { font-size: 1.15rem !important; }
+      body { font-size: 0.95rem; }
+      section { padding-top: 42px !important; padding-bottom: 42px !important; }
+      .container { padding-left: 18px !important; padding-right: 18px !important; }
+    }
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZTY3R12GE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZZTY3R12GE');
+</script>
+<!-- VM first-touch attribution + form-conversion tracking -->
+<script>
+(function(){
+  var KEY='vm_first_touch';
+  var sp=new URLSearchParams(location.search);
+  function g(k){return sp.get(k)||'';}
+  var ft=null;
+  try{ft=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+  if(!ft){
+    ft={
+      referrer: document.referrer||'',
+      landing_page: location.pathname+location.search,
+      first_seen: new Date().toISOString(),
+      utm_source: g('utm_source'), utm_medium: g('utm_medium'),
+      utm_campaign: g('utm_campaign'), utm_term: g('utm_term'),
+      utm_content: g('utm_content'), gclid: g('gclid'), fbclid: g('fbclid')
+    };
+    try{localStorage.setItem(KEY,JSON.stringify(ft));}catch(e){}
+  }
+  function channel(a){
+    if(a.utm_source) return a.utm_source+(a.utm_medium?(' / '+a.utm_medium):'');
+    var r=a.referrer; if(!r) return 'direct';
+    try{
+      var h=new URL(r).hostname.replace(/^www\./,'');
+      if(/(^|\.)google\.|(^|\.)bing\.|duckduckgo|(^|\.)yahoo\./.test(h)) return 'organic: '+h;
+      if(h.indexOf('vmleader.com')!==-1) return 'internal';
+      return 'referral: '+h;
+    }catch(e){return r;}
+  }
+  ft.channel=channel(ft);
+  window.VM_ATTRIBUTION=ft;
+  var _fetch=window.fetch;
+  window.fetch=function(url,opts){
+    try{
+      var u=(typeof url==='string')?url:(url&&url.url)||'';
+      if(u.indexOf('script.google.com/macros')!==-1 && opts && typeof opts.body==='string'){
+        var d=JSON.parse(opts.body);
+        if(d && typeof d==='object'){
+          d.attr_referrer=ft.referrer; d.attr_channel=ft.channel;
+          d.attr_landing=ft.landing_page; d.attr_first_seen=ft.first_seen;
+          d.attr_utm_source=ft.utm_source; d.attr_utm_medium=ft.utm_medium;
+          d.attr_utm_campaign=ft.utm_campaign; d.attr_utm_term=ft.utm_term;
+          d.attr_utm_content=ft.utm_content; d.attr_gclid=ft.gclid; d.attr_fbclid=ft.fbclid;
+          opts=Object.assign({},opts,{body:JSON.stringify(d)});
+          if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}
+        }
+      }
+    }catch(e){}
+    return _fetch.call(this,url,opts);
+  };
+})();
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Vertical Motion home" style="gap:9px;">
+      <img src="vm-icon.png" alt="" style="height:30px; width:auto;">
+      <img src="vm-wordmark.png" alt="Vertical Motion" style="height:19px; width:auto;">
+    </a>
+    <div class="nav-links" id="nav-links">
+      <div class="has-dropdown">
+        <a href="exec.html" class="dd-trigger">Executive Career <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col"><div class="dd-group"><h6>Coaching Programs</h6>
+              <a class="dd-item" href="eca.html"><span class="dd-item-t">Executive Career Accelerator</span><span class="dd-item-d">6-month 1:1 program to the executive ranks</span></a>
+              <a class="dd-item" href="cfa.html"><span class="dd-item-t">Corporate Freedom Accelerator</span><span class="dd-item-d">Leave corporate and build your own practice</span></a>
+              <a class="dd-item" href="mastermind.html"><span class="dd-item-t">Executive Mastermind Coaching</span><span class="dd-item-d">Exclusive 1:1 coaching for C-suite members</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Membership &amp; Self-Guided</h6>
+              <a class="dd-item" href="elevate.html"><span class="dd-item-t">Elevate Membership</span><span class="dd-item-d">Framework plus community</span></a>
+              <a class="dd-item" href="book.html"><span class="dd-item-t">The Executive Career Handbook</span><span class="dd-item-d">The book and framework</span></a>
+              <a class="dd-item" href="courses.html"><span class="dd-item-t">Courses &amp; Products</span><span class="dd-item-d">Standalone trainings and mini-courses</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Assessments</h6>
+              <a class="dd-item" href="ldna.html"><span class="dd-item-t">LDNA Assessment</span><span class="dd-item-d">See how you naturally lead in 6 minutes</span></a>
+              <a class="dd-item" href="foundations-report.html"><span class="dd-item-t">Leadership Foundations Report&trade;</span><span class="dd-item-d">Deep self-discovery and fit profile</span></a>
+            </div></div>
+          </div>
+          <a href="index.html#career" class="dd-cta">Explore Career Acceleration &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="eltscale.html" class="dd-trigger">Business Solutions <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col">
+              <div class="dd-group"><h6>Start Here</h6>
+                <a class="dd-item" href="scorecard.html"><span class="dd-item-t"><span class="pill-free">Free</span> ELT Risk Assessment</span><span class="dd-item-d">Score your executive leadership team in 7 minutes</span></a></div>
+              <div class="dd-group"><h6>Diagnose &amp; Scale</h6>
+                <a class="dd-item" href="elt-diagnostic.html"><span class="dd-item-t">ELT Diagnostic</span><span class="dd-item-d">Data-backed audit of your executive team</span></a>
+                <a class="dd-item" href="ELT-Scaling-Suite.html"><span class="dd-item-t">ELT Scaling Suite</span><span class="dd-item-d">Ongoing executive team performance system</span></a></div>
+            </div>
+            <div class="dd-col"><div class="dd-group"><h6>Ongoing Services</h6>
+              <a class="dd-item" href="executive-coaching.html"><span class="dd-item-t">Executive Coaching</span><span class="dd-item-d">1:1 coaching for your leadership team</span></a>
+              <a class="dd-item" href="outplacement.html"><span class="dd-item-t">Executive Outplacement</span><span class="dd-item-d">Transition exiting executives with care</span></a>
+              <a class="dd-item" href="ceo-advisory.html"><span class="dd-item-t">CEO Advisory</span><span class="dd-item-d">On-call strategic counsel for the CEO</span></a>
+            </div></div>
+            <div class="dd-col">
+              <div class="dd-group"><h6>Assessments</h6>
+                <a class="dd-item" href="ldna-biz.html"><span class="dd-item-t">LDNA &amp; Team Foundations Reports</span><span class="dd-item-d">Map your team's drivers and dynamics</span></a></div>
+              <div class="dd-group"><h6>Specialized</h6>
+                <a class="dd-item" href="baic.html"><span class="dd-item-t">BAIC (The Saunter Group)</span><span class="dd-item-d">Partner-delivered advisory suite</span></a></div>
+            </div>
+          </div>
+          <a href="index.html#scaling" class="dd-cta">Explore Enterprise Solutions &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="about.html" class="dd-trigger">About <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid"><div class="dd-col"><div class="dd-group"><h6>About Vertical Motion</h6>
+            <a class="dd-item" href="about.html#why"><span class="dd-item-t">Our Why</span><span class="dd-item-d">Tom's story and the mission behind VM</span></a>
+            <a class="dd-item" href="about.html#team"><span class="dd-item-t">Our Team</span><span class="dd-item-d">Meet the coaches behind Vertical Motion</span></a>
+            <a class="dd-item" href="speaking.html"><span class="dd-item-t">Book Tom to Speak</span><span class="dd-item-d">Bring Tom to your event or stage</span></a>
+          </div></div></div>
+        </div>
+      </div>
+      <a href="https://community.vmleader.com/">Member Login</a>
+      <a href="contact-us.html">Contact</a>
+    </div>
+    <div class="nav-cta-group">
+      <a href="#optin-section" class="btn-nav-cta">Get Your ELT Risk Score &rarr;</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div style="background:var(--navy); padding:120px 0 56px; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 100% 100%, rgba(91,124,153,0.2) 0%, transparent 60%); pointer-events:none;"></div>
+  <div class="container" style="position:relative; z-index:1;">
+    <div class="split-grid" style="display:grid; grid-template-columns:1fr 430px; gap:52px; align-items:center;">
+      <div>
+        <p class="eyebrow" style="color:rgba(207,232,239,0.7);">Free &middot; 7 Minutes</p>
+        <h1 style="color:white; margin-bottom:16px;">ELT Risk Scorecard</h1>
+        <p style="color:rgba(207,232,239,0.8); max-width:600px; font-size:1.0625rem; line-height:1.7;">Score your executive leadership team (ELT) across role fit, coverage, load, decisions, and trust. Walk away with your top 3 failure risks and a clear focus to de-risk your next stage of growth.</p>
+        <div style="display:flex; gap:24px; margin-top:28px; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <div style="width:8px; height:8px; border-radius:50%; background:var(--orange);"></div>
+            <span style="font-size:0.8125rem; color:rgba(207,232,239,0.75);">20 questions across 5 dimensions</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <div style="width:8px; height:8px; border-radius:50%; background:var(--orange);"></div>
+            <span style="font-size:0.8125rem; color:rgba(207,232,239,0.75);">Instant results, no wait</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <div style="width:8px; height:8px; border-radius:50%; background:var(--orange);"></div>
+            <span style="font-size:0.8125rem; color:rgba(207,232,239,0.75);">Shareable risk report</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="images/risk-scorecard-report.png" alt="Sample ELT Risk Scorecard report showing an overall score and dimension breakdown" style="width:100%; border-radius:var(--radius-lg); border:1px solid rgba(255,255,255,0.14); box-shadow:0 24px 60px rgba(0,0,0,0.5);">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section style="padding:64px 0 96px;">
+  <div class="container">
+
+    <!-- OPT-IN SECTION -->
+    <div id="optin-section" class="active">
+      <div style="max-width:640px; margin:0 auto;">
+        <div class="notice info">
+          <p>Answer from your own knowledge of your team. There are no right or wrong responses. Most people complete this in under 7 minutes.</p>
+        </div>
+        <h3 style="margin-bottom:8px;">First, a bit of context.</h3>
+        <p style="margin-bottom:32px;">This helps us make your results more precise and relevant to your stage.</p>
+
+        <form id="optin-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">Full Name <span style="color:#C62828;">*</span></label>
+              <input type="text" id="fullname" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Work Email <span style="color:#C62828;">*</span></label>
+              <input type="email" id="email" placeholder="you@company.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="role">Your Role / Title <span style="color:#C62828;">*</span></label>
+              <input type="text" id="role" placeholder="CEO, Founder, etc." required>
+            </div>
+            <div class="form-group">
+              <label for="revenue">Current Annual Revenue</label>
+              <select id="revenue">
+                <option value="">Select range</option>
+                <option>Under $5M</option>
+                <option>$5M &ndash; $10M</option>
+                <option>$10M &ndash; $25M</option>
+                <option>$25M &ndash; $50M</option>
+                <option>$50M &ndash; $100M</option>
+                <option>$100M+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="headcount">Company Headcount</label>
+              <input type="number" id="headcount" placeholder="e.g. 120" min="1">
+            </div>
+            <div class="form-group">
+              <label for="teamsize">Leadership Team Size</label>
+              <input type="number" id="teamsize" placeholder="e.g. 6" min="1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reason">What brought you here?</label>
+            <select id="reason">
+              <option value="">Select one</option>
+              <option>Assessing my leadership team</option>
+              <option>Preparing my team for growth, a raise, or a transition</option>
+              <option>Something keeps breaking and I'm not sure it's a people problem</option>
+              <option>I'm a coach/consultant exploring this for a client</option>
+            </select>
+          </div>
+          <div style="margin-bottom:8px;">
+            <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:0.875rem; color:var(--ink-mid);">
+              <input type="checkbox" id="optin-consent" style="margin-top:3px; width:auto; flex-shrink:0;">
+              <span>I agree to receive my scorecard results and occasional updates from Vertical Motion. You can unsubscribe any time.</span>
+            </label>
+          </div>
+          <div id="optin-error" style="display:none; color:#C62828; font-size:0.875rem; margin-top:12px; margin-bottom:0;"></div>
+          <button type="submit" class="btn btn-primary btn-lg" style="margin-top:24px; width:100%; justify-content:center;">
+            Start the Scorecard &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ASSESSMENT SECTION -->
+    <div id="assessment-section">
+      <div class="assessment-layout">
+        <div>
+          <!-- Progress -->
+          <div class="progress-wrap">
+            <div class="progress-label">
+              <span id="progress-text">Section A of 5 &mdash; Composition &amp; Fit</span>
+              <span id="progress-pct">20%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="progress-fill" style="width:20%"></div>
+            </div>
+          </div>
+
+          <!-- SECTION A -->
+          <div class="category-panel active" id="panel-A">
+            <div style="margin-bottom:28px;">
+              <span class="badge badge-navy" style="margin-bottom:12px;">Section A</span>
+              <h3 style="margin-bottom:8px;">Composition &amp; Fit</h3>
+              <p style="font-size:0.9375rem;">Are the right people in the right seats? Mismatched leaders create drag the entire organization absorbs.</p>
+            </div>
+            <div class="question-block" id="q-A1">
+              <div class="question-num">A1 &mdash; Role Fit</div>
+              <div class="question-text">Your leaders are matched to roles that fit their natural strengths:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('A1',1,this)"><input type="radio" name="A1" value="1"><div class="option-letter">A</div><div class="option-text">Several are clearly in the wrong seat</div></div>
+                <div class="option-item" onclick="selectOption('A1',2,this)"><input type="radio" name="A1" value="2"><div class="option-letter">B</div><div class="option-text">Strong people, but the fit is rough</div></div>
+                <div class="option-item" onclick="selectOption('A1',3,this)"><input type="radio" name="A1" value="3"><div class="option-letter">C</div><div class="option-text">Mostly well-matched</div></div>
+                <div class="option-item" onclick="selectOption('A1',4,this)"><input type="radio" name="A1" value="4"><div class="option-letter">D</div><div class="option-text">Deliberately matched to their strengths</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-A2">
+              <div class="question-num">A2 &mdash; Caged Strengths</div>
+              <div class="question-text">How many of your leaders spend most of their time on work that doesn't play to their strength?</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('A2',1,this)"><input type="radio" name="A2" value="1"><div class="option-letter">A</div><div class="option-text">Most of them</div></div>
+                <div class="option-item" onclick="selectOption('A2',2,this)"><input type="radio" name="A2" value="2"><div class="option-letter">B</div><div class="option-text">Several</div></div>
+                <div class="option-item" onclick="selectOption('A2',3,this)"><input type="radio" name="A2" value="3"><div class="option-letter">C</div><div class="option-text">A couple</div></div>
+                <div class="option-item" onclick="selectOption('A2',4,this)"><input type="radio" name="A2" value="4"><div class="option-letter">D</div><div class="option-text">Almost none &mdash; they work in their strength</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-A3">
+              <div class="question-num">A3 &mdash; Elevation / Hire Fit</div>
+              <div class="question-text">When you've promoted or hired into the team, the fit has been:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('A3',1,this)"><input type="radio" name="A3" value="1"><div class="option-letter">A</div><div class="option-text">Hit or miss &mdash; often miss</div></div>
+                <div class="option-item" onclick="selectOption('A3',2,this)"><input type="radio" name="A3" value="2"><div class="option-letter">B</div><div class="option-text">Inconsistent</div></div>
+                <div class="option-item" onclick="selectOption('A3',3,this)"><input type="radio" name="A3" value="3"><div class="option-letter">C</div><div class="option-text">Usually right</div></div>
+                <div class="option-item" onclick="selectOption('A3',4,this)"><input type="radio" name="A3" value="4"><div class="option-letter">D</div><div class="option-text">Reliably right, with a clear read on why</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-A4">
+              <div class="question-num">A4 &mdash; Concentration of Judgment</div>
+              <div class="question-text">The most important judgment calls:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('A4',1,this)"><input type="radio" name="A4" value="1"><div class="option-letter">A</div><div class="option-text">Almost all run through you</div></div>
+                <div class="option-item" onclick="selectOption('A4',2,this)"><input type="radio" name="A4" value="2"><div class="option-letter">B</div><div class="option-text">Mostly run through you</div></div>
+                <div class="option-item" onclick="selectOption('A4',3,this)"><input type="radio" name="A4" value="3"><div class="option-letter">C</div><div class="option-text">Spread across a few leaders</div></div>
+                <div class="option-item" onclick="selectOption('A4',4,this)"><input type="radio" name="A4" value="4"><div class="option-letter">D</div><div class="option-text">Genuinely distributed</div></div>
+              </div>
+            </div>
+            <div class="nav-btn-row">
+              <span></span>
+              <button class="btn btn-primary" onclick="nextSection('A','B')">Next: Coverage &amp; Complementarity &rarr;</button>
+            </div>
+          </div>
+
+          <!-- SECTION B -->
+          <div class="category-panel" id="panel-B">
+            <div style="margin-bottom:28px;">
+              <span class="badge badge-navy" style="margin-bottom:12px;">Section B</span>
+              <h3 style="margin-bottom:8px;">Coverage &amp; Complementarity</h3>
+              <p style="font-size:0.9375rem;">Do your leaders cover each other's blind spots, or share them?</p>
+            </div>
+            <div class="question-block" id="q-B1">
+              <div class="question-num">B1 &mdash; Blind-Spot Overlap</div>
+              <div class="question-text">Looking at how your leaders are paired, they tend to:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('B1',1,this)"><input type="radio" name="B1" value="1"><div class="option-letter">A</div><div class="option-text">Share strengths &mdash; and the same blind spots</div></div>
+                <div class="option-item" onclick="selectOption('B1',2,this)"><input type="radio" name="B1" value="2"><div class="option-letter">B</div><div class="option-text">Overlap more than they complement</div></div>
+                <div class="option-item" onclick="selectOption('B1',3,this)"><input type="radio" name="B1" value="3"><div class="option-letter">C</div><div class="option-text">Cover each other in most areas</div></div>
+                <div class="option-item" onclick="selectOption('B1',4,this)"><input type="radio" name="B1" value="4"><div class="option-letter">D</div><div class="option-text">Deliberately cover each other's blind spots</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-B2">
+              <div class="question-num">B2 &mdash; Missing Capability</div>
+              <div class="question-text">Is there a type of leader your team is simply missing &mdash; a gap nobody fills?</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('B2',1,this)"><input type="radio" name="B2" value="1"><div class="option-letter">A</div><div class="option-text">Yes &mdash; an obvious hole we keep working around</div></div>
+                <div class="option-item" onclick="selectOption('B2',2,this)"><input type="radio" name="B2" value="2"><div class="option-letter">B</div><div class="option-text">Probably, though we've never named it</div></div>
+                <div class="option-item" onclick="selectOption('B2',3,this)"><input type="radio" name="B2" value="3"><div class="option-letter">C</div><div class="option-text">Mostly covered</div></div>
+                <div class="option-item" onclick="selectOption('B2',4,this)"><input type="radio" name="B2" value="4"><div class="option-letter">D</div><div class="option-text">Coverage is complete and intentional</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-B3">
+              <div class="question-num">B3 &mdash; Style Diversity</div>
+              <div class="question-text">Your team is:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('B3',1,this)"><input type="radio" name="B3" value="1"><div class="option-letter">A</div><div class="option-text">Mostly the same kind of leader &mdash; we think alike</div></div>
+                <div class="option-item" onclick="selectOption('B3',2,this)"><input type="radio" name="B3" value="2"><div class="option-letter">B</div><div class="option-text">Skewed toward one or two styles</div></div>
+                <div class="option-item" onclick="selectOption('B3',3,this)"><input type="radio" name="B3" value="3"><div class="option-letter">C</div><div class="option-text">Reasonably mixed</div></div>
+                <div class="option-item" onclick="selectOption('B3',4,this)"><input type="radio" name="B3" value="4"><div class="option-letter">D</div><div class="option-text">Deliberately diverse in how people operate</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-B4">
+              <div class="question-num">B4 &mdash; Pairing</div>
+              <div class="question-text">When two leaders have to work closely, it tends to:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('B4',1,this)"><input type="radio" name="B4" value="1"><div class="option-letter">A</div><div class="option-text">Create friction we manage around</div></div>
+                <div class="option-item" onclick="selectOption('B4',2,this)"><input type="radio" name="B4" value="2"><div class="option-letter">B</div><div class="option-text">Be hit or miss</div></div>
+                <div class="option-item" onclick="selectOption('B4',3,this)"><input type="radio" name="B4" value="3"><div class="option-letter">C</div><div class="option-text">Work most of the time</div></div>
+                <div class="option-item" onclick="selectOption('B4',4,this)"><input type="radio" name="B4" value="4"><div class="option-letter">D</div><div class="option-text">Multiply &mdash; we pair people on purpose</div></div>
+              </div>
+            </div>
+            <div class="nav-btn-row">
+              <button class="btn btn-outline-navy" onclick="prevSection('B','A')">&larr; Back</button>
+              <button class="btn btn-primary" onclick="nextSection('B','C')">Next: Bench Load &rarr;</button>
+            </div>
+          </div>
+
+          <!-- SECTION C -->
+          <div class="category-panel" id="panel-C">
+            <div style="margin-bottom:28px;">
+              <span class="badge badge-navy" style="margin-bottom:12px;">Section C</span>
+              <h3 style="margin-bottom:8px;">Bench Load &amp; Durability</h3>
+              <p style="font-size:0.9375rem;">If a key leader left tomorrow, what would walk out the door with them?</p>
+            </div>
+            <div class="question-block" id="q-C1">
+              <div class="question-num">C1 &mdash; Adaptation / Strain</div>
+              <div class="question-text">Across your leaders, signs of running on empty &mdash; wired-and-tired, or checked-out &mdash; are:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('C1',1,this)"><input type="radio" name="C1" value="1"><div class="option-letter">A</div><div class="option-text">Widespread</div></div>
+                <div class="option-item" onclick="selectOption('C1',2,this)"><input type="radio" name="C1" value="2"><div class="option-letter">B</div><div class="option-text">Showing up in several</div></div>
+                <div class="option-item" onclick="selectOption('C1',3,this)"><input type="radio" name="C1" value="3"><div class="option-letter">C</div><div class="option-text">Occasional</div></div>
+                <div class="option-item" onclick="selectOption('C1',4,this)"><input type="radio" name="C1" value="4"><div class="option-letter">D</div><div class="option-text">Rare &mdash; the load looks sustainable</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-C2">
+              <div class="question-num">C2 &mdash; Key-Person Concentration</div>
+              <div class="question-text">If one key leader left tomorrow, the knowledge and relationships they hold would:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('C2',1,this)"><input type="radio" name="C2" value="1"><div class="option-letter">A</div><div class="option-text">Walk out the door with them</div></div>
+                <div class="option-item" onclick="selectOption('C2',2,this)"><input type="radio" name="C2" value="2"><div class="option-letter">B</div><div class="option-text">Be very hard to replace</div></div>
+                <div class="option-item" onclick="selectOption('C2',3,this)"><input type="radio" name="C2" value="3"><div class="option-letter">C</div><div class="option-text">Be recoverable with effort</div></div>
+                <div class="option-item" onclick="selectOption('C2',4,this)"><input type="radio" name="C2" value="4"><div class="option-letter">D</div><div class="option-text">Be documented and shared</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-C3">
+              <div class="question-num">C3 &mdash; Succession Depth</div>
+              <div class="question-text">For your most critical roles, a ready successor is:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('C3',1,this)"><input type="radio" name="C3" value="1"><div class="option-letter">A</div><div class="option-text">Nonexistent</div></div>
+                <div class="option-item" onclick="selectOption('C3',2,this)"><input type="radio" name="C3" value="2"><div class="option-letter">B</div><div class="option-text">A name on paper, not ready</div></div>
+                <div class="option-item" onclick="selectOption('C3',3,this)"><input type="radio" name="C3" value="3"><div class="option-letter">C</div><div class="option-text">Developing</div></div>
+                <div class="option-item" onclick="selectOption('C3',4,this)"><input type="radio" name="C3" value="4"><div class="option-letter">D</div><div class="option-text">Ready, or nearly</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-C4">
+              <div class="question-num">C4 &mdash; Quiet Attrition Risk</div>
+              <div class="question-text">The odds one of your best leaders is quietly considering leaving:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('C4',1,this)"><input type="radio" name="C4" value="1"><div class="option-letter">A</div><div class="option-text">High &mdash; and I might not see it coming</div></div>
+                <div class="option-item" onclick="selectOption('C4',2,this)"><input type="radio" name="C4" value="2"><div class="option-letter">B</div><div class="option-text">Real</div></div>
+                <div class="option-item" onclick="selectOption('C4',3,this)"><input type="radio" name="C4" value="3"><div class="option-letter">C</div><div class="option-text">Low-ish</div></div>
+                <div class="option-item" onclick="selectOption('C4',4,this)"><input type="radio" name="C4" value="4"><div class="option-letter">D</div><div class="option-text">Low &mdash; I'd know, and the load is healthy</div></div>
+              </div>
+            </div>
+            <div class="nav-btn-row">
+              <button class="btn btn-outline-navy" onclick="prevSection('C','B')">&larr; Back</button>
+              <button class="btn btn-primary" onclick="nextSection('C','D')">Next: Decision &amp; Alignment &rarr;</button>
+            </div>
+          </div>
+
+          <!-- SECTION D -->
+          <div class="category-panel" id="panel-D">
+            <div style="margin-bottom:28px;">
+              <span class="badge badge-navy" style="margin-bottom:12px;">Section D</span>
+              <h3 style="margin-bottom:8px;">Decision &amp; Alignment</h3>
+              <p style="font-size:0.9375rem;">When decision rights are unclear, everything waits for you. Real alignment shows up behind closed doors, not in all-hands meetings.</p>
+            </div>
+            <div class="question-block" id="q-D1">
+              <div class="question-num">D1 &mdash; Decision Rights</div>
+              <div class="question-text">Who decides what on this team is:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('D1',1,this)"><input type="radio" name="D1" value="1"><div class="option-letter">A</div><div class="option-text">Unclear &mdash; things stall or collide</div></div>
+                <div class="option-item" onclick="selectOption('D1',2,this)"><input type="radio" name="D1" value="2"><div class="option-letter">B</div><div class="option-text">Fuzzy at the edges</div></div>
+                <div class="option-item" onclick="selectOption('D1',3,this)"><input type="radio" name="D1" value="3"><div class="option-letter">C</div><div class="option-text">Mostly clear</div></div>
+                <div class="option-item" onclick="selectOption('D1',4,this)"><input type="radio" name="D1" value="4"><div class="option-letter">D</div><div class="option-text">Clear and used</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-D2">
+              <div class="question-num">D2 &mdash; Decision Velocity</div>
+              <div class="question-text">Cross-team decisions get made:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('D2',1,this)"><input type="radio" name="D2" value="1"><div class="option-letter">A</div><div class="option-text">Slowly &mdash; they stall</div></div>
+                <div class="option-item" onclick="selectOption('D2',2,this)"><input type="radio" name="D2" value="2"><div class="option-letter">B</div><div class="option-text">Slowly &mdash; they wait for you</div></div>
+                <div class="option-item" onclick="selectOption('D2',3,this)"><input type="radio" name="D2" value="3"><div class="option-letter">C</div><div class="option-text">Reasonably</div></div>
+                <div class="option-item" onclick="selectOption('D2',4,this)"><input type="radio" name="D2" value="4"><div class="option-letter">D</div><div class="option-text">Fast and cleanly</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-D3">
+              <div class="question-num">D3 &mdash; Alignment Behind Closed Doors</div>
+              <div class="question-text">With the doors closed, your leaders are:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('D3',1,this)"><input type="radio" name="D3" value="1"><div class="option-letter">A</div><div class="option-text">Pulling in different directions</div></div>
+                <div class="option-item" onclick="selectOption('D3',2,this)"><input type="radio" name="D3" value="2"><div class="option-letter">B</div><div class="option-text">Politely misaligned</div></div>
+                <div class="option-item" onclick="selectOption('D3',3,this)"><input type="radio" name="D3" value="3"><div class="option-letter">C</div><div class="option-text">Mostly aligned</div></div>
+                <div class="option-item" onclick="selectOption('D3',4,this)"><input type="radio" name="D3" value="4"><div class="option-letter">D</div><div class="option-text">Genuinely rowing together</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-D4">
+              <div class="question-num">D4 &mdash; Shared Direction</div>
+              <div class="question-text">Ask your leaders what matters most this year &mdash; you'd hear:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('D4',1,this)"><input type="radio" name="D4" value="1"><div class="option-letter">A</div><div class="option-text">Different answers</div></div>
+                <div class="option-item" onclick="selectOption('D4',2,this)"><input type="radio" name="D4" value="2"><div class="option-letter">B</div><div class="option-text">Overlapping but fuzzy</div></div>
+                <div class="option-item" onclick="selectOption('D4',3,this)"><input type="radio" name="D4" value="3"><div class="option-letter">C</div><div class="option-text">Broadly the same</div></div>
+                <div class="option-item" onclick="selectOption('D4',4,this)"><input type="radio" name="D4" value="4"><div class="option-letter">D</div><div class="option-text">The same, in their own words</div></div>
+              </div>
+            </div>
+            <div class="nav-btn-row">
+              <button class="btn btn-outline-navy" onclick="prevSection('D','C')">&larr; Back</button>
+              <button class="btn btn-primary" onclick="nextSection('D','E')">Next: Trust &amp; Conflict &rarr;</button>
+            </div>
+          </div>
+
+          <!-- SECTION E -->
+          <div class="category-panel" id="panel-E">
+            <div style="margin-bottom:28px;">
+              <span class="badge badge-navy" style="margin-bottom:12px;">Section E</span>
+              <h3 style="margin-bottom:8px;">Trust &amp; Conflict</h3>
+              <p style="font-size:0.9375rem;">The quality of conflict on your team is a direct proxy for how well it handles pressure. Hard truths avoided in the room become rumors in the hall.</p>
+            </div>
+            <div class="question-block" id="q-E1">
+              <div class="question-num">E1 &mdash; Psychological Safety</div>
+              <div class="question-text">In team meetings, hard truths get:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('E1',1,this)"><input type="radio" name="E1" value="1"><div class="option-letter">A</div><div class="option-text">Avoided &mdash; people go quiet</div></div>
+                <div class="option-item" onclick="selectOption('E1',2,this)"><input type="radio" name="E1" value="2"><div class="option-letter">B</div><div class="option-text">Raised carefully, rarely</div></div>
+                <div class="option-item" onclick="selectOption('E1',3,this)"><input type="radio" name="E1" value="3"><div class="option-letter">C</div><div class="option-text">Raised by most people</div></div>
+                <div class="option-item" onclick="selectOption('E1',4,this)"><input type="radio" name="E1" value="4"><div class="option-letter">D</div><div class="option-text">Put on the table directly</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-E2">
+              <div class="question-num">E2 &mdash; Conflict Quality</div>
+              <div class="question-text">When leaders disagree, it usually:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('E2',1,this)"><input type="radio" name="E2" value="1"><div class="option-letter">A</div><div class="option-text">Goes underground, or personal</div></div>
+                <div class="option-item" onclick="selectOption('E2',2,this)"><input type="radio" name="E2" value="2"><div class="option-letter">B</div><div class="option-text">Gets smoothed over</div></div>
+                <div class="option-item" onclick="selectOption('E2',3,this)"><input type="radio" name="E2" value="3"><div class="option-letter">C</div><div class="option-text">Gets worked through</div></div>
+                <div class="option-item" onclick="selectOption('E2',4,this)"><input type="radio" name="E2" value="4"><div class="option-letter">D</div><div class="option-text">Sharpens the decision</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-E3">
+              <div class="question-num">E3 &mdash; Volatility</div>
+              <div class="question-text">The team's emotional weather is:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('E3',1,this)"><input type="radio" name="E3" value="1"><div class="option-letter">A</div><div class="option-text">Reactive &mdash; mood drives the room</div></div>
+                <div class="option-item" onclick="selectOption('E3',2,this)"><input type="radio" name="E3" value="2"><div class="option-letter">B</div><div class="option-text">Up and down</div></div>
+                <div class="option-item" onclick="selectOption('E3',3,this)"><input type="radio" name="E3" value="3"><div class="option-letter">C</div><div class="option-text">Mostly steady</div></div>
+                <div class="option-item" onclick="selectOption('E3',4,this)"><input type="radio" name="E3" value="4"><div class="option-letter">D</div><div class="option-text">Steady, even under pressure</div></div>
+              </div>
+            </div>
+            <div class="question-block" id="q-E4">
+              <div class="question-num">E4 &mdash; Accountability</div>
+              <div class="question-text">When someone misses a commitment, it's:</div>
+              <div class="options-list">
+                <div class="option-item" onclick="selectOption('E4',1,this)"><input type="radio" name="E4" value="1"><div class="option-letter">A</div><div class="option-text">Ignored or worked around</div></div>
+                <div class="option-item" onclick="selectOption('E4',2,this)"><input type="radio" name="E4" value="2"><div class="option-letter">B</div><div class="option-text">Noticed, rarely addressed</div></div>
+                <div class="option-item" onclick="selectOption('E4',3,this)"><input type="radio" name="E4" value="3"><div class="option-letter">C</div><div class="option-text">Usually addressed</div></div>
+                <div class="option-item" onclick="selectOption('E4',4,this)"><input type="radio" name="E4" value="4"><div class="option-letter">D</div><div class="option-text">Addressed directly, as a norm</div></div>
+              </div>
+            </div>
+            <div id="section-error" style="display:none; color:#C62828; font-size:0.875rem; margin-top:16px;"></div>
+            <div class="nav-btn-row">
+              <button class="btn btn-outline-navy" onclick="prevSection('E','D')">&larr; Back</button>
+              <button class="btn btn-primary btn-lg" onclick="submitAssessment()">See My Risk Results &rarr;</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar-card">
+          <h4>Your Progress</h4>
+          <div class="sidebar-dim-list">
+            <div class="sidebar-dim active" id="sidebar-A">
+              <div class="sidebar-dim-dot"></div>
+              <span>A &mdash; Composition &amp; Fit</span>
+            </div>
+            <div class="sidebar-dim" id="sidebar-B">
+              <div class="sidebar-dim-dot"></div>
+              <span>B &mdash; Coverage &amp; Complementarity</span>
+            </div>
+            <div class="sidebar-dim" id="sidebar-C">
+              <div class="sidebar-dim-dot"></div>
+              <span>C &mdash; Bench Load &amp; Durability</span>
+            </div>
+            <div class="sidebar-dim" id="sidebar-D">
+              <div class="sidebar-dim-dot"></div>
+              <span>D &mdash; Decision &amp; Alignment</span>
+            </div>
+            <div class="sidebar-dim" id="sidebar-E">
+              <div class="sidebar-dim-dot"></div>
+              <span>E &mdash; Trust &amp; Conflict</span>
+            </div>
+          </div>
+          <div style="margin-top:24px; padding-top:20px; border-top:1px solid var(--border);">
+            <p style="font-size:0.8125rem; color:var(--ink-faint); margin:0; line-height:1.6;">Answer from your knowledge of your team as it is today, not as you'd like it to be. Honest answers produce the most useful results.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMITTING STATE -->
+    <div id="submitting-section">
+      <div style="width:56px; height:56px; border:4px solid var(--border); border-top-color:var(--navy); border-radius:50%; animation:spin 0.8s linear infinite; margin:0 auto 24px;"></div>
+      <h3 style="margin-bottom:8px;">Calculating your risk snapshot...</h3>
+      <p>Scoring across 5 dimensions. Identifying your top 3 failure risks.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <img src="vm-icon.png" alt="" style="height:36px; width:auto;">
+          <img src="vm-wordmark.png" alt="Vertical Motion" style="height:22px; width:auto;">
+        </div>
+        <p>We help good people become great leaders.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Executive Career</h5>
+        <ul>
+          <li><a href="eca.html">The Accelerator</a></li>
+          <li><a href="cfa.html">Corporate Freedom Accelerator</a></li>
+          <li><a href="elevate.html">Elevate Membership</a></li>
+          <li><a href="ldna.html">LDNA Assessment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="speaking.html">Book Tom to Speak</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Organizations</h5>
+        <ul>
+          <li><a href="index.html#scaling">ELT Scaling System</a></li>
+          <li><a href="https://eltscale.com">eltscale.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vertical Motion LLC. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html" style="color:inherit; opacity:0.6;">Privacy Policy</a></p>
+      <p><a href="https://vmleader.com" style="color:rgba(255,255,255,0.3);">vmleader.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+
+<script>
+// Nav
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+document.getElementById('nav-hamburger').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+
+// State
+const answers = {};
+let userData = {};
+const sections = ['A','B','C','D','E'];
+let currentSection = 0;
+
+const sectionLabels = {
+  A: 'Section A of 5: Composition & Fit',
+  B: 'Section B of 5: Coverage & Complementarity',
+  C: 'Section C of 5: Bench Load & Durability',
+  D: 'Section D of 5: Decision & Alignment',
+  E: 'Section E of 5: Trust & Conflict'
+};
+const progressPcts = { A:'20%', B:'40%', C:'60%', D:'80%', E:'100%' };
+
+// Opt-in form
+document.getElementById('optin-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name  = document.getElementById('fullname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const role  = document.getElementById('role').value.trim();
+  const errEl = document.getElementById('optin-error');
+
+  if (!name || !email || !role) {
+    errEl.textContent = 'Please fill in your name, email, and role to continue.';
+    errEl.style.display = 'block';
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.textContent = 'Please enter a valid email address.';
+    errEl.style.display = 'block';
+    return;
+  }
+  errEl.style.display = 'none';
+  userData = {
+    name, email, role,
+    revenue:  document.getElementById('revenue').value,
+    headcount: document.getElementById('headcount').value,
+    teamsize:  document.getElementById('teamsize').value,
+    reason:   document.getElementById('reason').value,
+    optIn:    document.getElementById('optin-consent').checked
+  };
+  document.getElementById('optin-section').classList.remove('active');
+  document.getElementById('assessment-section').classList.add('active');
+});
+
+// Select option
+function selectOption(qId, value, el) {
+  const block = document.getElementById('q-' + qId);
+  block.querySelectorAll('.option-item').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[qId] = value;
+}
+
+// Navigation
+function nextSection(from, to) {
+  const required = ['A1','A2','A3','A4'];
+  const prefix = from;
+  const qKeys = [prefix+'1', prefix+'2', prefix+'3', prefix+'4'];
+  const missing = qKeys.filter(k => !answers[k]);
+  if (missing.length > 0) {
+    // Highlight unanswered
+    missing.forEach(k => {
+      const block = document.getElementById('q-' + k);
+      if (block) {
+        block.style.borderColor = '#C62828';
+        block.style.background = 'rgba(198,40,40,0.02)';
+        setTimeout(() => { block.style.borderColor = ''; block.style.background = ''; }, 3000);
+      }
+    });
+    return;
+  }
+  document.getElementById('panel-' + from).classList.remove('active');
+  document.getElementById('panel-' + to).classList.add('active');
+  document.getElementById('sidebar-' + from).classList.remove('active');
+  document.getElementById('sidebar-' + from).classList.add('done');
+  document.getElementById('sidebar-' + to).classList.add('active');
+  document.getElementById('progress-text').textContent = sectionLabels[to];
+  document.getElementById('progress-fill').style.width = progressPcts[to];
+  document.getElementById('progress-pct').textContent = progressPcts[to];
+  window.scrollTo({ top: 120, behavior: 'smooth' });
+}
+
+function prevSection(from, to) {
+  document.getElementById('panel-' + from).classList.remove('active');
+  document.getElementById('panel-' + to).classList.add('active');
+  document.getElementById('sidebar-' + from).classList.remove('active');
+  document.getElementById('sidebar-' + to).classList.remove('done');
+  document.getElementById('sidebar-' + to).classList.add('active');
+  document.getElementById('progress-text').textContent = sectionLabels[to];
+  document.getElementById('progress-fill').style.width = progressPcts[to];
+  document.getElementById('progress-pct').textContent = progressPcts[to];
+  window.scrollTo({ top: 120, behavior: 'smooth' });
+}
+
+// Submit
+function submitAssessment() {
+  const eKeys = ['E1','E2','E3','E4'];
+  const missing = eKeys.filter(k => !answers[k]);
+  const errEl = document.getElementById('section-error');
+  if (missing.length > 0) {
+    missing.forEach(k => {
+      const block = document.getElementById('q-' + k);
+      if (block) { block.style.borderColor = '#C62828'; setTimeout(() => block.style.borderColor = '', 3000); }
+    });
+    errEl.textContent = 'Please answer all questions in this section before continuing.';
+    errEl.style.display = 'block';
+    return;
+  }
+  errEl.style.display = 'none';
+
+  // Calculate scores
+  const dims = {
+    A: ['A1','A2','A3','A4'],
+    B: ['B1','B2','B3','B4'],
+    C: ['C1','C2','C3','C4'],
+    D: ['D1','D2','D3','D4'],
+    E: ['E1','E2','E3','E4']
+  };
+  const scores = {};
+  for (const [dim, keys] of Object.entries(dims)) {
+    const vals = keys.map(k => answers[k] || 1);
+    scores[dim] = Math.round((vals.reduce((a,b) => a+b, 0) / vals.length) * 25);
+  }
+
+  // Weighted overall: A=25%, B=25%, C=20%, D=15%, E=15%
+  const overall = Math.round(
+    scores.A * 0.25 + scores.B * 0.25 + scores.C * 0.20 + scores.D * 0.15 + scores.E * 0.15
+  );
+
+  // Store and redirect
+  const payload = {
+    scores, overall, userData, answers,
+    timestamp: new Date().toISOString()
+  };
+  sessionStorage.setItem('elt_scorecard_result', JSON.stringify(payload));
+
+  document.getElementById('assessment-section').classList.remove('active');
+  document.getElementById('submitting-section').classList.add('active');
+
+  setTimeout(() => {
+    window.location.href = 'results.html';
+  }, 2200);
+}
+</script>
+</body>
+</html>

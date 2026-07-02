@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELT Diagnostic | Vertical Motion</title>
+  <link rel="canonical" href="https://vmleader.com/elt-diagnostic.html">
+  <meta name="description" content="Step 3 of the ELT Scaling Suite: a 3-4 week assessment of your leadership team, with a Risk Map, a private CEO debrief, and a 90-day plan.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="ELT Diagnostic">
+  <meta property="og:description" content="Step 3 of the ELT Scaling Suite: a 3-4 week assessment of your leadership team, with a Risk Map, a private CEO debrief, and a 90-day plan.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vmleader.com/elt-diagnostic.html">
+  <meta property="og:image" content="https://vmleader.com/assets/og/elt-diagnostic-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ELT Diagnostic — Vertical Motion">
+  <meta property="og:site_name" content="Vertical Motion">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ELT Diagnostic">
+  <meta name="twitter:description" content="Step 3 of the ELT Scaling Suite: a 3-4 week assessment of your leadership team, with a Risk Map, a private CEO debrief, and a 90-day plan.">
+  <meta name="twitter:image" content="https://vmleader.com/assets/og/elt-diagnostic-og.png">
+  <meta name="twitter:image:alt" content="ELT Diagnostic — Vertical Motion">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "ELT Diagnostic",
+  "description": "Step 3 of the ELT Scaling Suite. A 3 to 4 week advanced assessment of the executive leadership team, including 1:1 interviews, a half-day alignment workshop, a Leadership Team Risk Map, a private CEO debrief, and a 90-day plan.",
+  "provider": { "@type": "Organization", "name": "Vertical Motion", "url": "https://vmleader.com" },
+  "serviceType": "Executive Leadership Team Diagnostic",
+  "url": "https://vmleader.com/elt-diagnostic.html"
+}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="vm-favicon.png">
+  <style>
+    :root { --blue:#0693d8; --blue-dk:#057bb5; --blue-soft:#e6f4fb; --gray-vm:#878787; }
+    .nav-cta-group { display:flex; align-items:center; gap:10px; }
+    .nav-links { overflow:visible; }
+    .has-dropdown { position:relative; display:flex; align-items:center; }
+    .dd-trigger { display:inline-flex; align-items:center; gap:5px; font-size:0.8125rem; font-weight:500; color:rgba(255,255,255,0.65); cursor:pointer; transition:color var(--transition); }
+    .dd-trigger:hover, .has-dropdown:hover .dd-trigger { color:#fff; }
+    .dd-trigger .caret { font-size:0.55rem; opacity:0.7; transition:transform var(--transition); }
+    .has-dropdown:hover .dd-trigger .caret { transform:rotate(180deg); }
+    .has-dropdown::after { content:''; position:absolute; top:100%; left:-24px; right:-24px; height:24px; }
+    .dropdown-panel { position:absolute; top:calc(100% + 16px); left:50%; transform:translateX(-50%) translateY(8px); background:#fff; border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow-xl); padding:26px 30px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.18s ease, transform 0.18s ease; z-index:200; }
+    .has-dropdown:hover .dropdown-panel { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+    .dd-grid { display:flex; gap:30px; }
+    .dd-col { display:flex; flex-direction:column; gap:22px; min-width:226px; }
+    .dd-group h6 { font-family:var(--font-body); font-size:0.62rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; padding-left:11px; }
+    .dd-item { display:block; padding:8px 11px; margin:0 -11px; border-radius:11px; transition:background var(--transition); }
+    .dd-item:hover { background:var(--gray-bg); }
+    .dd-item-t { display:block; font-size:0.875rem; font-weight:600; color:var(--ink); line-height:1.25; }
+    .dd-item:hover .dd-item-t { color:var(--blue); }
+    .dd-item-d { display:block; font-size:0.74rem; color:var(--ink-soft); margin-top:2px; line-height:1.3; }
+    .dd-cta { display:block; margin-top:22px; padding-top:15px; border-top:1px solid var(--border); font-family:var(--font-head); font-weight:700; font-size:0.8rem; color:var(--orange); }
+    .pill-free { display:inline-block; font-size:0.55rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#fff; background:var(--blue); padding:2px 6px; border-radius:10px; }
+    @media (max-width:720px) {
+      .has-dropdown { width:100%; flex-direction:column; align-items:flex-start; }
+      .dd-trigger { color:#fff; font-weight:700; font-size:0.95rem; }
+      .dd-trigger .caret, .has-dropdown::after { display:none; }
+      .dropdown-panel { position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; background:transparent; border:none; box-shadow:none; padding:12px 0 4px; }
+      .dd-grid { flex-direction:column; gap:18px; }
+      .dd-group h6 { color:rgba(207,232,239,0.5); }
+      .dd-item { margin:0; padding:8px 0; }
+      .dd-item:hover { background:transparent; }
+      .dd-item-t { color:#fff; }
+      .dd-item-d { color:rgba(207,232,239,0.5); }
+    }
+    #form-success { display: none; text-align: center; padding: 48px 32px; }
+    #form-success h3 { margin-bottom: 12px; }
+    .who-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-bottom:44px; }
+    .who { background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); padding:28px; display:flex; gap:18px; align-items:flex-start; }
+    .who img { width:52px; height:52px; flex-shrink:0; }
+    .who h4 { font-size:1.1rem; margin-bottom:6px; }
+    .who p { font-size:0.92rem; color:var(--ink-mid); line-height:1.6; margin:0; }
+    .who-photo { width:100%; border-radius:var(--radius-md); box-shadow:var(--shadow-lg); display:block; object-fit:cover; max-height:360px; }
+    @media (max-width:760px){ .who-grid { grid-template-columns:1fr; } }
+    @media (max-width: 880px) {
+      .contact-grid { gap: 40px; }
+    }
+    @media (max-width: 480px) {
+      .contact-info-item { gap: 12px; }
+      .contact-info-icon { width: 40px; height: 40px; font-size: 1rem; flex-shrink: 0; }
+    }
+  
+    /* ===== MOBILE RESPONSIVE SWEEP (launch) ===== */
+    @media (max-width: 880px) {
+      [style*="grid-template-columns"],
+      .adv-stats,.auth-grid,.bk-hero-grid,.book-grid,.call-steps,.course-grid,.cred-grid,.cred-list,.dest-cards,.discover-grid,.ec-hero-grid,.es-hero-grid,.evt-gallery,.feat-grid,.fork-top,.form-grid,.form-row,.founder-card,.founders,.fw-cards,.fw5,.gallery,.hear-grid,.hero-start-grid,.img-split,.inc-grid,.incl-grid,.inside-grid,.inside-head,.lens-grid,.logo-grid,.math-grid,.mc-split,.offer-card,.pain-grid,.path,.pil-grid,.pillar-grid,.pillar3,.price-grid,.prob-grid,.proc-grid,.prog-cards,.proof-grid,.q-grid,.qual-banner,.qual-frame,.qual-list,.reel-grid,.rf-steps,.sec-split,.secret-grid,.shift-grid,.sound-list,.sp-hero-grid,.split,.split-grid,.split2,.start-grid,.stat-band,.stat-grid,.story-grid,.suite-grid,.team-grid,.tgrid,.topic-grid,.tstrip,.values-row,.vm-hero-grid,.vt-grid,.wantrap,.who-grid,.why-grid,.xc-hero-grid,.contact-grid,.footer-grid,.assessment-layout
+        { grid-template-columns: 1fr !important; }
+      section { padding-top: 56px !important; padding-bottom: 56px !important; }
+      h1 { font-size: 2rem !important; line-height: 1.14 !important; }
+      h2 { font-size: 1.55rem !important; }
+      .btn-lg, section .btn, .cta-actions .btn, .price-card .btn,
+      .es-hero-cta .btn, .xc-hero-cta .btn, .rf-hero-cta .btn, .ec-hero-cta .btn, .sp-hero-cta .btn, .bk-hero-grid .btn, .vm-hero-grid .btn
+        { width: 100% !important; justify-content: center !important; }
+      table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem !important; line-height: 1.16 !important; }
+      h2 { font-size: 1.3rem !important; }
+      h3 { font-size: 1.15rem !important; }
+      body { font-size: 0.95rem; }
+      section { padding-top: 42px !important; padding-bottom: 42px !important; }
+      .container { padding-left: 18px !important; padding-right: 18px !important; }
+    }
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZTY3R12GE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZZTY3R12GE');
+</script>
+<!-- VM first-touch attribution + form-conversion tracking -->
+<script>
+(function(){
+  var KEY='vm_first_touch';
+  var sp=new URLSearchParams(location.search);
+  function g(k){return sp.get(k)||'';}
+  var ft=null;
+  try{ft=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+  if(!ft){
+    ft={
+      referrer: document.referrer||'',
+      landing_page: location.pathname+location.search,
+      first_seen: new Date().toISOString(),
+      utm_source: g('utm_source'), utm_medium: g('utm_medium'),
+      utm_campaign: g('utm_campaign'), utm_term: g('utm_term'),
+      utm_content: g('utm_content'), gclid: g('gclid'), fbclid: g('fbclid')
+    };
+    try{localStorage.setItem(KEY,JSON.stringify(ft));}catch(e){}
+  }
+  function channel(a){
+    if(a.utm_source) return a.utm_source+(a.utm_medium?(' / '+a.utm_medium):'');
+    var r=a.referrer; if(!r) return 'direct';
+    try{
+      var h=new URL(r).hostname.replace(/^www\./,'');
+      if(/(^|\.)google\.|(^|\.)bing\.|duckduckgo|(^|\.)yahoo\./.test(h)) return 'organic: '+h;
+      if(h.indexOf('vmleader.com')!==-1) return 'internal';
+      return 'referral: '+h;
+    }catch(e){return r;}
+  }
+  ft.channel=channel(ft);
+  window.VM_ATTRIBUTION=ft;
+  var _fetch=window.fetch;
+  window.fetch=function(url,opts){
+    try{
+      var u=(typeof url==='string')?url:(url&&url.url)||'';
+      if(u.indexOf('script.google.com/macros')!==-1 && opts && typeof opts.body==='string'){
+        var d=JSON.parse(opts.body);
+        if(d && typeof d==='object'){
+          d.attr_referrer=ft.referrer; d.attr_channel=ft.channel;
+          d.attr_landing=ft.landing_page; d.attr_first_seen=ft.first_seen;
+          d.attr_utm_source=ft.utm_source; d.attr_utm_medium=ft.utm_medium;
+          d.attr_utm_campaign=ft.utm_campaign; d.attr_utm_term=ft.utm_term;
+          d.attr_utm_content=ft.utm_content; d.attr_gclid=ft.gclid; d.attr_fbclid=ft.fbclid;
+          opts=Object.assign({},opts,{body:JSON.stringify(d)});
+          if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}
+        }
+      }
+    }catch(e){}
+    return _fetch.call(this,url,opts);
+  };
+})();
+</script>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Vertical Motion home" style="gap:9px;">
+      <img src="vm-icon.png" alt="" style="height:30px; width:auto;">
+      <img src="vm-wordmark.png" alt="Vertical Motion" style="height:19px; width:auto;">
+    </a>
+    <div class="nav-links" id="nav-links">
+      <div class="has-dropdown">
+        <a href="exec.html" class="dd-trigger">Executive Career <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col"><div class="dd-group"><h6>Coaching Programs</h6>
+              <a class="dd-item" href="eca.html"><span class="dd-item-t">Executive Career Accelerator</span><span class="dd-item-d">6-month 1:1 program to the executive ranks</span></a>
+              <a class="dd-item" href="cfa.html"><span class="dd-item-t">Corporate Freedom Accelerator</span><span class="dd-item-d">Leave corporate and build your own practice</span></a>
+              <a class="dd-item" href="mastermind.html"><span class="dd-item-t">Executive Mastermind Coaching</span><span class="dd-item-d">Exclusive 1:1 coaching for C-suite members</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Membership &amp; Self-Guided</h6>
+              <a class="dd-item" href="elevate.html"><span class="dd-item-t">Elevate Membership</span><span class="dd-item-d">Framework plus community</span></a>
+              <a class="dd-item" href="book.html"><span class="dd-item-t">The Executive Career Handbook</span><span class="dd-item-d">The book and framework</span></a>
+              <a class="dd-item" href="courses.html"><span class="dd-item-t">Courses &amp; Products</span><span class="dd-item-d">Standalone trainings and mini-courses</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Assessments</h6>
+              <a class="dd-item" href="ldna.html"><span class="dd-item-t">LDNA Assessment</span><span class="dd-item-d">See how you naturally lead in 6 minutes</span></a>
+              <a class="dd-item" href="foundations-report.html"><span class="dd-item-t">Leadership Foundations Report&trade;</span><span class="dd-item-d">Deep self-discovery and fit profile</span></a>
+            </div></div>
+          </div>
+          <a href="index.html#career" class="dd-cta">Explore Career Acceleration &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="eltscale.html" class="dd-trigger">Business Solutions <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col">
+              <div class="dd-group"><h6>Start Here</h6>
+                <a class="dd-item" href="scorecard.html"><span class="dd-item-t"><span class="pill-free">Free</span> ELT Risk Assessment</span><span class="dd-item-d">Score your executive leadership team in 7 minutes</span></a></div>
+              <div class="dd-group"><h6>Diagnose &amp; Scale</h6>
+                <a class="dd-item" href="elt-diagnostic.html"><span class="dd-item-t">ELT Diagnostic</span><span class="dd-item-d">Data-backed audit of your executive team</span></a>
+                <a class="dd-item" href="ELT-Scaling-Suite.html"><span class="dd-item-t">ELT Scaling Suite</span><span class="dd-item-d">Ongoing executive team performance system</span></a></div>
+            </div>
+            <div class="dd-col"><div class="dd-group"><h6>Ongoing Services</h6>
+              <a class="dd-item" href="executive-coaching.html"><span class="dd-item-t">Executive Coaching</span><span class="dd-item-d">1:1 coaching for your leadership team</span></a>
+              <a class="dd-item" href="outplacement.html"><span class="dd-item-t">Executive Outplacement</span><span class="dd-item-d">Transition exiting executives with care</span></a>
+              <a class="dd-item" href="ceo-advisory.html"><span class="dd-item-t">CEO Advisory</span><span class="dd-item-d">On-call strategic counsel for the CEO</span></a>
+            </div></div>
+            <div class="dd-col">
+              <div class="dd-group"><h6>Assessments</h6>
+                <a class="dd-item" href="ldna-biz.html"><span class="dd-item-t">LDNA &amp; Team Foundations Reports</span><span class="dd-item-d">Map your team's drivers and dynamics</span></a></div>
+              <div class="dd-group"><h6>Specialized</h6>
+                <a class="dd-item" href="baic.html"><span class="dd-item-t">BAIC (The Saunter Group)</span><span class="dd-item-d">Partner-delivered advisory suite</span></a></div>
+            </div>
+          </div>
+          <a href="index.html#scaling" class="dd-cta">Explore Enterprise Solutions &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="about.html" class="dd-trigger">About <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid"><div class="dd-col"><div class="dd-group"><h6>About Vertical Motion</h6>
+            <a class="dd-item" href="about.html#why"><span class="dd-item-t">Our Why</span><span class="dd-item-d">Tom's story and the mission behind VM</span></a>
+            <a class="dd-item" href="about.html#team"><span class="dd-item-t">Our Team</span><span class="dd-item-d">Meet the coaches behind Vertical Motion</span></a>
+            <a class="dd-item" href="speaking.html"><span class="dd-item-t">Book Tom to Speak</span><span class="dd-item-d">Bring Tom to your event or stage</span></a>
+          </div></div></div>
+        </div>
+      </div>
+      <a href="https://community.vmleader.com/">Member Login</a>
+      <a href="contact-us.html">Contact</a>
+    </div>
+    <div class="nav-cta-group">
+      <a href="#contact" class="btn-nav-cta">Contact Us &rarr;</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="background:var(--navy); padding:120px 0 64px; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 100% 0%, rgba(252,101,2,0.14) 0%, transparent 60%); pointer-events:none;"></div>
+  <div class="container" style="position:relative; z-index:1;">
+    <div class="split-grid" style="display:grid; grid-template-columns:1fr 460px; gap:52px; align-items:center;">
+      <div>
+        <p class="eyebrow" style="color:var(--orange);">Step 3 of the ELT Scaling Suite &middot; 3 to 4 weeks</p>
+        <h1 style="color:white; margin-bottom:16px;">ELT Diagnostic</h1>
+        <p style="color:rgba(207,232,239,0.85); max-width:560px; font-size:1.0625rem; line-height:1.7;">The ELT Advanced Assessment. A three to four week deep read of your executive leadership team: how it's composed, where it's exposed, and exactly what to fix first, delivered as a risk map and a 90-day plan.</p>
+        <div style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="review.html" class="btn btn-primary btn-lg">Request an ELT Diagnostic &rarr;</a>
+          <a href="scorecard.html" class="btn btn-ghost-white btn-lg">Start with the free assessment</a>
+        </div>
+      </div>
+      <div>
+        <img src="images/diagnostic.jpg" alt="An executive leadership team in a working session" style="width:100%; border-radius:var(--radius-lg); box-shadow:0 24px 60px rgba(0,0,0,0.45); object-fit:cover; aspect-ratio:3/2;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT'S INCLUDED -->
+<section>
+  <div class="container">
+    <div class="section-head" style="max-width:760px;">
+      <p class="eyebrow" style="color:var(--orange);">What's included</p>
+      <h2>A complete read of your leadership team, in three to four weeks.</h2>
+      <p>Built from every seat on the team, not just the view from the corner office.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+      <div style="padding:30px 28px; background:var(--gray-bg); border:1px solid var(--border); border-radius:var(--radius-md);">
+        <div style="width:38px; height:38px; border-radius:var(--radius-sm); background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-weight:700; margin-bottom:16px;">1</div>
+        <h4 style="margin-bottom:8px;">Assessments and 1:1 interviews</h4>
+        <p style="font-size:0.9375rem; margin:0;">Leadership team assessments plus a one-on-one interview with each member of the ELT, so the picture is built from every seat.</p>
+      </div>
+      <div style="padding:30px 28px; background:var(--gray-bg); border:1px solid var(--border); border-radius:var(--radius-md);">
+        <div style="width:38px; height:38px; border-radius:var(--radius-sm); background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-weight:700; margin-bottom:16px;">2</div>
+        <h4 style="margin-bottom:8px;">Half-day alignment workshop</h4>
+        <p style="font-size:0.9375rem; margin:0;">A half-day workshop detailing team blind spots and overlap risks, to align on org design and operating system.</p>
+      </div>
+      <div style="padding:30px 28px; background:var(--gray-bg); border:1px solid var(--border); border-radius:var(--radius-md);">
+        <div style="width:38px; height:38px; border-radius:var(--radius-sm); background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-weight:700; margin-bottom:16px;">3</div>
+        <h4 style="margin-bottom:8px;">Risk Map, CEO debrief, and 90-day plan</h4>
+        <p style="font-size:0.9375rem; margin:0;">A Leadership Team Risk Map with your top risks, plus a private 1:1 CEO debrief and a 90-day plan for the CEO.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHO IT'S FOR ========== -->
+<section class="bg-gray">
+  <div class="container">
+    <div class="section-head" style="max-width:760px;">
+      <span class="eyebrow" style="color:var(--orange);">Who it's built for</span>
+      <h2>Not for every CEO. The right fit matters.</h2>
+      <p>The ELT Scaling Suite is designed for a specific kind of leader at a specific kind of inflection point.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who"><img src="images/Scaling.png" alt=""><div><h4>Scaling CEOs at $5M to $50M</h4><p>You've got product-market fit. The team that got you here isn't necessarily the team that gets you there.</p></div></div>
+      <div class="who"><img src="images/Pre-raise.png" alt=""><div><h4>Pre-raise or pre-transition CEOs</h4><p>Investors scrutinize the team first. Know your exposure before they do.</p></div></div>
+      <div class="who"><img src="images/Bottleneck.png" alt=""><div><h4>CEOs who feel like the bottleneck</h4><p>When every hard call lands on your desk, that's not a strategy problem. It's a team architecture problem.</p></div></div>
+      <div class="who"><img src="images/Investor.png" alt=""><div><h4>Investors &amp; executive coaches</h4><p>Use the scorecard to assess portfolio companies or client leadership teams with a shared language.</p></div></div>
+    </div>
+    <img class="who-photo" src="images/diagnostic2-web.jpg" alt="A leadership team in a working discussion">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <p class="eyebrow">Ready when you are</p>
+    <h2>See what your leadership team is really carrying.</h2>
+    <p>The ELT Diagnostic is Step 3 of the ELT Scaling Suite. If you haven't taken the free ELT Risk Assessment yet, that's the fastest place to start.</p>
+    <div class="cta-actions">
+      <a href="review.html" class="btn btn-primary btn-lg">Request an ELT Diagnostic &rarr;</a>
+      <a href="scorecard.html" class="btn btn-ghost-white btn-lg">Take the free ELT Risk Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <img src="vm-icon.png" alt="" style="height:36px; width:auto;">
+          <img src="vm-wordmark.png" alt="Vertical Motion" style="height:22px; width:auto;">
+        </div>
+        <p>We help good people become great leaders.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Executive Career</h5>
+        <ul>
+          <li><a href="eca.html">The Accelerator</a></li>
+          <li><a href="cfa.html">Corporate Freedom Accelerator</a></li>
+          <li><a href="elevate.html">Elevate Membership</a></li>
+          <li><a href="ldna.html">LDNA Assessment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="speaking.html">Book Tom to Speak</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Organizations</h5>
+        <ul>
+          <li><a href="index.html#scaling">ELT Scaling System</a></li>
+          <li><a href="https://eltscale.com">eltscale.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vertical Motion LLC. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html" style="color:inherit; opacity:0.6;">Privacy Policy</a></p>
+      <p><a href="https://vmleader.com" style="color:rgba(255,255,255,0.3);">vmleader.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+document.getElementById('nav-hamburger').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+</script>
+</body>
+</html>

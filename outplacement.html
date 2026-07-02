@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Outplacement | Vertical Motion</title>
+  <link rel="canonical" href="https://vmleader.com/outplacement.html">
+  <meta name="description" content="Senior-level outplacement built on the Whole Executive Framework. Give departing directors, VPs, and executives a dignified exit.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Executive Outplacement">
+  <meta property="og:description" content="Senior-level outplacement built on the Whole Executive Framework. Give departing directors, VPs, and executives a dignified exit.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vmleader.com/outplacement.html">
+  <meta property="og:image" content="https://vmleader.com/assets/og/outplacement-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Executive Outplacement — Vertical Motion">
+  <meta property="og:site_name" content="Vertical Motion">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Executive Outplacement">
+  <meta name="twitter:description" content="Senior-level outplacement built on the Whole Executive Framework. Give departing directors, VPs, and executives a dignified exit.">
+  <meta name="twitter:image" content="https://vmleader.com/assets/og/outplacement-og.png">
+  <meta name="twitter:image:alt" content="Executive Outplacement — Vertical Motion">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Executive Outplacement",
+  "description": "Senior-level outplacement built on the Whole Executive Framework, helping departing directors, VPs, and executives target the right next role with confidence.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Vertical Motion",
+    "url": "https://vmleader.com",
+    "email": "support@vmleader.com"
+  },
+  "serviceType": "Executive Outplacement and Career Transition",
+  "url": "https://vmleader.com/outplacement.html"
+}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="vm-favicon.png">
+  <style>
+    :root { --blue:#0693d8; --blue-dk:#057bb5; --blue-soft:#e6f4fb; --gray-vm:#878787; }
+    .nav-cta-group { display:flex; align-items:center; gap:10px; }
+    .nav-links { overflow:visible; }
+    .has-dropdown { position:relative; display:flex; align-items:center; }
+    .dd-trigger { display:inline-flex; align-items:center; gap:5px; font-size:0.8125rem; font-weight:500; color:rgba(255,255,255,0.65); cursor:pointer; transition:color var(--transition); }
+    .dd-trigger:hover, .has-dropdown:hover .dd-trigger { color:#fff; }
+    .dd-trigger .caret { font-size:0.55rem; opacity:0.7; transition:transform var(--transition); }
+    .has-dropdown:hover .dd-trigger .caret { transform:rotate(180deg); }
+    .has-dropdown::after { content:''; position:absolute; top:100%; left:-24px; right:-24px; height:24px; }
+    .dropdown-panel { position:absolute; top:calc(100% + 16px); left:50%; transform:translateX(-50%) translateY(8px); background:#fff; border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow-xl); padding:26px 30px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.18s ease, transform 0.18s ease; z-index:200; }
+    .has-dropdown:hover .dropdown-panel { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+    .dd-grid { display:flex; gap:30px; }
+    .dd-col { display:flex; flex-direction:column; gap:22px; min-width:226px; }
+    .dd-group h6 { font-family:var(--font-body); font-size:0.62rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; padding-left:11px; }
+    .dd-item { display:block; padding:8px 11px; margin:0 -11px; border-radius:11px; transition:background var(--transition); }
+    .dd-item:hover { background:var(--gray-bg); }
+    .dd-item-t { display:block; font-size:0.875rem; font-weight:600; color:var(--ink); line-height:1.25; }
+    .dd-item:hover .dd-item-t { color:var(--blue); }
+    .dd-item-d { display:block; font-size:0.74rem; color:var(--ink-soft); margin-top:2px; line-height:1.3; }
+    .dd-cta { display:block; margin-top:22px; padding-top:15px; border-top:1px solid var(--border); font-family:var(--font-head); font-weight:700; font-size:0.8rem; color:var(--orange); }
+    .pill-free { display:inline-block; font-size:0.55rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#fff; background:var(--blue); padding:2px 6px; border-radius:10px; }
+    @media (max-width:720px) {
+      .has-dropdown { width:100%; flex-direction:column; align-items:flex-start; }
+      .dd-trigger { color:#fff; font-weight:700; font-size:0.95rem; }
+      .dd-trigger .caret, .has-dropdown::after { display:none; }
+      .dropdown-panel { position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; background:transparent; border:none; box-shadow:none; padding:12px 0 4px; }
+      .dd-grid { flex-direction:column; gap:18px; }
+      .dd-group h6 { color:rgba(207,232,239,0.5); }
+      .dd-item { margin:0; padding:8px 0; }
+      .dd-item:hover { background:transparent; }
+      .dd-item-t { color:#fff; }
+      .dd-item-d { color:rgba(207,232,239,0.5); }
+    }
+    #form-success { display: none; text-align: center; padding: 48px 32px; }
+    #form-success h3 { margin-bottom: 12px; }
+    @media (max-width: 880px) {
+      .contact-grid { gap: 40px; }
+    }
+    @media (max-width: 480px) {
+      .contact-info-item { gap: 12px; }
+      .contact-info-icon { width: 40px; height: 40px; font-size: 1rem; flex-shrink: 0; }
+    }
+  
+    /* ===== MOBILE RESPONSIVE SWEEP (launch) ===== */
+    @media (max-width: 880px) {
+      [style*="grid-template-columns"],
+      .adv-stats,.auth-grid,.bk-hero-grid,.book-grid,.call-steps,.course-grid,.cred-grid,.cred-list,.dest-cards,.discover-grid,.ec-hero-grid,.es-hero-grid,.evt-gallery,.feat-grid,.fork-top,.form-grid,.form-row,.founder-card,.founders,.fw-cards,.fw5,.gallery,.hear-grid,.hero-start-grid,.img-split,.inc-grid,.incl-grid,.inside-grid,.inside-head,.lens-grid,.logo-grid,.math-grid,.mc-split,.offer-card,.pain-grid,.path,.pil-grid,.pillar-grid,.pillar3,.price-grid,.prob-grid,.proc-grid,.prog-cards,.proof-grid,.q-grid,.qual-banner,.qual-frame,.qual-list,.reel-grid,.rf-steps,.sec-split,.secret-grid,.shift-grid,.sound-list,.sp-hero-grid,.split,.split-grid,.split2,.start-grid,.stat-band,.stat-grid,.story-grid,.suite-grid,.team-grid,.tgrid,.topic-grid,.tstrip,.values-row,.vm-hero-grid,.vt-grid,.wantrap,.who-grid,.why-grid,.xc-hero-grid,.contact-grid,.footer-grid,.assessment-layout
+        { grid-template-columns: 1fr !important; }
+      section { padding-top: 56px !important; padding-bottom: 56px !important; }
+      h1 { font-size: 2rem !important; line-height: 1.14 !important; }
+      h2 { font-size: 1.55rem !important; }
+      .btn-lg, section .btn, .cta-actions .btn, .price-card .btn,
+      .es-hero-cta .btn, .xc-hero-cta .btn, .rf-hero-cta .btn, .ec-hero-cta .btn, .sp-hero-cta .btn, .bk-hero-grid .btn, .vm-hero-grid .btn
+        { width: 100% !important; justify-content: center !important; }
+      table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem !important; line-height: 1.16 !important; }
+      h2 { font-size: 1.3rem !important; }
+      h3 { font-size: 1.15rem !important; }
+      body { font-size: 0.95rem; }
+      section { padding-top: 42px !important; padding-bottom: 42px !important; }
+      .container { padding-left: 18px !important; padding-right: 18px !important; }
+    }
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZTY3R12GE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZZTY3R12GE');
+</script>
+<!-- VM first-touch attribution + form-conversion tracking -->
+<script>
+(function(){
+  var KEY='vm_first_touch';
+  var sp=new URLSearchParams(location.search);
+  function g(k){return sp.get(k)||'';}
+  var ft=null;
+  try{ft=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+  if(!ft){
+    ft={
+      referrer: document.referrer||'',
+      landing_page: location.pathname+location.search,
+      first_seen: new Date().toISOString(),
+      utm_source: g('utm_source'), utm_medium: g('utm_medium'),
+      utm_campaign: g('utm_campaign'), utm_term: g('utm_term'),
+      utm_content: g('utm_content'), gclid: g('gclid'), fbclid: g('fbclid')
+    };
+    try{localStorage.setItem(KEY,JSON.stringify(ft));}catch(e){}
+  }
+  function channel(a){
+    if(a.utm_source) return a.utm_source+(a.utm_medium?(' / '+a.utm_medium):'');
+    var r=a.referrer; if(!r) return 'direct';
+    try{
+      var h=new URL(r).hostname.replace(/^www\./,'');
+      if(/(^|\.)google\.|(^|\.)bing\.|duckduckgo|(^|\.)yahoo\./.test(h)) return 'organic: '+h;
+      if(h.indexOf('vmleader.com')!==-1) return 'internal';
+      return 'referral: '+h;
+    }catch(e){return r;}
+  }
+  ft.channel=channel(ft);
+  window.VM_ATTRIBUTION=ft;
+  var _fetch=window.fetch;
+  window.fetch=function(url,opts){
+    try{
+      var u=(typeof url==='string')?url:(url&&url.url)||'';
+      if(u.indexOf('script.google.com/macros')!==-1 && opts && typeof opts.body==='string'){
+        var d=JSON.parse(opts.body);
+        if(d && typeof d==='object'){
+          d.attr_referrer=ft.referrer; d.attr_channel=ft.channel;
+          d.attr_landing=ft.landing_page; d.attr_first_seen=ft.first_seen;
+          d.attr_utm_source=ft.utm_source; d.attr_utm_medium=ft.utm_medium;
+          d.attr_utm_campaign=ft.utm_campaign; d.attr_utm_term=ft.utm_term;
+          d.attr_utm_content=ft.utm_content; d.attr_gclid=ft.gclid; d.attr_fbclid=ft.fbclid;
+          opts=Object.assign({},opts,{body:JSON.stringify(d)});
+          if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}
+        }
+      }
+    }catch(e){}
+    return _fetch.call(this,url,opts);
+  };
+})();
+</script>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Vertical Motion home" style="gap:9px;">
+      <img src="vm-icon.png" alt="" style="height:30px; width:auto;">
+      <img src="vm-wordmark.png" alt="Vertical Motion" style="height:19px; width:auto;">
+    </a>
+    <div class="nav-links" id="nav-links">
+      <div class="has-dropdown">
+        <a href="exec.html" class="dd-trigger">Executive Career <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col"><div class="dd-group"><h6>Coaching Programs</h6>
+              <a class="dd-item" href="eca.html"><span class="dd-item-t">Executive Career Accelerator</span><span class="dd-item-d">6-month 1:1 program to the executive ranks</span></a>
+              <a class="dd-item" href="cfa.html"><span class="dd-item-t">Corporate Freedom Accelerator</span><span class="dd-item-d">Leave corporate and build your own practice</span></a>
+              <a class="dd-item" href="mastermind.html"><span class="dd-item-t">Executive Mastermind Coaching</span><span class="dd-item-d">Exclusive 1:1 coaching for C-suite members</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Membership &amp; Self-Guided</h6>
+              <a class="dd-item" href="elevate.html"><span class="dd-item-t">Elevate Membership</span><span class="dd-item-d">Framework plus community</span></a>
+              <a class="dd-item" href="book.html"><span class="dd-item-t">The Executive Career Handbook</span><span class="dd-item-d">The book and framework</span></a>
+              <a class="dd-item" href="courses.html"><span class="dd-item-t">Courses &amp; Products</span><span class="dd-item-d">Standalone trainings and mini-courses</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Assessments</h6>
+              <a class="dd-item" href="ldna.html"><span class="dd-item-t">LDNA Assessment</span><span class="dd-item-d">See how you naturally lead in 6 minutes</span></a>
+              <a class="dd-item" href="foundations-report.html"><span class="dd-item-t">Leadership Foundations Report&trade;</span><span class="dd-item-d">Deep self-discovery and fit profile</span></a>
+            </div></div>
+          </div>
+          <a href="index.html#career" class="dd-cta">Explore Career Acceleration &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="eltscale.html" class="dd-trigger">Business Solutions <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col">
+              <div class="dd-group"><h6>Start Here</h6>
+                <a class="dd-item" href="scorecard.html"><span class="dd-item-t"><span class="pill-free">Free</span> ELT Risk Assessment</span><span class="dd-item-d">Score your executive leadership team in 7 minutes</span></a></div>
+              <div class="dd-group"><h6>Diagnose &amp; Scale</h6>
+                <a class="dd-item" href="elt-diagnostic.html"><span class="dd-item-t">ELT Diagnostic</span><span class="dd-item-d">Data-backed audit of your executive team</span></a>
+                <a class="dd-item" href="ELT-Scaling-Suite.html"><span class="dd-item-t">ELT Scaling Suite</span><span class="dd-item-d">Ongoing executive team performance system</span></a></div>
+            </div>
+            <div class="dd-col"><div class="dd-group"><h6>Ongoing Services</h6>
+              <a class="dd-item" href="executive-coaching.html"><span class="dd-item-t">Executive Coaching</span><span class="dd-item-d">1:1 coaching for your leadership team</span></a>
+              <a class="dd-item" href="outplacement.html"><span class="dd-item-t">Executive Outplacement</span><span class="dd-item-d">Transition exiting executives with care</span></a>
+              <a class="dd-item" href="ceo-advisory.html"><span class="dd-item-t">CEO Advisory</span><span class="dd-item-d">On-call strategic counsel for the CEO</span></a>
+            </div></div>
+            <div class="dd-col">
+              <div class="dd-group"><h6>Assessments</h6>
+                <a class="dd-item" href="ldna-biz.html"><span class="dd-item-t">LDNA &amp; Team Foundations Reports</span><span class="dd-item-d">Map your team's drivers and dynamics</span></a></div>
+              <div class="dd-group"><h6>Specialized</h6>
+                <a class="dd-item" href="baic.html"><span class="dd-item-t">BAIC (The Saunter Group)</span><span class="dd-item-d">Partner-delivered advisory suite</span></a></div>
+            </div>
+          </div>
+          <a href="index.html#scaling" class="dd-cta">Explore Enterprise Solutions &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="about.html" class="dd-trigger">About <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid"><div class="dd-col"><div class="dd-group"><h6>About Vertical Motion</h6>
+            <a class="dd-item" href="about.html#why"><span class="dd-item-t">Our Why</span><span class="dd-item-d">Tom's story and the mission behind VM</span></a>
+            <a class="dd-item" href="about.html#team"><span class="dd-item-t">Our Team</span><span class="dd-item-d">Meet the coaches behind Vertical Motion</span></a>
+            <a class="dd-item" href="speaking.html"><span class="dd-item-t">Book Tom to Speak</span><span class="dd-item-d">Bring Tom to your event or stage</span></a>
+          </div></div></div>
+        </div>
+      </div>
+      <a href="https://community.vmleader.com/">Member Login</a>
+      <a href="contact-us.html">Contact</a>
+    </div>
+    <div class="nav-cta-group">
+      <a href="#contact" class="btn-nav-cta">Contact Us &rarr;</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="background:var(--navy); padding:120px 0 64px; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 100% 0%, rgba(91,124,153,0.2) 0%, transparent 60%); pointer-events:none;"></div>
+  <div class="container" style="position:relative; z-index:1;">
+    <div class="split-grid" style="display:grid; grid-template-columns:1fr 460px; gap:56px; align-items:center;">
+      <div>
+        <p class="eyebrow" style="color:rgba(207,232,239,0.7);">Executive Outplacement</p>
+        <h1 style="color:white; margin-bottom:16px;">Help your senior leaders land their next role.</h1>
+        <p style="color:rgba(207,232,239,0.85); max-width:560px; font-size:1.0625rem; line-height:1.7;">Senior-level outplacement built on the Whole Executive Framework&trade;. Give your departing directors, VPs, and executives a dignified exit and a real head start on what comes next.</p>
+        <div style="margin-top:28px;">
+          <a href="#contact" class="btn btn-primary btn-lg">Talk to Our Team &rarr;</a>
+        </div>
+      </div>
+      <div>
+        <img src="images/outplacement-hero.jpg" alt="A departing executive shaking hands, moving on to the next role" style="width:100%; border-radius:var(--radius-lg); box-shadow:0 24px 60px rgba(0,0,0,0.45); object-fit:cover; aspect-ratio:4/3;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- THE HUMAN COST -->
+<section>
+  <div class="container">
+    <div class="split-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+      <div>
+        <p class="eyebrow">The hardest call you make</p>
+        <h2 style="margin-bottom:20px;">A senior departure deserves more than a severance letter.</h2>
+        <p>Letting go of a senior manager, director, or executive is one of the hardest decisions a company makes. The business impact is real, and so is the human one. The people who helped build what you have deserve a considered exit and a genuine head start on what comes next.</p>
+        <p style="margin-top:16px;">Vertical Motion provides outplacement built for senior manager level and above. We help your departing leaders move on with clarity and confidence, and we protect the reputation you have spent years earning as an employer people respect.</p>
+      </div>
+      <div>
+        <img src="images/conference-room.jpg" alt="Executive leadership discussion" style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-xl); object-fit:cover; max-height:420px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHOLE EXECUTIVE FRAMEWORK -->
+<section class="bg-gray">
+  <div class="container">
+    <div class="section-head" style="max-width:760px;">
+      <p class="eyebrow">How it works</p>
+      <h2>Outplacement built on the Whole Executive Framework&trade;.</h2>
+      <p>Every engagement runs on the same system we use to coach sitting executives, not a generic resume workshop.</p>
+    </div>
+    <div style="max-width:840px; margin:0 auto 48px;">
+      <p>Your departing leaders get a structured read on how they lead, where they create the most value, and which roles genuinely fit. That clarity is the difference between chasing the first available opening and targeting the right next move. It is also what shortens the search and protects their confidence through a difficult transition.</p>
+    </div>
+    <div style="max-width:760px; margin:0 auto; background:var(--white); border:1px solid var(--border); border-radius:var(--radius-md); padding:36px; border-left:3px solid var(--orange);">
+      <p class="eyebrow" style="margin-bottom:10px;">On-Demand Career Coaching</p>
+      <h3 style="margin-bottom:12px;">Senior-level coaching, available when your leaders need it.</h3>
+      <p>One-on-one coaching with senior-level career coaches: positioning, search strategy, interview preparation, and offer negotiation, all tailored to director, VP, and C-suite roles. Your leaders reach for support at the moment a decision is in front of them, not on a fixed schedule that ignores how real searches unfold.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY OFFER IT -->
+<section>
+  <div class="container">
+    <div class="section-head" style="max-width:720px;">
+      <p class="eyebrow">The business case</p>
+      <h2>Senior-level outplacement is the smart move, not just the kind one.</h2>
+      <p>Supporting the leaders you transition protects the company you are still running.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:24px;">
+      <div style="padding:28px; background:var(--gray-bg); border:1px solid var(--border); border-radius:var(--radius-md);">
+        <h4 style="margin-bottom:8px;">Reduce legal and reputational risk</h4>
+        <p style="font-size:0.9375rem; margin:0;">Demonstrate genuine goodwill at exit and lower the odds of a costly, public dispute.</p>
+      </div>
+      <div style="padding:28px; background:var(--gray-bg); border:1px solid var(--border); border-radius:var(--radius-md);">
+        <h4 style="margin-bottom:8px;">Protect valuable relationships</h4>
+        <p style="font-size:0.9375rem; margin:0;">The leaders you transition may become clients, partners, or boomerang hires. Leave on terms that keep the door open.</p>
+      </div>
+      <div style="padding:28px; background:var(--gray-bg); border:1px solid var(--border); border-radius:var(--radius-md);">
+        <h4 style="margin-bottom:8px;">Reassure the leaders who stay</h4>
+        <p style="font-size:0.9375rem; margin:0;">Your remaining team is watching how you treat their peers. A dignified exit protects morale and trust.</p>
+      </div>
+      <div style="padding:28px; background:var(--gray-bg); border:1px solid var(--border); border-radius:var(--radius-md);">
+        <h4 style="margin-bottom:8px;">Borrow our credibility</h4>
+        <p style="font-size:0.9375rem; margin:0;">Align your brand with a recognized executive coaching partner whose reputation reflects well on you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-gray" style="padding:64px 0 96px;">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Left: pitch -->
+      <div>
+        <p class="eyebrow" style="margin-bottom:8px;">Talk to us</p>
+        <h2 style="margin-bottom:20px;">Give your leaders a softer landing.</h2>
+        <p>Ready to support your departing leaders with senior-level outplacement? Tell us about your situation and we will craft a plan tailored to your company and the people you are transitioning. No pressure, no template. A real conversation about the outcome you want.</p>
+        <div style="margin-top:36px;">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">&#9993;</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:support@vmleader.com" style="color:var(--navy);">support@vmleader.com</a></p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">&#127760;</div>
+            <div>
+              <h4>Website</h4>
+              <p><a href="https://vmleader.com" target="_blank" rel="noopener" style="color:var(--navy);">vmleader.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div>
+        <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius-md); padding:40px;">
+          <h3 style="margin-bottom:4px;">Contact Us</h3>
+          <p style="font-size:0.9375rem; margin-bottom:32px;">We'll follow up within one business day.</p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-name">Full Name <span style="color:#C62828;">*</span></label>
+                <input type="text" id="c-name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="c-email">Work Email <span style="color:#C62828;">*</span></label>
+                <input type="email" id="c-email" placeholder="you@company.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-company">Company</label>
+                <input type="text" id="c-company" placeholder="Company name">
+              </div>
+              <div class="form-group">
+                <label for="c-role">Your Title</label>
+                <input type="text" id="c-role" placeholder="CHRO, CEO, People Ops, etc.">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-count">How many are you transitioning?</label>
+                <select id="c-count">
+                  <option value="">Select</option>
+                  <option>1</option>
+                  <option>2 to 5</option>
+                  <option>6 to 10</option>
+                  <option>11 to 25</option>
+                  <option>25+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="c-level">Level of those transitioning</label>
+                <select id="c-level">
+                  <option value="">Select</option>
+                  <option>Senior Manager</option>
+                  <option>Director</option>
+                  <option>VP</option>
+                  <option>C-suite</option>
+                  <option>Mixed levels</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="c-message">Tell us about your situation</label>
+              <textarea id="c-message" rows="4" placeholder="What is prompting the transition, and what would a good outcome look like?"></textarea>
+            </div>
+            <div id="contact-error" style="display:none; color:#C62828; font-size:0.875rem; margin-bottom:16px;"></div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">Start the Conversation &rarr;</button>
+            <p style="font-size:0.75rem; color:var(--ink-faint); text-align:center; margin-top:12px; margin-bottom:0;">We respond within one business day. Every conversation is confidential.</p>
+          </form>
+
+          <div id="form-success">
+            <div style="width:56px; height:56px; border-radius:50%; background:var(--icy); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 20px;">&#10003;</div>
+            <h3>Message received.</h3>
+            <p style="color:var(--ink-mid);">We'll follow up within one business day to talk through a plan for the leaders you're transitioning.</p>
+            <a href="eltscale.html" class="btn btn-navy mt-32">Explore Business Solutions &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <img src="vm-icon.png" alt="" style="height:36px; width:auto;">
+          <img src="vm-wordmark.png" alt="Vertical Motion" style="height:22px; width:auto;">
+        </div>
+        <p>We help good people become great leaders.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Executive Career</h5>
+        <ul>
+          <li><a href="eca.html">The Accelerator</a></li>
+          <li><a href="cfa.html">Corporate Freedom Accelerator</a></li>
+          <li><a href="elevate.html">Elevate Membership</a></li>
+          <li><a href="ldna.html">LDNA Assessment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="speaking.html">Book Tom to Speak</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Organizations</h5>
+        <ul>
+          <li><a href="index.html#scaling">ELT Scaling System</a></li>
+          <li><a href="https://eltscale.com">eltscale.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vertical Motion LLC. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html" style="color:inherit; opacity:0.6;">Privacy Policy</a></p>
+      <p><a href="https://vmleader.com" style="color:rgba(255,255,255,0.3);">vmleader.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+document.getElementById('nav-hamburger').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name  = document.getElementById('c-name').value.trim();
+  const email = document.getElementById('c-email').value.trim();
+  const errEl = document.getElementById('contact-error');
+
+  if (!name || !email) {
+    errEl.textContent = 'Please provide your name and email to continue.';
+    errEl.style.display = 'block';
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.textContent = 'Please enter a valid email address.';
+    errEl.style.display = 'block';
+    return;
+  }
+  errEl.style.display = 'none';
+
+  const btn = document.querySelector('#contact-form button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  const payload = {
+    type:      "outplacement",
+    timestamp: new Date().toISOString(),
+    name:      name,
+    email:     email,
+    company:   document.getElementById('c-company').value.trim(),
+    role:      document.getElementById('c-role').value.trim(),
+    count:     document.getElementById('c-count').value,
+    level:     document.getElementById('c-level').value,
+    message:   document.getElementById('c-message').value.trim(),
+    source:    "outplacement"
+  };
+
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbxMU4VK_ikUEgTLsdGeMZ1rR8r4y7HJWCqvrGDJ_FT091fJpuueeNSZrOCaevAGhvqy/exec";
+
+  fetch(GAS_URL, {
+    method: "POST",
+    body: JSON.stringify(payload)
+  })
+  .then(() => {
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  })
+  .catch(() => {
+    // Still show success: submission saved; network may have blocked the response
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  });
+});
+</script>
+</body>
+</html>

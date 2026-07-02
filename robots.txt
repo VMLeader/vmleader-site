@@ -1,0 +1,73 @@
+# robots.txt for vmleader.com
+# All well-behaved crawlers and AI agents are welcome to read and cite our content.
+
+User-agent: *
+Allow: /
+
+# --- Search engines ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# --- AI / LLM crawlers (explicitly allowed so our content can be cited) ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# --- Unlisted / utility pages kept out of the index ---
+User-agent: *
+Disallow: /referrals.html
+Disallow: /results.html
+Disallow: /commit_runner.html
+Disallow: /gh_push.html
+Disallow: /inject.html
+Disallow: /push_jen_photo.html
+Disallow: /upload_photo.html
+
+Sitemap: https://vmleader.com/sitemap.xml

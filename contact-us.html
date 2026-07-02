@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Vertical Motion</title>
+  <link rel="canonical" href="https://vmleader.com/contact-us.html">
+  <meta name="description" content="Questions about our programs, business solutions, speaking, or partnerships? Denver based, global team. We reply within one business day.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Vertical Motion">
+  <meta property="og:description" content="Questions about our programs, business solutions, speaking, or partnerships? Denver based, global team. We reply within one business day.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vmleader.com/contact-us.html">
+  <meta property="og:image" content="https://vmleader.com/assets/og/contact-us-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Contact Vertical Motion — Vertical Motion">
+  <meta property="og:site_name" content="Vertical Motion">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Vertical Motion">
+  <meta name="twitter:description" content="Questions about our programs, business solutions, speaking, or partnerships? Denver based, global team. We reply within one business day.">
+  <meta name="twitter:image" content="https://vmleader.com/assets/og/contact-us-og.png">
+  <meta name="twitter:image:alt" content="Contact Vertical Motion — Vertical Motion">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Leadership Team Risk Review",
+  "description": "A 45-minute call walking through your ELT Risk Scorecard results, quantifying the cost of your top risks, and providing a clear path to close the gaps.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Vertical Motion",
+    "url": "https://vmleader.com",
+    "email": "support@vmleader.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Complimentary Risk Review for qualified CEOs",
+    "availability": "https://schema.org/InStock"
+  },
+  "serviceType": "Executive Coaching Consultation",
+  "url": "https://vmleader.com/contact-us.html"
+}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="vm-favicon.png">
+  <style>
+    :root { --blue:#0693d8; --blue-dk:#057bb5; --blue-soft:#e6f4fb; --gray-vm:#878787; }
+    .nav-cta-group { display:flex; align-items:center; gap:10px; }
+    .btn-nav-outline {
+      display:inline-flex; align-items:center; gap:6px;
+      padding:9px 18px; border-radius:var(--radius-pill);
+      font-family:var(--font-body); font-size:0.8125rem; font-weight:600;
+      color:#fff; border:1px solid rgba(255,255,255,0.45); background:transparent;
+      white-space:nowrap; transition:var(--transition);
+    }
+    .btn-nav-outline:hover { background:rgba(255,255,255,0.08); border-color:#fff; }
+    @media (max-width:900px) { .nav-cta-group .btn-nav-outline { display:none; } }
+    .nav-links { overflow:visible; }
+    .has-dropdown { position:relative; display:flex; align-items:center; }
+    .dd-trigger { display:inline-flex; align-items:center; gap:5px; font-size:0.8125rem; font-weight:500; color:rgba(255,255,255,0.65); cursor:pointer; transition:color var(--transition); }
+    .dd-trigger:hover, .has-dropdown:hover .dd-trigger { color:#fff; }
+    .dd-trigger .caret { font-size:0.55rem; opacity:0.7; transition:transform var(--transition); }
+    .has-dropdown:hover .dd-trigger .caret { transform:rotate(180deg); }
+    .has-dropdown::after { content:''; position:absolute; top:100%; left:-24px; right:-24px; height:24px; }
+    .dropdown-panel { position:absolute; top:calc(100% + 16px); left:50%; transform:translateX(-50%) translateY(8px); background:#fff; border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow-xl); padding:26px 30px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.18s ease, transform 0.18s ease; z-index:200; }
+    .has-dropdown:hover .dropdown-panel { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+    .dd-grid { display:flex; gap:30px; }
+    .dd-col { display:flex; flex-direction:column; gap:22px; min-width:226px; }
+    .dd-group h6 { font-family:var(--font-body); font-size:0.62rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; padding-left:11px; }
+    .dd-item { display:block; padding:8px 11px; margin:0 -11px; border-radius:11px; transition:background var(--transition); }
+    .dd-item:hover { background:var(--gray-bg); }
+    .dd-item-t { display:block; font-size:0.875rem; font-weight:600; color:var(--ink); line-height:1.25; }
+    .dd-item:hover .dd-item-t { color:var(--blue); }
+    .dd-item-d { display:block; font-size:0.74rem; color:var(--ink-soft); margin-top:2px; line-height:1.3; }
+    .dd-cta { display:block; margin-top:22px; padding-top:15px; border-top:1px solid var(--border); font-family:var(--font-head); font-weight:700; font-size:0.8rem; color:var(--orange); }
+    .pill-free { display:inline-block; font-size:0.55rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#fff; background:var(--blue); padding:2px 6px; border-radius:10px; }
+    @media (max-width:720px) {
+      .has-dropdown { width:100%; flex-direction:column; align-items:flex-start; }
+      .dd-trigger { color:#fff; font-weight:700; font-size:0.95rem; }
+      .dd-trigger .caret, .has-dropdown::after { display:none; }
+      .dropdown-panel { position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; background:transparent; border:none; box-shadow:none; padding:12px 0 4px; }
+      .dd-grid { flex-direction:column; gap:18px; }
+      .dd-group h6 { color:rgba(207,232,239,0.5); }
+      .dd-item { margin:0; padding:8px 0; }
+      .dd-item:hover { background:transparent; }
+      .dd-item-t { color:#fff; }
+      .dd-item-d { color:rgba(207,232,239,0.5); }
+    }
+    #form-success { display: none; text-align: center; padding: 48px 32px; }
+    #form-success h3 { margin-bottom: 12px; }
+    /* keep native radio buttons (global form rule sets appearance:none) */
+    .form-group input[type="radio"] { width:auto; margin:0; padding:0; border:none; box-shadow:none; -webkit-appearance:radio; appearance:auto; accent-color:var(--navy); flex-shrink:0; }
+    .social-links { display:flex; gap:10px; flex-wrap:wrap; }
+    @media (max-width: 880px) {
+      .contact-grid { gap: 40px; }
+    }
+    @media (max-width: 480px) {
+      .contact-info-item { gap: 12px; }
+      .contact-info-icon { width: 40px; height: 40px; font-size: 1rem; flex-shrink: 0; }
+    }
+  
+    /* ===== MOBILE RESPONSIVE SWEEP (launch) ===== */
+    @media (max-width: 880px) {
+      [style*="grid-template-columns"],
+      .adv-stats,.auth-grid,.bk-hero-grid,.book-grid,.call-steps,.course-grid,.cred-grid,.cred-list,.dest-cards,.discover-grid,.ec-hero-grid,.es-hero-grid,.evt-gallery,.feat-grid,.fork-top,.form-grid,.form-row,.founder-card,.founders,.fw-cards,.fw5,.gallery,.hear-grid,.hero-start-grid,.img-split,.inc-grid,.incl-grid,.inside-grid,.inside-head,.lens-grid,.logo-grid,.math-grid,.mc-split,.offer-card,.pain-grid,.path,.pil-grid,.pillar-grid,.pillar3,.price-grid,.prob-grid,.proc-grid,.prog-cards,.proof-grid,.q-grid,.qual-banner,.qual-frame,.qual-list,.reel-grid,.rf-steps,.sec-split,.secret-grid,.shift-grid,.sound-list,.sp-hero-grid,.split,.split-grid,.split2,.start-grid,.stat-band,.stat-grid,.story-grid,.suite-grid,.team-grid,.tgrid,.topic-grid,.tstrip,.values-row,.vm-hero-grid,.vt-grid,.wantrap,.who-grid,.why-grid,.xc-hero-grid,.contact-grid,.footer-grid,.assessment-layout
+        { grid-template-columns: 1fr !important; }
+      section { padding-top: 56px !important; padding-bottom: 56px !important; }
+      h1 { font-size: 2rem !important; line-height: 1.14 !important; }
+      h2 { font-size: 1.55rem !important; }
+      .btn-lg, section .btn, .cta-actions .btn, .price-card .btn,
+      .es-hero-cta .btn, .xc-hero-cta .btn, .rf-hero-cta .btn, .ec-hero-cta .btn, .sp-hero-cta .btn, .bk-hero-grid .btn, .vm-hero-grid .btn
+        { width: 100% !important; justify-content: center !important; }
+      table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem !important; line-height: 1.16 !important; }
+      h2 { font-size: 1.3rem !important; }
+      h3 { font-size: 1.15rem !important; }
+      body { font-size: 0.95rem; }
+      section { padding-top: 42px !important; padding-bottom: 42px !important; }
+      .container { padding-left: 18px !important; padding-right: 18px !important; }
+    }
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZTY3R12GE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZZTY3R12GE');
+</script>
+<!-- VM first-touch attribution + form-conversion tracking -->
+<script>
+(function(){
+  var KEY='vm_first_touch';
+  var sp=new URLSearchParams(location.search);
+  function g(k){return sp.get(k)||'';}
+  var ft=null;
+  try{ft=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+  if(!ft){
+    ft={
+      referrer: document.referrer||'',
+      landing_page: location.pathname+location.search,
+      first_seen: new Date().toISOString(),
+      utm_source: g('utm_source'), utm_medium: g('utm_medium'),
+      utm_campaign: g('utm_campaign'), utm_term: g('utm_term'),
+      utm_content: g('utm_content'), gclid: g('gclid'), fbclid: g('fbclid')
+    };
+    try{localStorage.setItem(KEY,JSON.stringify(ft));}catch(e){}
+  }
+  function channel(a){
+    if(a.utm_source) return a.utm_source+(a.utm_medium?(' / '+a.utm_medium):'');
+    var r=a.referrer; if(!r) return 'direct';
+    try{
+      var h=new URL(r).hostname.replace(/^www\./,'');
+      if(/(^|\.)google\.|(^|\.)bing\.|duckduckgo|(^|\.)yahoo\./.test(h)) return 'organic: '+h;
+      if(h.indexOf('vmleader.com')!==-1) return 'internal';
+      return 'referral: '+h;
+    }catch(e){return r;}
+  }
+  ft.channel=channel(ft);
+  window.VM_ATTRIBUTION=ft;
+  var _fetch=window.fetch;
+  window.fetch=function(url,opts){
+    try{
+      var u=(typeof url==='string')?url:(url&&url.url)||'';
+      if(u.indexOf('script.google.com/macros')!==-1 && opts && typeof opts.body==='string'){
+        var d=JSON.parse(opts.body);
+        if(d && typeof d==='object'){
+          d.attr_referrer=ft.referrer; d.attr_channel=ft.channel;
+          d.attr_landing=ft.landing_page; d.attr_first_seen=ft.first_seen;
+          d.attr_utm_source=ft.utm_source; d.attr_utm_medium=ft.utm_medium;
+          d.attr_utm_campaign=ft.utm_campaign; d.attr_utm_term=ft.utm_term;
+          d.attr_utm_content=ft.utm_content; d.attr_gclid=ft.gclid; d.attr_fbclid=ft.fbclid;
+          opts=Object.assign({},opts,{body:JSON.stringify(d)});
+          if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}
+        }
+      }
+    }catch(e){}
+    return _fetch.call(this,url,opts);
+  };
+})();
+</script>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Vertical Motion home" style="gap:9px;">
+      <img src="vm-icon.png" alt="" style="height:30px; width:auto;">
+      <img src="vm-wordmark.png" alt="Vertical Motion" style="height:19px; width:auto;">
+    </a>
+    <div class="nav-links" id="nav-links">
+      <div class="has-dropdown">
+        <a href="exec.html" class="dd-trigger">Executive Career <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col"><div class="dd-group"><h6>Coaching Programs</h6>
+              <a class="dd-item" href="eca.html"><span class="dd-item-t">Executive Career Accelerator</span><span class="dd-item-d">6-month 1:1 program to the executive ranks</span></a>
+              <a class="dd-item" href="cfa.html"><span class="dd-item-t">Corporate Freedom Accelerator</span><span class="dd-item-d">Leave corporate and build your own practice</span></a>
+              <a class="dd-item" href="mastermind.html"><span class="dd-item-t">Executive Mastermind Coaching</span><span class="dd-item-d">Exclusive 1:1 coaching for C-suite members</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Membership &amp; Self-Guided</h6>
+              <a class="dd-item" href="elevate.html"><span class="dd-item-t">Elevate Membership</span><span class="dd-item-d">Framework plus community</span></a>
+              <a class="dd-item" href="book.html"><span class="dd-item-t">The Executive Career Handbook</span><span class="dd-item-d">The book and framework</span></a>
+              <a class="dd-item" href="courses.html"><span class="dd-item-t">Courses &amp; Products</span><span class="dd-item-d">Standalone trainings and mini-courses</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Assessments</h6>
+              <a class="dd-item" href="ldna.html"><span class="dd-item-t">LDNA Assessment</span><span class="dd-item-d">See how you naturally lead in 6 minutes</span></a>
+              <a class="dd-item" href="foundations-report.html"><span class="dd-item-t">Leadership Foundations Report&trade;</span><span class="dd-item-d">Deep self-discovery and fit profile</span></a>
+            </div></div>
+          </div>
+          <a href="index.html#career" class="dd-cta">Explore Career Acceleration &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="eltscale.html" class="dd-trigger">Business Solutions <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col">
+              <div class="dd-group"><h6>Start Here</h6>
+                <a class="dd-item" href="scorecard.html"><span class="dd-item-t"><span class="pill-free">Free</span> ELT Risk Assessment</span><span class="dd-item-d">Score your executive leadership team in 7 minutes</span></a></div>
+              <div class="dd-group"><h6>Diagnose &amp; Scale</h6>
+                <a class="dd-item" href="elt-diagnostic.html"><span class="dd-item-t">ELT Diagnostic</span><span class="dd-item-d">Data-backed audit of your executive team</span></a>
+                <a class="dd-item" href="ELT-Scaling-Suite.html"><span class="dd-item-t">ELT Scaling Suite</span><span class="dd-item-d">Ongoing executive team performance system</span></a></div>
+            </div>
+            <div class="dd-col"><div class="dd-group"><h6>Ongoing Services</h6>
+              <a class="dd-item" href="executive-coaching.html"><span class="dd-item-t">Executive Coaching</span><span class="dd-item-d">1:1 coaching for your leadership team</span></a>
+              <a class="dd-item" href="outplacement.html"><span class="dd-item-t">Executive Outplacement</span><span class="dd-item-d">Transition exiting executives with care</span></a>
+              <a class="dd-item" href="ceo-advisory.html"><span class="dd-item-t">CEO Advisory</span><span class="dd-item-d">On-call strategic counsel for the CEO</span></a>
+            </div></div>
+            <div class="dd-col">
+              <div class="dd-group"><h6>Assessments</h6>
+                <a class="dd-item" href="ldna-biz.html"><span class="dd-item-t">LDNA &amp; Team Foundations Reports</span><span class="dd-item-d">Map your team's drivers and dynamics</span></a></div>
+              <div class="dd-group"><h6>Specialized</h6>
+                <a class="dd-item" href="baic.html"><span class="dd-item-t">BAIC (The Saunter Group)</span><span class="dd-item-d">Partner-delivered advisory suite</span></a></div>
+            </div>
+          </div>
+          <a href="index.html#scaling" class="dd-cta">Explore Enterprise Solutions &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="about.html" class="dd-trigger">About <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid"><div class="dd-col"><div class="dd-group"><h6>About Vertical Motion</h6>
+            <a class="dd-item" href="about.html#why"><span class="dd-item-t">Our Why</span><span class="dd-item-d">Tom's story and the mission behind VM</span></a>
+            <a class="dd-item" href="about.html#team"><span class="dd-item-t">Our Team</span><span class="dd-item-d">Meet the coaches behind Vertical Motion</span></a>
+            <a class="dd-item" href="speaking.html"><span class="dd-item-t">Book Tom to Speak</span><span class="dd-item-d">Bring Tom to your event or stage</span></a>
+          </div></div></div>
+        </div>
+      </div>
+      <a href="https://community.vmleader.com/">Member Login</a>
+      <a href="contact-us.html">Contact</a>
+    </div>
+    <div class="nav-cta-group">
+      <a href="exec.html" class="btn-nav-outline" style="background:var(--blue); border-color:var(--blue); color:#fff;">Advance Your Career</a>
+      <a href="eltscale.html" class="btn-nav-cta">Scale Your Team &rarr;</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="background:var(--navy); padding:120px 0 56px; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 100% 0%, rgba(91,124,153,0.2) 0%, transparent 60%); pointer-events:none;"></div>
+  <div class="container" style="position:relative; z-index:1;">
+    <p class="eyebrow" style="color:rgba(207,232,239,0.7);">Contact</p>
+    <h1 style="color:white; max-width:640px; margin-bottom:16px;">Let's talk.</h1>
+    <p style="color:rgba(207,232,239,0.85); max-width:600px; font-size:1.0625rem; line-height:1.7;">Questions about our programs, business solutions, speaking, or a partnership? Tell us what you need and the right person will get back to you within one business day.</p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section style="padding:64px 0 96px;">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: info -->
+      <div>
+        <p class="eyebrow" style="margin-bottom:8px;">Where we are</p>
+        <h3 style="margin-bottom:16px;">Denver based, global team.</h3>
+        <p>Vertical Motion is headquartered in the Denver, Colorado metro area, with team members across the United States, Europe, and the Caribbean. Wherever you are, there's a good chance we already work in your time zone.</p>
+
+        <div style="margin-top:36px;">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">&#9993;</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:support@vmleader.com" style="color:var(--navy);">support@vmleader.com</a></p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">&#127760;</div>
+            <div>
+              <h4>Website</h4>
+              <p><a href="https://vmleader.com" target="_blank" rel="noopener" style="color:var(--navy);">vmleader.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:36px; padding:24px; background:var(--gray-bg); border-radius:var(--radius-md); border-left:3px solid var(--navy);">
+          <p style="font-size:0.875rem; font-weight:700; color:var(--ink); margin-bottom:6px;">Prefer to explore first?</p>
+          <p style="font-size:0.875rem; color:var(--ink-mid); margin-bottom:16px;">See where you fit before you reach out.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a href="exec.html" class="btn btn-outline-navy btn-pill" style="font-size:0.82rem;">Executive Career &rarr;</a>
+            <a href="eltscale.html" class="btn btn-outline-navy btn-pill" style="font-size:0.82rem;">Business Solutions &rarr;</a>
+          </div>
+        </div>
+
+        <div style="margin-top:36px;">
+          <p style="font-size:0.8rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:12px;">Follow along</p>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@tomcoxvm" target="_blank" rel="noopener" class="btn btn-outline-navy btn-pill" style="font-size:0.82rem;">YouTube</a>
+            <a href="https://www.instagram.com/tomcoxvm/" target="_blank" rel="noopener" class="btn btn-outline-navy btn-pill" style="font-size:0.82rem;">Instagram</a>
+            <a href="https://www.linkedin.com/in/-tom/" target="_blank" rel="noopener" class="btn btn-outline-navy btn-pill" style="font-size:0.82rem;">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div>
+        <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius-md); padding:40px;">
+          <h3 style="margin-bottom:4px;">Send us a message</h3>
+          <p style="font-size:0.9375rem; margin-bottom:32px;">We'll reply within one business day.</p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-name">Name <span style="color:#C62828;">*</span></label>
+                <input type="text" id="c-name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="c-email">Email <span style="color:#C62828;">*</span></label>
+                <input type="email" id="c-email" placeholder="you@company.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-role">Role</label>
+                <input type="text" id="c-role" placeholder="Your title">
+              </div>
+              <div class="form-group">
+                <label for="c-phone">Phone</label>
+                <input type="tel" id="c-phone" placeholder="Optional">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Are you looking for?</label>
+              <div style="display:flex; flex-direction:column; gap:11px; margin-top:8px;">
+                <label style="display:flex; align-items:center; gap:9px; font-size:0.9375rem; cursor:pointer;"><input type="radio" name="interest" value="Executive Career Programs"> Executive Career Programs</label>
+                <label style="display:flex; align-items:center; gap:9px; font-size:0.9375rem; cursor:pointer;"><input type="radio" name="interest" value="Business Solutions"> Business Solutions</label>
+                <label style="display:flex; align-items:center; gap:9px; font-size:0.9375rem; cursor:pointer;"><input type="radio" name="interest" value="Other"> Other</label>
+              </div>
+            </div>
+            <div class="form-group" id="other-wrap" style="display:none;">
+              <label for="c-other">Tell us more</label>
+              <input type="text" id="c-other" placeholder="Describe here">
+            </div>
+            <div class="form-group">
+              <label for="c-message">What can we help with?</label>
+              <textarea id="c-message" rows="4" placeholder="Tell us a little about what you need..."></textarea>
+            </div>
+            <div id="contact-error" style="display:none; color:#C62828; font-size:0.875rem; margin-bottom:16px;"></div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">Send message &rarr;</button>
+            <p style="font-size:0.75rem; color:var(--ink-faint); text-align:center; margin-top:12px; margin-bottom:0;">We respond within one business day.</p>
+          </form>
+
+          <div id="form-success">
+            <div style="width:56px; height:56px; border-radius:50%; background:var(--icy); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 20px;">&#10003;</div>
+            <h3>Message received.</h3>
+            <p style="color:var(--ink-mid);">Thanks for reaching out. The right person at Vertical Motion will get back to you within one business day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <img src="vm-icon.png" alt="" style="height:36px; width:auto;">
+          <img src="vm-wordmark.png" alt="Vertical Motion" style="height:22px; width:auto;">
+        </div>
+        <p>We help good people become great leaders.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Executive Career</h5>
+        <ul>
+          <li><a href="eca.html">The Accelerator</a></li>
+          <li><a href="cfa.html">Corporate Freedom Accelerator</a></li>
+          <li><a href="elevate.html">Elevate Membership</a></li>
+          <li><a href="ldna.html">LDNA Assessment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="speaking.html">Book Tom to Speak</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Organizations</h5>
+        <ul>
+          <li><a href="index.html#scaling">ELT Scaling System</a></li>
+          <li><a href="https://eltscale.com">eltscale.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vertical Motion LLC. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html" style="color:inherit; opacity:0.6;">Privacy Policy</a></p>
+      <p><a href="https://vmleader.com" style="color:rgba(255,255,255,0.3);">vmleader.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+document.getElementById('nav-hamburger').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+
+// Toggle the "Other" describe field
+document.querySelectorAll('input[name="interest"]').forEach(function(r){
+  r.addEventListener('change', function(){
+    document.getElementById('other-wrap').style.display = (this.value === 'Other') ? 'block' : 'none';
+  });
+});
+
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name  = document.getElementById('c-name').value.trim();
+  var email = document.getElementById('c-email').value.trim();
+  var err   = document.getElementById('contact-error');
+  if(!name || !email){ err.textContent = 'Please add your name and email.'; err.style.display='block'; return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ err.textContent = 'Please enter a valid email address.'; err.style.display='block'; return; }
+  err.style.display='none';
+  var interestEl = document.querySelector('input[name="interest"]:checked');
+  var btn = document.querySelector('#contact-form button[type="submit"]');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  var payload = {
+    type: "contact",
+    source: "contact_us",
+    timestamp: new Date().toISOString(),
+    name: name,
+    email: email,
+    role: document.getElementById('c-role').value.trim(),
+    phone: document.getElementById('c-phone').value.trim(),
+    interest: interestEl ? interestEl.value : "",
+    interest_other: document.getElementById('c-other').value.trim(),
+    message: document.getElementById('c-message').value.trim()
+  };
+  var GAS_URL = "https://script.google.com/macros/s/AKfycbxMU4VK_ikUEgTLsdGeMZ1rR8r4y7HJWCqvrGDJ_FT091fJpuueeNSZrOCaevAGhvqy/exec";
+  fetch(GAS_URL, { method:"POST", body: JSON.stringify(payload) }).then(done).catch(done);
+  function done(){
+    document.getElementById('contact-form').style.display='none';
+    document.getElementById('form-success').style.display='block';
+  }
+});
+</script>
+</body>
+</html>

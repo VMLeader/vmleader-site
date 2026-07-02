@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LDNA Assessment | Vertical Motion</title>
+  <link rel="canonical" href="https://vmleader.com/ldna.html">
+  <meta name="description" content="In 6 minutes, see how you actually lead, where your role asks you to adapt, and what that gap costs you. Free behavioral assessment.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="LDNA Assessment">
+  <meta property="og:description" content="In 6 minutes, see how you actually lead, where your role asks you to adapt, and what that gap costs you. Free behavioral assessment.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vmleader.com/ldna.html">
+  <meta property="og:image" content="https://vmleader.com/assets/og/ldna-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="LDNA Assessment — Vertical Motion">
+  <meta property="og:site_name" content="Vertical Motion">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LDNA Assessment">
+  <meta name="twitter:description" content="In 6 minutes, see how you actually lead, where your role asks you to adapt, and what that gap costs you. Free behavioral assessment.">
+  <meta name="twitter:image" content="https://vmleader.com/assets/og/ldna-og.png">
+  <meta name="twitter:image:alt" content="LDNA Assessment — Vertical Motion">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Leadership Drivers and Natural Aptitudes (LDNA) Assessment",
+      "description": "A free 6-minute behavioral assessment revealing how you naturally lead across 7 dimensions, where your role demands adaptation, and what that gap costs you.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Vertical Motion",
+        "url": "https://vmleader.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "serviceType": "Leadership Behavioral Assessment",
+      "url": "https://vmleader.com/ldna.html"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the 7 LDNA dimensions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Drive and Independence (DR), Social Energy (SE), Pace and Patience (PA), Structure and Order (SO), Creative Battery (CB), Logic and Analysis (LA), and Vision and Ideas (VI). Each captures a distinct driver of natural leadership behavior."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is adaptive load?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Adaptive load is the energy spent adapting your natural style to meet role demands. A large gap between natural and adapted scores indicates high adaptive load, which shows up as exhaustion, disengagement, and leadership inconsistency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the LDNA take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Approximately 6 minutes. You choose words that fit how you naturally behave and how your current role requires you to behave. Results are immediate and personalized."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="vm-favicon.png">
+  <style>
+    :root { --blue:#0693d8; --blue-dk:#057bb5; --blue-soft:#e6f4fb; --gray-vm:#878787; }
+    .nav-cta-group { display:flex; align-items:center; gap:10px; }
+    .nav-links { overflow:visible; }
+    .has-dropdown { position:relative; display:flex; align-items:center; }
+    .dd-trigger { display:inline-flex; align-items:center; gap:5px; font-size:0.8125rem; font-weight:500; color:rgba(255,255,255,0.65); cursor:pointer; transition:color var(--transition); }
+    .dd-trigger:hover, .has-dropdown:hover .dd-trigger { color:#fff; }
+    .dd-trigger .caret { font-size:0.55rem; opacity:0.7; transition:transform var(--transition); }
+    .has-dropdown:hover .dd-trigger .caret { transform:rotate(180deg); }
+    .has-dropdown::after { content:''; position:absolute; top:100%; left:-24px; right:-24px; height:24px; }
+    .dropdown-panel { position:absolute; top:calc(100% + 16px); left:50%; transform:translateX(-50%) translateY(8px); background:#fff; border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow-xl); padding:26px 30px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.18s ease, transform 0.18s ease; z-index:200; }
+    .has-dropdown:hover .dropdown-panel { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+    .dd-grid { display:flex; gap:30px; }
+    .dd-col { display:flex; flex-direction:column; gap:22px; min-width:226px; }
+    .dd-group h6 { font-family:var(--font-body); font-size:0.62rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; padding-left:11px; }
+    .dd-item { display:block; padding:8px 11px; margin:0 -11px; border-radius:11px; transition:background var(--transition); }
+    .dd-item:hover { background:var(--gray-bg); }
+    .dd-item-t { display:block; font-size:0.875rem; font-weight:600; color:var(--ink); line-height:1.25; }
+    .dd-item:hover .dd-item-t { color:var(--blue); }
+    .dd-item-d { display:block; font-size:0.74rem; color:var(--ink-soft); margin-top:2px; line-height:1.3; }
+    .dd-cta { display:block; margin-top:22px; padding-top:15px; border-top:1px solid var(--border); font-family:var(--font-head); font-weight:700; font-size:0.8rem; color:var(--orange); }
+    .pill-free { display:inline-block; font-size:0.55rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#fff; background:var(--blue); padding:2px 6px; border-radius:10px; }
+    @media (max-width: 880px) {
+      .ldna-dim { gap: 16px; }
+    }
+    @media (max-width:720px) {
+      .has-dropdown { width:100%; flex-direction:column; align-items:flex-start; }
+      .dd-trigger { color:#fff; font-weight:700; font-size:0.95rem; }
+      .dd-trigger .caret, .has-dropdown::after { display:none; }
+      .dropdown-panel { position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; background:transparent; border:none; box-shadow:none; padding:12px 0 4px; }
+      .dd-grid { flex-direction:column; gap:18px; }
+      .dd-group h6 { color:rgba(207,232,239,0.5); }
+      .dd-item { margin:0; padding:8px 0; }
+      .dd-item:hover { background:transparent; }
+      .dd-item-t { color:#fff; }
+      .dd-item-d { color:rgba(207,232,239,0.5); }
+    }
+    @media (max-width: 480px) {
+      .ldna-dim-code { width: 44px; height: 44px; font-size: 0.9375rem; }
+    }
+  
+    /* ===== MOBILE RESPONSIVE SWEEP (launch) ===== */
+    @media (max-width: 880px) {
+      [style*="grid-template-columns"],
+      .adv-stats,.auth-grid,.bk-hero-grid,.book-grid,.call-steps,.course-grid,.cred-grid,.cred-list,.dest-cards,.discover-grid,.ec-hero-grid,.es-hero-grid,.evt-gallery,.feat-grid,.fork-top,.form-grid,.form-row,.founder-card,.founders,.fw-cards,.fw5,.gallery,.hear-grid,.hero-start-grid,.img-split,.inc-grid,.incl-grid,.inside-grid,.inside-head,.lens-grid,.logo-grid,.math-grid,.mc-split,.offer-card,.pain-grid,.path,.pil-grid,.pillar-grid,.pillar3,.price-grid,.prob-grid,.proc-grid,.prog-cards,.proof-grid,.q-grid,.qual-banner,.qual-frame,.qual-list,.reel-grid,.rf-steps,.sec-split,.secret-grid,.shift-grid,.sound-list,.sp-hero-grid,.split,.split-grid,.split2,.start-grid,.stat-band,.stat-grid,.story-grid,.suite-grid,.team-grid,.tgrid,.topic-grid,.tstrip,.values-row,.vm-hero-grid,.vt-grid,.wantrap,.who-grid,.why-grid,.xc-hero-grid,.contact-grid,.footer-grid,.assessment-layout
+        { grid-template-columns: 1fr !important; }
+      section { padding-top: 56px !important; padding-bottom: 56px !important; }
+      h1 { font-size: 2rem !important; line-height: 1.14 !important; }
+      h2 { font-size: 1.55rem !important; }
+      .btn-lg, section .btn, .cta-actions .btn, .price-card .btn,
+      .es-hero-cta .btn, .xc-hero-cta .btn, .rf-hero-cta .btn, .ec-hero-cta .btn, .sp-hero-cta .btn, .bk-hero-grid .btn, .vm-hero-grid .btn
+        { width: 100% !important; justify-content: center !important; }
+      table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem !important; line-height: 1.16 !important; }
+      h2 { font-size: 1.3rem !important; }
+      h3 { font-size: 1.15rem !important; }
+      body { font-size: 0.95rem; }
+      section { padding-top: 42px !important; padding-bottom: 42px !important; }
+      .container { padding-left: 18px !important; padding-right: 18px !important; }
+    }
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZTY3R12GE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZZTY3R12GE');
+</script>
+<!-- VM first-touch attribution + form-conversion tracking -->
+<script>
+(function(){
+  var KEY='vm_first_touch';
+  var sp=new URLSearchParams(location.search);
+  function g(k){return sp.get(k)||'';}
+  var ft=null;
+  try{ft=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+  if(!ft){
+    ft={
+      referrer: document.referrer||'',
+      landing_page: location.pathname+location.search,
+      first_seen: new Date().toISOString(),
+      utm_source: g('utm_source'), utm_medium: g('utm_medium'),
+      utm_campaign: g('utm_campaign'), utm_term: g('utm_term'),
+      utm_content: g('utm_content'), gclid: g('gclid'), fbclid: g('fbclid')
+    };
+    try{localStorage.setItem(KEY,JSON.stringify(ft));}catch(e){}
+  }
+  function channel(a){
+    if(a.utm_source) return a.utm_source+(a.utm_medium?(' / '+a.utm_medium):'');
+    var r=a.referrer; if(!r) return 'direct';
+    try{
+      var h=new URL(r).hostname.replace(/^www\./,'');
+      if(/(^|\.)google\.|(^|\.)bing\.|duckduckgo|(^|\.)yahoo\./.test(h)) return 'organic: '+h;
+      if(h.indexOf('vmleader.com')!==-1) return 'internal';
+      return 'referral: '+h;
+    }catch(e){return r;}
+  }
+  ft.channel=channel(ft);
+  window.VM_ATTRIBUTION=ft;
+  var _fetch=window.fetch;
+  window.fetch=function(url,opts){
+    try{
+      var u=(typeof url==='string')?url:(url&&url.url)||'';
+      if(u.indexOf('script.google.com/macros')!==-1 && opts && typeof opts.body==='string'){
+        var d=JSON.parse(opts.body);
+        if(d && typeof d==='object'){
+          d.attr_referrer=ft.referrer; d.attr_channel=ft.channel;
+          d.attr_landing=ft.landing_page; d.attr_first_seen=ft.first_seen;
+          d.attr_utm_source=ft.utm_source; d.attr_utm_medium=ft.utm_medium;
+          d.attr_utm_campaign=ft.utm_campaign; d.attr_utm_term=ft.utm_term;
+          d.attr_utm_content=ft.utm_content; d.attr_gclid=ft.gclid; d.attr_fbclid=ft.fbclid;
+          opts=Object.assign({},opts,{body:JSON.stringify(d)});
+          if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}
+        }
+      }
+    }catch(e){}
+    return _fetch.call(this,url,opts);
+  };
+})();
+</script>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Vertical Motion home" style="gap:9px;">
+      <img src="vm-icon.png" alt="" style="height:30px; width:auto;">
+      <img src="vm-wordmark.png" alt="Vertical Motion" style="height:19px; width:auto;">
+    </a>
+    <div class="nav-links" id="nav-links">
+      <div class="has-dropdown">
+        <a href="exec.html" class="dd-trigger">Executive Career <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col"><div class="dd-group"><h6>Coaching Programs</h6>
+              <a class="dd-item" href="eca.html"><span class="dd-item-t">Executive Career Accelerator</span><span class="dd-item-d">6-month 1:1 program to the executive ranks</span></a>
+              <a class="dd-item" href="cfa.html"><span class="dd-item-t">Corporate Freedom Accelerator</span><span class="dd-item-d">Leave corporate and build your own practice</span></a>
+              <a class="dd-item" href="mastermind.html"><span class="dd-item-t">Executive Mastermind Coaching</span><span class="dd-item-d">Exclusive 1:1 coaching for C-suite members</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Membership &amp; Self-Guided</h6>
+              <a class="dd-item" href="elevate.html"><span class="dd-item-t">Elevate Membership</span><span class="dd-item-d">Framework plus community</span></a>
+              <a class="dd-item" href="book.html"><span class="dd-item-t">The Executive Career Handbook</span><span class="dd-item-d">The book and framework</span></a>
+              <a class="dd-item" href="courses.html"><span class="dd-item-t">Courses &amp; Products</span><span class="dd-item-d">Standalone trainings and mini-courses</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Assessments</h6>
+              <a class="dd-item" href="ldna.html"><span class="dd-item-t">LDNA Assessment</span><span class="dd-item-d">See how you naturally lead in 6 minutes</span></a>
+              <a class="dd-item" href="foundations-report.html"><span class="dd-item-t">Leadership Foundations Report&trade;</span><span class="dd-item-d">Deep self-discovery and fit profile</span></a>
+            </div></div>
+          </div>
+          <a href="index.html#career" class="dd-cta">Explore Career Acceleration &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="eltscale.html" class="dd-trigger">Business Solutions <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col">
+              <div class="dd-group"><h6>Start Here</h6>
+                <a class="dd-item" href="scorecard.html"><span class="dd-item-t"><span class="pill-free">Free</span> ELT Risk Assessment</span><span class="dd-item-d">Score your executive leadership team in 7 minutes</span></a></div>
+              <div class="dd-group"><h6>Diagnose &amp; Scale</h6>
+                <a class="dd-item" href="elt-diagnostic.html"><span class="dd-item-t">ELT Diagnostic</span><span class="dd-item-d">Data-backed audit of your executive team</span></a>
+                <a class="dd-item" href="ELT-Scaling-Suite.html"><span class="dd-item-t">ELT Scaling Suite</span><span class="dd-item-d">Ongoing executive team performance system</span></a></div>
+            </div>
+            <div class="dd-col"><div class="dd-group"><h6>Ongoing Services</h6>
+              <a class="dd-item" href="executive-coaching.html"><span class="dd-item-t">Executive Coaching</span><span class="dd-item-d">1:1 coaching for your leadership team</span></a>
+              <a class="dd-item" href="outplacement.html"><span class="dd-item-t">Executive Outplacement</span><span class="dd-item-d">Transition exiting executives with care</span></a>
+              <a class="dd-item" href="ceo-advisory.html"><span class="dd-item-t">CEO Advisory</span><span class="dd-item-d">On-call strategic counsel for the CEO</span></a>
+            </div></div>
+            <div class="dd-col">
+              <div class="dd-group"><h6>Assessments</h6>
+                <a class="dd-item" href="ldna-biz.html"><span class="dd-item-t">LDNA &amp; Team Foundations Reports</span><span class="dd-item-d">Map your team's drivers and dynamics</span></a></div>
+              <div class="dd-group"><h6>Specialized</h6>
+                <a class="dd-item" href="baic.html"><span class="dd-item-t">BAIC (The Saunter Group)</span><span class="dd-item-d">Partner-delivered advisory suite</span></a></div>
+            </div>
+          </div>
+          <a href="index.html#scaling" class="dd-cta">Explore Enterprise Solutions &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="about.html" class="dd-trigger">About <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid"><div class="dd-col"><div class="dd-group"><h6>About Vertical Motion</h6>
+            <a class="dd-item" href="about.html#why"><span class="dd-item-t">Our Why</span><span class="dd-item-d">Tom's story and the mission behind VM</span></a>
+            <a class="dd-item" href="about.html#team"><span class="dd-item-t">Our Team</span><span class="dd-item-d">Meet the coaches behind Vertical Motion</span></a>
+            <a class="dd-item" href="speaking.html"><span class="dd-item-t">Book Tom to Speak</span><span class="dd-item-d">Bring Tom to your event or stage</span></a>
+          </div></div></div>
+        </div>
+      </div>
+      <a href="https://community.vmleader.com/">Member Login</a>
+      <a href="contact-us.html">Contact</a>
+    </div>
+    <div class="nav-cta-group">
+      <a href="https://thesauntergroup.com/ldna/" target="_blank" rel="noopener" class="btn-nav-cta">Take the LDNA &rarr;</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="background:var(--navy); padding:140px 0 80px; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 0% 100%, rgba(91,124,153,0.2) 0%, transparent 60%), radial-gradient(ellipse 60% 80% at 100% 0%, rgba(0,0,90,0.4) 0%, transparent 50%); pointer-events:none;"></div>
+  <div class="container">
+    <div class="split-grid" style="display:grid; grid-template-columns:1fr 400px; gap:64px; align-items:center; position:relative; z-index:1;">
+      <div>
+        <span class="badge" style="background:rgba(207,232,239,0.15); color:rgba(207,232,239,0.85); margin-bottom:20px;">Free &mdash; 6 Minutes</span>
+        <h1 style="color:white; margin-bottom:16px;">Leadership Drivers &amp; Natural Aptitudes</h1>
+        <p style="color:rgba(207,232,239,0.85); font-size:1.125rem; line-height:1.7; margin-bottom:32px; max-width:560px;">In 6 minutes you'll see how you actually lead, where your current role is asking you to behave differently, and what that gap is costing you every day.</p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="https://thesauntergroup.com/ldna/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Take the LDNA Now &rarr;</a>
+          <a href="#dimensions" class="btn btn btn-outline-navy btn-lg">See the 7 dimensions</a>
+        </div>
+        <div style="display:flex; gap:32px; margin-top:40px; padding-top:36px; border-top:1px solid rgba(255,255,255,0.12); flex-wrap:wrap;">
+          <div>
+            <strong style="display:block; font-family:var(--font-head); font-size:1.5rem; color:white;">6 min</strong>
+            <span style="font-size:0.8125rem; color:rgba(207,232,239,0.65);">Completion time</span>
+          </div>
+          <div>
+            <strong style="display:block; font-family:var(--font-head); font-size:1.5rem; color:white;">7</strong>
+            <span style="font-size:0.8125rem; color:rgba(207,232,239,0.65);">Behavioral dimensions</span>
+          </div>
+          <div>
+            <strong style="display:block; font-family:var(--font-head); font-size:1.5rem; color:white;">Free</strong>
+            <span style="font-size:0.8125rem; color:rgba(207,232,239,0.65);">No credit card required</span>
+          </div>
+        </div>
+      </div>
+      <!-- Hero visual -->
+      <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-lg); padding:32px;">
+        <p style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(207,232,239,0.5); margin-bottom:20px;">Your LDNA Profile</p>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:0.8125rem; color:rgba(255,255,255,0.8); margin-bottom:5px; font-weight:500;">
+              <span>Drive + Independence (DR)</span>
+              <span style="color:var(--orange);">Natural</span>
+            </div>
+            <div style="display:flex; gap:4px;">
+              <div style="flex:1; height:8px; border-radius:4px; background:var(--orange); opacity:0.9;"></div>
+              <div style="flex:1; height:8px; border-radius:4px; background:rgba(255,255,255,0.15);"></div>
+              <div style="font-size:0.7rem; color:rgba(207,232,239,0.5); padding-left:8px; line-height:8px;">vs. Adapted</div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:0.8125rem; color:rgba(255,255,255,0.8); margin-bottom:5px; font-weight:500;">
+              <span>Social Energy (SE)</span>
+              <span style="color:var(--icy);">Gap: Low</span>
+            </div>
+            <div style="display:flex; gap:4px;">
+              <div style="flex:0.6; height:8px; border-radius:4px; background:var(--slate); opacity:0.9;"></div>
+              <div style="flex:1.4; height:8px; border-radius:4px; background:rgba(255,255,255,0.15);"></div>
+              <div style="font-size:0.7rem; color:rgba(207,232,239,0.5); padding-left:8px; line-height:8px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:0.8125rem; color:rgba(255,255,255,0.8); margin-bottom:5px; font-weight:500;">
+              <span>Structure + Order (SO)</span>
+              <span style="color:rgba(255,100,100,0.9);">Gap: High</span>
+            </div>
+            <div style="display:flex; gap:4px;">
+              <div style="flex:0.3; height:8px; border-radius:4px; background:rgba(255,100,100,0.7); opacity:0.9;"></div>
+              <div style="flex:1.7; height:8px; border-radius:4px; background:rgba(255,255,255,0.15);"></div>
+              <div style="font-size:0.7rem; color:rgba(207,232,239,0.5); padding-left:8px; line-height:8px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:0.8125rem; color:rgba(255,255,255,0.8); margin-bottom:5px; font-weight:500;">
+              <span>Vision + Ideas (VI)</span>
+              <span style="color:var(--orange);">Natural</span>
+            </div>
+            <div style="display:flex; gap:4px;">
+              <div style="flex:1.8; height:8px; border-radius:4px; background:var(--orange); opacity:0.9;"></div>
+              <div style="flex:0.2; height:8px; border-radius:4px; background:rgba(255,255,255,0.15);"></div>
+              <div style="font-size:0.7rem; color:rgba(207,232,239,0.5); padding-left:8px; line-height:8px;"></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.1);">
+          <p style="font-size:0.8rem; color:rgba(207,232,239,0.55); margin:0; line-height:1.6;">Sample profile. Your results are unique to how you lead, and how your role asks you to adapt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT IS LDNA -->
+<section>
+  <div class="container">
+    <div class="split-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+      <div>
+        <p class="eyebrow">What is LDNA</p>
+        <h2 style="margin-bottom:20px;">Pick the words that fit. We do the math.</h2>
+        <p>LDNA is a behavioral assessment built for leaders, not HR professionals. Seven dimensions grounded in established behavioral science. Each one captures a different driver of how you naturally lead, and how your role asks you to adapt.</p>
+        <p style="margin-top:16px;">The output isn't a personality type or a color. It's a precise read on the gap between how you're wired and how your current role demands you operate, and an honest look at what that adaptation is costing you in energy, effectiveness, and satisfaction.</p>
+        <p style="margin-top:16px;">Most leaders see it immediately. The "a-ha" isn't "I learned something new about myself." It's "someone finally described something I've always felt but never had language for."</p>
+      </div>
+      <div>
+        <div style="padding:32px; background:var(--gray-bg); border-radius:var(--radius-md); border:1px solid var(--border);">
+          <p class="eyebrow" style="margin-bottom:16px;">What you'll walk away with</p>
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div style="width:32px; height:32px; border-radius:var(--radius-sm); background:var(--navy); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.75rem; flex-shrink:0;">1</div>
+              <p style="font-size:0.9375rem; margin:0; padding-top:4px;">Your natural leadership style across 7 dimensions</p>
+            </div>
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div style="width:32px; height:32px; border-radius:var(--radius-sm); background:var(--navy); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.75rem; flex-shrink:0;">2</div>
+              <p style="font-size:0.9375rem; margin:0; padding-top:4px;">How your current role asks you to behave differently</p>
+            </div>
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div style="width:32px; height:32px; border-radius:var(--radius-sm); background:var(--navy); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.75rem; flex-shrink:0;">3</div>
+              <p style="font-size:0.9375rem; margin:0; padding-top:4px;">The exact adaptation gap and what it's costing you</p>
+            </div>
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div style="width:32px; height:32px; border-radius:var(--radius-sm); background:var(--navy); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.75rem; flex-shrink:0;">4</div>
+              <p style="font-size:0.9375rem; margin:0; padding-top:4px;">Immediate, personalized insight you can use in your next leadership decision</p>
+            </div>
+          </div>
+          <a href="https://thesauntergroup.com/ldna/" target="_blank" rel="noopener" class="btn btn-primary mt-32" style="width:100%; justify-content:center;">Take the LDNA &rarr;</a>
+          <p style="color:rgba(0,0,128,0.45); font-size:0.75rem; margin-top:10px; text-align:center;">LDNA is operated under license by <a href="https://thesauntergroup.com" target="_blank" rel="noopener" style="color:rgba(0,0,128,0.55); text-decoration:underline;">The Saunter Group</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 DIMENSIONS -->
+<section id="dimensions" class="bg-gray">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The 7 dimensions</p>
+      <h2>How you lead. Not how you think you lead.</h2>
+      <p>Each dimension captures a distinct driver of natural behavior. The gap between your natural score and your adapted score is where the insight lives.</p>
+    </div>
+    <div style="max-width:720px; margin:0 auto;">
+      <div class="ldna-dim">
+        <div class="ldna-dim-code">DR</div>
+        <div>
+          <h4>Drive + Independence</h4>
+          <p>How much you push, challenge norms, and operate autonomously. High DR leaders move fast, make unilateral calls, and resist oversight. Low DR leaders build consensus and proceed carefully.</p>
+        </div>
+      </div>
+      <div class="ldna-dim">
+        <div class="ldna-dim-code">SE</div>
+        <div>
+          <h4>Social Energy</h4>
+          <p>How you generate and spend energy through people interaction. High SE leaders are energized by collaboration, relationships, and visibility. Low SE leaders prefer focused, independent work.</p>
+        </div>
+      </div>
+      <div class="ldna-dim">
+        <div class="ldna-dim-code">PA</div>
+        <div>
+          <h4>Pace + Patience</h4>
+          <p>How fast or measured you naturally operate. High PA leaders are steady, methodical, and prefer proven processes. Low PA leaders drive urgency, change course quickly, and are energized by rapid iteration.</p>
+        </div>
+      </div>
+      <div class="ldna-dim">
+        <div class="ldna-dim-code">SO</div>
+        <div>
+          <h4>Structure + Order</h4>
+          <p>How much you depend on rules, protocols, and defined process. High SO leaders operate best with clear structure and established guidelines. Low SO leaders excel in ambiguity and resist rigid procedure.</p>
+        </div>
+      </div>
+      <div class="ldna-dim">
+        <div class="ldna-dim-code">CB</div>
+        <div>
+          <h4>Creative Battery</h4>
+          <p>Your natural orientation toward creative problem-solving, novelty, and idea generation. High CB leaders thrive with open-ended challenges. Low CB leaders prefer proven approaches and execution over invention.</p>
+        </div>
+      </div>
+      <div class="ldna-dim">
+        <div class="ldna-dim-code">LA</div>
+        <div>
+          <h4>Logic + Analysis</h4>
+          <p>How naturally you operate from data, evidence, and analytical rigor. High LA leaders prioritize objectivity, research, and measured decision-making. Low LA leaders decide from intuition and experience.</p>
+        </div>
+      </div>
+      <div class="ldna-dim">
+        <div class="ldna-dim-code">VI</div>
+        <div>
+          <h4>Vision + Ideas</h4>
+          <p>How you see possibilities, connect patterns, and think at a systems level. High VI leaders are future-oriented, strategic, and energized by complexity. Low VI leaders stay grounded in what's immediate and actionable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <p class="eyebrow">6 minutes. Zero cost. Immediate insight.</p>
+    <h2>See how you actually lead, and what it's costing you.</h2>
+    <p>The LDNA gives you a precise read on your natural leadership style, the adaptation your role demands, and the gap between them.</p>
+    <div class="cta-actions">
+      <a href="https://thesauntergroup.com/ldna/" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Take the Free LDNA &rarr;</a>
+    </div>
+    <p style="color:rgba(207,232,239,0.5); font-size:0.8125rem; margin-top:16px;">The assessment opens on a new page at thesauntergroup.com/ldna</p>
+    <p style="color:rgba(207,232,239,0.4); font-size:0.75rem; margin-top:8px;">LDNA is operated under license by <a href="https://thesauntergroup.com" target="_blank" rel="noopener" style="color:rgba(207,232,239,0.5); text-decoration:underline;">The Saunter Group</a>.</p>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <img src="vm-icon.png" alt="" style="height:36px; width:auto;">
+          <img src="vm-wordmark.png" alt="Vertical Motion" style="height:22px; width:auto;">
+        </div>
+        <p>We help good people become great leaders.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Executive Career</h5>
+        <ul>
+          <li><a href="eca.html">The Accelerator</a></li>
+          <li><a href="cfa.html">Corporate Freedom Accelerator</a></li>
+          <li><a href="elevate.html">Elevate Membership</a></li>
+          <li><a href="ldna.html">LDNA Assessment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="speaking.html">Book Tom to Speak</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Organizations</h5>
+        <ul>
+          <li><a href="index.html#scaling">ELT Scaling System</a></li>
+          <li><a href="https://eltscale.com">eltscale.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vertical Motion LLC. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html" style="color:inherit; opacity:0.6;">Privacy Policy</a></p>
+      <p><a href="https://vmleader.com" style="color:rgba(255,255,255,0.3);">vmleader.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+document.getElementById('nav-hamburger').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+</script>
+</body>
+</html>

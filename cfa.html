@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Freedom Accelerator | Vertical Motion</title>
+  <link rel="canonical" href="https://vmleader.com/cfa.html">
+  <meta name="description" content="Leave corporate and build your own coaching, consulting, or fractional practice, landing paying clients before you ever resign.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Corporate Freedom Accelerator">
+  <meta property="og:description" content="Leave corporate and build your own coaching, consulting, or fractional practice, landing paying clients before you ever resign.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vmleader.com/cfa.html">
+  <meta property="og:image" content="https://vmleader.com/assets/og/cfa-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Corporate Freedom Accelerator — Vertical Motion">
+  <meta property="og:site_name" content="Vertical Motion">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Corporate Freedom Accelerator">
+  <meta name="twitter:description" content="Leave corporate and build your own coaching, consulting, or fractional practice, landing paying clients before you ever resign.">
+  <meta name="twitter:image" content="https://vmleader.com/assets/og/cfa-og.png">
+  <meta name="twitter:image:alt" content="Corporate Freedom Accelerator — Vertical Motion">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Corporate Freedom Accelerator",
+  "description": "Leave corporate and build your own coaching, consulting, or fractional practice, landing paying clients before you ever resign.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Vertical Motion",
+    "url": "https://vmleader.com/"
+  },
+  "serviceType": "Career Transition Coaching",
+  "url": "https://vmleader.com/cfa.html"
+}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="vm-favicon.png">
+  <style>
+    :root { --blue:#0693d8; --blue-dk:#057bb5; --blue-soft:#e6f4fb; --gray-vm:#878787; }
+    .vm-wordmark { height:23px; width:auto; display:block; }
+    /* nav */
+    .nav-cta-group { display:flex; align-items:center; gap:10px; }
+    .btn-nav-outline { display:inline-flex; align-items:center; gap:6px; padding:9px 18px; border-radius:var(--radius-pill); font-family:var(--font-body); font-size:0.8125rem; font-weight:600; color:#fff; border:1px solid rgba(255,255,255,0.45); background:transparent; white-space:nowrap; transition:var(--transition); }
+    .btn-nav-outline:hover { background:rgba(255,255,255,0.08); border-color:#fff; }
+    .nav-links { overflow:visible; }
+    .has-dropdown { position:relative; display:flex; align-items:center; }
+    .dd-trigger { display:inline-flex; align-items:center; gap:5px; font-size:0.8125rem; font-weight:500; color:rgba(255,255,255,0.65); cursor:pointer; transition:color var(--transition); }
+    .dd-trigger:hover, .has-dropdown:hover .dd-trigger { color:#fff; }
+    .dd-trigger .caret { font-size:0.55rem; opacity:0.7; transition:transform var(--transition); }
+    .has-dropdown:hover .dd-trigger .caret { transform:rotate(180deg); }
+    .has-dropdown::after { content:''; position:absolute; top:100%; left:-24px; right:-24px; height:24px; }
+    .dropdown-panel { position:absolute; top:calc(100% + 16px); left:50%; transform:translateX(-50%) translateY(8px); background:#fff; border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow-xl); padding:26px 30px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.18s ease, transform 0.18s ease; z-index:200; }
+    .has-dropdown:hover .dropdown-panel { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+    .dd-grid { display:flex; gap:30px; }
+    .dd-col { display:flex; flex-direction:column; gap:22px; min-width:226px; }
+    .dd-group h6 { font-family:var(--font-body); font-size:0.62rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; padding-left:11px; }
+    .dd-item { display:block; padding:8px 11px; margin:0 -11px; border-radius:11px; transition:background var(--transition); }
+    .dd-item:hover { background:var(--gray-bg); }
+    .dd-item-t { display:block; font-size:0.875rem; font-weight:600; color:var(--ink); line-height:1.25; }
+    .dd-item:hover .dd-item-t { color:var(--blue); }
+    .dd-item-d { display:block; font-size:0.74rem; color:var(--ink-soft); margin-top:2px; line-height:1.3; }
+    .dd-cta { display:block; margin-top:22px; padding-top:15px; border-top:1px solid var(--border); font-family:var(--font-head); font-weight:700; font-size:0.8rem; color:var(--orange); }
+    .pill-free { display:inline-block; font-size:0.55rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#fff; background:var(--blue); padding:2px 6px; border-radius:10px; }
+    .btn-blue { background:var(--blue); color:#fff; border:1px solid var(--blue); }
+    .btn-blue:hover { background:var(--blue-dk); border-color:var(--blue-dk); transform:translateY(-1px); box-shadow:0 6px 20px rgba(6,147,216,0.30); }
+
+    /* hero */
+    .cfa-hero { position:relative; padding:165px 0 96px; background:var(--navy); overflow:hidden; }
+    .cfa-hero::after { content:''; position:absolute; inset:0; background:radial-gradient(820px 460px at 78% 0%, rgba(252,101,2,0.16), transparent 62%); z-index:0; }
+    .cfa-hero .container { position:relative; z-index:1; }
+    .cfa-badge { display:inline-flex; align-items:center; gap:9px; font-size:0.72rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--icy); background:rgba(252,101,2,0.14); border:1px solid rgba(252,101,2,0.4); padding:8px 16px; border-radius:var(--radius-pill); margin-bottom:24px; }
+    .cfa-badge .dot { width:6px; height:6px; border-radius:50%; background:var(--orange); }
+    .cfa-hero h1 { color:#fff; max-width:880px; font-size:clamp(2.3rem,4.8vw,4rem); line-height:1.07; margin-bottom:22px; }
+    .cfa-hero h1 .accent { color:var(--orange); }
+    .cfa-hero-sub { color:rgba(207,232,239,0.82); font-size:1.15rem; line-height:1.7; max-width:680px; margin-bottom:34px; }
+    .cfa-hero-cta { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+    .cfa-note { font-size:0.85rem; color:rgba(207,232,239,0.6); }
+    .cfa-note strong { color:#fff; }
+    .cfa-hero-bg { position:absolute; inset:0; z-index:0; background:linear-gradient(180deg, rgba(8,30,43,0.70), rgba(8,30,43,0.93)), url('images/CFA/break-free.jpg') center 18%/cover no-repeat; }
+    .bundle-img { display:block; max-width:560px; width:100%; margin:0 auto 46px; border-radius:var(--radius-md); box-shadow:var(--shadow-lg); }
+    .wantrap { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+    .wantrap-fig { width:100%; border-radius:var(--radius-md); box-shadow:var(--shadow-md); background:#fff; padding:20px; border:1px solid var(--border); }
+
+    .cfa-dark { background:var(--navy); }
+    .cfa-dark h2, .cfa-dark h3, .cfa-dark h4 { color:#fff; }
+    .cfa-dark .section-head p { color:rgba(207,232,239,0.72); }
+
+    /* secrets */
+    .secret-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .secret { background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:32px 28px; box-shadow:var(--shadow-sm); }
+    .secret .tag { font-family:var(--font-head); font-weight:700; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--orange); margin-bottom:12px; }
+    .secret h4 { font-size:1.18rem; margin-bottom:10px; }
+    .secret p { font-size:0.93rem; color:var(--ink-mid); line-height:1.65; margin:0; }
+
+    /* problem */
+    .prob-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:48px; }
+    .prob { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:30px 26px; }
+    .prob h4 { color:#fff; font-size:1.05rem; margin-bottom:8px; }
+    .prob p { color:rgba(207,232,239,0.7); font-size:0.92rem; line-height:1.6; margin:0; }
+    .big-line { text-align:center; max-width:760px; margin:0 auto; }
+    .big-line h2 { color:#fff; }
+    .big-line .accent { color:var(--orange); }
+
+    /* path timeline */
+    .path { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .path-step { position:relative; background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:30px 26px; box-shadow:var(--shadow-sm); }
+    .path-step .ph { font-family:var(--font-head); font-weight:700; color:var(--blue); font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px; }
+    .path-step h4 { font-size:1.1rem; margin-bottom:8px; }
+    .path-step p { font-size:0.9rem; color:var(--ink-soft); line-height:1.6; margin:0; }
+    .path-step .dur { display:inline-block; margin-top:14px; font-size:0.75rem; font-weight:700; color:var(--orange); background:rgba(252,101,2,0.1); padding:4px 10px; border-radius:var(--radius-pill); }
+
+    /* what you get */
+    .feat-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px 30px; }
+    .feat { display:flex; gap:14px; align-items:flex-start; padding:18px 0; border-bottom:1px solid var(--border); }
+    .feat .fi { width:34px; height:34px; flex-shrink:0; border-radius:9px; background:var(--blue-soft); color:var(--blue); display:grid; place-items:center; font-weight:800; font-size:0.95rem; }
+    .feat h4 { font-size:1rem; margin-bottom:4px; }
+    .feat p { font-size:0.88rem; color:var(--ink-soft); line-height:1.55; margin:0; }
+
+    /* founders */
+    .founders { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+    .fcard { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:30px; display:flex; gap:20px; align-items:flex-start; }
+    .fcard img { width:96px; height:96px; border-radius:14px; object-fit:cover; object-position:center top; flex-shrink:0; }
+    .fcard h4 { color:#fff; font-size:1.15rem; margin-bottom:3px; }
+    .fcard .role { color:var(--blue); font-size:0.82rem; font-weight:600; margin-bottom:10px; }
+    .fcard p { color:rgba(207,232,239,0.72); font-size:0.9rem; line-height:1.6; margin:0; }
+
+    /* testimonials grid */
+    .tcards { display:flex; flex-wrap:wrap; justify-content:center; gap:22px; max-width:1140px; margin:0 auto; }
+    .tcard2 { flex:0 1 336px; background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:24px; box-shadow:var(--shadow-sm); }
+    .tcard2 p { font-size:0.93rem; line-height:1.62; color:var(--ink); margin:0 0 16px; }
+    .tcard2 .who { display:flex; align-items:center; gap:12px; }
+    .cfa-av { width:44px; height:44px; border-radius:50%; flex-shrink:0; object-fit:cover; object-position:center top; }
+    .cfa-av.ini { background:var(--blue-soft); color:var(--blue); display:grid; place-items:center; font-family:var(--font-head); font-weight:700; font-size:0.9rem; }
+    .tcard2 .nm { font-family:var(--font-head); font-weight:700; font-size:0.9rem; color:var(--ink); }
+    .tcard2 .nm span { display:block; font-size:0.76rem; color:var(--ink-faint); font-weight:400; }
+
+    /* guarantee */
+    .guar { max-width:840px; margin:0 auto; background:var(--blue-soft); border:1px solid #bfe3f3; border-radius:var(--radius-lg); padding:54px 56px; text-align:center; }
+    .guar .guar-img { width:138px; height:auto; display:block; margin:0 auto 24px; }
+    .guar .seal { font-family:var(--font-head); font-weight:700; color:var(--orange); font-size:0.92rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:14px; }
+    .guar h3 { margin-bottom:16px; font-size:2rem; }
+    .guar p { font-size:1.1rem; color:var(--ink-mid); margin:0 auto; max-width:640px; line-height:1.72; }
+    /* paired trap + framework images */
+    .wantrap-imgs { display:flex; flex-direction:column; gap:20px; }
+
+    /* first refusal form */
+    .cfa-form { max-width:520px; margin:0 auto; background:#fff; border-radius:var(--radius-md); padding:26px; box-shadow:var(--shadow-lg); text-align:left; }
+    .cfa-row { display:flex; gap:12px; margin-bottom:12px; }
+    .cfa-form input { flex:1; min-width:0; width:100%; padding:13px 15px; border:1px solid var(--border); border-radius:10px; font-family:var(--font-body); font-size:0.95rem; color:var(--ink); background:#fff; }
+    .cfa-form input:focus { outline:none; border-color:var(--orange); box-shadow:0 0 0 3px rgba(252,101,2,0.12); }
+    .cfa-success { max-width:520px; margin:0 auto; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.18); border-radius:var(--radius-md); padding:30px 28px; }
+    .cfa-success h3 { color:#fff; margin-bottom:8px; }
+    .cfa-success p { color:rgba(207,232,239,0.78); margin:0; }
+    @media (max-width:560px) { .cfa-row { flex-direction:column; } }
+
+    @media (max-width:900px) {
+      .secret-grid, .prob-grid, .path, .feat-grid, .founders, .wantrap { grid-template-columns:1fr; }
+      .tcard2 { flex-basis:100%; max-width:440px; }
+      .nav-cta-group .btn-nav-outline { display:none; }
+    }
+    @media (max-width:720px) {
+      .has-dropdown { width:100%; flex-direction:column; align-items:flex-start; }
+      .dd-trigger { color:#fff; font-weight:700; font-size:0.95rem; }
+      .dd-trigger .caret, .has-dropdown::after { display:none; }
+      .dropdown-panel { position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; background:transparent; border:none; box-shadow:none; padding:12px 0 4px; }
+      .dd-grid { flex-direction:column; gap:18px; }
+      .dd-group h6 { color:rgba(207,232,239,0.5); }
+      .dd-item { margin:0; padding:8px 0; }
+      .dd-item:hover { background:transparent; }
+      .dd-item-t { color:#fff; }
+      .dd-item-d { color:rgba(207,232,239,0.5); }
+    }
+    @media (max-width:560px) {
+      .container, .container-sm { padding:0 20px; }
+      .cfa-hero { padding:128px 0 70px; }
+      .fcard { flex-direction:column; }
+    }
+  
+    /* ===== MOBILE RESPONSIVE SWEEP (launch) ===== */
+    @media (max-width: 880px) {
+      [style*="grid-template-columns"],
+      .adv-stats,.auth-grid,.bk-hero-grid,.book-grid,.call-steps,.course-grid,.cred-grid,.cred-list,.dest-cards,.discover-grid,.ec-hero-grid,.es-hero-grid,.evt-gallery,.feat-grid,.fork-top,.form-grid,.form-row,.founder-card,.founders,.fw-cards,.fw5,.gallery,.hear-grid,.hero-start-grid,.img-split,.inc-grid,.incl-grid,.inside-grid,.inside-head,.lens-grid,.logo-grid,.math-grid,.mc-split,.offer-card,.pain-grid,.path,.pil-grid,.pillar-grid,.pillar3,.price-grid,.prob-grid,.proc-grid,.prog-cards,.proof-grid,.q-grid,.qual-banner,.qual-frame,.qual-list,.reel-grid,.rf-steps,.sec-split,.secret-grid,.shift-grid,.sound-list,.sp-hero-grid,.split,.split-grid,.split2,.start-grid,.stat-band,.stat-grid,.story-grid,.suite-grid,.team-grid,.tgrid,.topic-grid,.tstrip,.values-row,.vm-hero-grid,.vt-grid,.wantrap,.who-grid,.why-grid,.xc-hero-grid,.contact-grid,.footer-grid,.assessment-layout
+        { grid-template-columns: 1fr !important; }
+      section { padding-top: 56px !important; padding-bottom: 56px !important; }
+      h1 { font-size: 2rem !important; line-height: 1.14 !important; }
+      h2 { font-size: 1.55rem !important; }
+      .btn-lg, section .btn, .cta-actions .btn, .price-card .btn,
+      .es-hero-cta .btn, .xc-hero-cta .btn, .rf-hero-cta .btn, .ec-hero-cta .btn, .sp-hero-cta .btn, .bk-hero-grid .btn, .vm-hero-grid .btn
+        { width: 100% !important; justify-content: center !important; }
+      table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem !important; line-height: 1.16 !important; }
+      h2 { font-size: 1.3rem !important; }
+      h3 { font-size: 1.15rem !important; }
+      body { font-size: 0.95rem; }
+      section { padding-top: 42px !important; padding-bottom: 42px !important; }
+      .container { padding-left: 18px !important; padding-right: 18px !important; }
+    }
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZTY3R12GE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZZTY3R12GE');
+</script>
+<!-- VM first-touch attribution + form-conversion tracking -->
+<script>
+(function(){
+  var KEY='vm_first_touch';
+  var sp=new URLSearchParams(location.search);
+  function g(k){return sp.get(k)||'';}
+  var ft=null;
+  try{ft=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+  if(!ft){
+    ft={
+      referrer: document.referrer||'',
+      landing_page: location.pathname+location.search,
+      first_seen: new Date().toISOString(),
+      utm_source: g('utm_source'), utm_medium: g('utm_medium'),
+      utm_campaign: g('utm_campaign'), utm_term: g('utm_term'),
+      utm_content: g('utm_content'), gclid: g('gclid'), fbclid: g('fbclid')
+    };
+    try{localStorage.setItem(KEY,JSON.stringify(ft));}catch(e){}
+  }
+  function channel(a){
+    if(a.utm_source) return a.utm_source+(a.utm_medium?(' / '+a.utm_medium):'');
+    var r=a.referrer; if(!r) return 'direct';
+    try{
+      var h=new URL(r).hostname.replace(/^www\./,'');
+      if(/(^|\.)google\.|(^|\.)bing\.|duckduckgo|(^|\.)yahoo\./.test(h)) return 'organic: '+h;
+      if(h.indexOf('vmleader.com')!==-1) return 'internal';
+      return 'referral: '+h;
+    }catch(e){return r;}
+  }
+  ft.channel=channel(ft);
+  window.VM_ATTRIBUTION=ft;
+  var _fetch=window.fetch;
+  window.fetch=function(url,opts){
+    try{
+      var u=(typeof url==='string')?url:(url&&url.url)||'';
+      if(u.indexOf('script.google.com/macros')!==-1 && opts && typeof opts.body==='string'){
+        var d=JSON.parse(opts.body);
+        if(d && typeof d==='object'){
+          d.attr_referrer=ft.referrer; d.attr_channel=ft.channel;
+          d.attr_landing=ft.landing_page; d.attr_first_seen=ft.first_seen;
+          d.attr_utm_source=ft.utm_source; d.attr_utm_medium=ft.utm_medium;
+          d.attr_utm_campaign=ft.utm_campaign; d.attr_utm_term=ft.utm_term;
+          d.attr_utm_content=ft.utm_content; d.attr_gclid=ft.gclid; d.attr_fbclid=ft.fbclid;
+          opts=Object.assign({},opts,{body:JSON.stringify(d)});
+          if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}
+        }
+      }
+    }catch(e){}
+    return _fetch.call(this,url,opts);
+  };
+})();
+</script>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Vertical Motion home" style="gap:9px;">
+      <img src="vm-icon.png" alt="" style="height:30px; width:auto;">
+      <img src="vm-wordmark.png" alt="Vertical Motion" style="height:19px; width:auto;">
+    </a>
+    <div class="nav-links" id="nav-links">
+      <div class="has-dropdown">
+        <a href="exec.html" class="dd-trigger">Executive Career <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col"><div class="dd-group"><h6>Coaching Programs</h6>
+              <a class="dd-item" href="eca.html"><span class="dd-item-t">Executive Career Accelerator</span><span class="dd-item-d">6-month 1:1 program to the executive ranks</span></a>
+              <a class="dd-item" href="cfa.html"><span class="dd-item-t">Corporate Freedom Accelerator</span><span class="dd-item-d">Leave corporate and build your own practice</span></a>
+              <a class="dd-item" href="mastermind.html"><span class="dd-item-t">Executive Mastermind Coaching</span><span class="dd-item-d">Exclusive 1:1 coaching for C-suite members</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Membership &amp; Self-Guided</h6>
+              <a class="dd-item" href="elevate.html"><span class="dd-item-t">Elevate Membership</span><span class="dd-item-d">Framework plus community</span></a>
+              <a class="dd-item" href="book.html"><span class="dd-item-t">The Executive Career Handbook</span><span class="dd-item-d">The book and framework</span></a>
+              <a class="dd-item" href="courses.html"><span class="dd-item-t">Courses &amp; Products</span><span class="dd-item-d">Standalone trainings and mini-courses</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Assessments</h6>
+              <a class="dd-item" href="ldna.html"><span class="dd-item-t">LDNA Assessment</span><span class="dd-item-d">See how you naturally lead in 6 minutes</span></a>
+              <a class="dd-item" href="foundations-report.html"><span class="dd-item-t">Leadership Foundations Report&trade;</span><span class="dd-item-d">Deep self-discovery and fit profile</span></a>
+            </div></div>
+          </div>
+          <a href="index.html#career" class="dd-cta">Explore Career Acceleration &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="eltscale.html" class="dd-trigger">Business Solutions <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col">
+              <div class="dd-group"><h6>Start Here</h6>
+                <a class="dd-item" href="scorecard.html"><span class="dd-item-t"><span class="pill-free">Free</span> ELT Risk Assessment</span><span class="dd-item-d">Score your executive leadership team in 7 minutes</span></a></div>
+              <div class="dd-group"><h6>Diagnose &amp; Scale</h6>
+                <a class="dd-item" href="elt-diagnostic.html"><span class="dd-item-t">ELT Diagnostic</span><span class="dd-item-d">Data-backed audit of your executive team</span></a>
+                <a class="dd-item" href="ELT-Scaling-Suite.html"><span class="dd-item-t">ELT Scaling Suite</span><span class="dd-item-d">Ongoing executive team performance system</span></a></div>
+            </div>
+            <div class="dd-col"><div class="dd-group"><h6>Ongoing Services</h6>
+              <a class="dd-item" href="executive-coaching.html"><span class="dd-item-t">Executive Coaching</span><span class="dd-item-d">1:1 coaching for your leadership team</span></a>
+              <a class="dd-item" href="outplacement.html"><span class="dd-item-t">Executive Outplacement</span><span class="dd-item-d">Transition exiting executives with care</span></a>
+              <a class="dd-item" href="ceo-advisory.html"><span class="dd-item-t">CEO Advisory</span><span class="dd-item-d">On-call strategic counsel for the CEO</span></a>
+            </div></div>
+            <div class="dd-col">
+              <div class="dd-group"><h6>Assessments</h6>
+                <a class="dd-item" href="#"><span class="dd-item-t">LDNA &amp; Team Foundations Reports</span><span class="dd-item-d">Map your team's drivers and dynamics</span></a></div>
+              <div class="dd-group"><h6>Specialized</h6>
+                <a class="dd-item" href="baic.html"><span class="dd-item-t">BAIC (The Saunter Group)</span><span class="dd-item-d">Partner-delivered advisory suite</span></a></div>
+            </div>
+          </div>
+          <a href="index.html#scaling" class="dd-cta">Explore Enterprise Solutions &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="about.html" class="dd-trigger">About <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid"><div class="dd-col"><div class="dd-group"><h6>About Vertical Motion</h6>
+            <a class="dd-item" href="about.html#why"><span class="dd-item-t">Our Why</span><span class="dd-item-d">Tom's story and the mission behind VM</span></a>
+            <a class="dd-item" href="about.html"><span class="dd-item-t">Our Team</span><span class="dd-item-d">Meet the coaches behind Vertical Motion</span></a>
+            <a class="dd-item" href="#"><span class="dd-item-t">Book Tom to Speak</span><span class="dd-item-d">Bring Tom to your event or stage</span></a>
+          </div></div></div>
+        </div>
+      </div>
+      <a href="https://community.vmleader.com/">Member Login</a>
+      <a href="contact-us.html">Contact</a>
+    </div>
+    <div class="nav-cta-group">
+      <a href="index.html#career" class="btn-nav-outline">Advance Your Career</a>
+      <a href="index.html#scaling" class="btn-nav-cta">Scale Your Team &rarr;</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="cfa-hero">
+  <div class="cfa-hero-bg"></div>
+  <div class="container">
+    <div class="cfa-badge fade-up"><span class="dot"></span>The Corporate Freedom Accelerator</div>
+    <h1 class="fade-up fade-up-delay-1">Stop building their empire. <span class="accent">Start building your own.</span></h1>
+    <p class="cfa-hero-sub fade-up fade-up-delay-2">A 12-month program for mid-career leaders ready to turn corporate expertise into high-fee coaching, consulting, or fractional clients. Using the Revenue First Framework™, you secure premium clients before you ever hand in your resignation, replacing your salary without risking your family's security.</p>
+    <div class="cfa-hero-cta fade-up fade-up-delay-3">
+      <a href="#waitlist" class="btn btn-primary btn-lg btn-pill">Join the First Refusal List &rarr;</a>
+      <span class="cfa-note"><strong>Applications currently closed</strong> &middot; be first to know when we reopen</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 3 SECRETS ========== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What you will learn</span>
+      <h2>Become the Chief Growth Officer of your own life.</h2>
+      <p>We skip the busy work of logos and websites and focus on the only thing that creates true independence: validated income.</p>
+    </div>
+    <div class="secret-grid">
+      <div class="secret">
+        <div class="tag">Secret #1</div>
+        <h4>Reposition your corporate expertise</h4>
+        <p>Why your years of "invisible expertise" are worth far more as a high-ticket package than a bi-weekly paycheck.</p>
+      </div>
+      <div class="secret">
+        <div class="tag">Secret #2</div>
+        <h4>The Revenue First Framework™</h4>
+        <p>Our proprietary method to skip the busy work, websites and logos, and go straight to your first $10k+ sale.</p>
+      </div>
+      <div class="secret">
+        <div class="tag">Secret #3</div>
+        <h4>The safe transition</h4>
+        <p>Validate your business and sign your first beta client while keeping your current role, so you hit your Freedom Number before you ever resign.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== THE PROBLEM ========== -->
+<section class="cfa-dark">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--orange);">The golden handcuffs</span>
+      <h2>You've spent 15+ years climbing. You earned the title, the office, and the handcuffs.</h2>
+      <p>But lately, you have realized three things.</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob">
+        <h4>The age-out is real</h4>
+        <p>You are watching peers get "restructured" out of roles they spent decades earning.</p>
+      </div>
+      <div class="prob">
+        <h4>Identity erosion</h4>
+        <p>When someone asks who you are, you give them your company's name. You have lost the founder version of yourself.</p>
+      </div>
+      <div class="prob">
+        <h4>The ceiling</h4>
+        <p>You work 60+ hours a week growing someone else's empire, while yours stays a notebook full of ideas.</p>
+      </div>
+    </div>
+    <div class="big-line">
+      <h2>The safest career isn't the one you have. <span class="accent">It's the one you own.</span></h2>
+    </div>
+  </div>
+</section>
+
+<!-- ========== THE WANTREPRENEUR TRAP ========== -->
+<section class="bg-gray">
+  <div class="container">
+    <div class="wantrap">
+      <div class="wantrap-imgs">
+        <img class="wantrap-fig" src="images/CFA/Wantrapreneur.png" alt="The Wantrepreneur process: dreaming, brand, product, marketing, sales, then failure">
+        <img class="wantrap-fig" src="images/CFA/revenue-first-framework.png" alt="The Revenue First Framework, a 6-step path from offer to paying clients">
+      </div>
+      <div>
+        <span class="eyebrow">Why most people fail</span>
+        <h2 style="margin:12px 0 16px;">Don't fall into the "Wantrepreneur" trap.</h2>
+        <p>Most people who dream of leaving corporate start with the busy work: a website, a logo, a brand, a product built over months. By the time they finally talk to a buyer, they are out of runway, confused, and frustrated.</p>
+        <p style="margin-top:24px;">The Revenue First Framework™ flips the order. You validate income first and skip everything that doesn't lead to a paying client. Real sales conversations come early, not last.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== THE PATH ========== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The path</span>
+      <h2>A de-risked plan, from first sale to full freedom.</h2>
+      <p>The Revenue First Framework&trade; is a proprietary, 6-step system where you test your offer, have real sales conversations, and land high-fee clients while you are still employed.</p>
+    </div>
+    <div class="path">
+      <div class="path-step">
+        <div class="ph">Phase 1</div>
+        <h4>Kickoff Intensive</h4>
+        <p>Reposition your expertise, choose your model (coaching, consulting, or fractional), and architect a premium offer.</p>
+        <span class="dur">Week 1</span>
+      </div>
+      <div class="path-step">
+        <div class="ph">Phase 2</div>
+        <h4>60-Day Launch Sprint</h4>
+        <p>Eight weeks of 90-minute implementation calls to have real sales conversations and land your first premium clients.</p>
+        <span class="dur">8 weeks</span>
+      </div>
+      <div class="path-step">
+        <div class="ph">Phase 3</div>
+        <h4>10-Month Scale Phase</h4>
+        <p>Forty weeks of advanced topics to scale toward replacing, or exceeding, your corporate compensation.</p>
+        <span class="dur">40 weeks</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT YOU GET ========== -->
+<section class="bg-gray">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Here's what you get</span>
+      <h2>Everything you need to validate income, not busy work.</h2>
+    </div>
+    <img class="bundle-img" src="images/CFA/cfa-bundle.png" alt="The Corporate Freedom Accelerator program shown on desktop, laptop, tablet, and phone">
+    <div class="feat-grid">
+      <div class="feat"><div class="fi">&#10003;</div><div><h4>The Revenue First Framework™</h4><p>Our proprietary 6-phase system that goes straight to validated income, not logos and websites.</p></div></div>
+      <div class="feat"><div class="fi">&#10003;</div><div><h4>Business models built for mid-career leaders</h4><p>Choose between coaching, consulting, or fractional work based on your expertise, income goals, and time. No drop-shipping nonsense.</p></div></div>
+      <div class="feat"><div class="fi">&#10003;</div><div><h4>The "No-Leap" transition plan</h4><p>Build your business and hit your Freedom Number before you resign. Designed for leaders with 10+ hours a week.</p></div></div>
+      <div class="feat"><div class="fi">&#10003;</div><div><h4>Proven templates, scripts &amp; SOPs</h4><p>Offer Architecture, Sales Conversation Framework, Objection Handling, Onboarding, KPI Dashboard, 90-Day Growth Plan, and 30+ more.</p></div></div>
+      <div class="feat"><div class="fi">&#10003;</div><div><h4>Weekly office hours + Revenue Lab</h4><p>Live implementation support. Bring your sales calls for review and get real-time offer feedback from the founders.</p></div></div>
+      <div class="feat"><div class="fi">&#10003;</div><div><h4>Private community</h4><p>A Circle community with your cohort for accountability and a wins board to keep you moving when corporate life gets heavy.</p></div></div>
+      <div class="feat"><div class="fi">&#10003;</div><div><h4>Founder-led calls, not junior coaches</h4><p>Every call led by Tom or Ryan. You get the frameworks that actually built their businesses.</p></div></div>
+      <div class="feat"><div class="fi">&#10003;</div><div><h4>12 months of access</h4><p>Full 12-month access to the CFA program and community.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOUNDERS ========== -->
+<section class="cfa-dark">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--blue);">Who leads it</span>
+      <h2>Built and led by operators who have done it.</h2>
+      <p>Every call is led by a founder who built real businesses, not a junior coach reading a script.</p>
+    </div>
+    <div class="founders">
+      <div class="fcard">
+        <img src="images/team/tom-cox.jpg" alt="Tom Cox">
+        <div>
+          <h4>Tom Cox</h4>
+          <div class="role">Founder &middot; 3x CEO &middot; Serial Entrepreneur</div>
+          <p>Founder of Vertical Motion, a 3x CEO who has closed more than $1.5B in new business and built multiple venture-backed companies. He has sat in the executive chair and built businesses from zero.</p>
+        </div>
+      </div>
+      <div class="fcard">
+        <img src="images/team/ryan-roberts.jpg" alt="Ryan Roberts">
+        <div>
+          <h4>Ryan Roberts</h4>
+          <div class="role">Coach &middot; Fighter Pilot &middot; Founder with a Successful Exit</div>
+          <p>A 20-year USAF officer and fighter pilot turned business risk analyst, Ryan co-founded a defense contracting firm and grew it to a successful exit. He brings disciplined execution to every transition.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">From the cohort</span>
+      <h2>Our cohorts are in progress. Here's what they're saying.</h2>
+    </div>
+    <div class="tcards">
+      <div class="tcard2"><p>"My biggest takeaway was to reverse-engineer your thinking from how you would normally operate in a corporate setting."</p><div class="who"><img class="cfa-av" src="images/CFA/t-justin.jpg" alt="Justin S."><div class="nm">Justin S.<span>CFA cohort member</span></div></div></div>
+      <div class="tcard2"><p>"My biggest takeaway is it doesn't have to be perfect. Approach it like a project: research, make a decision, and iterate in real time. Be agile, not waterfall."</p><div class="who"><img class="cfa-av" src="images/CFA/t-tiffany.jpg" alt="Tiffany W."><div class="nm">Tiffany W.<span>CFA cohort member</span></div></div></div>
+      <div class="tcard2"><p>"My biggest takeaway was that I don't have to be 100% ready before I start, because the truth is I'm never 100%, and I end up becoming my own worst enemy."</p><div class="who"><img class="cfa-av" src="images/CFA/t-peter.jpg" alt="Peter I."><div class="nm">Peter I.<span>CFA cohort member</span></div></div></div>
+      <div class="tcard2"><p>"I am very inspired by this group and energized for what is to come. Viewing this as many small experiments helps minimize my fears. I am not as scared about stumbling."</p><div class="who"><img class="cfa-av" src="images/CFA/t-elizabeth.jpg" alt="Elizabeth D."><div class="nm">Elizabeth D.<span>CFA cohort member</span></div></div></div>
+      <div class="tcard2"><p>"I am blown away by the thoughtful, quality content here. Hitting it out of the park. Thank you."</p><div class="who"><img class="cfa-av" src="images/CFA/t-bri.jpg" alt="Bri J."><div class="nm">Bri J.<span>CFA cohort member</span></div></div></div>
+      <div class="tcard2"><p>"I've dreamed about moving into consulting for years. There's not even a question, I'd already done the exact things this program describes. Now I have a real plan."</p><div class="who"><img class="cfa-av" src="images/CFA/t-chris.jpg" alt="Chris M."><div class="nm">Chris M.<span>CFA cohort member</span></div></div></div>
+      <div class="tcard2"><p>"My biggest takeaway is how ambitious it is. It'll be great though. We will all grow from it."</p><div class="who"><img class="cfa-av" src="images/CFA/t-brett.jpg" alt="Brett K."><div class="nm">Brett K.<span>CFA cohort member</span></div></div></div>
+      <div class="tcard2"><p>"The type of program that will take the VM brand to the next level. The mindset shift and practical insights from Ryan and Tom make this a very unique opportunity."</p><div class="who"><img class="cfa-av" src="images/CFA/t-mykel.jpg" alt="Mykel S."><div class="nm">Mykel S.<span>CFA cohort member</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GUARANTEE ========== -->
+<section class="bg-gray">
+  <div class="container">
+    <div class="guar">
+      <img class="guar-img" src="images/CFA/guarantee.png" alt="Money-back guarantee badge">
+      <div class="seal">The $10K CFA Guarantee</div>
+      <h3>Earn it back, or we keep working with you free.</h3>
+      <p>Follow the Revenue First Framework™, do the assignments, and show up to (or watch) the calls. If you don't earn back your full investment, we continue working with you, at no cost, until you do.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WAITLIST CTA ========== -->
+<section class="cta-section" id="waitlist">
+  <div class="container" style="position:relative; z-index:1; max-width:680px;">
+    <span class="eyebrow" style="color:rgba(252,101,2,0.85);">Applications currently closed</span>
+    <h2 style="color:var(--white); margin:16px auto 16px;">Stop building someone else's empire. Start building yours.</h2>
+    <p style="color:rgba(207,232,239,0.75); max-width:540px; margin:0 auto 34px;">Join the First Refusal List and you'll be the first to know the moment we reopen applications for the next cohort.</p>
+    <form id="cfaForm" class="cfa-form" novalidate>
+      <div class="cfa-row">
+        <input type="text" name="first_name" placeholder="First name" autocomplete="given-name" required>
+        <input type="text" name="last_name" placeholder="Last name" autocomplete="family-name" required>
+      </div>
+      <div class="cfa-row">
+        <input type="email" name="email" placeholder="Email address" autocomplete="email" required>
+        <input type="tel" name="phone" placeholder="Phone" autocomplete="tel" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-pill" style="width:100%; justify-content:center;">Join the First Refusal List &rarr;</button>
+    </form>
+    <div id="cfaSuccess" class="cfa-success" style="display:none;">
+      <h3>You're on the list.</h3>
+      <p>You'll be the first to hear the moment we reopen applications for the next CFA cohort. Keep an eye on your inbox.</p>
+    </div>
+    <p style="margin-top:22px; font-size:0.82rem; color:rgba(207,232,239,0.6);">Prefer to talk it through? <a href="contact-us.html" style="color:var(--icy); text-decoration:underline;">Talk to the team</a>.</p>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <img src="vm-icon.png" alt="" style="height:36px; width:auto;">
+          <img src="vm-wordmark.png" alt="Vertical Motion" style="height:22px; width:auto;">
+        </div>
+        <p>We help good people become great leaders.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Executive Career</h5>
+        <ul>
+          <li><a href="eca.html">The Accelerator</a></li>
+          <li><a href="cfa.html">Corporate Freedom Accelerator</a></li>
+          <li><a href="elevate.html">Elevate Membership</a></li>
+          <li><a href="book.html">The Handbook</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Organizations</h5>
+        <ul>
+          <li><a href="index.html#scaling">ELT Scaling System</a></li>
+          <li><a href="https://eltscale.com">eltscale.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://community.vmleader.com/">Member Login</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vertical Motion LLC. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html" style="color:inherit; opacity:0.6;">Privacy Policy</a></p>
+      <p><a href="https://vmleader.com" style="color:rgba(255,255,255,0.3);">vmleader.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+document.getElementById('nav-hamburger').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+
+// First Refusal List: posts to the capture web app, then shows the thank-you.
+// Paste your deployed Google Apps Script web app /exec URL here.
+const CFA_ENDPOINT = "https://script.google.com/macros/s/AKfycbzSE-saWcs9IPEzleSAqB2Jg0TJ0ozjnaBISjf7bPJr6N_35S9Vys6U1VKqybuIbPAuyg/exec";
+document.getElementById('cfaForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  if (!this.checkValidity()) { this.reportValidity(); return; }
+  const data = Object.fromEntries(new FormData(this).entries());
+  data.source = 'cfa_first_refusal';
+  data.timestamp = new Date().toISOString();
+  data.page = location.href;
+  if (CFA_ENDPOINT) {
+    fetch(CFA_ENDPOINT, {
+      method: 'POST', mode: 'no-cors', keepalive: true,
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(data)
+    }).catch(() => {});
+  }
+  this.style.display = 'none';
+  document.getElementById('cfaSuccess').style.display = 'block';
+});
+</script>
+</body>
+</html>

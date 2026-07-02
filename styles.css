@@ -989,3 +989,8 @@ footer {
 }
 
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* Mobile fix: keep hero eyebrow/content clear of the floating fixed nav */
+@media (max-width: 880px){
+  section[class*="hero"]{ padding-top: 104px !important; }
+}

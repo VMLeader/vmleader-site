@@ -311,7 +311,9 @@
       padding:40px 32px; border-radius:var(--radius-md); text-align:left;
       background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);
       transition:var(--transition);
+      display:flex; flex-direction:column;
     }
+    .dest-card .btn { margin-top:auto; align-self:flex-start; }
     .dest-card:hover { border-color:var(--blue); transform:translateY(-3px); }
     .dest-card .ico { font-size:1.6rem; margin-bottom:14px; }
     .dest-card h4 { color:#fff; font-size:1.2rem; margin-bottom:8px; }
@@ -511,7 +513,7 @@
       <a href="contact-us.html">Contact</a>
     </div>
     <div class="nav-cta-group">
-      <a href="exec.html" class="btn-nav-outline" style="background:var(--blue); border-color:var(--blue); color:#fff;">Advance Your Career</a>
+      <a href="exec.html" class="btn-nav-outline" style="background:var(--blue); border-color:var(--blue); color:#fff;">Advance Your Career &rarr;</a>
       <a href="eltscale.html" class="btn-nav-cta">Scale Your Team &rarr;</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
@@ -544,7 +546,7 @@
         </div>
         <div class="dest-card">
           <div class="ico">&#127970;</div>
-          <h4>I want to scale my leadership team</h4>
+          <h4>I want to scale my executive leadership team</h4>
           <p>For CEOs and investors building a team that scales without the bottleneck.</p>
           <a href="eltscale.html" class="btn btn-primary btn-lg btn-pill">Explore Business Solutions &rarr;</a>
         </div>

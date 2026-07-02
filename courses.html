@@ -404,9 +404,27 @@
 <script>
 const nav = document.getElementById('main-nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
-document.getElementById('nav-hamburger').addEventListener('click', () => {
-  document.getElementById('nav-links').classList.toggle('open');
-});
+(function(){
+  var ham=document.getElementById('nav-hamburger');
+  var links=document.getElementById('nav-links');
+  if(!ham||!links) return;
+  function setOpen(o){
+    links.classList.toggle('open', o);
+    document.body.classList.toggle('nav-open', o);
+    ham.setAttribute('aria-expanded', o?'true':'false');
+  }
+  ham.addEventListener('click', function(e){ e.stopPropagation(); setOpen(!links.classList.contains('open')); });
+  links.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', function(e){
+    if(links.classList.contains('open') && !links.contains(e.target) && !ham.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') setOpen(false); });
+  var y0=null;
+  links.addEventListener('touchstart', function(e){ y0=e.touches[0].clientY; }, {passive:true});
+  links.addEventListener('touchend', function(e){
+    if(y0!==null){ var dy=e.changedTouches[0].clientY - y0; if(dy < -40) setOpen(false); y0=null; }
+  }, {passive:true});
+})();
 </script>
 </body>
 </html>

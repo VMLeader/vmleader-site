@@ -922,10 +922,11 @@ footer {
 /* ---- 720px: phones ---- */
 @media (max-width: 720px) {
   .container { padding: 0 20px; }
-  nav { width: calc(100% - 24px); top: 12px; }
+  nav { width: auto; left: 12px; right: 12px; top: 12px; transform: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
   .nav-inner { padding: 0 18px; }
   .nav-links { display: none; }
-  .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 84px; left: 12px; right: 12px; background: var(--navy); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 20px 24px; gap: 18px; box-shadow: var(--shadow-xl); z-index: 99; }
+  .nav-links.open { display: flex; flex-direction: column; align-items: stretch; position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; background: var(--navy); padding: 82px 22px 40px; gap: 16px; z-index: 99; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y; box-sizing: border-box; }
+  .nav-links.open > * { max-width: 100%; }
   .nav-hamburger { display: flex; }
   .btn-nav-cta { display: none; }
   section { padding: 56px 0; }
@@ -1006,20 +1007,5 @@ body.nav-open::before {
 
 /* Reserve scrollbar space so opening/closing the mobile menu doesn't shift layout */
 html { scrollbar-gutter: stable; }
-/* Mobile menu: scroll inside the menu so the bottom is always reachable */
-@media (max-width: 880px){
-  .nav-links.open {
-    max-height: calc(100vh - 96px);
-    max-height: calc(100dvh - 96px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* Kill sideways drift: no horizontal page scroll, menu pans vertically only */
+/* Kill sideways drift: no horizontal page scroll (full-screen mobile menu handles the rest) */
 html, body { overflow-x: hidden; }
-@media (max-width: 880px){
-  .nav-links.open { touch-action: pan-y; overscroll-behavior: contain; }
-}

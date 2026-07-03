@@ -1013,11 +1013,12 @@ html, body { overflow-x: hidden; }
 /* ============ Mobile menu (light, right-aligned, drift-proof) ============ */
 @media (max-width: 720px){
   /* Full-width dark header bar while open, with logo + clear X */
-  body.nav-open nav { left: 0 !important; right: 0 !important; top: 0 !important; width: 100% !important; border-radius: 0 !important; background: var(--navy) !important; z-index: 100; }
-  body.nav-open .nav-hamburger span { width: 22px; height: 2px; }
-  body.nav-open .nav-hamburger span:nth-child(1){ transform: translateY(6px) rotate(45deg); }
+  body.nav-open nav { background: transparent !important; border-color: transparent !important; box-shadow: none !important; z-index: 100; }
+  body.nav-open .nav-hamburger { position: relative; z-index: 101; }
+  body.nav-open .nav-hamburger span { width: 24px; height: 2.5px; background: #081e2b !important; }
+  body.nav-open .nav-hamburger span:nth-child(1){ transform: translateY(6.5px) rotate(45deg); }
   body.nav-open .nav-hamburger span:nth-child(2){ opacity: 0; }
-  body.nav-open .nav-hamburger span:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
+  body.nav-open .nav-hamburger span:nth-child(3){ transform: translateY(-6.5px) rotate(-45deg); }
 
   /* Hard clamp: nothing can exceed the screen, so it cannot scroll/drift sideways */
   .nav-links.open, .nav-links.open * { max-width: 100% !important; min-width: 0 !important; box-sizing: border-box; overflow-wrap: anywhere; touch-action: pan-y; }

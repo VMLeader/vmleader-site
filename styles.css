@@ -1044,3 +1044,5 @@ html, body { overflow-x: hidden; }
   /* Simple bottom links (Member Login, Contact) */
   .nav-links.open > a { text-align: right; color: #24333d !important; font-weight: 600; font-size: 1.05rem; padding: 16px 0 !important; border-top: 1px solid #ececec; margin-top: 14px; }
 }
+
+/* redeploy trigger 20260703022829 */

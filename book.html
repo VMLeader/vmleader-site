@@ -792,6 +792,7 @@ window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.
   var ham=document.getElementById('nav-hamburger');
   var links=document.getElementById('nav-links');
   if(!ham||!links) return;
+  links.addEventListener('scroll',function(){if(links.scrollLeft!==0){links.scrollLeft=0;}},{passive:true});
   function setOpen(o){
     links.classList.toggle('open', o);
     document.body.classList.toggle('nav-open', o);

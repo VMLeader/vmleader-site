@@ -1013,7 +1013,7 @@ html, body { overflow-x: hidden; }
 /* Mobile menu: force vertical-only touch on EVERY element (touch-action doesn't inherit,
    and touches land on the links inside, not the container) — kills the sideways drift */
 @media (max-width: 880px){
-  .nav-links.open, .nav-links.open * { touch-action: pan-y; max-width: 100%; box-sizing: border-box; }
+  .nav-links.open, .nav-links.open * { touch-action: pan-y; max-width: 100% !important; min-width: 0 !important; box-sizing: border-box; overflow-wrap: anywhere; }
   .nav-links.open .dd-grid { flex-direction: column; gap: 16px; width: 100%; }
   .nav-links.open .dd-col { min-width: 0; width: 100%; }
   .nav-links.open .dropdown-panel { position: static; transform: none; left: auto; right: auto; width: 100%; }

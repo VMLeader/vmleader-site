@@ -1017,3 +1017,9 @@ html { scrollbar-gutter: stable; }
     -webkit-overflow-scrolling: touch;
   }
 }
+
+/* Kill sideways drift: no horizontal page scroll, menu pans vertically only */
+html, body { overflow-x: hidden; }
+@media (max-width: 880px){
+  .nav-links.open { touch-action: pan-y; overscroll-behavior: contain; }
+}

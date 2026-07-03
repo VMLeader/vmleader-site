@@ -539,6 +539,7 @@ window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.
     links.classList.toggle('open', o);
     document.body.classList.toggle('nav-open', o);
     ham.setAttribute('aria-expanded', o?'true':'false');
+    if(o){ links.scrollTop=0; }
   }
   ham.addEventListener('click', function(e){ e.stopPropagation(); setOpen(!links.classList.contains('open')); });
   links.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
@@ -546,10 +547,13 @@ window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.
     if(links.classList.contains('open') && !links.contains(e.target) && !ham.contains(e.target)) setOpen(false);
   });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') setOpen(false); });
-  var y0=null;
-  links.addEventListener('touchstart', function(e){ y0=e.touches[0].clientY; }, {passive:true});
+  var x0=null,y0=null;
+  links.addEventListener('touchstart', function(e){ x0=e.touches[0].clientX; y0=e.touches[0].clientY; }, {passive:true});
   links.addEventListener('touchend', function(e){
-    if(y0!==null){ var dy=e.changedTouches[0].clientY - y0; if(dy < -40) setOpen(false); y0=null; }
+    if(y0===null) return;
+    var dy=e.changedTouches[0].clientY - y0, dx=e.changedTouches[0].clientX - x0;
+    if(dy < -80 && Math.abs(dx) < 40 && links.scrollTop <= 0) setOpen(false);
+    x0=y0=null;
   }, {passive:true});
 })();
 </script>

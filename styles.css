@@ -1003,3 +1003,17 @@ body.nav-open::before {
   -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
   z-index: 98;
 }
+
+/* Reserve scrollbar space so opening/closing the mobile menu doesn't shift layout */
+html { scrollbar-gutter: stable; }
+/* Mobile menu: scroll inside the menu so the bottom is always reachable */
+@media (max-width: 880px){
+  .nav-links.open {
+    max-height: calc(100vh - 96px);
+    max-height: calc(100dvh - 96px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+}

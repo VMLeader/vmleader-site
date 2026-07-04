@@ -278,6 +278,13 @@
     .faq[open] summary::after { content:'\2212'; }
     .faq p { padding:0 0 22px; font-size:0.95rem; color:var(--ink-mid); line-height:1.7; margin:0; }
 
+    /* scroll cue to the questionnaire */
+    .scroll-cue { display:inline-flex; flex-direction:column; align-items:center; gap:8px; margin-top:26px; color:var(--orange); font-family:var(--font-head); font-weight:700; font-size:0.9rem; letter-spacing:0.01em; transition:color var(--transition); }
+    .scroll-cue:hover { color:var(--orange-dk); }
+    .scroll-cue-arrow { display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; border:2px solid var(--orange); font-size:1.15rem; line-height:1; animation:scrollCueBounce 1.6s ease-in-out infinite; }
+    @keyframes scrollCueBounce { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(7px); } }
+    @media (prefers-reduced-motion: reduce) { .scroll-cue-arrow { animation:none; } }
+
     /* questionnaire form */
     .q-card { max-width:760px; margin:0 auto; background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg); box-shadow:var(--shadow-xl); padding:42px 44px; }
     .q-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
@@ -910,8 +917,11 @@
     <div class="section-head">
       <span class="eyebrow" style="color:var(--blue);">Book your free strategy call</span>
       <h2>We review every questionnaire carefully and use it to prepare for your strategy call.</h2>
-      <p>This questionnaire helps us determine the next actions you should take to advance your career, and whether we are a fit to work together in a larger coaching capacity.</p>
       <p style="margin-top:12px;">We work with serious, mid-career leaders who are ready to take decisive action toward Director, VP, and C-level roles. We take on a limited number of new clients so we can go deep with each one, which is why cultural fit matters so much to us.</p>
+      <a href="#qForm" class="scroll-cue">
+        <span class="scroll-cue-text">Scroll down to complete your questionnaire</span>
+        <span class="scroll-cue-arrow" aria-hidden="true">&#8595;</span>
+      </a>
     </div>
     <div class="call-steps">
       <div class="call-step"><div class="cs-n">1</div><div><h4>Answer a few questions</h4><p>So your coach can prep and make the call useful.</p></div></div>

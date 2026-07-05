@@ -3,6 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  (function(){
+    function _vmHP(){try{document.querySelectorAll('form').forEach(function(f){if(f.querySelector('input[name="website"]'))return;var w=document.createElement('div');w.setAttribute('aria-hidden','true');w.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;';var l=document.createElement('label');l.textContent='Website';var i=document.createElement('input');i.type='text';i.name='website';i.tabIndex=-1;i.setAttribute('autocomplete','off');w.appendChild(l);w.appendChild(i);f.appendChild(w);});}catch(e){}}
+    if(document.readyState!=='loading'){_vmHP();}else{document.addEventListener('DOMContentLoaded',_vmHP);}
+    var _fetch=window.fetch;
+    window.fetch=function(url,opts){
+      try{
+        var u=(typeof url==='string')?url:(url&&url.url)||'';
+        if(u.indexOf('script.google.com/macros')!==-1 && opts && typeof opts.body==='string'){
+          var d=JSON.parse(opts.body);
+          if(d && typeof d==='object'){
+            var _hp=''; try{var _h=document.querySelector('input[name="website"]'); _hp=_h?String(_h.value||'').trim():'';}catch(e){}
+            var _el=Math.round((window.performance&&performance.now)?performance.now():99999);
+            d.website=_hp; d.elapsed_ms=_el;
+            if(_hp!=='' || _el<1500){ return Promise.resolve(new Response(JSON.stringify({result:'success'}),{status:200,headers:{'Content-Type':'application/json'}})); }
+            opts=Object.assign({},opts,{body:JSON.stringify(d)});
+          }
+        }
+      }catch(e){}
+      return _fetch.call(this,url,opts);
+    };
+  })();
+  </script>
   <title>Book a Leadership Risk Review | Vertical Motion</title>
   <meta name="description" content="Request a 45-minute Leadership Team Risk Review. Walk through your scorecard results, quantify your top risks, and get a clear plan before your board does.">
   <link rel="canonical" href="https://vmleader.com/contact.html">

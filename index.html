@@ -450,7 +450,7 @@
             <div class="dd-col">
               <div class="dd-group">
                 <h6>Assessments</h6>
-                <a class="dd-item" href="https://thesauntergroup.com/ldna/"><span class="dd-item-t"><span class="pill-free">Free</span> LDNA Assessment</span><span class="dd-item-d">See how you naturally lead in 6 minutes</span></a>
+                <a class="dd-item" href="ldna.html"><span class="dd-item-t"><span class="pill-free">Free</span> LDNA Assessment</span><span class="dd-item-d">See how you naturally lead in 6 minutes</span></a>
                 <a class="dd-item" href="foundations-report.html"><span class="dd-item-t">Leadership Foundations Report&trade;</span><span class="dd-item-d">Deep self-discovery and fit profile</span></a>
               </div>
             </div>
@@ -532,16 +532,18 @@
 <section class="vm-hero">
   <div class="container">
     <style>
-      .ldna-banner { transition: background .2s ease, border-color .2s ease, transform .2s ease; }
-      .ldna-banner:hover { background: rgba(6,147,216,0.22) !important; border-color: rgba(6,147,216,0.72) !important; transform: translateY(-1px); }
-      .ldna-banner .ldna-cta { transition: background .2s ease; }
-      .ldna-banner:hover .ldna-cta { background: #ffffff !important; }
+      .ldna-banner { transition: background .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+      .ldna-banner:hover { background: linear-gradient(100deg, rgba(6,147,216,0.4), rgba(6,147,216,0.18)) !important; border-color: rgba(6,147,216,0.85) !important; transform: translateY(-2px); box-shadow: 0 16px 44px rgba(6,147,216,0.32) !important; }
+      .ldna-banner .ldna-cta { transition: background .2s ease, transform .2s ease; animation: ldnaPulse 2.2s ease-out infinite; }
+      .ldna-banner:hover .ldna-cta { background: #ffffff !important; transform: scale(1.03); }
+      @keyframes ldnaPulse { 0% { box-shadow: 0 0 0 0 rgba(207,232,239,0.6); } 70% { box-shadow: 0 0 0 10px rgba(207,232,239,0); } 100% { box-shadow: 0 0 0 0 rgba(207,232,239,0); } }
+      @media (prefers-reduced-motion: reduce){ .ldna-banner .ldna-cta { animation: none; } }
       @media (max-width: 640px){
         .ldna-banner { flex-direction: column; align-items: flex-start !important; }
         .ldna-banner .ldna-cta { width: 100%; justify-content: center; }
       }
     </style>
-    <a class="ldna-banner" href="https://thesauntergroup.com/ldna/" style="display:flex; align-items:center; gap:18px; flex-wrap:wrap; background:rgba(6,147,216,0.14); border:1px solid rgba(6,147,216,0.45); border-radius:14px; padding:14px 18px; margin-bottom:34px; text-decoration:none;">
+    <a class="ldna-banner" href="ldna" style="display:flex; align-items:center; gap:18px; flex-wrap:wrap; background:linear-gradient(100deg, rgba(6,147,216,0.28), rgba(6,147,216,0.12)); border:1px solid rgba(6,147,216,0.6); border-radius:14px; padding:16px 20px; margin-bottom:34px; text-decoration:none; box-shadow:0 10px 34px rgba(6,147,216,0.22);">
       <span style="flex-shrink:0; font-family:var(--font-body); font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#fff; background:var(--blue); padding:5px 10px; border-radius:20px; white-space:nowrap;">Free &middot; 6 min</span>
       <span style="flex:1; min-width:240px; color:rgba(207,232,239,0.92); font-size:0.9375rem; line-height:1.55;"><strong style="color:#fff;">Take the free LDNA assessment.</strong> You'll see how you actually lead, where your current role is asking you to behave differently, and what that gap is costing you every day.</span>
       <span class="ldna-cta" style="flex-shrink:0; display:inline-flex; align-items:center; gap:6px; background:var(--icy); color:var(--navy); font-family:var(--font-head); font-weight:700; font-size:0.875rem; padding:11px 22px; border-radius:100px; white-space:nowrap;">Take the LDNA &rarr;</span>

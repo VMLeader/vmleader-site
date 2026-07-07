@@ -59,6 +59,10 @@
       section { padding-top: 42px !important; padding-bottom: 42px !important; }
       .container { padding-left: 18px !important; padding-right: 18px !important; }
     }
+    @media (max-width: 760px) {
+      .ldna-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+      .ldna-hero-img { max-width: 340px !important; margin: 0 auto !important; }
+    }
   </style>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZTY3R12GE"></script>
@@ -207,16 +211,20 @@
 </nav>
 
 <!-- HERO / CONFIRMATION -->
-<div style="background:var(--navy); padding:128px 0 72px; position:relative; overflow:hidden;">
+<div style="background:var(--navy); padding:118px 0 60px; position:relative; overflow:hidden;">
   <div style="position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 100% 0%, rgba(91,124,153,0.2) 0%, transparent 60%); pointer-events:none;"></div>
-  <div class="container" style="position:relative; z-index:1; text-align:center;">
-    <div style="width:64px; height:64px; border-radius:50%; background:rgba(207,232,239,0.15); border:1px solid rgba(207,232,239,0.35); display:flex; align-items:center; justify-content:center; font-size:1.75rem; color:var(--icy); margin:0 auto 24px;">&#10003;</div>
-    <p class="eyebrow" style="color:rgba(207,232,239,0.75); margin-bottom:12px;">LDNA Assessment</p>
-    <h1 style="color:white; max-width:720px; margin:0 auto 18px; font-size:clamp(2rem, 4.4vw, 3rem);">We've received your submission! Thank you!</h1>
-    <p style="color:rgba(207,232,239,0.85); max-width:600px; margin:0 auto; font-size:1.0625rem; line-height:1.7;">We're now putting together your individual LDNA results report. This usually takes 1 to 2 business days, and we'll email your results to you as soon as they're ready.</p>
-    <div style="margin:38px auto 0; max-width:360px;">
-      <img src="images/ldna-sample-page.png" alt="Sample LDNA individual profile report" style="width:100%; height:auto; border-radius:12px; box-shadow:0 24px 60px rgba(0,0,0,0.4); display:block;">
-      <p style="color:rgba(207,232,239,0.6); font-size:0.78rem; margin:14px 0 0;">A preview of the personalized report we're preparing for you.</p>
+  <div class="container" style="position:relative; z-index:1;">
+    <div class="ldna-hero-grid" style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:52px; align-items:center;">
+      <div>
+        <div style="width:56px; height:56px; border-radius:50%; background:rgba(207,232,239,0.15); border:1px solid rgba(207,232,239,0.35); display:flex; align-items:center; justify-content:center; font-size:1.5rem; color:var(--icy); margin-bottom:20px;">&#10003;</div>
+        <p class="eyebrow" style="color:rgba(207,232,239,0.75); margin-bottom:12px;">LDNA Assessment</p>
+        <h1 style="color:white; margin:0 0 18px; font-size:clamp(1.9rem, 3.6vw, 2.85rem);">We've received your submission! Thank you!</h1>
+        <p style="color:rgba(207,232,239,0.85); max-width:520px; font-size:1.0625rem; line-height:1.7; margin:0;">We're now putting together your individual LDNA results report. This usually takes 1 to 2 business days, and we'll email your results to you as soon as they're ready.</p>
+      </div>
+      <div class="ldna-hero-img" style="max-width:400px; margin-left:auto;">
+        <img src="images/ldna-sample-page.png" alt="Sample LDNA individual profile report" style="width:100%; height:auto; border-radius:12px; box-shadow:0 24px 60px rgba(0,0,0,0.4); display:block;">
+        <p style="color:rgba(207,232,239,0.6); font-size:0.78rem; margin:14px 0 0; text-align:center;">A preview of the personalized report we're preparing for you.</p>
+      </div>
     </div>
   </div>
 </div>

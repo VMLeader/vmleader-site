@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climb Together | Vertical Motion</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Climb Together is the Vertical Motion alumni community and member referral program. Come back to the room, and bring someone up with you.">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="icon" type="image/png" href="vm-favicon.png">
+  <style>
+    /* === Unified VM nav + brand === */
+    :root { --blue:#0693d8; --blue-dk:#057bb5; --blue-soft:#e6f4fb; --gray-vm:#878787; }
+    .vm-wordmark { height:23px; width:auto; display:block; }
+    .nav-cta-group { display:flex; align-items:center; gap:10px; }
+    .btn-nav-outline { display:inline-flex; align-items:center; gap:6px; padding:9px 18px; border-radius:var(--radius-pill); font-family:var(--font-body); font-size:0.8125rem; font-weight:600; color:#fff; border:1px solid rgba(255,255,255,0.45); background:transparent; white-space:nowrap; transition:var(--transition); }
+    .btn-nav-outline:hover { background:rgba(255,255,255,0.08); border-color:#fff; }
+    .nav-links { overflow:visible; }
+    .has-dropdown { position:relative; display:flex; align-items:center; }
+    .dd-trigger { display:inline-flex; align-items:center; gap:5px; font-size:0.8125rem; font-weight:500; color:rgba(255,255,255,0.65); cursor:pointer; transition:color var(--transition); }
+    .dd-trigger:hover, .has-dropdown:hover .dd-trigger { color:#fff; }
+    .dd-trigger .caret { font-size:0.55rem; opacity:0.7; transition:transform var(--transition); }
+    .has-dropdown:hover .dd-trigger .caret { transform:rotate(180deg); }
+    .has-dropdown::after { content:''; position:absolute; top:100%; left:-24px; right:-24px; height:24px; }
+    .dropdown-panel { position:absolute; top:calc(100% + 16px); left:50%; transform:translateX(-50%) translateY(8px); background:#fff; border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow-xl); padding:26px 30px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.18s ease, transform 0.18s ease; z-index:200; }
+    .has-dropdown:hover .dropdown-panel { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+    .dd-grid { display:flex; gap:30px; }
+    .dd-col { display:flex; flex-direction:column; gap:22px; min-width:226px; }
+    .dd-group h6 { font-family:var(--font-body); font-size:0.62rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; padding-left:11px; }
+    .dd-item { display:block; padding:8px 11px; margin:0 -11px; border-radius:11px; transition:background var(--transition); }
+    .dd-item:hover { background:var(--gray-bg); }
+    .dd-item-t { display:block; font-size:0.875rem; font-weight:600; color:var(--ink); line-height:1.25; }
+    .dd-item:hover .dd-item-t { color:var(--blue); }
+    .dd-item-d { display:block; font-size:0.74rem; color:var(--ink-soft); margin-top:2px; line-height:1.3; }
+    .dd-cta { display:block; margin-top:22px; padding-top:15px; border-top:1px solid var(--border); font-family:var(--font-head); font-weight:700; font-size:0.8rem; color:var(--orange); }
+    .pill-free { display:inline-block; font-size:0.55rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#fff; background:var(--blue); padding:2px 6px; border-radius:10px; }
+    .btn-blue { background:var(--blue); color:#fff; border:1px solid var(--blue); }
+    .btn-blue:hover { background:var(--blue-dk); border-color:var(--blue-dk); transform:translateY(-1px); }
+    @media (max-width:880px){ .nav-cta-group .btn-nav-outline{ display:none; } }
+
+    /* hero */
+    .rf-hero { position:relative; background:var(--navy); overflow:hidden; }
+    .rf-hero .rf-hero-photo { position:absolute; top:0; right:0; bottom:0; width:50%; background-image:url('images/climb-web.jpg'); background-size:cover; background-position:82% 30%; }
+    .rf-hero .container { position:relative; z-index:1; min-height:540px; display:flex; align-items:center; padding:118px 0 96px; }
+    .rf-hero-panel { max-width:min(560px, 42vw); }
+    .rf-hero .eyebrow { color:var(--icy); }
+    .rf-hero h1 { color:#fff; font-size:clamp(2.4rem,5vw,3.8rem); line-height:1.05; margin:12px 0 18px; }
+    .rf-hero p { color:rgba(230,242,247,0.96); font-size:1.12rem; line-height:1.7; max-width:100%; margin-bottom:28px; }
+    .rf-hero-cta { display:flex; gap:14px; flex-wrap:wrap; }
+    @media (max-width:860px){
+      .rf-hero .rf-hero-photo { position:relative; width:100%; height:260px; }
+      .rf-hero .container { min-height:auto; padding:96px 0 40px; }
+      .rf-hero-panel { max-width:none; }
+    }
+    /* member photo ribbon */
+    .climb-ribbon { background:var(--navy); padding:32px 0; overflow:hidden; }
+    .climb-ribbon .cr-track { display:flex; gap:14px; width:max-content; will-change:transform; }
+    .climb-ribbon .cr-track--l { animation:crScrollL 90s linear infinite; }
+    .climb-ribbon .cr-track--r { animation:crScrollR 90s linear infinite; margin-top:14px; }
+    .climb-ribbon:hover .cr-track { animation-play-state:paused; }
+    .climb-ribbon .cr-img { height:210px; width:auto; border-radius:12px; object-fit:cover; display:block; flex:none; }
+    @keyframes crScrollL { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    @keyframes crScrollR { from{transform:translateX(-50%)} to{transform:translateX(0)} }
+    @media (max-width:640px){ .climb-ribbon .cr-img { height:150px; } .climb-ribbon { padding:22px 0; } }
+    @media (prefers-reduced-motion:reduce){ .climb-ribbon .cr-track { animation:none; } }
+
+    .lead-quote { max-width:820px; margin:0 auto; text-align:center; }
+    .lead-quote p { font-family:var(--font-display); font-size:1.4rem; line-height:1.5; color:var(--ink); }
+
+    /* Tom note */
+    .tom-note { max-width:760px; margin:0 auto; background:#fff; border:1px solid var(--border); border-left:4px solid var(--orange); border-radius:var(--radius-md); padding:34px 36px; box-shadow:var(--shadow-sm); }
+    .tom-note p { color:var(--ink-mid); line-height:1.75; margin:0 0 14px; }
+    .tom-note .sig { font-family:var(--font-display); color:var(--ink); font-size:1.15rem; margin-top:18px; }
+
+    /* tiers */
+    .ct-tiers { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch; }
+    .ct-card { position:relative; background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:32px 28px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; }
+    .ct-card.feat { border:2px solid var(--orange); box-shadow:var(--shadow-md); }
+    .ct-badge { position:absolute; top:-13px; left:28px; background:var(--orange); color:#fff; font-family:var(--font-head); font-weight:700; font-size:0.72rem; letter-spacing:0.04em; text-transform:uppercase; padding:5px 12px; border-radius:999px; }
+    .ct-card .eyebrow { color:var(--orange); }
+    .ct-card h3 { margin:6px 0 4px; font-size:1.35rem; }
+    .ct-price { font-family:var(--font-head); font-weight:700; color:var(--ink); font-size:2rem; line-height:1.1; margin:14px 0 2px; }
+    .ct-price span { font-size:0.95rem; font-weight:600; color:var(--ink-soft); }
+    .ct-sub { font-size:0.9rem; color:var(--ink-soft); margin:0 0 18px; }
+    .ct-list { list-style:none; padding:0; margin:0 0 24px; }
+    .ct-list li { position:relative; padding-left:26px; margin-bottom:11px; font-size:0.95rem; color:var(--ink-mid); line-height:1.5; }
+    .ct-list li:before { content:"\2713"; position:absolute; left:0; top:0; color:var(--blue); font-weight:700; }
+    .ct-card .btn { margin-top:auto; justify-content:center; width:100%; }
+    .ct-note { max-width:760px; margin:26px auto 0; text-align:center; font-size:0.9rem; color:var(--ink-soft); }
+
+    /* steps */
+    .rf-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .rf-step { background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:30px 28px; box-shadow:var(--shadow-sm); }
+    .rf-step .num { width:40px; height:40px; border-radius:50%; background:var(--navy); color:#fff; font-family:var(--font-head); font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+    .rf-step h4 { margin-bottom:8px; }
+    .rf-step p { font-size:0.95rem; color:var(--ink-mid); margin:0; }
+
+    /* benefit table */
+    .rf-benefit { max-width:760px; margin:32px auto 0; border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; }
+    .rf-benefit table { width:100%; border-collapse:collapse; }
+    .rf-benefit th, .rf-benefit td { padding:16px 20px; text-align:left; font-size:0.95rem; border-bottom:1px solid var(--border); }
+    .rf-benefit th { background:var(--navy); color:#fff; font-family:var(--font-head); font-weight:700; font-size:0.82rem; letter-spacing:0.03em; }
+    .rf-benefit td:first-child { font-weight:600; color:var(--ink); }
+    .rf-benefit td .amt { color:var(--orange); font-weight:700; }
+    .rf-benefit tr:last-child td { border-bottom:none; }
+
+    /* share */
+    .share-box { max-width:760px; margin:0 auto; background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:32px; box-shadow:var(--shadow-md); }
+    .share-msg { background:var(--gray-bg); border:1px solid var(--border); border-radius:var(--radius-sm); padding:18px 20px; font-size:0.95rem; line-height:1.6; color:var(--ink-mid); white-space:pre-wrap; }
+    .share-btns { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+    .share-btns a, .share-btns button { flex:1; min-width:140px; justify-content:center; }
+    .copied-note { font-size:0.85rem; color:var(--blue); font-weight:600; margin-top:12px; display:none; }
+
+    /* form */
+    .refer-card { max-width:680px; margin:0 auto; background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:40px; box-shadow:var(--shadow-md); }
+    #refer-success { display:none; text-align:center; padding:24px 8px; }
+
+    /* terms */
+    .rf-terms { max-width:760px; margin:0 auto; }
+    .rf-terms li { font-size:0.92rem; color:var(--ink-mid); line-height:1.6; margin-bottom:10px; }
+
+    .rf-footer { background:var(--navy); color:rgba(207,232,239,0.7); text-align:center; padding:40px 0; font-size:0.85rem; }
+    .rf-footer img { height:20px; width:auto; margin-bottom:14px; opacity:0.9; }
+    .rf-footer p { margin:4px 0; }
+
+    @media (max-width:820px){ .rf-steps,.ct-tiers{grid-template-columns:1fr;} .rf-hero .bg{background-position:center 30%;} }
+
+    /* ===== MOBILE RESPONSIVE SWEEP (launch) ===== */
+    @media (max-width: 880px) {
+      [style*="grid-template-columns"],
+      .adv-stats,.auth-grid,.bk-hero-grid,.book-grid,.call-steps,.course-grid,.cred-grid,.cred-list,.ct-tiers,.dest-cards,.discover-grid,.ec-hero-grid,.es-hero-grid,.evt-gallery,.feat-grid,.fork-top,.form-grid,.form-row,.founder-card,.founders,.fw-cards,.fw5,.gallery,.hear-grid,.hero-start-grid,.img-split,.inc-grid,.incl-grid,.inside-grid,.inside-head,.lens-grid,.logo-grid,.math-grid,.mc-split,.offer-card,.pain-grid,.path,.pil-grid,.pillar-grid,.pillar3,.price-grid,.prob-grid,.proc-grid,.prog-cards,.proof-grid,.q-grid,.qual-banner,.qual-frame,.qual-list,.reel-grid,.rf-steps,.sec-split,.secret-grid,.shift-grid,.sound-list,.sp-hero-grid,.split,.split-grid,.split2,.start-grid,.stat-band,.stat-grid,.story-grid,.suite-grid,.team-grid,.tgrid,.topic-grid,.tstrip,.values-row,.vm-hero-grid,.vt-grid,.wantrap,.who-grid,.why-grid,.xc-hero-grid,.contact-grid,.footer-grid,.assessment-layout
+        { grid-template-columns: 1fr !important; }
+      section { padding-top: 56px !important; padding-bottom: 56px !important; }
+      h1 { font-size: 2rem !important; line-height: 1.14 !important; }
+      h2 { font-size: 1.55rem !important; }
+      .btn-lg, section .btn, .cta-actions .btn, .price-card .btn,
+      .es-hero-cta .btn, .xc-hero-cta .btn, .rf-hero-cta .btn, .ec-hero-cta .btn, .sp-hero-cta .btn, .bk-hero-grid .btn, .vm-hero-grid .btn
+        { width: 100% !important; justify-content: center !important; }
+      table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem !important; line-height: 1.16 !important; }
+      h2 { font-size: 1.3rem !important; }
+      h3 { font-size: 1.15rem !important; }
+      body { font-size: 0.95rem; }
+      section { padding-top: 42px !important; padding-bottom: 42px !important; }
+      .container { padding-left: 18px !important; padding-right: 18px !important; }
+    }
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZTY3R12GE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZZTY3R12GE');
+</script>
+<!-- VM first-touch attribution + form-conversion tracking -->
+<script>
+(function(){
+  var KEY='vm_first_touch';
+  var sp=new URLSearchParams(location.search);
+  function g(k){return sp.get(k)||'';}
+  var ft=null;
+  try{ft=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+  if(!ft){
+    ft={
+      referrer: document.referrer||'',
+      landing_page: location.pathname+location.search,
+      first_seen: new Date().toISOString(),
+      utm_source: g('utm_source'), utm_medium: g('utm_medium'),
+      utm_campaign: g('utm_campaign'), utm_term: g('utm_term'),
+      utm_content: g('utm_content'), gclid: g('gclid'), fbclid: g('fbclid')
+    };
+    try{localStorage.setItem(KEY,JSON.stringify(ft));}catch(e){}
+  }
+  function channel(a){
+    if(a.utm_source) return a.utm_source+(a.utm_medium?(' / '+a.utm_medium):'');
+    var r=a.referrer; if(!r) return 'direct';
+    try{
+      var h=new URL(r).hostname.replace(/^www\./,'');
+      if(/(^|\.)google\.|(^|\.)bing\.|duckduckgo|(^|\.)yahoo\./.test(h)) return 'organic: '+h;
+      if(h.indexOf('vmleader.com')!==-1) return 'internal';
+      return 'referral: '+h;
+    }catch(e){return r;}
+  }
+  ft.channel=channel(ft);
+  window.VM_ATTRIBUTION=ft;
+  function _vmHP(){try{document.querySelectorAll('form').forEach(function(f){if(f.querySelector('input[name=\"website\"]'))return;var w=document.createElement('div');w.setAttribute('aria-hidden','true');w.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;';var l=document.createElement('label');l.textContent='Website';var i=document.createElement('input');i.type='text';i.name='website';i.tabIndex=-1;i.setAttribute('autocomplete','off');w.appendChild(l);w.appendChild(i);f.appendChild(w);});}catch(e){}}
+  if(document.readyState!=='loading'){_vmHP();}else{document.addEventListener('DOMContentLoaded',_vmHP);}
+  var _fetch=window.fetch;
+  window.fetch=function(url,opts){
+    try{
+      var u=(typeof url==='string')?url:(url&&url.url)||'';
+      if(u.indexOf('script.google.com/macros')!==-1 && opts && typeof opts.body==='string'){
+        var d=JSON.parse(opts.body);
+        if(d && typeof d==='object'){
+          var _hp=''; try{var _h=document.querySelector('input[name=\"website\"]'); _hp=_h?String(_h.value||'').trim():'';}catch(e){}
+          var _el=Math.round((window.performance&&performance.now)?performance.now():99999);
+          d.website=_hp; d.elapsed_ms=_el;
+          if(_hp!=='' || _el<1500){ return Promise.resolve(new Response(JSON.stringify({result:'success'}),{status:200,headers:{'Content-Type':'application/json'}})); }
+          d.attr_referrer=ft.referrer; d.attr_channel=ft.channel;
+          d.attr_landing=ft.landing_page; d.attr_first_seen=ft.first_seen;
+          d.attr_utm_source=ft.utm_source; d.attr_utm_medium=ft.utm_medium;
+          d.attr_utm_campaign=ft.utm_campaign; d.attr_utm_term=ft.utm_term;
+          d.attr_utm_content=ft.utm_content; d.attr_gclid=ft.gclid; d.attr_fbclid=ft.fbclid;
+          opts=Object.assign({},opts,{body:JSON.stringify(d)});
+          if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}
+        }
+      }
+    }catch(e){}
+    return _fetch.call(this,url,opts);
+  };
+})();
+</script>
+</head>
+<body>
+
+<!-- UNIFIED VM NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Vertical Motion home" style="gap:9px;">
+      <img src="vm-icon.png" alt="" style="height:30px; width:auto;">
+      <img src="vm-wordmark.png" alt="Vertical Motion" style="height:19px; width:auto;">
+    </a>
+    <div class="nav-links" id="nav-links">
+      <div class="has-dropdown">
+        <a href="exec.html" class="dd-trigger">Executive Career <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col"><div class="dd-group"><h6>Coaching Programs</h6>
+              <a class="dd-item" href="eca.html"><span class="dd-item-t">Executive Career Accelerator</span><span class="dd-item-d">6-month 1:1 program to the executive ranks</span></a>
+              <a class="dd-item" href="cfa.html"><span class="dd-item-t">Corporate Freedom Accelerator</span><span class="dd-item-d">Leave corporate and build your own practice</span></a>
+              <a class="dd-item" href="mastermind.html"><span class="dd-item-t">Executive Mastermind Coaching</span><span class="dd-item-d">Exclusive 1:1 coaching for C-suite members</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Membership &amp; Self-Guided</h6>
+              <a class="dd-item" href="elevate.html"><span class="dd-item-t">Elevate Membership</span><span class="dd-item-d">Framework plus community</span></a>
+              <a class="dd-item" href="book.html"><span class="dd-item-t">The Executive Career Handbook</span><span class="dd-item-d">The book and framework</span></a>
+              <a class="dd-item" href="courses.html"><span class="dd-item-t">Courses &amp; Products</span><span class="dd-item-d">Standalone trainings and mini-courses</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Assessments</h6>
+              <a class="dd-item" href="ldna.html"><span class="dd-item-t"><span class="pill-free">Free</span> LDNA Assessment</span><span class="dd-item-d">See how you naturally lead in 6 minutes</span></a>
+              <a class="dd-item" href="foundations-report.html"><span class="dd-item-t">Leadership Foundations Report&trade;</span><span class="dd-item-d">Deep self-discovery and fit profile</span></a>
+            </div></div>
+          </div>
+          <a href="index.html#career" class="dd-cta">Explore Career Acceleration &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="eltscale.html" class="dd-trigger">Business Solutions <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col">
+              <div class="dd-group"><h6>Start Here</h6>
+                <a class="dd-item" href="scorecard.html"><span class="dd-item-t"><span class="pill-free">Free</span> ELT Risk Assessment</span><span class="dd-item-d">Score your executive leadership team in 7 minutes</span></a></div>
+              <div class="dd-group"><h6>Diagnose &amp; Scale</h6>
+                <a class="dd-item" href="elt-diagnostic.html"><span class="dd-item-t">ELT Diagnostic</span><span class="dd-item-d">Data-backed audit of your executive team</span></a>
+                <a class="dd-item" href="ELT-Scaling-Suite.html"><span class="dd-item-t">ELT Scaling Suite</span><span class="dd-item-d">Ongoing executive team performance system</span></a></div>
+            </div>
+            <div class="dd-col"><div class="dd-group"><h6>Ongoing Services</h6>
+              <a class="dd-item" href="executive-coaching.html"><span class="dd-item-t">Executive Coaching</span><span class="dd-item-d">1:1 coaching for your leadership team</span></a>
+              <a class="dd-item" href="outplacement.html"><span class="dd-item-t">Executive Outplacement</span><span class="dd-item-d">Transition exiting executives with care</span></a>
+              <a class="dd-item" href="ceo-advisory.html"><span class="dd-item-t">CEO Advisory</span><span class="dd-item-d">On-call strategic counsel for the CEO</span></a>
+            </div></div>
+            <div class="dd-col">
+              <div class="dd-group"><h6>Assessments</h6>
+                <a class="dd-item" href="#"><span class="dd-item-t">LDNA &amp; Team Foundations Reports</span><span class="dd-item-d">Map your team's drivers and dynamics</span></a></div>
+              <div class="dd-group"><h6>Specialized</h6>
+                <a class="dd-item" href="baic.html"><span class="dd-item-t">BAIC (The Saunter Group)</span><span class="dd-item-d">Partner-delivered advisory suite</span></a></div>
+            </div>
+          </div>
+          <a href="index.html#scaling" class="dd-cta">Explore Enterprise Solutions &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="about.html" class="dd-trigger">About <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid"><div class="dd-col"><div class="dd-group"><h6>About Vertical Motion</h6>
+            <a class="dd-item" href="about.html#why"><span class="dd-item-t">Our Why</span><span class="dd-item-d">Tom's story and the mission behind VM</span></a>
+            <a class="dd-item" href="about.html#team"><span class="dd-item-t">Our Team</span><span class="dd-item-d">Meet the coaches behind Vertical Motion</span></a>
+            <a class="dd-item" href="speaking.html"><span class="dd-item-t">Book Tom to Speak</span><span class="dd-item-d">Bring Tom to your event or stage</span></a>
+          </div></div></div>
+        </div>
+      </div>
+      <a href="https://community.vmleader.com/">Member Login</a>
+      <a href="contact-us.html">Contact</a>
+    </div>
+    <div class="nav-cta-group">
+      <a href="index.html#career" class="btn-nav-outline">Advance Your Career &rarr;</a>
+      <a href="index.html#scaling" class="btn-nav-cta">Scale Your Team &rarr;</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="rf-hero">
+  <div class="container">
+    <div class="rf-hero-panel">
+      <p class="eyebrow">For Vertical Motion members and alumni</p>
+      <h1>Climb Together.</h1>
+      <p>The most valuable thing we built here was never just the coaching. It was the room. The weekly calls, and the people who understand what you are carrying because they are carrying it too. The door is open again, for as long as you want it. And when you are back in, bring someone up with you.</p>
+      <div class="rf-hero-cta">
+        <a href="#tiers" class="btn btn-primary btn-lg btn-pill">Come back to the room</a>
+        <a href="#refer" class="btn btn-ghost-white btn-lg btn-pill">Refer someone</a>
+      </div>
+    </div>
+  </div>
+  <div class="rf-hero-photo" role="img" aria-label="Vertical Motion members climbing together"></div>
+</section>
+
+<!-- A NOTE FROM TOM -->
+<section>
+  <div class="container">
+    <div class="section-head" style="max-width:720px;"><p class="eyebrow" style="color:var(--orange);">A note from Tom</p><h2>We reopened the room. For good.</h2></div>
+    <div class="tom-note">
+      <p>When your program wrapped, I let you roll off and lose access to the room. One of our alumni told me recently that he missed those weekly calls more than anything, and that being cut off from the group took away the very thing that made this powerful. He was right, and it has been sitting with me.</p>
+      <p>So we fixed it. Climb Together is how you stay in the room for as long as you want, at a rate we only offer the people who have already done the work with us. The weekly calls are back on the calendar, the community is open, and there is a monthly leadership roundtable where we work through whatever you are facing right now.</p>
+      <p>I built this company to help good people become great leaders. That does not stop the day your program ends. Come back to the room.</p>
+      <p class="sig">Tom</p>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBER PHOTO RIBBON -->
+<section class="climb-ribbon" aria-label="Vertical Motion members in the room">
+  <div class="cr-track cr-track--l">
+      <img src="images/climb/web/atlanta-meetup.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/dc-meetup.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/emiliya-bagdasarian-with-brett-buske.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/group.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-1255.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-1928.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2064.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2071.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2098.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2383.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3424.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3738.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3940.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-4996.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-6018.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-6383.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-7386.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/james-millan-deepak-rammohan.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/member-collage.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/members-2.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/members-4.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/nathan-eddy-with-danil-karandin.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/renard-henry-with-cto-samuel-davis-1.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/tom-clients.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/atlanta-meetup.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/dc-meetup.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/emiliya-bagdasarian-with-brett-buske.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/group.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-1255.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-1928.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2064.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2071.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2098.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2383.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3424.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3738.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3940.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-4996.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-6018.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-6383.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-7386.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/james-millan-deepak-rammohan.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/member-collage.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/members-2.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/members-4.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/nathan-eddy-with-danil-karandin.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/renard-henry-with-cto-samuel-davis-1.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/tom-clients.jpg" alt="" loading="lazy" class="cr-img">
+  </div>
+  <div class="cr-track cr-track--r">
+      <img src="images/climb/web/dc-client-meet-up.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/denver-group.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/emiliya-bagdasarian-with-nyc-crew.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-0020.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-1302.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2062.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2065.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2085.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2102.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3137.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3736.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3766.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-4211.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-5789.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-6038.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-7247.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-9962.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/julie-zwissler-with-dr-dan-kaufman.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/members-1.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/members-3.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/members-5.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/peter-and-vijay.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/starsky-smith-with-jackie-demyan.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/tom-cox-with-dr-dan-kaufman.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/dc-client-meet-up.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/denver-group.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/emiliya-bagdasarian-with-nyc-crew.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-0020.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-1302.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2062.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2065.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2085.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-2102.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3137.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3736.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-3766.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-4211.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-5789.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-6038.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-7247.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/img-9962.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/julie-zwissler-with-dr-dan-kaufman.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/members-1.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/members-3.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/members-5.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/peter-and-vijay.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/starsky-smith-with-jackie-demyan.jpg" alt="" loading="lazy" class="cr-img">
+      <img src="images/climb/web/tom-cox-with-dr-dan-kaufman.jpg" alt="" loading="lazy" class="cr-img">
+  </div>
+</section>
+
+<!-- THE LADDER / TIERS -->
+<section id="tiers" class="bg-gray">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow" style="color:var(--orange);">Ways to stay</p><h2>Two ways to stay in the room, plus coaching on demand.</h2><p>Pick the level that fits where you are right now. Move up or down anytime.</p></div>
+    <div class="ct-tiers">
+
+      <div class="ct-card feat">
+        <span class="ct-badge">Most popular</span>
+        <p class="eyebrow">Membership</p>
+        <h3>Community</h3>
+        <div class="ct-price">$197<span>/mo</span></div>
+        <p class="ct-sub">or $1,970/year (two months free)</p>
+        <ul class="ct-list">
+          <li>Weekly access to Tuesday evening's Leadership Edge Calls</li>
+          <li>Access to the weekly member-led roundtable discussion immediately following Leadership Edge sessions</li>
+          <li>Full access to the community, including all member chat channels &amp; member directory</li>
+          <li>Quarterly leadership roundtable with hot seats</li>
+          <li>Access to all future mini-courses and trainings</li>
+        </ul>
+        <a href="https://community.vmleader.com/checkout/climb-together-community" class="btn btn-primary btn-pill">Rejoin the community</a>
+      </div>
+
+      <div class="ct-card">
+        <p class="eyebrow">Membership</p>
+        <h3>Community + Coaching</h3>
+        <div class="ct-price">$497<span>/mo</span></div>
+        <p class="ct-sub">or $2,497/6 months (one month free)</p>
+        <ul class="ct-list">
+          <li>Everything in the Community tier</li>
+          <li>Ongoing continuation 1:1 coaching with a VM certified coach</li>
+          <li>Access to all weekly group coaching calls</li>
+          <li>Personal accountability between the group calls</li>
+          <li>Priority access to the coaching team</li>
+        </ul>
+        <a href="https://community.vmleader.com/checkout/climb-together-coaching" class="btn btn-outline-navy btn-pill">Add coaching</a>
+      </div>
+
+      <div class="ct-card">
+        <p class="eyebrow">On demand</p>
+        <h3>A la carte</h3>
+        <div class="ct-price">Pay as you go</div>
+        <p class="ct-sub">Add on to either tier, or use on its own</p>
+        <ul class="ct-list">
+          <li>VM certified coach session, $297 per hour</li>
+          <li>1:1 with Tom or Ryan, $397 per 30 minutes</li>
+          <li>Coaching bundle packages available</li>
+          <li>Book only when you need it</li>
+        </ul>
+        <a href="https://community.vmleader.com/" class="btn btn-outline-navy btn-pill">Add A la carte</a>
+      </div>
+
+    </div>
+    <p class="ct-note">The annual prepay brings two months free and locks in your alumni rate. This rate honors the work you already put in, and we only offer it to people who have been through a program with us.</p>
+  </div>
+</section>
+
+<!-- THE REFERRAL: HOW IT WORKS -->
+<section id="refer">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow" style="color:var(--orange);">Bring someone up with you</p><h2>The referral, built into the room.</h2><p>When someone you respect is up against the same wall you faced, bring them up with you. They get a hand, and you get a credit toward your membership.</p></div>
+    <div class="rf-howhead" style="text-align:center; max-width:640px; margin:4px auto 34px;">
+      <h3 style="margin-bottom:6px;">How it works</h3>
+      <p style="color:var(--ink-soft); margin:0;">Three steps. We handle the rest.</p>
+    </div>
+    <div class="rf-steps">
+      <div class="rf-step">
+        <div class="num">1</div>
+        <h4>Send it their way</h4>
+        <p>Use one of the ready-made messages below, or just tell us who to reach out to. No codes to track, nothing to manage.</p>
+      </div>
+      <div class="rf-step">
+        <div class="num">2</div>
+        <h4>They join a flagship program</h4>
+        <p>Your peer enrolls in ECA Signature, the Corporate Freedom Accelerator, or the Executive Mastermind.</p>
+      </div>
+      <div class="rf-step">
+        <div class="num">3</div>
+        <h4>You both benefit</h4>
+        <p>They receive 7.5% off, and you receive a matching 7.5% as credit in your account which you can use toward your membership. We take it from there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU BOTH GET -->
+<section class="bg-gray">
+  <div class="container">
+    <div class="section-head" style="max-width:720px;"><p class="eyebrow" style="color:var(--orange);">What you both get</p><h2>A benefit that flows both ways.</h2><p>Fifteen percent, shared evenly. Your friend saves on enrollment, and you earn matching account credit, good toward our programs, your monthly membership, courses, or events.</p></div>
+    <div class="rf-benefit">
+      <table>
+        <tr><th>Program</th><th>Your friend saves</th><th>Your credit</th></tr>
+        <tr><td>ECA Signature</td><td><span class="amt">$750</span> off</td><td><span class="amt">$750</span></td></tr>
+        <tr><td>Corporate Freedom Accelerator</td><td><span class="amt">$750</span> off</td><td><span class="amt">$750</span></td></tr>
+        <tr><td>Executive Mastermind</td><td>7.5% off</td><td>up to <span class="amt">$2,500</span> credit</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SHARE ASSETS -->
+<section id="share">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow" style="color:var(--orange);">Ready-made to share</p><h2>Reach out in your voice, not ours.</h2><p>Add a first name to personalize it, then pick a channel. The message is written to sound like you, not a campaign.</p></div>
+    <div class="share-box">
+      <label for="friendName" style="display:block; font-size:0.9rem; font-weight:600; color:var(--ink); margin-bottom:8px;">Their first name (optional)</label>
+      <input type="text" id="friendName" placeholder="e.g. Jordan" oninput="updateShare()" style="width:100%; margin-bottom:22px;">
+      <p style="font-size:0.8rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:8px;">Your message</p>
+      <div class="share-msg" id="shareMsg"></div>
+      <div class="share-btns">
+        <a id="btnEmail" class="btn btn-outline-navy btn-pill" href="#">Email</a>
+        <a id="btnSms" class="btn btn-outline-navy btn-pill" href="#">Text</a>
+        <a id="btnWa" class="btn btn-outline-navy btn-pill" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <button id="btnCopy" class="btn btn-primary btn-pill" onclick="copyMsg()">Copy message</button>
+      </div>
+      <p class="copied-note" id="copiedNote">Copied. Paste it into a LinkedIn DM or anywhere else.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REFER DIRECTLY -->
+<section class="bg-gray">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow" style="color:var(--orange);">Prefer we reach out?</p><h2>Send us their details and we'll take it from there.</h2><p>Give us a name and how to reach them, and we'll make a warm introduction on your behalf. Your name stays attached so your credit is tracked.</p></div>
+    <div class="refer-card">
+      <form id="refer-form" novalidate>
+        <p style="font-size:0.8rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:14px;">About you</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="r-name">Your name <span style="color:#C62828;">*</span></label>
+            <input type="text" id="r-name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="r-email">Your email <span style="color:#C62828;">*</span></label>
+            <input type="email" id="r-email" placeholder="you@company.com" required>
+          </div>
+        </div>
+        <p style="font-size:0.8rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-soft); margin:26px 0 14px;">Who you're bringing up</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-first">Their first name <span style="color:#C62828;">*</span></label>
+            <input type="text" id="f-first" placeholder="First name" required>
+          </div>
+          <div class="form-group">
+            <label for="f-last">Their last name</label>
+            <input type="text" id="f-last" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-email">Their email <span style="color:#C62828;">*</span></label>
+            <input type="email" id="f-email" placeholder="their@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Their phone</label>
+            <input type="tel" id="f-phone" placeholder="Optional">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="f-program">Where might they fit?</label>
+          <select id="f-program">
+            <option value="">Not sure yet</option>
+            <option>Executive Career Accelerator (ECA)</option>
+            <option>Elevate Membership</option>
+            <option>Corporate Freedom Accelerator</option>
+            <option>Executive Mastermind</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="f-notes">Anything we should know?</label>
+          <textarea id="f-notes" rows="3" placeholder="How you know them, what they're working on, best way to reach out..."></textarea>
+        </div>
+        <div id="refer-error" style="display:none; color:#C62828; font-size:0.875rem; margin-bottom:16px;"></div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">Send referral &rarr;</button>
+        <p style="font-size:0.75rem; color:var(--ink-faint); text-align:center; margin-top:12px; margin-bottom:0;">We'll reach out with care. Your name stays attached so your credit is tracked.</p>
+      </form>
+      <div id="refer-success">
+        <div style="width:56px; height:56px; border-radius:50%; background:var(--icy); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 20px;">&#10003;</div>
+        <h3>Thank you for the introduction.</h3>
+        <p style="color:var(--ink-mid);">We'll reach out to them soon and keep your referral attached to your account. Bringing someone into the room is the highest compliment we can receive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section>
+  <div class="container">
+    <div class="section-head" style="max-width:720px;"><p class="eyebrow" style="color:var(--orange);">The fine print</p><h2>How the credit works.</h2><p>Applies to our flagship programs: ECA Signature, the Corporate Freedom Accelerator, and the Executive Mastermind.</p></div>
+    <ul class="rf-terms">
+      <li>Your friend receives 7.5% off enrollment, and you receive a matching 7.5% as account credit.</li>
+      <li>Credit posts after your friend enrolls and their payment clears. It holds for 30 days, then becomes available to use.</li>
+      <li>Credit is good toward our programs, your monthly membership, courses, or events. It expires 12 months from issue, is non-transferable, and has no cash value.</li>
+      <li>One referral benefit applies per enrollment.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <img src="vm-icon.png" alt="" style="height:36px; width:auto;">
+          <img src="vm-wordmark.png" alt="Vertical Motion" style="height:22px; width:auto;">
+        </div>
+        <p>We help good people become great leaders.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Executive Career</h5>
+        <ul>
+          <li><a href="eca.html">The Accelerator</a></li>
+          <li><a href="cfa.html">Corporate Freedom Accelerator</a></li>
+          <li><a href="elevate.html">Elevate Membership</a></li>
+          <li><a href="book.html">The Handbook</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Organizations</h5>
+        <ul>
+          <li><a href="index.html#scaling">ELT Scaling System</a></li>
+          <li><a href="https://eltscale.com">eltscale.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://community.vmleader.com/">Member Login</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vertical Motion LLC. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html" style="color:inherit; opacity:0.6;">Privacy Policy</a></p>
+      <p><a href="https://vmleader.com" style="color:rgba(255,255,255,0.3);">vmleader.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ---- Share assets ----
+var LANDING = "https://vmleader.com/ldna.html";  // friend's front door: LDNA + strategy call
+function buildMsg(name){
+  var who = name && name.trim() ? name.trim() : "there";
+  return "Hey " + who + ", I've been part of a leadership community through Vertical Motion and it's made a real difference for me. If you're up against the same kind of wall I was, I think you'd get a lot out of it. Start with their quick LDNA and a strategy call here: " + LANDING + ". If you move forward, you get a discount and I get a credit, so we both win. Just mention my name when you sign up so they can connect it.";
+}
+function updateShare(){
+  var name = document.getElementById('friendName').value;
+  var msg = buildMsg(name);
+  document.getElementById('shareMsg').textContent = msg;
+  var enc = encodeURIComponent(msg);
+  document.getElementById('btnEmail').href = "mailto:?subject=" + encodeURIComponent("Thought of you") + "&body=" + enc;
+  document.getElementById('btnSms').href   = "sms:?&body=" + enc;
+  document.getElementById('btnWa').href    = "https://wa.me/?text=" + enc;
+  document.getElementById('copiedNote').style.display = 'none';
+}
+function copyMsg(){
+  var msg = document.getElementById('shareMsg').textContent;
+  navigator.clipboard.writeText(msg).then(function(){
+    document.getElementById('copiedNote').style.display = 'block';
+  }).catch(function(){
+    document.getElementById('copiedNote').style.display = 'block';
+  });
+}
+updateShare();
+
+// ---- Refer directly form ----
+var GAS_URL = "https://script.google.com/macros/s/AKfycbxMU4VK_ikUEgTLsdGeMZ1rR8r4y7HJWCqvrGDJ_FT091fJpuueeNSZrOCaevAGhvqy/exec";
+document.getElementById('refer-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var rn = document.getElementById('r-name').value.trim();
+  var re = document.getElementById('r-email').value.trim();
+  var ff = document.getElementById('f-first').value.trim();
+  var fe = document.getElementById('f-email').value.trim();
+  var err = document.getElementById('refer-error');
+  if(!rn || !re || !ff || !fe){
+    err.textContent = "Please add your name and email, plus your friend's first name and email.";
+    err.style.display = 'block'; return;
+  }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(re) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fe)){
+    err.textContent = "Please check the email addresses and try again.";
+    err.style.display = 'block'; return;
+  }
+  err.style.display = 'none';
+  var btn = document.querySelector('#refer-form button[type="submit"]');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  var payload = {
+    type: "referral",
+    source: "climb_together_referral",
+    timestamp: new Date().toISOString(),
+    referrer_name: rn,
+    referrer_email: re,
+    friend_first: ff,
+    friend_last: document.getElementById('f-last').value.trim(),
+    friend_email: fe,
+    friend_phone: document.getElementById('f-phone').value.trim(),
+    program: document.getElementById('f-program').value,
+    notes: document.getElementById('f-notes').value.trim()
+  };
+  fetch(GAS_URL, { method:"POST", body: JSON.stringify(payload) })
+    .then(function(){ done(); }).catch(function(){ done(); });
+  function done(){
+    document.getElementById('refer-form').style.display='none';
+    document.getElementById('refer-success').style.display='block';
+  }
+});
+
+// ---- Unified VM nav (scroll state + mobile menu) ----
+var nav = document.getElementById('main-nav');
+window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 20); });
+(function(){
+  var ham=document.getElementById('nav-hamburger');
+  var links=document.getElementById('nav-links');
+  if(!ham||!links) return;
+  links.addEventListener('scroll',function(){if(links.scrollLeft!==0){links.scrollLeft=0;}},{passive:true});
+  function setOpen(o){
+    links.classList.toggle('open', o);
+    document.body.classList.toggle('nav-open', o);
+    ham.setAttribute('aria-expanded', o?'true':'false');
+    if(o){ links.scrollTop=0; }
+  }
+  ham.addEventListener('click', function(e){ e.stopPropagation(); setOpen(!links.classList.contains('open')); });
+  links.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', function(e){
+    if(links.classList.contains('open') && !links.contains(e.target) && !ham.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') setOpen(false); });
+  var x0=null,y0=null;
+  links.addEventListener('touchstart', function(e){ x0=e.touches[0].clientX; y0=e.touches[0].clientY; }, {passive:true});
+  links.addEventListener('touchend', function(e){
+    if(y0===null) return;
+    var dy=e.changedTouches[0].clientY - y0, dx=e.changedTouches[0].clientX - x0;
+    if(dy < -80 && Math.abs(dx) < 40 && links.scrollTop <= 0) setOpen(false);
+    x0=y0=null;
+  }, {passive:true});
+})();
+</script>
+</body>
+</html>

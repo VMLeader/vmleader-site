@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#081e2b" />
+<meta name="color-scheme" content="light" />
+
+<!-- SET ME: the public URL of this page on your site -->
+<link rel="canonical" href="https://vmleader.com/ldna-assessment.html" />
+
+<!-- Favicons: add your own site favicon links here if this page does not inherit them. -->
+
+<title>Free Leadership Assessment · LDNA Behavioral Profile | Vertical Motion</title>
+<meta name="description" content="Free leadership assessment and behavioral profile. The LDNA reads seven leadership dimensions in less than 10 minutes, scoring natural style and role behavior. Free full report." />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Vertical Motion" />
+<meta property="og:url" content="https://vmleader.com/ldna-assessment.html" />
+<meta property="og:title" content="LDNA · Leadership Drivers & Natural Aptitudes (free) | Vertical Motion" />
+<meta property="og:description" content="Free leadership assessment and behavioral profile. The LDNA reads seven leadership dimensions in less than 10 minutes, scoring natural style and role behavior. Free full report." />
+<!-- SET ME: add your own og:image (1200x630) for link previews -->
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="LDNA · Leadership Drivers & Natural Aptitudes (free) | Vertical Motion" />
+<meta name="twitter:description" content="Free leadership assessment and behavioral profile. The LDNA reads seven leadership dimensions in less than 10 minutes, scoring natural style and role behavior. Free full report." />
+<!-- SET ME: add your own twitter:image for link previews -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"LDNA \u00b7 Leadership Drivers & Natural Aptitudes","url":"https://vmleader.com/ldna-assessment.html","provider":{"@type":"Organization","name":"The Saunter Group","url":"https://thesauntergroup.com"},"areaServed":"US","serviceType":"Leadership behavioral assessment","description":"A free seven-dimension behavioral assessment (less than 10 minutes), returning a full LDNA report.","offers":{"@type":"Offer","priceCurrency":"USD","price":"0"}}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- ============================================================
+     THEME · FONTS
+     To restyle this page, swap the Google Fonts line below and the
+     --font-* variables in the :root block. Nothing else needs to change.
+     ============================================================ -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     THEME · COLORS AND FONTS
+     Every color and font on this page is defined once, right here.
+     Edit these variables to match your site. Leave the rest of the
+     stylesheet alone.
+     ============================================================ */
+  :root {
+    /* Values below are taken from vmleader.com styles.css so this
+       page matches the rest of the site. */
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-2: #f8fafc;        /* VM --gray-bg */
+    --ink: #081e2b;              /* VM --navy / --ink */
+    --ink-soft: #334155;         /* VM --ink-mid */
+    --ink-mute: #64748b;         /* VM --ink-soft */
+    --line: #e2e8f0;             /* VM --border */
+    --primary: #fc6502;          /* VM --orange, primary CTA */
+    --primary-hover: #d95400;    /* VM --orange-dk */
+    --primary-ink: #FFFFFF;
+    --primary-soft: rgba(252,101,2,0.06);   /* VM soft orange (translucent, as in styles.css) */
+    --primary-line: rgba(252,101,2,0.25);   /* VM orange border tint */
+    --accent: #d95400;           /* VM orange (darker step for small text) */
+    --accent-soft: rgba(252,101,2,0.06);
+    --accent-line: rgba(252,101,2,0.25);
+    --selected-bg: #081e2b;      /* VM navy for selected word chips */
+    --selected-ink: #FFFFFF;
+    --shadow-sm: 0 1px 4px rgba(8,30,43,0.07);
+    --shadow-md: 0 4px 20px rgba(8,30,43,0.10);
+    --radius: 12px;              /* VM --radius-md */
+    --radius-sm: 6px;            /* VM --radius-sm */
+    --radius-chip: 100px;        /* VM --radius-pill */
+    --transition: 0.2s ease;
+
+    --font-serif: Arial, 'Helvetica Neue', Helvetica, sans-serif;   /* VM --font-head (headings) */
+    --font-ui: 'Inter', system-ui, sans-serif;                       /* VM --font-body */
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: var(--font-ui);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ---------- Header ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--ink);              /* VM navy header */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .topbar-inner {
+    max-width: 1180px; margin: 0 auto;
+    padding: 16px 32px;
+    display: flex; align-items: center; gap: 20px;
+    position: relative;
+  }
+
+  /* Nav links + hamburger */
+  .nav-toggle { display: none; flex-direction: column; gap: 5px; width: 36px; height: 36px; background: transparent; border: 0; cursor: pointer; padding: 0; justify-content: center; align-items: center; margin-left: auto; }
+  .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform 200ms ease, opacity 200ms ease; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-links { display: flex; align-items: center; gap: 28px; flex: 1; justify-content: flex-end; }
+  .nav-links a { font-family: var(--font-ui); font-size: 14px; font-weight: 500; color: var(--ink-soft); text-decoration: none; transition: color 180ms; position: relative; padding: 8px 0; }
+  .nav-links a:hover { color: var(--primary); }
+  .nav-links a.active { color: var(--primary); font-weight: 600; }
+  .nav-links a.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -19px; height: 2px; background: var(--accent); }
+
+  /* Progress strip below topbar */
+  .progress-strip { background: rgba(255,255,255,0.96); border-bottom: 1px solid var(--line); }
+  .progress-strip-inner { max-width: 1180px; margin: 0 auto; padding: 10px 32px 12px; }
+  .brand {
+    display: flex; align-items: center; gap: 16px;
+    letter-spacing: -0.005em;
+    text-decoration: none;
+    color: inherit;
+    flex-shrink: 0;
+  }
+  .brand:hover .brand-tag { color: var(--primary); }
+  .brand-tag-sub { display: none; font-family: var(--font-serif); font-style: italic; font-size: 14px; color: var(--ink-soft); line-height: 1.35; margin-top: 6px; flex-basis: 100%; letter-spacing: 0; text-transform: none; font-weight: 400; white-space: nowrap; }
+  @media (min-width: 1024px) { .brand-tag-sub { display: block; } }
+  .brand-mark {
+    position: relative;
+    width: 54px; height: 54px;
+    border-radius: 9px;
+    background: var(--primary);
+    display: inline-block;
+    box-shadow: 0 1px 0 var(--accent) inset, var(--shadow-sm);
+    align-self: center;
+    overflow: hidden;
+  }
+  .brand-mark-L {
+    position: absolute;
+    left: 6px;
+    bottom: 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 46px;
+    color: #FFFFFF;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+  .brand-mark-dna {
+    position: absolute;
+    top: 14px;
+    right: 6px;
+    font-family: var(--font-serif);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    color: #CFE8EF; /* lighter brass, higher contrast on navy at small size */
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .brand-name { font-family: var(--font-serif); font-size: 19px; color: var(--ink); font-weight: 600; line-height: 1.1; letter-spacing: -0.005em; }
+  .brand-sub  { font-family: var(--font-ui); font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.14em; margin-top: 3px; }
+  .brand-logo { height: 72px; width: auto; display: block; transition: opacity 180ms; }
+  .brand:hover .brand-logo { opacity: 0.85; }
+  .brand-tag { font-family: var(--font-ui); font-size: 13px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.18em; font-weight: 500; padding-left: 22px; border-left: 1px solid var(--line); display: none; line-height: 1.1; transition: color 180ms; }
+  @media (min-width: 1024px) { .brand-tag { display: block; } }
+  /* Trademark superscript, small, normal-weight, sits high */
+  .tm { font-size: 0.5em; vertical-align: super; line-height: 0; margin-left: 0.08em; font-weight: 500; font-style: normal; color: var(--ink-mute); }
+  h1 .tm { color: var(--accent); font-style: normal; }
+  .brand-name .tm { color: var(--ink-mute); }
+  .operator-byline { font-family: var(--font-ui); font-size: 13px; color: var(--ink-mute); margin: -6px 0 18px; letter-spacing: 0.01em; }
+  .operator-byline strong { color: var(--ink-soft); font-weight: 600; }
+  .welcome-partner { display: inline-flex; align-items: center; gap: 16px; margin: 0 0 22px; padding: 14px 28px; background: var(--accent-soft); border: 1px solid var(--accent-line); border-radius: 999px; }
+  .welcome-partner-label { font-family: var(--font-ui); font-size: 11.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; color: #d95400; }
+  .welcome-partner-link { display: inline-flex; align-items: center; line-height: 0; }
+  .welcome-partner-logo { height: 32px; width: auto; display: block; }
+
+  .progress-wrap {
+    flex: 1;
+    display: flex; flex-direction: column; gap: 6px;
+    min-width: 0;
+    margin-left: 0;
+  }
+  .progress-meta { display: flex; justify-content: space-between; font-family: var(--font-ui); font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.1em; }
+  .progress-bar { height: 4px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+  .progress-fill {
+    height: 100%; width: 0%;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary) 60%, var(--accent) 100%);
+    border-radius: 999px;
+    transition: width 380ms cubic-bezier(.2,.7,.3,1);
+  }
+
+  /* ---------- Layout ---------- */
+  main { max-width: 980px; margin: 0 auto; padding: 40px 28px 120px; }
+
+  .step { display: none; }
+  .step.active { display: block; animation: fadeUp 320ms cubic-bezier(.2,.7,.3,1); }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .step-eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase; letter-spacing: 0.2em; font-size: 11px;
+    color: var(--accent); font-weight: 500;
+    margin-bottom: 14px;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .step-eyebrow::before {
+    content: ""; width: 18px; height: 1px; background: var(--accent); display: inline-block;
+  }
+  .strip { display: flex; height: 6px; width: 180px; border-radius: 4px; overflow: hidden; gap: 2px; margin: 0 0 22px; }
+  .strip i { display: block; flex: 1; }
+  .strip .s1 { background: var(--primary); } .strip .s2 { background: var(--accent); }
+  .strip .s3 { background: #5B7C99; } .strip .s4 { background: var(--accent); opacity: 0.55; }
+  .strip .s5 { background: var(--primary); opacity: 0.5; } .strip .s6 { background: #5B7C99; opacity: 0.5; }
+  h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(30px, 4.2vw, 44px);
+    line-height: 1.12; letter-spacing: -0.015em;
+    margin: 0 0 16px;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  h1 em { font-style: italic; color: var(--accent); font-weight: 600; }
+  h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(22px, 3vw, 28px);
+    line-height: 1.2; letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+  .lede { color: var(--ink-soft); font-size: 18px; max-width: 64ch; margin: 0 0 28px; line-height: 1.55; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 28px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* ---------- Fields ---------- */
+  .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+  .field label { font-family: var(--font-ui); font-weight: 600; font-size: 13px; color: var(--ink); letter-spacing: 0.01em; }
+  .field .help { font-family: var(--font-ui); font-size: 13px; color: var(--ink-mute); }
+  .field .req { color: var(--accent); margin-left: 3px; font-weight: 700; }
+
+  input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-ui); font-size: 15px;
+    color: var(--ink);
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+  input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-soft);
+  }
+  input.invalid, select.invalid { border-color: #B23A4A; box-shadow: 0 0 0 3px rgba(178,58,74,0.12); }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  /* ---------- Word picker ---------- */
+  .picker-toolbar {
+    position: sticky; top: 65px; z-index: 10;
+    background: var(--bg);
+    padding: 14px 0 12px;
+    margin: 0 0 14px;
+    border-bottom: 1px solid var(--line);
+    display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center;
+  }
+  .search {
+    flex: 1; min-width: 240px;
+    position: relative;
+  }
+  .search input {
+    padding-left: 38px;
+  }
+  .search svg {
+    position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+    width: 18px; height: 18px; color: var(--ink-mute);
+  }
+  .toolbar-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .toggle-btn {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    padding: 9px 14px;
+    font-family: var(--font-ui); font-size: 13px; font-weight: 500;
+    color: var(--ink-soft); cursor: pointer;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: all var(--transition);
+  }
+  .toggle-btn:hover { color: var(--ink); border-color: var(--ink-mute); }
+  .toggle-btn.on {
+    background: var(--primary); color: var(--primary-ink); border-color: var(--primary);
+  }
+  .counter {
+    font-family: var(--font-ui);
+    font-size: 13px; color: var(--ink-soft);
+    background: var(--accent-soft);
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-line);
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+  }
+  .counter strong { color: var(--accent); font-weight: 700; }
+
+  .chip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+  }
+  .chip {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    border-radius: var(--radius-chip);
+    padding: 10px 14px;
+    font-family: var(--font-ui); font-size: 13.5px; font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    transition: all 140ms cubic-bezier(.2,.7,.3,1);
+    user-select: none;
+    line-height: 1.25;
+    letter-spacing: 0.005em;
+  }
+  .chip:hover {
+    border-color: var(--primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+  .chip.selected {
+    background: var(--selected-bg);
+    color: var(--selected-ink);
+    border-color: var(--selected-bg);
+    box-shadow: 0 4px 12px rgba(8, 30, 43, 0.22);
+  }
+  .chip.selected:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+  .chip[hidden] { display: none; }
+
+  .picker-empty {
+    text-align: center; padding: 30px; color: var(--ink-mute); font-size: 14px; font-family: var(--font-ui);
+  }
+
+  /* ---------- Carry-over banner ---------- */
+  .carry-banner {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    background: var(--primary-soft);
+    border: 1px solid var(--primary-line);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    font-family: var(--font-serif);
+    font-size: 15px;
+    color: var(--primary);
+  }
+  .carry-banner button {
+    background: var(--primary); color: #fff; border: 0;
+    padding: 9px 16px; border-radius: 999px;
+    font-family: var(--font-ui); font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: background var(--transition);
+    letter-spacing: 0.01em;
+  }
+  .carry-banner button:hover { background: var(--primary-hover); }
+
+  /* ---------- Review ---------- */
+  .review-section { margin-bottom: 26px; }
+  .review-section h3 {
+    font-family: var(--font-ui);
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--accent); margin: 0 0 12px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .review-edit {
+    background: none; border: 0; color: var(--primary);
+    font-family: var(--font-ui); font-size: 12px; font-weight: 600;
+    cursor: pointer; padding: 0;
+    text-decoration: underline; text-underline-offset: 3px;
+    text-transform: none; letter-spacing: 0;
+  }
+  .review-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .review-chip {
+    background: var(--surface-2); border-radius: var(--radius-chip);
+    padding: 6px 12px; font-family: var(--font-ui); font-size: 13px; color: var(--ink);
+    border: 1px solid var(--line);
+  }
+  .review-field { font-size: 16px; color: var(--ink); margin-bottom: 4px; }
+  .review-field .k { font-family: var(--font-ui); font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-mute); margin-right: 10px; }
+
+  /* ---------- Nav ---------- */
+  .nav {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 32px;
+  }
+  .btn {
+    appearance: none;
+    border: 0;
+    border-radius: 999px;
+    padding: 13px 24px;
+    font-family: var(--font-ui); font-size: 14px; font-weight: 600;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
+  }
+  .btn-primary {
+    background: var(--primary); color: var(--primary-ink);
+    box-shadow: 0 6px 14px rgba(8, 30, 43, 0.22);
+  }
+  .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); box-shadow: 0 8px 18px rgba(8, 30, 43, 0.28); }
+  .btn-primary:disabled { background: var(--ink-mute); box-shadow: none; cursor: not-allowed; transform: none; }
+  .btn-ghost {
+    background: transparent; color: var(--ink-soft);
+  }
+  .btn-ghost:hover { color: var(--ink); }
+
+  /* ---------- Free assessment + report tiers card ---------- */
+  .report-card { background: var(--surface); border-color: var(--accent-line); }
+  .ldna-diagram { display: flex; justify-content: center; margin: 22px 0 6px; transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1); transform-origin: center center; will-change: transform; }
+  .ldna-diagram:hover { transform: scale(1.20); }
+  .ldna-diagram svg { width: 100%; max-width: 480px; height: auto; overflow: visible; }
+  .ldna-dim-group { cursor: pointer; transition: opacity 180ms; outline: none; }
+  .ldna-dim-group circle { transition: fill 200ms ease, stroke-width 200ms ease, r 200ms ease; }
+  .ldna-dim-group:hover circle, .ldna-dim-group:focus circle, .ldna-dim-group.is-active circle { fill: #fc6502; stroke-width: 2.2; }
+  .ldna-dim-group:hover text, .ldna-dim-group:focus text, .ldna-dim-group.is-active text { fill: #fff; }
+  .ldna-dim-label { cursor: pointer; transition: fill 200ms, font-weight 200ms; outline: none; }
+  .ldna-dim-label:hover, .ldna-dim-label.is-active { fill: #fc6502; font-weight: 700; }
+  .ldna-hint { text-align: center; font-family: var(--font-ui); font-size: 12px; color: var(--ink-mute); letter-spacing: 0.04em; margin: 4px 0 0; }
+  .ldna-hint svg { vertical-align: -3px; margin-right: 5px; opacity: 0.7; }
+  /* Definition panel */
+  .ldna-definition { background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 20px 24px; margin-top: 18px; min-height: 96px; transition: opacity 200ms; }
+  .ldna-def-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
+  .ldna-def-code { font-family: var(--font-ui); font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: 0.18em; }
+  .ldna-def-name { font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: var(--ink); }
+  .ldna-def-body { font-family: var(--font-ui); font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; margin: 0 0 8px; }
+  .ldna-def-poles { font-family: var(--font-ui); font-size: 13px; color: var(--ink-mute); line-height: 1.6; margin: 0; }
+  .ldna-def-poles strong { color: var(--ink); font-weight: 600; }
+  .ldna-prompt { color: var(--ink-mute); font-family: var(--font-ui); font-size: 14px; font-style: italic; padding: 8px 0; }
+  @media (hover: none) { .ldna-diagram:hover { transform: none; } }
+  .free-badge { display: inline-block; font-family: var(--font-ui); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: #d95400; background: var(--accent-soft); border: 1px solid var(--accent-line); padding: 5px 12px; border-radius: 999px; }
+  .report-lede { font-family: var(--font-serif); font-size: 16px; color: var(--ink-soft); line-height: 1.6; max-width: 64ch; margin: 12px 0 24px; }
+  .report-lede strong { color: var(--ink); font-weight: 600; }
+  .report-tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 720px) { .report-tiers { grid-template-columns: 1fr; } }
+  .tier { padding: 22px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); display: flex; flex-direction: column; }
+  .tier-free { background: var(--accent-soft); border-color: var(--accent-line); }
+  .tier-extended { background: var(--surface-2); }
+  .tier-tag { font-family: var(--font-ui); font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; color: var(--ink-mute); margin-bottom: 8px; }
+  .tier-free .tier-tag { color: #d95400; }
+  .tier h3 { font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: var(--ink); margin: 0 0 12px; line-height: 1.2; }
+  .tier ul { list-style: none; padding: 0; margin: 0 0 8px; }
+  .tier ul li { font-family: var(--font-ui); font-size: 13.5px; color: var(--ink-soft); padding: 5px 0; padding-left: 18px; position: relative; line-height: 1.45; }
+  .tier ul li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-family: var(--font-ui); }
+  .tier-note { font-family: var(--font-ui); font-size: 12px; color: var(--ink-mute); margin: 10px 0 0; font-style: italic; }
+
+  /* ---------- Consent ---------- */
+  .consent-card { background: var(--surface); }
+  .consent-notice {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin: 4px 0 20px;
+    max-width: 64ch;
+  }
+  .consent-row {
+    display: flex; align-items: flex-start; gap: 12px;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    color: var(--ink);
+    padding: 9px 0;
+    cursor: pointer;
+    line-height: 1.45;
+  }
+  .consent-row input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px; height: 18px;
+    min-width: 18px;
+    border: 1.5px solid var(--line);
+    border-radius: 4px;
+    background: var(--surface);
+    margin: 2px 0 0;
+    cursor: pointer;
+    transition: all var(--transition);
+    position: relative;
+  }
+  .consent-row input[type="checkbox"]:hover { border-color: var(--primary); }
+  .consent-row input[type="checkbox"]:focus { outline: none; box-shadow: 0 0 0 3px var(--primary-soft); border-color: var(--primary); }
+  .consent-row input[type="checkbox"]:checked {
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+  .consent-row input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px; top: 1px;
+    width: 5px; height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .consent-row.invalid input[type="checkbox"] { border-color: #B23A4A; box-shadow: 0 0 0 3px rgba(178,58,74,0.12); }
+  .consent-required {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 4px;
+  }
+  .req-tag {
+    display: inline-block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+    padding: 1px 7px;
+    border-radius: 999px;
+    margin-left: 6px;
+    vertical-align: 1px;
+    font-weight: 600;
+  }
+  .consent-optional { margin-top: 8px; }
+  .consent-sublabel {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-mute);
+    margin: 4px 0 4px;
+  }
+  .consent-fineprint {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin: 6px 0 0;
+    padding-left: 30px;
+  }
+  .consent-links {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--ink-mute);
+  }
+  .consent-links a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary-line);
+    transition: border-color var(--transition);
+  }
+  .consent-links a:hover { border-bottom-color: var(--primary); }
+  .consent-sep { margin: 0 10px; color: var(--ink-mute); }
+
+  /* ---------- Welcome ---------- */
+  .welcome-meta {
+    display: flex; gap: 28px; margin-top: 22px;
+    font-family: var(--font-ui); font-size: 13px; color: var(--ink-soft);
+    flex-wrap: wrap;
+  }
+  .welcome-meta div { display: flex; align-items: center; gap: 9px; }
+  .welcome-meta svg { color: var(--primary); }
+
+  /* ---------- Hero start CTA + scroll cue ---------- */
+  .hero-start { margin: 28px 0 4px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; }
+  .btn-hero { font-size: 16px; padding: 16px 34px; display: inline-flex; align-items: center; gap: 10px; }
+  .btn-hero .arrow { display: inline-block; transition: transform 220ms cubic-bezier(.2,.7,.3,1); }
+  .btn-hero:hover .arrow { transform: translateY(3px); }
+  .hero-start-note { font-family: var(--font-ui); font-size: 13px; color: var(--ink-mute); margin: 0; letter-spacing: 0.01em; }
+  .hero-start-note strong { color: var(--ink-soft); font-weight: 600; }
+  /* Quiet, secondary clickable VM link beneath the prominent (non-clickable) credit */
+  .welcome-partner-static { cursor: default; }
+  .partner-visit-link { font-family: var(--font-ui); font-size: 12.5px; color: var(--ink-mute); text-decoration: none; display: inline-flex; align-items: center; gap: 5px; margin: -10px 0 22px; letter-spacing: 0.01em; transition: color 180ms; }
+  .partner-visit-link:hover { color: var(--primary); }
+  .partner-visit-link .arrow { transition: transform 180ms; }
+  .partner-visit-link:hover .arrow { transform: translateX(3px); }
+
+  /* ---------- How-it-works step strip ---------- */
+  .how-strip { margin: 26px 0 6px; }
+  .how-strip-head { font-family: var(--font-ui); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-mute); margin-bottom: 12px; }
+  .how-steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .how-steps li { display: flex; gap: 11px; align-items: flex-start; padding: 14px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; }
+  .how-num { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: #fff; font-family: var(--font-ui); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .how-txt { font-family: var(--font-ui); font-size: 12.5px; color: var(--ink-soft); line-height: 1.42; }
+  .how-txt strong { display: block; color: var(--ink); font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  @media (max-width: 760px) { .how-steps { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 440px) { .how-steps { grid-template-columns: 1fr; } }
+
+  /* ---------- "More about the LDNA" divider ---------- */
+  .more-divider { display: flex; align-items: center; gap: 16px; margin: 46px 0 6px; }
+  .more-divider::before, .more-divider::after { content: ""; height: 1px; background: var(--line); flex: 1; }
+  .more-divider span { font-family: var(--font-ui); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; color: var(--ink-mute); white-space: nowrap; }
+
+  /* ---------- Intake form kicker ---------- */
+  .form-kicker { font-family: var(--font-ui); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 12px; display: inline-flex; align-items: center; gap: 8px; }
+  .form-kicker::before { content: ""; width: 18px; height: 1px; background: var(--accent); display: inline-block; }
+
+  /* ---------- Done ---------- */
+  .done {
+    text-align: center; padding: 60px 20px;
+  }
+  .done .check {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: var(--primary-soft); color: var(--primary);
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 22px;
+    border: 1px solid var(--primary-line);
+  }
+  .done-partner-card { margin: 36px auto 0; max-width: 580px; padding: 24px 26px; background: var(--accent-soft); border: 1px solid var(--accent-line); border-radius: 12px; text-align: left; }
+  .done-partner-eyebrow { font-family: var(--font-ui); font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; color: #d95400; margin-bottom: 6px; }
+  .done-partner-heading { font-family: var(--font-serif); font-size: 22px; font-weight: 600; color: var(--ink); margin: 0 0 10px; line-height: 1.25; }
+  .done-partner-body { font-family: var(--font-ui); font-size: 14px; color: var(--ink-soft); line-height: 1.55; margin: 0 0 18px; }
+  .done-partner-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .done-partner-link { display: inline-flex; align-items: center; line-height: 0; }
+  .done-partner-logo { height: 36px; width: auto; display: block; }
+  .done-partner-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
+  .done-partner-btn { display: inline-flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-radius: 10px; text-decoration: none; font-family: var(--font-ui); font-size: 14px; font-weight: 600; transition: transform 180ms ease, box-shadow 180ms ease; }
+  .done-partner-btn:hover { transform: translateY(-1px); }
+  .done-partner-btn-primary { background: var(--ink); color: #fff; border: 1px solid var(--ink); }
+  .done-partner-btn-primary:hover { box-shadow: 0 4px 14px rgba(8, 30, 43, 0.18); }
+  .done-partner-btn-secondary { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+  .done-partner-btn-secondary:hover { border-color: var(--ink-soft); }
+  .done-partner-btn-label { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+  .done-partner-btn-eyebrow { font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; opacity: 0.72; }
+  .done-partner-btn-arrow { font-size: 18px; line-height: 1; opacity: 0.8; }
+
+  /* ---------- Share-to-unlock module (completion screen) ---------- */
+  .unlock-card { margin: 34px auto 0; max-width: 620px; padding: 30px 30px 28px; background: var(--surface); border: 1px solid var(--primary-line); border-radius: 16px; text-align: left; box-shadow: var(--shadow-md); }
+  .unlock-card.is-unlocked { border-color: var(--accent-line); background: linear-gradient(180deg, var(--accent-soft) 0%, #fff 120px); }
+  .unlock-eyebrow { font-family: var(--font-ui); font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 8px; }
+  .unlock-heading { font-family: var(--font-serif); font-size: 24px; font-weight: 600; color: var(--ink); margin: 0 0 12px; line-height: 1.22; }
+  .unlock-body { font-family: var(--font-ui); font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; margin: 0 0 16px; }
+  .unlock-body strong { color: var(--ink); font-weight: 600; }
+  .unlock-list { list-style: none; padding: 0; margin: 0 0 22px; }
+  .unlock-list li { font-family: var(--font-ui); font-size: 13.5px; color: var(--ink-soft); padding: 5px 0 5px 24px; position: relative; line-height: 1.45; }
+  .unlock-list li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  .unlock-share-label { display: block; font-family: var(--font-ui); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-mute); margin: 0 0 8px; }
+  .reflink-row { display: flex; gap: 10px; margin-bottom: 14px; }
+  .reflink-row input { flex: 1; min-width: 0; font-size: 13.5px; color: var(--ink-soft); background: var(--surface-2); }
+  .reflink-copy { flex: 0 0 auto; padding: 12px 20px; box-shadow: none; }
+  .share-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+  .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink); font-family: var(--font-ui); font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer; transition: border-color 180ms, transform 180ms, box-shadow 180ms; }
+  .share-btn:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+  .share-btn svg { width: 16px; height: 16px; }
+  .unlock-or { display: flex; align-items: center; gap: 14px; margin: 24px 0 18px; }
+  .unlock-or::before, .unlock-or::after { content: ""; height: 1px; background: var(--line); flex: 1; }
+  .unlock-or span { font-family: var(--font-ui); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-mute); white-space: nowrap; }
+  .invite-box input { margin-bottom: 8px; }
+  .invite-help { font-family: var(--font-ui); font-size: 12px; color: var(--ink-mute); margin: 0 0 14px; line-height: 1.45; }
+  .invite-box .btn { width: 100%; }
+  .invite-err { font-family: var(--font-ui); font-size: 13px; color: #B23A4A; margin: 10px 0 0; }
+  .unlock-done { display: flex; align-items: flex-start; gap: 14px; margin-top: 22px; padding: 18px 20px; background: #fff; border: 1px solid var(--accent-line); border-radius: 12px; }
+  .unlock-done-check { flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; }
+  .unlock-done div { font-family: var(--font-ui); font-size: 13.5px; color: var(--ink-soft); line-height: 1.5; }
+  .unlock-done strong { display: block; color: var(--ink); font-size: 14.5px; font-weight: 600; margin-bottom: 2px; }
+  @media (max-width: 640px) {
+    .unlock-card { padding: 22px 18px; }
+    .reflink-row { flex-direction: column; }
+    .reflink-copy { width: 100%; }
+  }
+
+  .err-banner {
+    background: #FBEAEC; color: #7A1F2B; border: 1px solid #E8B5BC;
+    padding: 12px 14px; border-radius: var(--radius-sm); margin-bottom: 16px;
+    font-family: var(--font-ui); font-size: 14px;
+  }
+
+  .footer-note {
+    text-align: center; color: var(--ink-mute);
+    font-family: var(--font-ui); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 36px 24px 60px;
+  }
+
+  /* small screens */
+  @media (max-width: 640px) {
+    .topbar-inner { padding: 12px 16px; gap: 10px; flex-wrap: wrap; }
+    .progress-wrap { order: 3; flex-basis: 100%; }
+    main { padding: 24px 16px 80px; }
+    .card { padding: 18px; }
+    .picker-toolbar { top: 110px; }
+    .chip-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+  }
+
+
+/* ===========================================================
+   COMPREHENSIVE MOBILE SWEEP, best practice across all pages
+   =========================================================== */
+@media (max-width: 880px) {
+  /* Containers: scale down section padding aggressively */
+  section.hero { padding: 64px 22px 56px !important; }
+  section.section, section.section.alt, section.stat-band, section.cta-band,
+  section.pillars, section.bench, section.lessons, section.story-body,
+  section.from-ryan, section.problem, section.method, section.offerings,
+  section.story, section.partner, section.instrument, section.ladder-band,
+  section.pull-quote { padding-left: 22px !important; padding-right: 22px !important; }
+
+  /* Hero typography */
+  section.hero h1 { font-size: clamp(28px, 8.4vw, 40px) !important; line-height: 1.08 !important; max-width: none !important; }
+  section.hero .lede, .hero .lede { font-size: 16px !important; line-height: 1.5 !important; max-width: none !important; }
+  .hero-ctas { gap: 10px !important; }
+  .hero-ctas .btn-lg, .hero-ctas .btn { width: 100% !important; justify-content: center !important; padding: 14px 18px !important; font-size: 15px !important; }
+  .hero-meta { font-size: 12px !important; margin-top: 14px !important; }
+  .hero-meta span + span { display: inline-block; margin-left: 12px !important; }
+
+  /* Section h2 + lede */
+  .section h2, .section-inner h2, section.section h2 { font-size: clamp(22px, 6.5vw, 30px) !important; line-height: 1.18 !important; max-width: none !important; }
+  .section .lede, .section-inner .lede, section.section .lede { font-size: 16px !important; max-width: none !important; }
+  .section p, .section-inner p { font-size: 16px !important; max-width: none !important; }
+
+  /* Section padding for vertical rhythm */
+  section.section, section.section.alt { padding-top: 56px !important; padding-bottom: 56px !important; }
+  section.cta-band { padding: 64px 22px !important; }
+  .cta-inner h2 { font-size: clamp(22px, 7vw, 32px) !important; }
+  .cta-inner p { font-size: 16px !important; }
+  .ctas { gap: 10px !important; }
+  .ctas .btn-lg, .ctas .btn { width: 100% !important; justify-content: center !important; }
+
+  /* Universal grid collapse */
+  .domain-grid, .pillars-grid, .lessons-grid, .who-grid, .feature-grid,
+  .deliverables, .cta-grid, .dim-grid, .usecase-grid, .outcome-grid,
+  .bench-grid, .phases, .grid-cards, .offerings-grid,
+  .pillars-grid-3, .small-cards { grid-template-columns: 1fr !important; gap: 14px !important; }
+
+  /* Two-up summaries that should remain 2-col but tighter */
+  .ami-summary { grid-template-columns: repeat(2, 1fr) !important; gap: 6px !important; }
+  .ami-domains { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* AMI widget: stack to single column */
+  .ami-body { grid-template-columns: 1fr !important; }
+  .ami-left, .ami-right { padding: 18px 16px !important; }
+  .ami-head { padding: 16px 18px 12px !important; }
+  .ami-head .t { font-size: 14px !important; line-height: 1.3 !important; }
+  .ami-card .val { font-size: 17px !important; }
+  .ami-radar svg { max-width: 100% !important; }
+  .ami-fix .desc { font-size: 12.5px !important; line-height: 1.4 !important; }
+  .ami-fix .meta { font-size: 9.5px !important; }
+  .ami-fix.demo-pulse::before { font-size: 9px !important; left: 12px !important; }
+
+  /* Tables: wrap in horizontal scroll */
+  table.compare, .rsp-sc-table, .rsp-vm-table, .rsp-sp-table { font-size: 11px !important; }
+  table.compare { display: block !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; white-space: nowrap; }
+
+  /* Stacked report deck on mobile: taller deck, lighter chrome */
+  .rsp-deck { height: 640px !important; }
+  .rsp-page-head { padding: 10px 14px !important; }
+  .rsp-page-title { font-size: 12px !important; }
+  .rsp-page-num { font-size: 8.5px !important; }
+  .rsp-page-body { padding: 12px 14px !important; height: calc(100% - 42px) !important; }
+  .rsp-tabs { gap: 6px !important; }
+  .rsp-tab { font-size: 11px !important; padding: 7px 12px !important; }
+
+  /* Scorecard table mobile */
+  .rsp-sc-table th, .rsp-sc-table td { padding: 4px 5px !important; font-size: 10px !important; }
+  .rsp-sc-bar { width: 60px !important; }
+  .rsp-sc-foot { flex-direction: column !important; gap: 8px !important; align-items: flex-start !important; }
+  .rsp-sc-amibig { font-size: 24px !important; }
+
+  /* VMOCA register: hide ID column on narrow */
+  .rsp-vm-table th, .rsp-vm-table td { padding: 3px 4px !important; font-size: 9.5px !important; }
+  .rsp-vm-header { flex-direction: column !important; gap: 4px !important; align-items: flex-start !important; }
+
+  /* Sprint actions table */
+  .rsp-sp-table th, .rsp-sp-table td { padding: 4px 5px !important; font-size: 10px !important; }
+  .rsp-sp-head { flex-direction: column !important; gap: 4px !important; align-items: flex-start !important; }
+
+  /* SVG containers should always be 100% */
+  .domain-diagram svg, .rsp-ax-wrap svg, .rsp-fmap-wrap svg, .ldna-diagram svg { max-width: 100% !important; width: 100% !important; height: auto !important; }
+
+  /* Stat band */
+  .stat-inner { flex-direction: column !important; gap: 14px !important; align-items: flex-start !important; }
+  .stat-number { font-size: clamp(56px, 18vw, 80px) !important; }
+  .stat-context { font-size: 14px !important; }
+
+  /* Pricing band */
+  .pricing-band h2, section[class*="PRICING"] h2 { font-size: clamp(22px, 6.5vw, 26px) !important; }
+
+  /* TAB / bench section */
+  .bench-card { padding: 18px 18px !important; }
+  .bench-card h3 { font-size: 16px !important; }
+  .bench-card p { font-size: 12.5px !important; }
+  .bench-lede { font-size: 14.5px !important; }
+
+  /* From-Ryan card */
+  .from-ryan-card { padding: 28px 22px !important; }
+  .from-ryan-sig { flex-direction: column !important; gap: 8px !important; align-items: flex-start !important; }
+  .from-ryan-sig-name { font-size: 17px !important; }
+  .from-ryan-sig-meta { font-size: 11px !important; }
+
+  /* Logo / topbar safety */
+  .brand-logo { height: 44px !important; }
+  .topbar-inner { padding: 12px 16px !important; gap: 10px !important; }
+  .nav-cta { font-size: 13px !important; padding: 9px 14px !important; }
+
+  /* Mobile nav: anchored dropdown bubble that fully exposes the menu */
+  .nav-toggle { display: flex !important; }
+  .nav-links {
+    position: absolute !important;
+    top: calc(100% + 10px) !important; left: 14px !important; right: 14px !important;
+    background: #fff !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 18px 44px rgba(8, 30, 43,0.20) !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    padding: 8px !important;
+    gap: 2px !important;
+    z-index: 99 !important;
+    max-height: calc(100dvh - 96px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    opacity: 0 !important; visibility: hidden !important; pointer-events: none !important;
+    transform: translateY(-10px) scale(0.97) !important; transform-origin: top right !important;
+    transition: opacity 180ms ease, transform 240ms cubic-bezier(0.22,1,0.36,1), visibility 0s linear 240ms !important;
+  }
+  .nav-links.open {
+    opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
+    transform: translateY(0) scale(1) !important;
+    transition: opacity 180ms ease, transform 280ms cubic-bezier(0.22,1,0.36,1) !important;
+  }
+  .nav-links a {
+    font-family: var(--font-ui) !important;
+    font-size: 16px !important;
+    padding: 13px 14px !important;
+    border-bottom: 1px solid var(--line) !important;
+    width: 100% !important;
+    color: var(--ink) !important;
+    font-weight: 500 !important;
+    border-radius: 10px !important;
+    transition: background 140ms ease !important;
+  }
+  .nav-links a:last-child { border-bottom: 0 !important; }
+  .nav-links a:active { background: var(--surface-2, #f8fafc) !important; }
+  .nav-links a.active { color: var(--accent) !important; font-weight: 600 !important; }
+  .nav-links a.active::after { display: none !important; }
+  .progress-strip-inner { padding: 8px 16px 10px !important; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column !important; gap: 12px !important; align-items: flex-start !important; }
+
+  /* LDNA welcome screen */
+  .step h1 { font-size: clamp(26px, 7vw, 32px) !important; line-height: 1.15 !important; }
+  .step .lede { font-size: 15px !important; }
+  .welcome-meta { flex-direction: column !important; gap: 8px !important; }
+  .card { padding: 22px 20px !important; }
+  .report-tiers { grid-template-columns: 1fr !important; }
+  .tier { padding: 18px 18px !important; }
+  .done-partner-card { padding: 22px 18px !important; }
+  .done-partner-actions { flex-direction: column !important; gap: 10px !important; }
+  .done-partner-btn { width: 100% !important; justify-content: center !important; }
+
+  /* Leadership-assessment hub: comparison table & FAQ */
+  .faq summary { padding: 18px 22px !important; font-size: 16px !important; }
+  .faq summary::after { right: 22px !important; }
+  .faq details p { padding: 0 22px 18px !important; font-size: 14px !important; }
+}
+
+@media (max-width: 480px) {
+  /* Extra-narrow refinements */
+  .ami-summary { grid-template-columns: 1fr 1fr !important; }
+  .ami-card .val { font-size: 15px !important; }
+  .ami-card .lbl { font-size: 9px !important; }
+  .rsp-deck { height: 700px !important; }
+  .bench-grid { grid-template-columns: 1fr !important; }
+  .nav-cta { font-size: 12px !important; padding: 8px 12px !important; }
+  .brand-logo { height: 40px !important; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <!-- YOUR LOGO: uses the same logo files as the rest of vmleader.com.
+         Delete the whole <header> block if this page renders inside your
+         site template with its own header. -->
+    <a href="https://vmleader.com" class="brand" aria-label="Vertical Motion, home">
+      <img src="https://vmleader.com/vm-icon.png" alt="" style="height:34px; width:auto; display:block;" />
+      <img src="https://vmleader.com/vm-wordmark.png" alt="Vertical Motion" style="height:20px; width:auto; display:block;" />
+    </a>
+    <!-- Attribution: the LDNA instrument is licensed from The Saunter Group. Please keep this lockup. -->
+    <a href="https://thesauntergroup.com" target="_blank" rel="noopener" style="margin-left:auto; display:flex; align-items:center; gap:9px; text-decoration:none;">
+      <span style="font-family:var(--font-ui); font-size:10.5px; font-weight:500; color:rgba(255,255,255,0.55); text-transform:uppercase; letter-spacing:0.14em;">Powered by</span>
+      <img src="data:image/png;base64,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" alt="The Saunter Group" style="height:30px; width:auto; display:block; opacity:0.95;" />
+    </a>
+  </div>
+  <div class="progress-strip">
+    <div class="progress-strip-inner">
+      <div class="progress-wrap" aria-hidden="true">
+        <div class="progress-meta">
+          <span id="stepLabel">Welcome</span>
+          <span id="stepIndex">Step 1 of 4</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- STEP 1: Welcome + demographics -->
+  <section class="step active" data-step="0" aria-label="About you">
+    <div class="step-eyebrow">Free leadership assessment</div>
+    <p style="font-family: var(--font-serif); font-style: italic; font-size: 15.5px; color: var(--accent); margin: 0 0 8px; letter-spacing: 0.01em;">Understand every leader. Build the whole team.</p>
+    <h1>Take the LDNA<span class="tm">™</span> assessment. <em>Your free full profile in less than 10 minutes.</em></h1>
+    <p class="operator-byline">Assessment powered by <strong>The Saunter Group</strong></p>
+    <p class="lede">
+      In less than 10 minutes you'll see how you actually lead, where your current role is asking
+      you to behave differently, and what that gap is costing you every day. Pick the
+      words that fit. We do the math.
+    </p>
+    <div class="hero-start">
+      <button class="btn btn-primary btn-hero" id="heroStart" type="button">Start the assessment <span class="arrow" aria-hidden="true">↓</span></button>
+      <p class="hero-start-note"><strong>Free.</strong> Less than 10 minutes. Jump straight in, or read more below first.</p>
+    </div>
+    <div class="welcome-meta">
+      <div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Less than 10 minutes
+      </div>
+      <div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Confidential
+      </div>
+      <div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        Your progress saves automatically
+      </div>
+    </div>
+
+    <!-- How it works: makes clear this is a 4-step assessment taken on THIS page -->
+    <div class="how-strip" aria-label="How the assessment works">
+      <div class="how-strip-head">How it works · four quick steps, all on this page</div>
+      <ol class="how-steps">
+        <li><span class="how-num">1</span><span class="how-txt"><strong>About you</strong>A few details, right below.</span></li>
+        <li><span class="how-num">2</span><span class="how-txt"><strong>Words that fit you</strong>Pick what describes your natural style.</span></li>
+        <li><span class="how-num">3</span><span class="how-txt"><strong>Words your role demands</strong>The same list, through your role's lens.</span></li>
+        <li><span class="how-num">4</span><span class="how-txt"><strong>Get your report</strong>Your full LDNA report, emailed free.</span></li>
+      </ol>
+    </div>
+
+    <div class="card" id="start-form" style="margin-top: 22px; scroll-margin-top: 96px;">
+      <div class="form-kicker">Step 1 of 4 · Start here</div>
+      <h2>Tell us a bit about yourself</h2>
+      <p class="help" style="margin-top: 4px; margin-bottom: 18px; color: var(--ink-mute); font-size: 14px;">
+        This context helps us tailor your profile.
+      </p>
+
+      <div class="grid-2">
+        <div class="field">
+          <label for="fullName">Full name<span class="req">*</span></label>
+          <input id="fullName" type="text" autocomplete="name" placeholder="Jane Doe" />
+        </div>
+        <div class="field">
+          <label for="email">Email address<span class="req">*</span></label>
+          <input id="email" type="email" autocomplete="email" placeholder="you@company.com" />
+        </div>
+        <div class="field">
+          <label for="role">Current role / title<span class="req">*</span></label>
+          <input id="role" type="text" autocomplete="organization-title" placeholder="e.g. Director of Operations" />
+        </div>
+        <div class="field">
+          <label for="experience">Years of experience<span class="req">*</span></label>
+          <select id="experience">
+            <option value="">Select…</option>
+            <option>0-2 years</option>
+            <option>3-5 years</option>
+            <option>6-10 years</option>
+            <option>11-15 years</option>
+            <option>16-20 years</option>
+            <option>20+ years</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="card consent-card" style="margin-top: 22px;">
+      <h2>Consent &amp; follow-up</h2>
+      <p class="consent-notice">
+        The Saunter Group, LLC is the data controller for your responses. We process your
+        name, email, role, and behavioral selections to generate your confidential LDNA
+        profile. We don't sell or share your data with third parties.
+      </p>
+
+      <label class="consent-row consent-required">
+        <input type="checkbox" id="consentRequired" />
+        <span>
+          I consent to my responses being processed to generate my LDNA profile.
+          <span class="req-tag">Required</span>
+        </span>
+      </label>
+
+      <div class="consent-optional">
+        <p class="consent-sublabel">Stay in touch</p>
+        <label class="consent-row">
+          <input type="checkbox" id="consentFollowup" checked />
+          <span>
+            Send me a brief feedback request about my LDNA experience, occasional research invitations, and articles on leadership development.
+          </span>
+        </label>
+        <p class="consent-fineprint">Pre-selected. Untick if you'd rather not. You can unsubscribe from any message at any time.</p>
+      </div>
+
+      <div class="consent-links">
+        <a href="https://thesauntergroup.com/ldna/privacy.html" target="_blank" rel="noopener">View Privacy Policy</a>
+        <span class="consent-sep">·</span>
+        <a href="mailto:info@thesauntergroup.com?subject=LDNA%20data%20request">Contact us about your data</a>
+      </div>
+    </div>
+
+    <div class="nav">
+      <span></span>
+      <button class="btn btn-primary" id="next0">Begin assessment →</button>
+    </div>
+
+    <div class="more-divider"><span>More about the LDNA</span></div>
+    <!-- LDNA 7-dimension visual -->
+    <div class="card" style="margin-top: 28px;">
+      <h2>What LDNA reads.</h2>
+      <p class="report-lede" style="margin-bottom: 0;">
+        Seven dimensions grounded in established behavioral science. Each one captures a different driver of how you naturally lead, and how your role asks you to adapt.
+      </p>
+      <div class="ldna-diagram" id="ldnaDiagram">
+        <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The seven LDNA dimensions arranged in a heptagon around a central LDNA mark. Hover or tap a dimension for the definition.">
+          <defs>
+            <radialGradient id="ldnaCenter" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#153347" />
+              <stop offset="100%" stop-color="#081e2b" />
+            </radialGradient>
+          </defs>
+          <g stroke="#CFE8EF" stroke-width="0.75" fill="none">
+            <line x1="300" y1="240" x2="300" y2="80"/>
+            <line x1="300" y1="240" x2="425" y2="140"/>
+            <line x1="300" y1="240" x2="456" y2="275"/>
+            <line x1="300" y1="240" x2="369" y2="384"/>
+            <line x1="300" y1="240" x2="231" y2="384"/>
+            <line x1="300" y1="240" x2="144" y2="275"/>
+            <line x1="300" y1="240" x2="175" y2="140"/>
+          </g>
+          <circle cx="300" cy="240" r="58" fill="url(#ldnaCenter)" stroke="#fc6502" stroke-width="1.5" />
+          <text x="300" y="234" text-anchor="middle" font-family="Aptos Serif, Source Serif 4, Georgia, serif" font-size="22" font-weight="700" fill="#fff">LDNA</text>
+          <text x="300" y="256" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" letter-spacing="2.4" fill="#CFE8EF">7 DIMENSIONS</text>
+          <g font-family="Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+            <g class="ldna-dim-group" data-dim="0" tabindex="0" role="button" aria-label="Drive and Independence"><circle cx="300" cy="80" r="22" fill="#fff" stroke="#fc6502" stroke-width="1.6"/><text x="300" y="85" fill="#fc6502">1</text></g>
+            <g class="ldna-dim-group" data-dim="1" tabindex="0" role="button" aria-label="Social Energy"><circle cx="425" cy="140" r="22" fill="#fff" stroke="#fc6502" stroke-width="1.6"/><text x="425" y="145" fill="#fc6502">2</text></g>
+            <g class="ldna-dim-group" data-dim="2" tabindex="0" role="button" aria-label="Pace and Patience"><circle cx="456" cy="275" r="22" fill="#fff" stroke="#fc6502" stroke-width="1.6"/><text x="456" y="280" fill="#fc6502">3</text></g>
+            <g class="ldna-dim-group" data-dim="3" tabindex="0" role="button" aria-label="Structure and Order"><circle cx="369" cy="384" r="22" fill="#fff" stroke="#fc6502" stroke-width="1.6"/><text x="369" y="389" fill="#fc6502">4</text></g>
+            <g class="ldna-dim-group" data-dim="4" tabindex="0" role="button" aria-label="Creative Battery"><circle cx="231" cy="384" r="22" fill="#fff" stroke="#fc6502" stroke-width="1.6"/><text x="231" y="389" fill="#fc6502">5</text></g>
+            <g class="ldna-dim-group" data-dim="5" tabindex="0" role="button" aria-label="Logic and Analysis"><circle cx="144" cy="275" r="22" fill="#fff" stroke="#fc6502" stroke-width="1.6"/><text x="144" y="280" fill="#fc6502">6</text></g>
+            <g class="ldna-dim-group" data-dim="6" tabindex="0" role="button" aria-label="Vision and Ideas"><circle cx="175" cy="140" r="22" fill="#fff" stroke="#fc6502" stroke-width="1.6"/><text x="175" y="145" fill="#fc6502">7</text></g>
+          </g>
+          <g font-family="Inter, sans-serif" font-size="11.5" font-weight="600" fill="#081e2b">
+            <text class="ldna-dim-label" data-dim="0" x="300" y="42" text-anchor="middle">Drive &amp; Independence</text>
+            <text class="ldna-dim-label" data-dim="1" x="455" y="135" text-anchor="start">Social Energy</text>
+            <text class="ldna-dim-label" data-dim="2" x="486" y="272" text-anchor="start">Pace &amp; Patience</text>
+            <text class="ldna-dim-label" data-dim="3" x="369" y="426" text-anchor="middle">Structure &amp; Order</text>
+            <text class="ldna-dim-label" data-dim="4" x="231" y="426" text-anchor="middle">Creative Battery</text>
+            <text class="ldna-dim-label" data-dim="5" x="114" y="272" text-anchor="end">Logic &amp; Analysis</text>
+            <text class="ldna-dim-label" data-dim="6" x="145" y="135" text-anchor="end">Vision &amp; Ideas</text>
+          </g>
+        </svg>
+      </div>
+      <p class="ldna-hint">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v5.25"/><path d="M16 11h-1a3 3 0 0 0-3 3v0a3 3 0 0 0 3 3h1a4 4 0 0 0 4-4v-2a4 4 0 0 0-4-4"/></svg>
+        Hover or tap any dimension to see what it measures.
+      </p>
+      <div class="ldna-definition" id="ldnaDefinition" aria-live="polite">
+        <span class="ldna-prompt" id="ldnaPrompt">Each of the seven dimensions captures a different driver of how you naturally lead. Hover or tap one to read the definition.</span>
+        <div class="ldna-def-head" style="display:none;">
+          <span class="ldna-def-code" id="ldnaDefCode"></span>
+          <span class="ldna-def-name" id="ldnaDefName"></span>
+        </div>
+        <p class="ldna-def-body" id="ldnaDefBody" style="display:none;"></p>
+        <p class="ldna-def-poles" id="ldnaDefPoles" style="display:none;"></p>
+      </div>
+    </div>
+
+    <!-- Adaptation Gap callout -->
+    <div class="card" style="margin-top: 22px; background: var(--primary); color: #fff; border-color: var(--primary);">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+        <span style="font-family: var(--font-ui); font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #CFE8EF;">The signature read</span>
+      </div>
+      <h2 style="color: #fff; margin: 0 0 12px; font-size: 22px;">The Adaptation Gap.</h2>
+      <p style="font-family: var(--font-ui); font-size: 14.5px; color: rgba(255,255,255,0.85); line-height: 1.55; margin: 0;">
+        Where your natural self and your role behavior diverge, energy is spent. The LDNA quantifies that load per dimension and names its shape, aligned, demand-weighted, or bidirectional. It is the daily cost of being who your role asks you to be, made visible.
+      </p>
+    </div>
+
+    <!-- Free assessment + report tiers -->
+    <div class="card report-card" style="margin-top: 22px;">
+      <div class="free-badge">Free assessment</div>
+      <h2 style="margin-top: 10px;">What you'll receive.</h2>
+      <p class="report-lede">
+        Complete the assessment and we'll email you your <strong>full LDNA report</strong>: your archetype, all seven dimensions scored and explained, your <strong>Adaptation Gap</strong>, your AI-exposure read, and development guidance written to your profile. Free, and no sharing required.
+      </p>
+      <div class="report-tiers">
+        <div class="tier tier-free">
+          <div class="tier-tag">Included free</div>
+          <h3>Your full LDNA report</h3>
+          <ul>
+            <li>All seven dimensions, scored and explained</li>
+            <li>Your archetype on the value-stream field</li>
+            <li>Your full Adaptation Gap: the daily cost, dimension by dimension</li>
+            <li>Your AI-exposure read: where your strengths stay durable vs. exposed</li>
+            <li>Development guidance written to your own profile</li>
+          </ul>
+          <p class="tier-note">Free, and no sharing required.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- STEP 2: Part 1 -->
+  <section class="step" data-step="1" aria-label="Part 1: Natural self">
+    <div class="step-eyebrow">Part 1 of 2 · Natural self</div>
+    <h1>Which of these describe who you are most of the time?</h1>
+    <p class="lede">Select every word that genuinely fits your natural style across work and life. Typical range is 20 to 50 words.</p>
+
+    <div class="picker-toolbar" id="toolbar1">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+        <input type="text" id="search1" placeholder="Filter words…" autocomplete="off" />
+      </div>
+      <div class="toolbar-actions">
+        <button class="toggle-btn" id="selOnly1" type="button" aria-pressed="false">Show selected only</button>
+        <div class="counter"><strong id="count1">0</strong> selected</div>
+      </div>
+    </div>
+
+    <div class="chip-grid" id="grid1" role="group" aria-label="Natural self words"></div>
+    <div class="picker-empty" id="empty1" hidden>No matching words. Clear the filter to see all.</div>
+
+    <div class="nav">
+      <button class="btn btn-ghost" data-back="1">← Back</button>
+      <button class="btn btn-primary" data-next="1">Continue to Part 2 →</button>
+    </div>
+  </section>
+
+  <!-- STEP 3: Part 2 -->
+  <section class="step" data-step="2" aria-label="Part 2: Role behavior">
+    <div class="step-eyebrow">Part 2 of 2 · Role behavior</div>
+    <h1>Which of these describe how you <em>must behave</em> to succeed in your current role?</h1>
+    <p class="lede">Same list, different lens. What does the role itself reward or require? It's normal for this set to overlap with, or differ from, your natural self.</p>
+
+    <div class="carry-banner" id="carryBanner" hidden>
+      <span>Want to start with your Part 1 selections and edit from there?</span>
+      <button id="carryBtn" type="button">Carry over selections</button>
+    </div>
+
+    <div class="picker-toolbar" id="toolbar2">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+        <input type="text" id="search2" placeholder="Filter words…" autocomplete="off" />
+      </div>
+      <div class="toolbar-actions">
+        <button class="toggle-btn" id="selOnly2" type="button" aria-pressed="false">Show selected only</button>
+        <div class="counter"><strong id="count2">0</strong> selected</div>
+      </div>
+    </div>
+
+    <div class="chip-grid" id="grid2" role="group" aria-label="Role behavior words"></div>
+    <div class="picker-empty" id="empty2" hidden>No matching words. Clear the filter to see all.</div>
+
+    <div class="nav">
+      <button class="btn btn-ghost" data-back="2">← Back</button>
+      <button class="btn btn-primary" data-next="2">Review your responses →</button>
+    </div>
+  </section>
+
+  <!-- STEP 4: Review + submit -->
+  <section class="step" data-step="3" aria-label="Review">
+    <div class="step-eyebrow">Almost done</div>
+    <h1>Review your responses</h1>
+    <p class="lede">Take a moment to look this over. You can jump back to any section to make changes.</p>
+
+    <div class="card">
+      <div class="review-section">
+        <h3>About you <button class="review-edit" data-jump="0">Edit</button></h3>
+        <div class="review-field"><span class="k">Name:</span><span id="rName">,</span></div>
+        <div class="review-field"><span class="k">Email:</span><span id="rEmail">,</span></div>
+        <div class="review-field"><span class="k">Role:</span><span id="rRole">,</span></div>
+        <div class="review-field"><span class="k">Experience:</span><span id="rExp">,</span></div>
+      </div>
+
+      <div class="review-section">
+        <h3>Part 1: Natural self (<span id="rCount1">0</span>) <button class="review-edit" data-jump="1">Edit</button></h3>
+        <div class="review-list" id="rList1"></div>
+      </div>
+
+      <div class="review-section">
+        <h3>Part 2: Role behavior (<span id="rCount2">0</span>) <button class="review-edit" data-jump="2">Edit</button></h3>
+        <div class="review-list" id="rList2"></div>
+      </div>
+    </div>
+
+    <div id="submitErr" class="err-banner" hidden></div>
+
+    <div class="nav">
+      <button class="btn btn-ghost" data-back="3">← Back</button>
+      <button class="btn btn-primary" id="submitBtn">Submit assessment</button>
+    </div>
+  </section>
+
+  <!-- STEP 5: Done -->
+  <section class="step" data-step="4" aria-label="Submitted">
+    <div class="done">
+      <div class="check">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h1>Thank you.</h1>
+      <p class="lede" style="margin-left: auto; margin-right: auto;">Your <strong>full report</strong> arrives within <strong>one business day</strong>, delivered by the <strong>Vertical Motion</strong> team.</p>
+
+      <!-- While you wait: the strongest free next step that exists today -->
+      <!-- Bring your team: optional ungated share + team-assessment lead -->
+      <div class="unlock-card" id="unlockCard">
+        <div class="unlock-eyebrow">Bring your team</div>
+        <h2 class="unlock-heading">The LDNA is sharper across a team.</h2>
+        <p class="unlock-body">
+          Pass the assessment to anyone who'd benefit. No strings, and they each get their own full report free. <strong>Want your whole team read together?</strong> Email <a href="mailto:support@vmleader.com?subject=Team%20LDNA%20assessment" style="color:var(--accent);font-weight:600;">support@vmleader.com</a> about a team assessment, and we'll map how your leaders fit, where they cover each other, and where they share a blind spot.
+        </p>
+
+        <div class="unlock-share">
+          <label class="unlock-share-label" for="refLink">Share link</label>
+          <div class="reflink-row">
+            <input id="refLink" type="text" readonly value="" aria-label="LDNA assessment share link" />
+            <button class="btn btn-primary reflink-copy" id="copyLink" type="button">Copy</button>
+          </div>
+          <div class="share-btns">
+            <a id="shareEmail" class="share-btn" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email
+            </a>
+            <a id="shareLinkedIn" class="share-btn" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.25h4.5V24h-4.5V8.25zM8.25 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.99c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.69 1.82-2.69 3.7V24h-4.5V8.25z"/></svg>LinkedIn
+            </a>
+            <a id="shareSMS" class="share-btn" href="#">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>Text
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="done-partner-card" aria-label="Want to go deeper? Two paths through Vertical Motion.">
+        <div class="done-partner-row" style="margin-bottom: 14px;">
+          <a href="https://www.vmleader.com" target="_blank" rel="noopener" class="done-partner-link" aria-label="Visit Vertical Motion">
+            <img src="https://images.squarespace-cdn.com/content/v1/67d84861b35dd82387d52220/fd6ec7ef-2c28-4366-a1f0-b31cbc5b2e70/PNG+File+Sans+ECA+Tag.png?format=1500w" alt="Vertical Motion" class="done-partner-logo" />
+          </a>
+          <span class="done-partner-eyebrow" style="margin: 0;">Go deeper</span>
+        </div>
+        <h2 class="done-partner-heading">Want to go deeper?</h2>
+        <p class="done-partner-body">
+          Two paths through Vertical Motion. Start with the framework, or get the full LDNA inside a personalized executive read.
+        </p>
+        <div class="done-partner-actions">
+          <a href="https://community.vmleader.com/checkout/foundations-report" target="_blank" rel="noopener" class="done-partner-btn done-partner-btn-primary">
+            <span class="done-partner-btn-label">
+              <span class="done-partner-btn-eyebrow">The full LDNA read</span>
+              <span>Get the Foundations Report</span>
+            </span>
+            <span class="done-partner-btn-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="https://community.vmleader.com/checkout/foundations-course" target="_blank" rel="noopener" class="done-partner-btn done-partner-btn-secondary">
+            <span class="done-partner-btn-label">
+              <span class="done-partner-btn-eyebrow">Learn the framework</span>
+              <span>Start the Foundations Course</span>
+            </span>
+            <span class="done-partner-btn-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="footer-note">
+  <!-- Attribution: please keep this block. -->
+  <a href="https://thesauntergroup.com" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; margin-bottom:14px;">
+    <span style="color:var(--ink-mute);">Powered by</span>
+    <img src="data:image/png;base64,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" alt="The Saunter Group" style="height:44px; width:auto; display:block;" />
+  </a><br>
+  LDNA (Leadership Drivers &amp; Natural Aptitudes) © 2026 The Saunter Group, LLC · a proprietary instrument, used under license
+</div>
+
+<script>
+/* ============================================================
+   Adjective pool, refined 159-item list, ASCII hyphens.
+   Both sections use the identical pool so the natural-vs-adaptive
+   gap can be computed downstream.
+   ============================================================ */
+const WORDS = [
+  "Cooperative","Energetic","Innovative","Meticulous","Sensitive","Fast-paced","Persistent","Calm-paced",
+  "Experimental","Expressive","Critical-thinking","Structured","Laid-back with details","Thick-skinned",
+  "Charming","Strategic-thinking","Rule-conscious","Independent","Patient","Strong-willed","People-oriented",
+  "Original","Unhurried","Casual about rules","Results-driven","Friendly","Questioning","Methodical",
+  "Relentless","Intuitive-feeling","Practical-only","Determined","Talkative","Resourceful","Perfectionistic",
+  "Approachable","Big-picture","Cautious with change","Analytical","Resourceful-creative",
+  "Reserved with feelings","Tenacious","Sociable","Routine-oriented (tasks)","Numbers-oriented",
+  "Driven by deadlines","Entrepreneurial","Warm","Farsighted","Planner","Conscientious","Engaging",
+  "Abstract-minded","Relational","Unstructured","Energetic-all-day","Rational","Juggles-many-tasks",
+  "Competitive","Open","Insightful","Thorough","Careful","Compassionate","Vision-oriented",
+  "Spontaneous-casual","High stamina","Skeptical","Easily bored","Entertaining","Steady","Systematic",
+  "Disciplined","Sentimental","Conceptual","Encouraging","Even-tempered","Cautious-judging","Risk-taking",
+  "Cheerful","Dependable","Orderly","Emotional","Imaginative","Team-minded","Tolerant","Compliance-minded",
+  "Tireless","Pragmatic","Restless","Enthusiastic","Idea-driven","Quality-focused","Flexible with structure",
+  "Guided by heart","Inventive","Upbeat","Deliberate","Procedural","Easily drained","Logical",
+  "Change-seeking","Charismatic","Problem-solving","Pressured","Process-oriented","Cool-headed",
+  "Hard-driving","Chatty","Opportunistic-creative","Slow to anger","Diligent","Impartial","Strong-nerved",
+  "Self-directed","Persuasive","Lively","Precise","Empathetic","Anticipatory","Adaptable","Resilient",
+  "Self-reliant","Outgoing","Hates routine (repetition)","Detail-oriented","Burnout-prone","Objective",
+  "Easily stimulated","Personable","Active","Consistent","Sensitive to stress","Confident","Measured",
+  "Overwhelmed easily","Reserved","Firm","Hard-working","Welcoming","Curious","Easily distracted",
+  "Authoritative","Magnetic","Ingenious","Rigorous","Caring","Autonomous","Evidence-driven",
+  "Unconventional","Standards-driven","Composed","Assertive","Organized","Fast-paced (works quickly)",
+  "Holistic","Attuned","Novelty-seeking","Inquisitive"
+];
+
+/* ============================================================
+   Endpoint, paste your Google Apps Script Web App URL here
+   to send responses to your sheet. Leave as null to skip and
+   only do local JSON download.
+   ============================================================ */
+const SUBMIT_ENDPOINT = "https://script.google.com/macros/s/AKfycbx2If3UCmoe6HOB5s1jDnf0RN8Ps-IbJ15AwE0TpleGleMP7VMZ1JplGQhyMCeolILv/exec";
+
+/* ============================================================
+   Partner configuration (Vertical Motion install)
+   ------------------------------------------------------------
+   PARTNER_ID    identifies this installation in every submission
+                 so reports route correctly. DO NOT CHANGE.
+   THANK_YOU_URL where respondents land after submitting.
+   PAGE_URL      the public URL of THIS page on your site
+                 (used to build share links). Update if the page
+                 lives at a different path.
+   ============================================================ */
+const PARTNER_ID    = "vmleader";
+const THANK_YOU_URL = "https://vmleader.com/submitted-ldna.html";
+const PAGE_URL      = "https://vmleader.com/ldna-assessment.html";
+
+/* ============================================================
+   State
+   ============================================================ */
+const STORAGE_KEY = "ldna.v1";
+const ATTRIBUTION_KEY = "ldna.attribution.v1";
+const POLICY_VERSION = "2026-05-29";
+
+/* ============================================================
+   Attribution capture
+   ------------------------------------------------------------
+   Reads UTM parameters, a partner/licensee tag, and an external
+   contact id from the URL on every page load. First-touch values
+   persist in localStorage for 90 days so a returning visitor stays
+   attributed to whichever licensee originally drove them here.
+   Later params overwrite empty slots but never overwrite first-touch.
+   ============================================================ */
+const ATTR_KEYS = ["partner", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "cid", "contact_id", "ref"];
+const ATTR_TTL_DAYS = 90;
+
+function readAttribution() {
+  let stored = null;
+  try {
+    const raw = localStorage.getItem(ATTRIBUTION_KEY);
+    if (raw) {
+      stored = JSON.parse(raw);
+      // Expire stale first-touch
+      if (stored.firstTouchAt && (Date.now() - new Date(stored.firstTouchAt).getTime()) > ATTR_TTL_DAYS * 24 * 60 * 60 * 1000) {
+        stored = null;
+      }
+    }
+  } catch (_) {}
+
+  const params = new URLSearchParams(window.location.search);
+  const incoming = {};
+  ATTR_KEYS.forEach(k => {
+    const v = params.get(k);
+    if (v) incoming[k] = v.trim().slice(0, 120); // cap length
+  });
+  // Normalize contact_id alias
+  if (incoming.contact_id && !incoming.cid) incoming.cid = incoming.contact_id;
+
+  const isFirstTouch = !stored;
+  const merged = stored ? { ...stored } : {
+    firstTouchAt: new Date().toISOString(),
+    firstTouchReferrer: (document.referrer || location.href).slice(0, 240),
+    firstTouchLanding: location.pathname + location.search,
+  };
+  // First-touch: only set if absent
+  ATTR_KEYS.forEach(k => {
+    if (incoming[k] && !merged[k]) merged[k] = incoming[k];
+  });
+  // Last-touch: always capture so we can compute attribution either way
+  merged.lastTouchAt = new Date().toISOString();
+  ATTR_KEYS.forEach(k => {
+    if (incoming[k]) merged["last_" + k] = incoming[k];
+  });
+  merged.lastReferrer = (document.referrer || location.href).slice(0, 240);
+
+  try { localStorage.setItem(ATTRIBUTION_KEY, JSON.stringify(merged)); } catch (_) {}
+  return merged;
+}
+
+const ATTRIBUTION = readAttribution();
+const state = {
+  step: 0,
+  demographics: { fullName: "", email: "", role: "", experience: "" },
+  consent: {
+    required: false,
+    // Pre-checked combined follow-up opt-in. Tracked as a single flag,
+    // but mirrored across the legacy feedback/research/updates columns
+    // in the sheet so existing reporting keeps working.
+    followup: true,
+    timestamp: null,   // set when required consent is first ticked
+  },
+  part1: new Set(),
+  part2: new Set(),
+};
+
+const STEP_LABELS = ["About you", "Part 1 of 2", "Part 2 of 2", "Review", "Submitted"];
+const TOTAL_STEPS = 4; // not counting "submitted"
+
+/* ============================================================
+   Persistence
+   ============================================================ */
+function save() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      step: state.step,
+      demographics: state.demographics,
+      consent: state.consent,
+      part1: [...state.part1],
+      part2: [...state.part2],
+    }));
+  } catch (_) {}
+}
+function load() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const d = JSON.parse(raw);
+    if (d.demographics) Object.assign(state.demographics, d.demographics);
+    if (d.consent) Object.assign(state.consent, d.consent);
+    if (Array.isArray(d.part1)) state.part1 = new Set(d.part1);
+    if (Array.isArray(d.part2)) state.part2 = new Set(d.part2);
+    if (typeof d.step === "number") state.step = Math.min(d.step, 3);
+  } catch (_) {}
+}
+
+/* ============================================================
+   Rendering
+   ============================================================ */
+function showStep(i) {
+  state.step = i;
+  document.querySelectorAll(".step").forEach(s => s.classList.toggle("active", Number(s.dataset.step) === i));
+  document.getElementById("stepLabel").textContent = STEP_LABELS[i] || "";
+  document.getElementById("stepIndex").textContent = i < TOTAL_STEPS ? `Step ${i + 1} of ${TOTAL_STEPS}` : "Complete";
+  const pct = i < TOTAL_STEPS ? ((i) / (TOTAL_STEPS - 1)) * 100 : 100;
+  document.getElementById("progressFill").style.width = pct + "%";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  if (i === 3) renderReview();
+  if (i === 4) setupShare();
+  if (i === 2) {
+    document.getElementById("carryBanner").hidden = (state.part2.size > 0 || state.part1.size === 0);
+  }
+  save();
+}
+
+function buildGrid(gridId, set) {
+  const grid = document.getElementById(gridId);
+  grid.innerHTML = "";
+  WORDS.forEach(word => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "chip" + (set.has(word) ? " selected" : "");
+    btn.textContent = word;
+    btn.setAttribute("role", "checkbox");
+    btn.setAttribute("aria-checked", set.has(word) ? "true" : "false");
+    btn.dataset.word = word;
+    btn.addEventListener("click", () => toggleChip(btn, set, gridId));
+    grid.appendChild(btn);
+  });
+}
+
+function toggleChip(btn, set, gridId) {
+  const word = btn.dataset.word;
+  if (set.has(word)) { set.delete(word); btn.classList.remove("selected"); btn.setAttribute("aria-checked","false"); }
+  else { set.add(word); btn.classList.add("selected"); btn.setAttribute("aria-checked","true"); }
+  updateCounters();
+  save();
+  // re-apply current filter (in case "selected only" is on)
+  if (gridId === "grid1") applyFilter(1);
+  if (gridId === "grid2") applyFilter(2);
+}
+
+function updateCounters() {
+  document.getElementById("count1").textContent = state.part1.size;
+  document.getElementById("count2").textContent = state.part2.size;
+}
+
+/* ---------- Search + "selected only" ---------- */
+const filterState = { 1: { q: "", selOnly: false }, 2: { q: "", selOnly: false } };
+
+function applyFilter(n) {
+  const { q, selOnly } = filterState[n];
+  const set = n === 1 ? state.part1 : state.part2;
+  const grid = document.getElementById("grid" + n);
+  const empty = document.getElementById("empty" + n);
+  let visible = 0;
+  grid.querySelectorAll(".chip").forEach(chip => {
+    const word = chip.dataset.word.toLowerCase();
+    const matchesQ = !q || word.includes(q);
+    const matchesSel = !selOnly || set.has(chip.dataset.word);
+    const show = matchesQ && matchesSel;
+    chip.hidden = !show;
+    if (show) visible++;
+  });
+  empty.hidden = visible > 0;
+}
+
+function wireFilter(n) {
+  const searchEl = document.getElementById("search" + n);
+  const selBtn = document.getElementById("selOnly" + n);
+  searchEl.addEventListener("input", e => {
+    filterState[n].q = e.target.value.trim().toLowerCase();
+    applyFilter(n);
+  });
+  selBtn.addEventListener("click", () => {
+    filterState[n].selOnly = !filterState[n].selOnly;
+    selBtn.classList.toggle("on", filterState[n].selOnly);
+    selBtn.setAttribute("aria-pressed", String(filterState[n].selOnly));
+    applyFilter(n);
+  });
+}
+
+/* ---------- Carry over ---------- */
+document.getElementById("carryBtn").addEventListener("click", () => {
+  state.part1.forEach(w => state.part2.add(w));
+  buildGrid("grid2", state.part2);
+  updateCounters();
+  applyFilter(2);
+  document.getElementById("carryBanner").hidden = true;
+  save();
+});
+
+/* ---------- Demographics binding ---------- */
+function bindDemographics() {
+  const fields = ["fullName","email","role","experience"];
+  fields.forEach(id => {
+    const el = document.getElementById(id);
+    el.value = state.demographics[id] || "";
+    el.addEventListener("input", () => { state.demographics[id] = el.value; save(); });
+    el.addEventListener("change", () => { state.demographics[id] = el.value; save(); });
+  });
+}
+
+/* ---------- Consent binding ---------- */
+const CONSENT_FIELDS = {
+  consentRequired: "required",
+  consentFollowup: "followup",
+};
+function bindConsent() {
+  Object.entries(CONSENT_FIELDS).forEach(([id, key]) => {
+    const el = document.getElementById(id);
+    el.checked = !!state.consent[key];
+    el.addEventListener("change", () => {
+      state.consent[key] = el.checked;
+      // Stamp the moment the user first grants required consent
+      if (key === "required" && el.checked && !state.consent.timestamp) {
+        state.consent.timestamp = new Date().toISOString();
+      }
+      // If they un-check required later, clear the stamp
+      if (key === "required" && !el.checked) {
+        state.consent.timestamp = null;
+      }
+      save();
+    });
+  });
+}
+
+function validateDemographics() {
+  const d = state.demographics;
+  let ok = true;
+  ["fullName","email","role","experience"].forEach(id => {
+    const el = document.getElementById(id);
+    const empty = !String(d[id] || "").trim();
+    el.classList.toggle("invalid", empty);
+    if (empty) ok = false;
+  });
+  const emailEl = document.getElementById("email");
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email);
+  if (d.email && !emailOk) { emailEl.classList.add("invalid"); ok = false; }
+
+  // Required consent must be ticked
+  const consentRow = document.getElementById("consentRequired").closest(".consent-row");
+  if (!state.consent.required) {
+    consentRow.classList.add("invalid");
+    ok = false;
+  } else {
+    consentRow.classList.remove("invalid");
+  }
+  return ok;
+}
+
+/* ---------- Review ---------- */
+function renderReview() {
+  document.getElementById("rName").textContent = state.demographics.fullName || ",";
+  document.getElementById("rEmail").textContent = state.demographics.email || ",";
+  document.getElementById("rRole").textContent = state.demographics.role || ",";
+  document.getElementById("rExp").textContent = state.demographics.experience || ",";
+
+  const render = (listId, countId, set) => {
+    const list = document.getElementById(listId);
+    list.innerHTML = "";
+    [...set].forEach(w => {
+      const span = document.createElement("span");
+      span.className = "review-chip";
+      span.textContent = w;
+      list.appendChild(span);
+    });
+    document.getElementById(countId).textContent = set.size;
+    if (set.size === 0) {
+      const span = document.createElement("span");
+      span.style.color = "var(--ink-mute)";
+      span.style.fontSize = "13px";
+      span.textContent = "No words selected.";
+      list.appendChild(span);
+    }
+  };
+  render("rList1", "rCount1", state.part1);
+  render("rList2", "rCount2", state.part2);
+}
+
+/* ---------- Navigation ---------- */
+document.getElementById("next0").addEventListener("click", () => {
+  if (!validateDemographics()) return;
+  showStep(1);
+});
+document.querySelectorAll("[data-next]").forEach(b => {
+  b.addEventListener("click", () => showStep(Number(b.dataset.next) + 1));
+});
+document.querySelectorAll("[data-back]").forEach(b => {
+  b.addEventListener("click", () => showStep(Number(b.dataset.back) - 1));
+});
+document.querySelectorAll("[data-jump]").forEach(b => {
+  b.addEventListener("click", () => showStep(Number(b.dataset.jump)));
+});
+
+/* ---------- Submit ---------- */
+function getReferralCode() {
+  try {
+    const s = JSON.parse(localStorage.getItem("ldna.share.v1") || "{}");
+    if (s && s.referralCode) return s.referralCode;
+  } catch (_) {}
+  return "LD" + Date.now().toString(36).toUpperCase().slice(-5) + Math.random().toString(36).toUpperCase().slice(2, 5);
+}
+
+function buildPayload() {
+  return {
+    submittedAt: new Date().toISOString(),
+    ...state.demographics,
+    naturalSelf: [...state.part1],
+    roleBehavior: [...state.part2],
+    naturalSelfCount: state.part1.size,
+    roleBehaviorCount: state.part2.size,
+    // Default deliverable everyone receives free. The full multi-page report is
+    // unlocked separately via a share event from the completion screen.
+    reportTier: "full",
+    // This respondent's own referral code (for the share link on the Done screen).
+    referralCode: state.referralCode || "",
+    // If they arrived via someone else's share link (?ref=CODE), credit that referrer.
+    referrerCode: ATTRIBUTION.ref || "",
+    consentTimestamp: state.consent.timestamp || new Date().toISOString(),
+    policyVersion: POLICY_VERSION,
+    // One combined follow-up opt-in (pre-checked, can be unticked).
+    // Mirrored to legacy columns so existing reporting/sheets keep working.
+    optInFollowup: !!state.consent.followup,
+    optInFeedback: !!state.consent.followup,
+    optInResearch: !!state.consent.followup,
+    optInUpdates: !!state.consent.followup,
+    // Attribution, what brought this respondent here. First-touch values
+    // are sticky (90 days via localStorage); last-touch reflects the most
+    // recent visit so licensees can analyze attribution either way.
+    partner: PARTNER_ID,
+    utmSource: ATTRIBUTION.utm_source || "",
+    utmMedium: ATTRIBUTION.utm_medium || "",
+    utmCampaign: ATTRIBUTION.utm_campaign || "",
+    utmTerm: ATTRIBUTION.utm_term || "",
+    utmContent: ATTRIBUTION.utm_content || "",
+    contactId: ATTRIBUTION.cid || ATTRIBUTION.contact_id || "",
+    firstTouchAt: ATTRIBUTION.firstTouchAt || "",
+    firstTouchReferrer: ATTRIBUTION.firstTouchReferrer || "",
+    lastTouchAt: ATTRIBUTION.lastTouchAt || "",
+    lastReferrer: ATTRIBUTION.lastReferrer || "",
+  };
+}
+
+async function submit() {
+  const submitBtn = document.getElementById("submitBtn");
+  const errBanner = document.getElementById("submitErr");
+  errBanner.hidden = true;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Submitting…";
+  // Mint a personal referral code and persist it (survives the cache clear below)
+  // so the completion screen can build this person's share link.
+  state.referralCode = getReferralCode();
+  try {
+    localStorage.setItem("ldna.share.v1", JSON.stringify({
+      email: state.demographics.email,
+      name: state.demographics.fullName,
+      referralCode: state.referralCode,
+    }));
+  } catch (_) {}
+  const payload = buildPayload();
+
+  if (SUBMIT_ENDPOINT) {
+    try {
+      const res = await fetch(SUBMIT_ENDPOINT, {
+        method: "POST",
+        // Apps Script web apps don't accept preflighted JSON; send as text/plain.
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("Server returned " + res.status);
+    } catch (e) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit assessment";
+      errBanner.hidden = false;
+      errBanner.textContent = "We couldn't submit just now (" + e.message + "). Your responses are saved locally. Please try again in a moment.";
+      return;
+    }
+  } else {
+    // No endpoint, log to console.
+    console.log("LDNA payload:", payload);
+  }
+
+  // Clear local cache (assessment is complete)
+  try { localStorage.removeItem(STORAGE_KEY); } catch(_) {}
+  if (THANK_YOU_URL) { window.location.assign(THANK_YOU_URL); return; }
+  showStep(4);
+}
+document.getElementById("submitBtn").addEventListener("click", submit);
+
+/* ============================================================
+   Optional share (completion screen)
+   ------------------------------------------------------------
+   The full report is free for everyone; sharing is optional and
+   gates nothing. Any share action (copy link, email/LinkedIn/SMS)
+   records a lightweight event for analytics. Self-send links work
+   with no backend.
+   ============================================================ */
+
+const SHARE_BASE = PAGE_URL;
+
+function shareData() {
+  let d = {};
+  try { d = JSON.parse(localStorage.getItem("ldna.share.v1") || "{}"); } catch (_) {}
+  return {
+    email: d.email || state.demographics.email || "",
+    name: d.name || state.demographics.fullName || "",
+    referralCode: d.referralCode || state.referralCode || "",
+  };
+}
+
+function buildShareLink(code) {
+  return SHARE_BASE + "?ref=" + encodeURIComponent(code || "") +
+    "&utm_source=referral&utm_medium=share&utm_campaign=ldna";
+}
+
+function recordShareEvent(channel, invitees) {
+  const d = shareData();
+  const payload = {
+    eventType: "share_unlock",
+    referrerEmail: d.email,
+    referrerName: d.name,
+    referralCode: d.referralCode,
+    channel: channel,
+    invitees: invitees || [],
+    inviteCount: (invitees || []).length,
+    unlockFull: false,
+    submittedAt: new Date().toISOString(),
+    utmSource: ATTRIBUTION.utm_source || "",
+    partner: PARTNER_ID,
+  };
+  if (!SUBMIT_ENDPOINT) { console.log("LDNA share event:", payload); return; }
+  try {
+    fetch(SUBMIT_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload),
+      keepalive: true,
+    }).catch(function () {});
+  } catch (_) {}
+}
+
+function setupShare() {
+  const d = shareData();
+  const link = buildShareLink(d.referralCode);
+
+  const input = document.getElementById("refLink");
+  if (input) input.value = link;
+
+  const subject = "A leadership read worth less than 10 minutes of your time";
+  const body = "I just took the LDNA, a free leadership assessment (less than 10 minutes). " +
+    "It maps how you naturally lead versus how your role asks you to, and emails you a full report. Worth a look:\n\n" +
+    link + "\n";
+
+  const em = document.getElementById("shareEmail");
+  if (em) em.href = "mailto:?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  const li = document.getElementById("shareLinkedIn");
+  if (li) li.href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(link);
+  const sms = document.getElementById("shareSMS");
+  if (sms) sms.href = "sms:?&body=" + encodeURIComponent(body);
+
+  if (setupShare._wired) return;
+  setupShare._wired = true;
+
+  const copyBtn = document.getElementById("copyLink");
+  if (copyBtn) copyBtn.addEventListener("click", function () {
+    const inp = document.getElementById("refLink");
+    if (inp) {
+      inp.focus(); inp.select();
+      const ok = function () { copyBtn.textContent = "Copied ✓"; setTimeout(function () { copyBtn.textContent = "Copy"; }, 1800); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(inp.value).then(ok).catch(function () { try { document.execCommand("copy"); } catch (_) {} ok(); });
+      } else { try { document.execCommand("copy"); } catch (_) {} ok(); }
+    }
+    recordShareEvent("copy", []);
+  });
+
+  [["shareEmail", "email"], ["shareLinkedIn", "linkedin"], ["shareSMS", "sms"]].forEach(function (pair) {
+    const el = document.getElementById(pair[0]);
+    if (el) el.addEventListener("click", function () { recordShareEvent(pair[1], []); });
+  });
+}
+
+/* ---------- Init ---------- */
+load();
+bindDemographics();
+bindConsent();
+buildGrid("grid1", state.part1);
+buildGrid("grid2", state.part2);
+wireFilter(1);
+wireFilter(2);
+updateCounters();
+showStep(state.step || 0);
+</script>
+
+<script>
+/* LDNA diagram interactivity: hover/tap a dimension to load its definition */
+(function() {
+  var dims = [
+    { code: "DR", name: "Drive & Independence",
+      body: "Self-direction and assertiveness. The drive to set your own course.",
+      high: "self-directed, drives own agenda", low: "collaborative, takes direction" },
+    { code: "SE", name: "Social Energy",
+      body: "Outward, people-directed energy. Warmth and expressiveness.",
+      high: "outgoing, energised by people", low: "reserved, task-focused" },
+    { code: "PA", name: "Pace & Patience",
+      body: "A steady, composed tempo and an even keel under pressure.",
+      high: "patient, steady under pressure", low: "fast, urgent, quick to react" },
+    { code: "SO", name: "Structure & Order",
+      body: "Organisation, method, and follow-through on detail.",
+      high: "organised, methodical, process-driven", low: "flexible, improvisational" },
+    { code: "CB", name: "Creative Battery",
+      body: "Sustained mental energy for generating and chasing the new.",
+      high: "restless idea-engine, seeks the new", low: "prefers proven, settled ground" },
+    { code: "LA", name: "Logic & Analysis",
+      body: "Reasoning and decisions built on evidence and objective scrutiny.",
+      high: "rigorous, evidence-led", low: "intuitive, feel-led" },
+    { code: "VI", name: "Vision & Ideas",
+      body: "Imagination, abstraction, and big-picture thinking.",
+      high: "abstract, big-picture", low: "concrete, execution-focused" }
+  ];
+
+  var prompt = document.getElementById("ldnaPrompt");
+  var head   = document.querySelector("#ldnaDefinition .ldna-def-head");
+  var code   = document.getElementById("ldnaDefCode");
+  var name   = document.getElementById("ldnaDefName");
+  var body   = document.getElementById("ldnaDefBody");
+  var poles  = document.getElementById("ldnaDefPoles");
+
+  if (!prompt || !head || !code || !name || !body || !poles) return;
+
+  function setDim(idx) {
+    var d = dims[idx];
+    if (!d) return;
+    prompt.style.display = "none";
+    head.style.display = "flex";
+    body.style.display = "";
+    poles.style.display = "";
+    code.textContent = d.code;
+    name.textContent = d.name;
+    body.textContent = d.body;
+    poles.innerHTML = "<strong>High:</strong> " + d.high + ". <strong>Low:</strong> " + d.low + ".";
+    document.querySelectorAll(".ldna-dim-group.is-active, .ldna-dim-label.is-active")
+      .forEach(function(el){ el.classList.remove("is-active"); });
+    document.querySelectorAll('.ldna-dim-group[data-dim="' + idx + '"], .ldna-dim-label[data-dim="' + idx + '"]')
+      .forEach(function(el){ el.classList.add("is-active"); });
+  }
+
+  function attach(selector) {
+    document.querySelectorAll(selector).forEach(function(el) {
+      var idx = parseInt(el.getAttribute("data-dim"), 10);
+      el.addEventListener("mouseenter", function() { setDim(idx); });
+      el.addEventListener("focus",      function() { setDim(idx); });
+      el.addEventListener("click",      function() { setDim(idx); });
+      el.addEventListener("keydown",    function(e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setDim(idx); }
+      });
+    });
+  }
+  attach(".ldna-dim-group");
+  attach(".ldna-dim-label");
+})();
+</script>
+
+<script>
+/* Hero CTA: smooth-scroll to the intake form and focus the first field,
+   so it's unmistakable that the assessment starts here (not the partner logo). */
+(function() {
+  var heroBtn = document.getElementById("heroStart");
+  var form = document.getElementById("start-form");
+  if (!heroBtn || !form) return;
+  heroBtn.addEventListener("click", function() {
+    var y = form.getBoundingClientRect().top + window.pageYOffset - 90;
+    window.scrollTo({ top: y, behavior: "smooth" });
+    setTimeout(function() {
+      var f = document.getElementById("fullName");
+      if (f) { try { f.focus({ preventScroll: true }); } catch (_) { f.focus(); } }
+    }, 600);
+  });
+})();
+</script>
+
+
+</body>
+</html>

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Climb Together | Vertical Motion</title>
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Climb Together is the Vertical Motion alumni community and member referral program. Come back to the room, and bring someone up with you.">
+  <meta name="description" content="Climb Together is the Vertical Motion alumni community and member referral program. Come back to the community, and bring someone up with you.">
   <meta property="og:title" content="Climb Together | Vertical Motion">
-  <meta property="og:description" content="The Vertical Motion alumni community and member referral program. Come back to the room, and bring someone up with you.">
+  <meta property="og:description" content="The Vertical Motion alumni community and member referral program. Come back to the community, and bring someone up with you.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vmleader.com/climb.html">
   <meta property="og:image" content="https://vmleader.com/assets/og/climb-og.png">
@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="Vertical Motion">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Climb Together | Vertical Motion">
-  <meta name="twitter:description" content="The Vertical Motion alumni community and member referral program. Come back to the room, and bring someone up with you.">
+  <meta name="twitter:description" content="The Vertical Motion alumni community and member referral program. Come back to the community, and bring someone up with you.">
   <meta name="twitter:image" content="https://vmleader.com/assets/og/climb-og.png">
   <meta name="twitter:image:alt" content="Climb Together · Vertical Motion">
   <link rel="stylesheet" href="styles.css?v=4">
@@ -79,9 +79,12 @@
     .lead-quote p { font-family:var(--font-display); font-size:1.4rem; line-height:1.5; color:var(--ink); }
 
     /* Tom note */
-    .tom-note { max-width:760px; margin:0 auto; background:#fff; border:1px solid var(--border); border-left:4px solid var(--orange); border-radius:var(--radius-md); padding:34px 36px; box-shadow:var(--shadow-sm); }
+    .tom-grid { display:grid; grid-template-columns:300px 1fr; gap:36px; align-items:start; max-width:980px; margin:0 auto; }
+    .tom-photo img { width:100%; height:auto; border-radius:var(--radius-md); display:block; box-shadow:var(--shadow-sm); }
+    .tom-note { background:#fff; border:1px solid var(--border); border-left:4px solid var(--orange); border-radius:var(--radius-md); padding:34px 36px; box-shadow:var(--shadow-sm); }
     .tom-note p { color:var(--ink-mid); line-height:1.75; margin:0 0 14px; }
     .tom-note .sig { font-family:var(--font-display); color:var(--ink); font-size:1.15rem; margin-top:18px; }
+    @media (max-width:760px){ .tom-grid { grid-template-columns:1fr; gap:22px; } .tom-photo { max-width:300px; margin:0 auto; } }
 
     /* tiers */
     .ct-tiers { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch; }
@@ -114,6 +117,12 @@
     .rf-benefit td:first-child { font-weight:600; color:var(--ink); }
     .rf-benefit td .amt { color:var(--orange); font-weight:700; }
     .rf-benefit tr:last-child td { border-bottom:none; }
+    .refer-dark { background:var(--navy); }
+    .refer-dark .section-head h2 { color:#fff; }
+    .refer-dark .section-head p { color:rgba(230,242,247,0.85); }
+    .refer-dark .rf-howhead h3 { color:#fff; }
+    .refer-dark .rf-step .num { background:var(--orange); }
+    .bg-icy { background:var(--icy); }
 
     /* share */
     .share-box { max-width:760px; margin:0 auto; background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:32px; box-shadow:var(--shadow-md); }
@@ -314,9 +323,9 @@
       <div class="climb-badge"><span class="dot"></span>Private page - please don't share outside of the VM community</div>
       <p class="eyebrow">For Vertical Motion members and alumni</p>
       <h1>Climb Together.</h1>
-      <p>The most valuable thing we built here was never just the coaching. It was the room. The weekly calls, and the people who understand what you are carrying because they are carrying it too. The door is open again, for as long as you want it. And when you are back in, bring someone up with you.</p>
+      <p>The most valuable thing we built here was never just the coaching. It was the community. The weekly calls, and the people who understand what you are carrying because they are carrying it too. The community is open again, for as long as you want it. And when you are back in, bring someone up with you.</p>
       <div class="rf-hero-cta">
-        <a href="#tiers" class="btn btn-primary btn-lg btn-pill">Come back to the room</a>
+        <a href="#tiers" class="btn btn-primary btn-lg btn-pill">Rejoin the community</a>
         <a href="#refer" class="btn btn-ghost-white btn-lg btn-pill">Refer someone</a>
       </div>
     </div>
@@ -327,18 +336,26 @@
 <!-- A NOTE FROM TOM -->
 <section>
   <div class="container">
-    <div class="section-head" style="max-width:720px;"><p class="eyebrow" style="color:var(--orange);">A note from Tom</p><h2>We reopened the room. For good.</h2></div>
-    <div class="tom-note">
-      <p>When your program wrapped, I let you roll off and lose access to the room. One of our alumni told me recently that he missed those weekly calls more than anything, and that being cut off from the group took away the very thing that made this powerful. He was right, and it has been sitting with me.</p>
-      <p>So we fixed it. Climb Together is how you stay in the room for as long as you want, at a rate we only offer the people who have already done the work with us. The weekly calls are back on the calendar, the community is open, and there is a quarterly leadership roundtable where we work through whatever you are facing right now.</p>
-      <p>I built this company to help good people become great leaders. That does not stop the day your program ends. Come back to the room.</p>
-      <p class="sig">Tom</p>
+    <div class="section-head" style="max-width:720px;"><p class="eyebrow" style="color:var(--orange);">A note from Tom</p><h2>We reopened the community. For good.</h2></div>
+    <div class="tom-grid">
+      <div class="tom-photo"><img src="images/climb-tom.jpg" alt="Tom Cox" loading="lazy"></div>
+      <div class="tom-note">
+        <p>When your time in the program ended, we let you roll off and you lost access to most of the community.</p>
+        <p>That was a mistake on my part.</p>
+        <p>One of our alumni told me recently that he missed those weekly calls more than anything, and that being cut off from the group took away the very thing that made this powerful.</p>
+        <p>He was right, and I have been sitting with that ever since.</p>
+        <p>So, we want to fix it.</p>
+        <p><strong>Climb Together</strong> is how you stay in the community for as long as you want, at a rate we only offer the people who have already done the work with us. The weekly calls are back on the calendar. The community is open. And there is a new monthly leadership roundtable (for alumni only) where we work through whatever you are facing right now.</p>
+        <p>I built this company to help good people become great leaders. But that work doesn't end when an implementation program ends. I'd love to welcome you back to the community to continue to build yourselves, and build others, together.</p>
+        <p>I look forward to seeing you again&hellip;</p>
+        <p class="sig">-tom</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- MEMBER PHOTO RIBBON -->
-<section class="climb-ribbon" aria-label="Vertical Motion members in the room">
+<section class="climb-ribbon" aria-label="Vertical Motion members in the community">
   <div class="cr-track cr-track--l">
       <img src="images/climb/web/atlanta-meetup.jpg" alt="" loading="lazy" class="cr-img">
       <img src="images/climb/web/dc-meetup.jpg" alt="" loading="lazy" class="cr-img">
@@ -444,7 +461,7 @@
 <!-- THE LADDER / TIERS -->
 <section id="tiers" class="bg-gray">
   <div class="container">
-    <div class="section-head"><p class="eyebrow" style="color:var(--orange);">Ways to stay</p><h2>Two ways to stay in the room, plus coaching on demand.</h2><p>Pick the level that fits where you are right now. Move up or down anytime.</p></div>
+    <div class="section-head"><p class="eyebrow" style="color:var(--orange);">Ways to stay</p><h2>Two ways to stay in the community, plus 1:1 coaching on demand.</h2><p>Pick the level that fits where you are right now. Move up or down anytime.</p></div>
     <div class="ct-tiers">
 
       <div class="ct-card feat">
@@ -457,10 +474,11 @@
           <li>Weekly access to Tuesday evening's Leadership Edge Calls</li>
           <li>Access to the weekly member-led roundtable discussion immediately following Leadership Edge sessions</li>
           <li>Full access to the community, including all member chat channels &amp; member directory</li>
-          <li>Quarterly leadership roundtable with hot seats</li>
-          <li>Access to all future mini-courses and trainings</li>
+          <li>Monthly leadership roundtable with hot seats</li>
+          <li>Access to all current and future mini-courses and trainings</li>
+          <li>Priority access to Live Events</li>
         </ul>
-        <a href="https://community.vmleader.com/checkout/climb-together-membership" class="btn btn-primary btn-pill">Rejoin the community</a>
+        <a href="https://community.vmleader.com/checkout/climb-together-membership" target="_blank" rel="noopener" class="btn btn-primary btn-pill">Rejoin the community</a>
       </div>
 
       <div class="ct-card">
@@ -470,12 +488,12 @@
         <p class="ct-sub">or $2,497/6 months (one month free)</p>
         <ul class="ct-list">
           <li>Everything in the Community tier</li>
-          <li>Ongoing continuation 1:1 coaching with a VM certified coach</li>
+          <li>Ongoing 1:1 coaching with a VM certified coach</li>
           <li>Access to all weekly group coaching calls</li>
           <li>Personal accountability between the group calls</li>
-          <li>Priority access to the coaching team</li>
+          <li>Priority access to the leadership + coaching teams</li>
         </ul>
-        <a href="https://community.vmleader.com/checkout/climb-together-coaching-and-community" class="btn btn-outline-navy btn-pill">Add coaching</a>
+        <a href="https://community.vmleader.com/checkout/climb-together-coaching-and-community" target="_blank" rel="noopener" class="btn btn-outline-navy btn-pill">Rejoin with 1:1 Coaching</a>
       </div>
 
       <div class="ct-card">
@@ -484,12 +502,13 @@
         <div class="ct-price">Pay as you go</div>
         <p class="ct-sub">Add on to either tier, or use on its own</p>
         <ul class="ct-list">
-          <li>VM certified coach session, $297 per hour</li>
-          <li>1:1 with Tom or Ryan, $397 per 30 minutes</li>
-          <li>Coaching bundle packages available</li>
+          <li>$297 per 1:1 60-minute private coaching session with a Vertical Motion Certified Coach (VMCC)</li>
+          <li>$997 for 4 sessions with a VMCC</li>
+          <li>$1,470 for 6 sessions with a VMCC</li>
+          <li>$397 per 1:1 30-minute private coaching session with Tom Cox or Ryan Roberts</li>
           <li>Book only when you need it</li>
         </ul>
-        <a href="https://community.vmleader.com/checkout/a-la-carte-on-demand-coaching" class="btn btn-outline-navy btn-pill">Add À la carte</a>
+        <a href="https://community.vmleader.com/checkout/a-la-carte-on-demand-coaching" target="_blank" rel="noopener" class="btn btn-outline-navy btn-pill">Add À la carte</a>
       </div>
 
     </div>
@@ -498,12 +517,12 @@
 </section>
 
 <!-- THE REFERRAL: HOW IT WORKS -->
-<section id="refer">
+<section id="refer" class="refer-dark">
   <div class="container">
-    <div class="section-head"><p class="eyebrow" style="color:var(--orange);">Bring someone up with you</p><h2>The referral, built into the room.</h2><p>When someone you respect is up against the same wall you faced, bring them up with you. They get a hand, and you get a credit toward your membership.</p></div>
+    <div class="section-head"><p class="eyebrow" style="color:var(--orange);">Bring someone up with you</p><h2>The referral, built into the community.</h2><p>When someone you respect is up against the same ceiling you faced, bring them up with you. They get a hand up, and you get a credit toward your membership.</p></div>
     <div class="rf-howhead" style="text-align:center; max-width:640px; margin:4px auto 34px;">
       <h3 style="margin-bottom:6px;">How it works</h3>
-      <p style="color:var(--ink-soft); margin:0;">Three steps. We handle the rest.</p>
+      <p style="color:rgba(230,242,247,0.7); margin:0;">Three steps. We handle the rest.</p>
     </div>
     <div class="rf-steps">
       <div class="rf-step">
@@ -526,7 +545,7 @@
 </section>
 
 <!-- WHAT YOU BOTH GET -->
-<section class="bg-gray">
+<section class="bg-icy">
   <div class="container">
     <div class="section-head" style="max-width:720px;"><p class="eyebrow" style="color:var(--orange);">What you both get</p><h2>A benefit that flows both ways.</h2><p>Fifteen percent, shared evenly. Your friend saves on enrollment, and you earn matching account credit, good toward our programs, your monthly membership, courses, or events.</p></div>
     <div class="rf-benefit">
@@ -540,8 +559,15 @@
   </div>
 </section>
 
+<!-- SCHOLARSHIP -->
+<section>
+  <div class="container">
+    <div class="section-head" style="max-width:720px;"><p class="eyebrow" style="color:var(--orange);">Pay it forward</p><h2>Turn your credit into someone else's start.</h2><p>Credits can be donated to a scholarship program for deserving people who can't afford our programs.</p></div>
+  </div>
+</section>
+
 <!-- SHARE ASSETS -->
-<section id="share">
+<section id="share" class="bg-gray">
   <div class="container">
     <div class="section-head"><p class="eyebrow" style="color:var(--orange);">Ready-made to share</p><h2>Reach out in your voice, not ours.</h2><p>Add a first name to personalize it, then pick a channel. The message is written to sound like you, not a campaign.</p></div>
     <div class="share-box">
@@ -561,7 +587,7 @@
 </section>
 
 <!-- REFER DIRECTLY -->
-<section class="bg-gray">
+<section>
   <div class="container">
     <div class="section-head"><p class="eyebrow" style="color:var(--orange);">Prefer we reach out?</p><h2>Send us their details and we'll take it from there.</h2><p>Give us a name and how to reach them, and we'll make a warm introduction on your behalf. Your name stays attached so your credit is tracked.</p></div>
     <div class="refer-card">
@@ -603,7 +629,6 @@
           <select id="f-program">
             <option value="">Not sure yet</option>
             <option>Executive Career Accelerator (ECA)</option>
-            <option>Elevate Membership</option>
             <option>Corporate Freedom Accelerator</option>
             <option>Executive Mastermind</option>
           </select>
@@ -619,14 +644,14 @@
       <div id="refer-success">
         <div style="width:56px; height:56px; border-radius:50%; background:var(--icy); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:0 auto 20px;">&#10003;</div>
         <h3>Thank you for the introduction.</h3>
-        <p style="color:var(--ink-mid);">We'll reach out to them soon and keep your referral attached to your account. Bringing someone into the room is the highest compliment we can receive.</p>
+        <p style="color:var(--ink-mid);">We'll reach out to them soon and keep your referral attached to your account. Bringing someone into the community is the highest compliment we can receive.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- TERMS -->
-<section>
+<section class="bg-gray">
   <div class="container">
     <div class="section-head" style="max-width:720px;"><p class="eyebrow" style="color:var(--orange);">The fine print</p><h2>How the credit works.</h2><p>Applies to our flagship programs: ECA Signature, the Corporate Freedom Accelerator, and the Executive Mastermind.</p></div>
     <ul class="rf-terms">
@@ -687,7 +712,7 @@
 var LANDING = "https://vmleader.com";  // friend's front door
 function buildMsg(name){
   var who = name && name.trim() ? name.trim() : "there";
-  return "Hey " + who + ", I've been in a leadership program through Vertical Motion and it's made a real difference for me. They have a referral program where if I bring someone in, you get a discount and I get a credit, so we both win. Thought you'd get a lot out of it. Start with their quick LDNA assessment and a strategy call. Take a look here: " + LANDING + ". If you reach out, just mention my name so they can connect it.";
+  return "Hey " + who + ", I've been in a leadership program through Vertical Motion and it's made a real difference for me. They have a referral program where if I bring someone in, you get a discount and I get a credit, so we both win. Thought you'd get a lot out of it. Start by taking a quick LDNA assessment and a strategy call. Take a look here: " + LANDING + ". If you reach out, just mention my name so they can connect it.";
 }
 function updateShare(){
   var name = document.getElementById('friendName').value;

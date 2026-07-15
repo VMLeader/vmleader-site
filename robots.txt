@@ -62,7 +62,7 @@ Allow: /
 
 # --- Unlisted / utility pages kept out of the index ---
 User-agent: *
-Disallow: /referrals.html
+Disallow: /climb.html
 Disallow: /results.html
 Disallow: /commit_runner.html
 Disallow: /gh_push.html

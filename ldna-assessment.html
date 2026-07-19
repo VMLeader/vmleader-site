@@ -1059,7 +1059,7 @@
       <div class="consent-optional">
         <p class="consent-sublabel">Stay in touch</p>
         <label class="consent-row">
-          <input type="checkbox" id="consentFollowup" checked />
+          <input type="checkbox" id="consentFollowup" />
           <span>
             Send me a brief feedback request about my LDNA experience, occasional research invitations, and articles on leadership development.
           </span>
@@ -1483,16 +1483,48 @@ function readAttribution() {
 }
 
 const ATTRIBUTION = readAttribution();
+/* ============================================================
+   Geo-aware default for the OPTIONAL follow-up opt-in
+   ------------------------------------------------------------
+   EU/EEA/UK visitors: default OFF. Pre-checked marketing consent
+   is not valid under GDPR / UK-GDPR given the data-controller
+   language on this page.
+   Everyone else (primarily US, our main market): default ON.
+   Detection is timezone-based (offline, no IP lookup). Anything
+   under Europe/* is treated as EU for safety, plus the EU/EEA
+   zones that live outside that prefix. Unknown/undetectable
+   timezones default ON.
+   NOTE: this only sets the DEFAULT. A returning visitor's saved
+   choice (loaded in load(), below) always overrides it.
+   ============================================================ */
+const IN_EU_REGION = (function () {
+  try {
+    var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || "");
+    if (/^Europe\//.test(tz)) return true;            // EU + EEA + UK + CH (+ other European zones)
+    var euOutsideEurope = [
+      "Atlantic/Reykjavik", // Iceland (EEA)
+      "Atlantic/Canary",    // Spain (Canary Islands)
+      "Atlantic/Azores",    // Portugal
+      "Atlantic/Madeira",   // Portugal
+      "Africa/Ceuta",       // Spain (Ceuta / Melilla)
+      "Asia/Nicosia",       // Cyprus
+      "Asia/Famagusta"      // Cyprus
+    ];
+    return euOutsideEurope.indexOf(tz) !== -1;
+  } catch (_) { return false; }
+})();
+const DEFAULT_FOLLOWUP = !IN_EU_REGION;
+
 const state = {
   step: 0,
   demographics: { fullName: "", email: "", role: "", experience: "", seniority: "" },
   consent: {
     required: false,
-    // Combined follow-up opt-in. Defaults OFF: pre-checked marketing consent is
-    // not valid under GDPR given the data-controller language on this page.
-    // Tracked as a single flag, but mirrored across the legacy
+    // Combined follow-up opt-in. Default is GEO-AWARE (see DEFAULT_FOLLOWUP above):
+    // OFF for EU/EEA/UK visitors (GDPR: no pre-checked marketing consent), ON for
+    // everyone else. Tracked as a single flag, but mirrored across the legacy
     // feedback/research/updates columns in the sheet so existing reporting keeps working.
-    followup: false,
+    followup: DEFAULT_FOLLOWUP,
     timestamp: null,   // set when required consent is first ticked
   },
   part1: new Set(),

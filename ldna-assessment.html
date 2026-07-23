@@ -605,6 +605,13 @@
   .teaser-band-pill[data-band="high"] { background: #F6E1D9; color: #9E3B1E; }
   .teaser-band-label { font-family: var(--font-ui); font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; color: rgba(255,255,255,0.72); }
   .teaser-blurb { font-family: var(--font-ui); font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.9); margin: 0 0 18px; }
+  .teaser-explain-intro { font-family: var(--font-ui); font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.9); margin: 0 0 10px; }
+  .teaser-explain { list-style: none; margin: 0 0 20px; padding: 0; }
+  .teaser-explain li { position: relative; font-family: var(--font-ui); font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.82); padding-left: 16px; margin-bottom: 11px; }
+  .teaser-explain li:last-child { margin-bottom: 0; }
+  .teaser-explain li::before { content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--primary); }
+  .teaser-explain strong { color: #fff; font-weight: 600; }
+  .teaser-compare-head { font-family: var(--font-ui); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: rgba(255,255,255,0.7); margin: 0 0 10px; }
   .teaser-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
   .teaser-stat { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; padding: 14px 12px; text-align: center; }
   .teaser-stat strong { display: block; font-family: var(--font-serif); font-size: 30px; font-weight: 600; color: #fff; line-height: 1; margin-bottom: 6px; font-variant-numeric: tabular-nums; }
@@ -953,16 +960,16 @@
   <section class="step active" data-step="0" aria-label="About you">
     <div class="step-eyebrow">Free leadership assessment</div>
     <p style="font-family: var(--font-serif); font-style: italic; font-size: 15.5px; color: var(--accent); margin: 0 0 8px; letter-spacing: 0.01em;">Understand every leader. Build the whole team.</p>
-    <h1>Take the LDNA<span class="tm">™</span> assessment. <em>Your free full profile in less than 10 minutes.</em></h1>
+    <h1>Take the LDNA<span class="tm">™</span> assessment. <em>Free, and under 10 minutes.</em></h1>
     <p class="operator-byline">Assessment powered by <strong>The Saunter Group</strong></p>
     <p class="lede">
-      In less than 10 minutes you'll see how you actually lead, where your current role is asking
-      you to behave differently, and what that gap is costing you every day. Pick the
-      words that fit. We do the math.
+      The assessment takes under 10 minutes. You'll see an instant snapshot the moment you finish,
+      and your full behavioral report, all seven dimensions scored and your Adaptation Gap mapped,
+      arrives by email within one business day. Pick the words that fit. We do the math.
     </p>
     <div class="hero-start">
       <button class="btn btn-primary btn-hero" id="heroStart" type="button">Start the assessment <span class="arrow" aria-hidden="true">↓</span></button>
-      <p class="hero-start-note"><strong>Free.</strong> Less than 10 minutes. Jump straight in, or read more below first.</p>
+      <p class="hero-start-note"><strong>Free.</strong> Under 10 minutes. Instant snapshot on-screen, full report emailed within one business day.</p>
     </div>
     <div class="welcome-meta">
       <div>
@@ -1037,40 +1044,6 @@
             <option>Board / Advisor</option>
           </select>
         </div>
-      </div>
-    </div>
-
-    <div class="card consent-card" style="margin-top: 22px;">
-      <h2>Consent &amp; follow-up</h2>
-      <p class="consent-notice">
-        The Saunter Group, LLC is the data controller for your responses. We process your
-        name, email, role, and behavioral selections to generate your confidential LDNA
-        profile. We don't sell or share your data with third parties.
-      </p>
-
-      <label class="consent-row consent-required">
-        <input type="checkbox" id="consentRequired" />
-        <span>
-          I consent to my responses being processed to generate my LDNA profile.
-          <span class="req-tag">Required</span>
-        </span>
-      </label>
-
-      <div class="consent-optional">
-        <p class="consent-sublabel">Results &amp; updates</p>
-        <label class="consent-row">
-          <input type="checkbox" id="consentFollowup" />
-          <span>
-            I consent to receiving my results and follow-up emails from Vertical Motion.
-          </span>
-        </label>
-        <p class="consent-fineprint">Optional. Unsubscribe anytime.</p>
-      </div>
-
-      <div class="consent-links">
-        <a href="https://vmleader.com/privacy.html" target="_blank" rel="noopener">View Privacy Policy</a>
-        <span class="consent-sep">·</span>
-        <a href="mailto:info@thesauntergroup.com?subject=LDNA%20data%20request">Contact us about your data</a>
       </div>
     </div>
 
@@ -1232,11 +1205,11 @@
     </div>
   </section>
 
-  <!-- STEP 4: Review + submit -->
-  <section class="step" data-step="3" aria-label="Review">
-    <div class="step-eyebrow">Almost done</div>
-    <h1>Review your responses</h1>
-    <p class="lede">Take a moment to look this over. You can jump back to any section to make changes.</p>
+  <!-- STEP 4: Review + consent + submit -->
+  <section class="step" data-step="3" aria-label="Review and consent">
+    <div class="step-eyebrow">One last step</div>
+    <h1>One last step</h1>
+    <p class="lede">Thanks for completing the Leadership DNA assessment. Before we generate your profile, please review how your responses are used and confirm your choices below.</p>
 
     <div class="card">
       <div class="review-section">
@@ -1259,11 +1232,54 @@
       </div>
     </div>
 
+    <div class="card consent-card" style="margin-top: 22px;">
+      <h2>How your responses are used</h2>
+      <p class="consent-notice">
+        The Saunter Group is the controller of your data. We collect your name, work email,
+        role, and the words you selected in order to generate your individual Leadership DNA
+        profile and send it to you. We record the date of your consent and the version of this
+        notice so we can honor the terms you agreed to.
+      </p>
+
+      <label class="consent-row consent-required">
+        <input type="checkbox" id="consentProcessing" />
+        <span>
+          I consent to The Saunter Group processing my responses to generate and deliver my Leadership DNA profile.
+          <span class="req-tag">Required</span>
+        </span>
+      </label>
+
+      <div class="consent-optional">
+        <label class="consent-row">
+          <input type="checkbox" id="consentNorming" />
+          <span>
+            I also agree that my responses may be included, in de-identified form, in The Saunter Group's aggregate dataset used to develop, norm, and validate the Leadership DNA instrument. This is voluntary and is not required to receive my profile.
+          </span>
+        </label>
+
+        <p class="consent-sublabel" style="margin-top: 14px;">Results &amp; updates</p>
+        <label class="consent-row">
+          <input type="checkbox" id="consentFollowup" />
+          <span>
+            I consent to receiving my results and follow-up emails from Vertical Motion.
+          </span>
+        </label>
+        <p class="consent-fineprint" style="margin-top: 6px;">Optional. Unsubscribe anytime.</p>
+      </div>
+
+      <p class="consent-fineprint">
+        You can withdraw either consent or ask us to delete your data at any time by emailing
+        <a href="mailto:support@vmleader.com?subject=LDNA%20data%20request">support@vmleader.com</a>.
+        Our <a href="https://vmleader.com/privacy.html" target="_blank" rel="noopener">Privacy Policy</a> explains how long we keep data,
+        how we protect it, and your rights.
+      </p>
+    </div>
+
     <div id="submitErr" class="err-banner" hidden></div>
 
     <div class="nav">
       <button class="btn btn-ghost" data-back="3">← Back</button>
-      <button class="btn btn-primary" id="submitBtn">Submit assessment</button>
+      <button class="btn btn-primary" id="submitBtn" disabled>Generate my profile</button>
     </div>
   </section>
 
@@ -1274,26 +1290,40 @@
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
       <h1>Thank you.</h1>
-      <p class="lede" style="margin-left: auto; margin-right: auto;">Your <strong>full report</strong> arrives within <strong>one business day</strong>, delivered by the <strong>Vertical Motion</strong> team.</p>
+      <p class="lede" style="margin-left: auto; margin-right: auto;">Your <strong>full report</strong> arrives within <strong>one business day</strong> from <strong>support@vmleader.com</strong>. Add that address to your contacts so it doesn't get filtered to spam.</p>
 
       <!-- Instant snapshot: a directional first look computed on-device from the
-           two word sets. The scored, dimension-by-dimension gap comes in the emailed report. -->
+           two word sets. The scored, dimension-by-dimension gap comes in the emailed report.
+           This is the short summary. Please keep it. Everything BELOW it is yours to edit. -->
       <div class="teaser-card" id="teaserCard" hidden>
         <div class="teaser-eyebrow">Your instant snapshot</div>
-        <h2 class="teaser-heading">A first look at your Adaptation Gap</h2>
+        <h2 class="teaser-heading">A first look at how your role and your natural style line up.</h2>
         <div class="teaser-band" id="teaserBand">
           <span class="teaser-band-pill" id="teaserBandPill">Moderate</span>
           <span class="teaser-band-label">adaptation load</span>
         </div>
-        <p class="teaser-blurb" id="teaserBlurb"></p>
+        <p class="teaser-explain-intro">Two different things are at work here, and your report separates them:</p>
+        <ul class="teaser-explain">
+          <li><strong>Adaptation load</strong> is how far your role pulls you from your natural defaults, a measure of distance, not difficulty. <span id="teaserLoadNote"></span></li>
+          <li><strong>Strain</strong> is what holding that distance actually costs you day to day. Load and strain aren't the same: a wide gap can sit comfortably, or a narrow one can wear on you. Where you fall is what your full report works out.</li>
+        </ul>
+        <p class="teaser-compare-head">How your natural style and your role compare</p>
         <div class="teaser-stats">
-          <div class="teaser-stat"><strong id="teaserOverlap">0</strong><span>traits your natural self and role share</span></div>
-          <div class="teaser-stat"><strong id="teaserRoleOnly">0</strong><span>your role demands that aren't natural to you</span></div>
-          <div class="teaser-stat"><strong id="teaserNatOnly">0</strong><span>natural traits your role doesn't call on</span></div>
+          <div class="teaser-stat"><strong id="teaserOverlap">0</strong><span id="teaserOverlapLabel">traits your natural style and your role share</span></div>
+          <div class="teaser-stat"><strong id="teaserRoleOnly">0</strong><span id="teaserRoleOnlyLabel">your role asks for that aren't natural to you</span></div>
+          <div class="teaser-stat"><strong id="teaserNatOnly">0</strong><span id="teaserNatOnlyLabel">natural strengths your role doesn't currently draw on</span></div>
         </div>
-        <p class="teaser-foot">This is a directional preview. Your full report scores all seven dimensions, names your archetype, and maps the gap dimension by dimension.</p>
+        <p class="teaser-foot">This is a directional preview. Your full report scores all seven dimensions, names your archetype, and maps the gap, and the strain behind it, dimension by dimension.</p>
       </div>
 
+
+      <!-- ============================================================
+           EDITABLE ZONE (Vertical Motion): everything from here to the
+           end of this results screen is yours. The thank-you line and the
+           instant snapshot above are the LDNA summary; please keep those.
+           From here down, edit / replace / add anything: your call to
+           action, offers, booking links, tracking pixels, etc.
+           ============================================================ -->
 
       <!-- Bring your team: optional ungated share + team-assessment lead -->
       <div class="unlock-card" id="unlockCard">
@@ -1411,13 +1441,17 @@ const SUBMIT_ENDPOINT = "https://script.google.com/macros/s/AKfycbx2If3UCmoe6HOB
    ------------------------------------------------------------
    PARTNER_ID    identifies this installation in every submission
                  so reports route correctly. DO NOT CHANGE.
-   THANK_YOU_URL where respondents land after submitting.
+   THANK_YOU_URL leave EMPTY ("") to show the results (thank-you +
+                 instant snapshot + your CTA) inline on this page,
+                 which is the recommended flow. Set a URL only if you
+                 want to redirect to your own separate page instead
+                 (then the on-page snapshot is skipped).
    PAGE_URL      the public URL of THIS page on your site
                  (used to build share links). Update if the page
                  lives at a different path.
    ============================================================ */
 const PARTNER_ID    = "vmleader";
-const THANK_YOU_URL = "https://vmleader.com/submitted-ldna.html";
+const THANK_YOU_URL = "";
 const PAGE_URL      = "https://vmleader.com/ldna-assessment.html";
 
 /* ============================================================
@@ -1425,7 +1459,7 @@ const PAGE_URL      = "https://vmleader.com/ldna-assessment.html";
    ============================================================ */
 const STORAGE_KEY = "ldna.v1";
 const ATTRIBUTION_KEY = "ldna.attribution.v1";
-const POLICY_VERSION = "2026-05-29";
+const POLICY_VERSION = "sD-2026.1";
 
 /* ============================================================
    Attribution capture
@@ -1487,13 +1521,16 @@ const state = {
   step: 0,
   demographics: { fullName: "", email: "", role: "", experience: "", seniority: "" },
   consent: {
-    required: false,
-    // Combined opt-in: results email + follow-up marketing. Defaults ON for ALL
-    // visitors (per VM: LDNA results are delivered ONLY by email, so ticking this
-    // box is how the respondent receives them). Mirrored across the legacy
-    // feedback/research/updates columns in the sheet so existing reporting keeps working.
+    // Required: process responses to generate + deliver the profile. Submission is
+    // blocked until this is true.
+    processing: false,
+    // Optional: de-identified inclusion in the aggregate norming/validation dataset.
+    // This is the norm-eligibility flag, kept SEPARATE from marketing on purpose.
+    norming: false,
+    // Optional results-email + follow-up opt-in. Defaults ON for ALL visitors per VM
+    // (main lead-magnet email capture). Mirrored across the legacy feedback/updates columns.
     followup: true,
-    timestamp: null,   // set when required consent is first ticked
+    timestamp: null,   // set when processing consent is first ticked
   },
   part1: new Set(),
   part2: new Set(),
@@ -1649,26 +1686,35 @@ function bindDemographics() {
 
 /* ---------- Consent binding ---------- */
 const CONSENT_FIELDS = {
-  consentRequired: "required",
+  consentProcessing: "processing",
+  consentNorming: "norming",
   consentFollowup: "followup",
 };
+// "Generate my profile" stays disabled until required processing consent is ticked.
+function updateGenerateBtn() {
+  const btn = document.getElementById("submitBtn");
+  if (btn) btn.disabled = !state.consent.processing;
+}
 function bindConsent() {
   Object.entries(CONSENT_FIELDS).forEach(([id, key]) => {
     const el = document.getElementById(id);
+    if (!el) return;
     el.checked = !!state.consent[key];
     el.addEventListener("change", () => {
       state.consent[key] = el.checked;
-      // Stamp the moment the user first grants required consent
-      if (key === "required" && el.checked && !state.consent.timestamp) {
+      // Stamp the moment the user first grants required processing consent
+      if (key === "processing" && el.checked && !state.consent.timestamp) {
         state.consent.timestamp = new Date().toISOString();
       }
-      // If they un-check required later, clear the stamp
-      if (key === "required" && !el.checked) {
+      // If they un-check processing later, clear the stamp
+      if (key === "processing" && !el.checked) {
         state.consent.timestamp = null;
       }
+      updateGenerateBtn();
       save();
     });
   });
+  updateGenerateBtn();
 }
 
 function validateDemographics() {
@@ -1683,15 +1729,6 @@ function validateDemographics() {
   const emailEl = document.getElementById("email");
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email);
   if (d.email && !emailOk) { emailEl.classList.add("invalid"); ok = false; }
-
-  // Required consent must be ticked
-  const consentRow = document.getElementById("consentRequired").closest(".consent-row");
-  if (!state.consent.required) {
-    consentRow.classList.add("invalid");
-    ok = false;
-  } else {
-    consentRow.classList.remove("invalid");
-  }
   return ok;
 }
 
@@ -1723,6 +1760,7 @@ function renderReview() {
   };
   render("rList1", "rCount1", state.part1);
   render("rList2", "rCount2", state.part2);
+  updateGenerateBtn();
 }
 
 /* ---------- Instant snapshot (teaser) ----------
@@ -1746,24 +1784,42 @@ function renderTeaser() {
   const union = n + r - overlap;
   const divergence = union ? (union - overlap) / union : 0; // 0 (identical) .. 1 (no overlap)
 
-  let band, blurb;
+  // The snapshot only measures LOAD (distance between the two lists). It never
+  // claims to measure strain (the daily cost), which is what the full report works
+  // out. Keeping that line honest is what makes the snapshot safe to show everyone.
+  let band, loadNote;
   if (divergence < 0.34) {
     band = "Low";
-    blurb = "Your natural style and your role's demands line up closely. Most of what the role asks comes naturally to you, so less daily energy goes into adapting.";
+    loadNote = "Yours is low, which means most of what your role asks already comes naturally to you.";
   } else if (divergence < 0.60) {
     band = "Moderate";
-    blurb = "A meaningful share of what your role demands sits outside your natural style. That gap is where day-to-day energy quietly gets spent.";
+    loadNote = "Yours is moderate, a blend of what comes naturally to you and what the role adds on top.";
   } else {
     band = "High";
-    blurb = "Your role asks for a lot that doesn't come naturally to you. A high adaptation load is workable, but it's worth knowing exactly where it falls, and what it costs.";
+    loadNote = "Yours is high, which is common and entirely workable.";
   }
+
+  // A zero overlap is expected (the two lists are different lenses, not a matched
+  // pair) and must never read like a bug. Reassure explicitly in that case.
+  if (overlap === 0) {
+    loadNote += " A zero overlap here is normal, not an error.";
+  }
+
+  const plural = (nn, one, many) => (nn === 1 ? one : many);
 
   document.getElementById("teaserBandPill").textContent = band;
   document.getElementById("teaserBandPill").dataset.band = band.toLowerCase();
-  document.getElementById("teaserBlurb").textContent = blurb;
+  document.getElementById("teaserLoadNote").textContent = loadNote;
+
   document.getElementById("teaserOverlap").textContent = overlap;
+  document.getElementById("teaserOverlapLabel").textContent =
+    plural(overlap, "trait", "traits") + " your natural style and your role share";
   document.getElementById("teaserRoleOnly").textContent = roleOnly;
+  document.getElementById("teaserRoleOnlyLabel").textContent =
+    "your role asks for that " + plural(roleOnly, "isn't", "aren't") + " natural to you";
   document.getElementById("teaserNatOnly").textContent = natOnly;
+  document.getElementById("teaserNatOnlyLabel").textContent =
+    "natural " + plural(natOnly, "strength", "strengths") + " your role doesn't currently draw on";
   card.hidden = false;
 }
 
@@ -1825,10 +1881,16 @@ function buildPayload() {
     referralCode: state.referralCode || "",
     // If they arrived via someone else's share link (?ref=CODE), credit that referrer.
     referrerCode: ATTRIBUTION.ref || "",
+    // --- Consent (auditable per respondent) ---
+    // Checkbox 1, required: authorizes processing to generate + deliver the profile.
+    consent_processing: !!state.consent.processing,
+    // Checkbox 2, optional: THE norm-eligibility flag (de-identified dataset).
+    consent_norming: !!state.consent.norming,
     consentTimestamp: state.consent.timestamp || new Date().toISOString(),
     policyVersion: POLICY_VERSION,
-    // One combined follow-up opt-in (pre-checked, can be unticked).
-    // Mirrored to legacy columns so existing reporting/sheets keep working.
+    // Optional marketing/follow-up opt-in (Checkbox 3, defaults OFF). Kept SEPARATE
+    // from consent_norming; norm-eligibility = consent_norming only. Mirrored to
+    // legacy columns so existing reporting/sheets keep working.
     optInFollowup: !!state.consent.followup,
     optInFeedback: !!state.consent.followup,
     optInResearch: !!state.consent.followup,
@@ -1853,9 +1915,11 @@ function buildPayload() {
 async function submit() {
   const submitBtn = document.getElementById("submitBtn");
   const errBanner = document.getElementById("submitErr");
+  // Hard gate: never submit without the required processing consent.
+  if (!state.consent.processing) { updateGenerateBtn(); return; }
   errBanner.hidden = true;
   submitBtn.disabled = true;
-  submitBtn.textContent = "Submitting…";
+  submitBtn.textContent = "Generating…";
   // Mint a personal referral code and persist it (survives the cache clear below)
   // so the completion screen can build this person's share link.
   state.referralCode = getReferralCode();
@@ -1879,7 +1943,7 @@ async function submit() {
       if (!res.ok) throw new Error("Server returned " + res.status);
     } catch (e) {
       submitBtn.disabled = false;
-      submitBtn.textContent = "Submit assessment";
+      submitBtn.textContent = "Generate my profile";
       errBanner.hidden = false;
       errBanner.textContent = "We couldn't submit just now (" + e.message + "). Your responses are saved locally. Please try again in a moment.";
       return;

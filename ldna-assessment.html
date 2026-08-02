@@ -1974,6 +1974,7 @@ async function submit() {
   // Clear local cache (assessment is complete)
   try { localStorage.removeItem(STORAGE_KEY); } catch(_) {}
   if (THANK_YOU_URL) { window.location.assign(THANK_YOU_URL); return; }
+  if (typeof fbq === 'function') { fbq('track', 'Lead'); }
   showStep(4);
 }
 document.getElementById("submitBtn").addEventListener("click", submit);

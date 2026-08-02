@@ -139,7 +139,7 @@ src="https://www.facebook.com/tr?id=1103250585705776&ev=PageView&noscript=1"
             d.attr_utm_campaign=ft.utm_campaign; d.attr_utm_term=ft.utm_term;
             d.attr_utm_content=ft.utm_content; d.attr_gclid=ft.gclid; d.attr_fbclid=ft.fbclid;
             opts=Object.assign({},opts,{body:JSON.stringify(d)});
-            if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}
+            if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}if(typeof fbq==='function'){fbq('track','Lead');}
           }
         }
       }catch(e){}

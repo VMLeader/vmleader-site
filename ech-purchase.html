@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Book Resources | The Executive Career Handbook | Vertical Motion</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Thank you for buying The Executive Career Handbook. Enter your shipping address and unlock your digital bonuses.">
+  <link rel="canonical" href="https://vmleader.com/ech-purchase.html">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="icon" type="image/png" href="vm-favicon.png">
+  <style>
+    :root { --blue:#0693d8; --blue-dk:#057bb5; --blue-soft:#e6f4fb; --gray-vm:#878787; }
+    .nav-cta-group { display:flex; align-items:center; gap:10px; }
+    .btn-nav-outline { display:inline-flex; align-items:center; gap:6px; padding:9px 18px; border-radius:var(--radius-pill); font-family:var(--font-body); font-size:0.8125rem; font-weight:600; color:#fff; border:1px solid rgba(255,255,255,0.45); background:transparent; white-space:nowrap; transition:var(--transition); }
+    .btn-nav-outline:hover { background:rgba(255,255,255,0.08); border-color:#fff; }
+    @media (max-width:900px) { .nav-cta-group .btn-nav-outline { display:none; } }
+    .nav-links { overflow:visible; }
+    .has-dropdown { position:relative; display:flex; align-items:center; }
+    .dd-trigger { display:inline-flex; align-items:center; gap:5px; font-size:0.8125rem; font-weight:500; color:rgba(255,255,255,0.65); cursor:pointer; transition:color var(--transition); }
+    .dd-trigger:hover, .has-dropdown:hover .dd-trigger { color:#fff; }
+    .dd-trigger .caret { font-size:0.55rem; opacity:0.7; transition:transform var(--transition); }
+    .has-dropdown:hover .dd-trigger .caret { transform:rotate(180deg); }
+    .has-dropdown::after { content:''; position:absolute; top:100%; left:-24px; right:-24px; height:24px; }
+    .dropdown-panel { position:absolute; top:calc(100% + 16px); left:50%; transform:translateX(-50%) translateY(8px); background:#fff; border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow-xl); padding:26px 30px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.18s ease, transform 0.18s ease; z-index:200; }
+    .has-dropdown:hover .dropdown-panel { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+    .dd-grid { display:flex; gap:30px; }
+    .dd-col { display:flex; flex-direction:column; gap:22px; min-width:226px; }
+    .dd-group h6 { font-family:var(--font-body); font-size:0.62rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; padding-left:11px; }
+    .dd-item { display:block; padding:8px 11px; margin:0 -11px; border-radius:11px; transition:background var(--transition); }
+    .dd-item:hover { background:var(--gray-bg); }
+    .dd-item-t { display:block; font-size:0.875rem; font-weight:600; color:var(--ink); line-height:1.25; }
+    .dd-item:hover .dd-item-t { color:var(--blue); }
+    .dd-item-d { display:block; font-size:0.74rem; color:var(--ink-soft); margin-top:2px; line-height:1.3; }
+    .dd-cta { display:block; margin-top:22px; padding-top:15px; border-top:1px solid var(--border); font-family:var(--font-head); font-weight:700; font-size:0.8rem; color:var(--orange); }
+    .pill-free { display:inline-block; font-size:0.55rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#fff; background:var(--blue); padding:2px 6px; border-radius:10px; }
+    @media (max-width:720px) {
+      .has-dropdown { width:100%; flex-direction:column; align-items:flex-start; }
+      .dd-trigger { color:#fff; font-weight:700; font-size:0.95rem; }
+      .dd-trigger .caret, .has-dropdown::after { display:none; }
+      .dropdown-panel { position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; background:transparent; border:none; box-shadow:none; padding:12px 0 4px; }
+      .dd-grid { flex-direction:column; gap:18px; }
+      .dd-group h6 { color:rgba(207,232,239,0.5); }
+      .dd-item { margin:0; padding:8px 0; }
+      .dd-item:hover { background:transparent; }
+      .dd-item-t { color:#fff; }
+      .dd-item-d { color:rgba(207,232,239,0.5); }
+    }
+
+    /* ===== Shipping form ===== */
+    .ship-wrap { max-width:640px; margin:0 auto; }
+    .ship-card { background:#fff; border:1px solid var(--border); border-radius:20px; box-shadow:var(--shadow-lg); padding:34px 34px 30px; }
+    .ship-card h2 { margin:0 0 6px; font-size:1.5rem; }
+    .ship-sub { color:var(--ink-soft); font-size:0.98rem; line-height:1.6; margin:0 0 22px; }
+    .field { margin-bottom:16px; }
+    .field label { display:block; font-size:0.8rem; font-weight:700; letter-spacing:0.02em; color:var(--ink-mid); margin-bottom:6px; }
+    .field label .req { color:var(--orange); }
+    .field input, .field select { width:100%; box-sizing:border-box; padding:12px 14px; border:1px solid var(--border); border-radius:11px; font-family:var(--font-body); font-size:0.98rem; color:var(--ink); background:#fff; transition:border-color var(--transition), box-shadow var(--transition); }
+    .field input:focus, .field select:focus { outline:none; border-color:var(--blue); box-shadow:0 0 0 3px var(--blue-soft); }
+    .field-row { display:flex; gap:14px; }
+    .field-row .field { flex:1; }
+    .ship-note { font-size:0.8rem; color:var(--ink-soft); background:var(--blue-soft); border-radius:10px; padding:10px 13px; margin:2px 0 20px; line-height:1.5; }
+    .form-err { display:none; background:#fdecec; color:#b3261e; border:1px solid #f4c7c3; border-radius:10px; padding:10px 13px; font-size:0.85rem; margin-bottom:16px; }
+    .ship-card .btn { width:100%; justify-content:center; }
+    .ship-privacy { text-align:center; font-size:0.76rem; color:var(--ink-faint); margin:14px 0 0; }
+    .ship-privacy a { color:var(--ink-soft); text-decoration:underline; }
+
+    /* ===== Resources (revealed after submit) ===== */
+    #resources { display:none; }
+    .res-intro { max-width:720px; margin:0 auto 8px; }
+    .res-list { max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+    .res-group-label { font-family:var(--font-body); font-size:0.66rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint); margin:18px 0 2px; }
+    .res-item { display:flex; align-items:center; justify-content:space-between; gap:16px; background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px 18px; transition:border-color var(--transition), box-shadow var(--transition); }
+    .res-item:hover { border-color:var(--blue); box-shadow:var(--shadow-md); }
+    .res-item-t { font-weight:700; color:var(--ink); font-size:0.98rem; line-height:1.3; }
+    .res-item-d { font-size:0.8rem; color:var(--ink-soft); margin-top:2px; }
+    .res-item .btn { flex-shrink:0; }
+    .signoff { max-width:720px; margin:26px auto 0; color:var(--ink-mid); font-size:0.98rem; line-height:1.7; }
+    .signoff .name { font-family:var(--font-head); font-weight:700; color:var(--ink); }
+    @media (max-width:560px) {
+      .field-row { flex-direction:column; gap:0; }
+      .res-item { flex-direction:column; align-items:flex-start; }
+      .res-item .btn { width:100%; justify-content:center; }
+    }
+    @media (max-width: 880px) {
+      section { padding-top: 56px !important; padding-bottom: 56px !important; }
+      h1 { font-size: 2rem !important; line-height: 1.14 !important; }
+      h2 { font-size: 1.55rem !important; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem !important; line-height: 1.16 !important; }
+      h2 { font-size: 1.3rem !important; }
+      body { font-size: 0.95rem; }
+      section { padding-top: 42px !important; padding-bottom: 42px !important; }
+      .container { padding-left: 18px !important; padding-right: 18px !important; }
+      .ship-card { padding:26px 20px 24px; }
+    }
+  </style>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZTY3R12GE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZZTY3R12GE');
+  </script>
+  <!-- Meta Pixel - VM LDNA Funnel 2026 -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1103250585705776');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1103250585705776&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel -->
+  <!-- VM first-touch attribution + form-conversion tracking -->
+  <script>
+  (function(){
+    var KEY='vm_first_touch';
+    var sp=new URLSearchParams(location.search);
+    function g(k){return sp.get(k)||'';}
+    var ft=null;
+    try{ft=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+    if(!ft){
+      ft={
+        referrer: document.referrer||'',
+        landing_page: location.pathname+location.search,
+        first_seen: new Date().toISOString(),
+        utm_source: g('utm_source'), utm_medium: g('utm_medium'),
+        utm_campaign: g('utm_campaign'), utm_term: g('utm_term'),
+        utm_content: g('utm_content'), gclid: g('gclid'), fbclid: g('fbclid')
+      };
+      try{localStorage.setItem(KEY,JSON.stringify(ft));}catch(e){}
+    }
+    function channel(a){
+      if(a.utm_source) return a.utm_source+(a.utm_medium?(' / '+a.utm_medium):'');
+      var r=a.referrer; if(!r) return 'direct';
+      try{
+        var h=new URL(r).hostname.replace(/^www\./,'');
+        if(/(^|\.)google\.|(^|\.)bing\.|duckduckgo|(^|\.)yahoo\./.test(h)) return 'organic: '+h;
+        if(h.indexOf('vmleader.com')!==-1) return 'internal';
+        return 'referral: '+h;
+      }catch(e){return r;}
+    }
+    ft.channel=channel(ft);
+    window.VM_ATTRIBUTION=ft;
+    function _vmHP(){try{document.querySelectorAll('form').forEach(function(f){if(f.querySelector('input[name="website"]'))return;var w=document.createElement('div');w.setAttribute('aria-hidden','true');w.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;';var l=document.createElement('label');l.textContent='Website';var i=document.createElement('input');i.type='text';i.name='website';i.tabIndex=-1;i.setAttribute('autocomplete','off');w.appendChild(l);w.appendChild(i);f.appendChild(w);});}catch(e){}}
+    if(document.readyState!=='loading'){_vmHP();}else{document.addEventListener('DOMContentLoaded',_vmHP);}
+    var _fetch=window.fetch;
+    window.fetch=function(url,opts){
+      try{
+        var u=(typeof url==='string')?url:(url&&url.url)||'';
+        if(u.indexOf('script.google.com/macros')!==-1 && opts && typeof opts.body==='string'){
+          var d=JSON.parse(opts.body);
+          if(d && typeof d==='object'){
+            var _hp=''; try{var _h=document.querySelector('input[name="website"]'); _hp=_h?String(_h.value||'').trim():'';}catch(e){}
+            var _el=Math.round((window.performance&&performance.now)?performance.now():99999);
+            d.website=_hp; d.elapsed_ms=_el;
+            if(_hp!=='' || _el<1500){ return Promise.resolve(new Response(JSON.stringify({result:'success'}),{status:200,headers:{'Content-Type':'application/json'}})); }
+            d.attr_referrer=ft.referrer; d.attr_channel=ft.channel;
+            d.attr_landing=ft.landing_page; d.attr_first_seen=ft.first_seen;
+            d.attr_utm_source=ft.utm_source; d.attr_utm_medium=ft.utm_medium;
+            d.attr_utm_campaign=ft.utm_campaign; d.attr_utm_term=ft.utm_term;
+            d.attr_utm_content=ft.utm_content; d.attr_gclid=ft.gclid; d.attr_fbclid=ft.fbclid;
+            opts=Object.assign({},opts,{body:JSON.stringify(d)});
+            if(typeof gtag==='function'){gtag('event','generate_lead',{form_source:(d.source||d.type||'form'),lead_channel:ft.channel});}
+          }
+        }
+      }catch(e){}
+      return _fetch.call(this,url,opts);
+    };
+  })();
+  </script>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Vertical Motion home" style="gap:9px;">
+      <img src="vm-icon.png" alt="" style="height:30px; width:auto;">
+      <img src="vm-wordmark.png" alt="Vertical Motion" style="height:19px; width:auto;">
+    </a>
+    <div class="nav-links" id="nav-links">
+      <div class="has-dropdown">
+        <a href="exec.html" class="dd-trigger">Executive Career <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col"><div class="dd-group"><h6>Coaching Programs</h6>
+              <a class="dd-item" href="eca.html"><span class="dd-item-t">Executive Career Accelerator</span><span class="dd-item-d">6-month 1:1 program to the executive ranks</span></a>
+              <a class="dd-item" href="cfa.html"><span class="dd-item-t">Corporate Freedom Accelerator</span><span class="dd-item-d">Leave corporate and build your own practice</span></a>
+              <a class="dd-item" href="mastermind.html"><span class="dd-item-t">Executive Mastermind Coaching</span><span class="dd-item-d">Exclusive 1:1 coaching for C-suite members</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Membership &amp; Self-Guided</h6>
+              <a class="dd-item" href="elevate.html"><span class="dd-item-t">Elevate Membership</span><span class="dd-item-d">Framework plus community</span></a>
+              <a class="dd-item" href="book.html"><span class="dd-item-t">The Executive Career Handbook</span><span class="dd-item-d">The book and framework</span></a>
+              <a class="dd-item" href="courses.html"><span class="dd-item-t">Courses &amp; Products</span><span class="dd-item-d">Standalone trainings and mini-courses</span></a>
+            </div></div>
+            <div class="dd-col"><div class="dd-group"><h6>Assessments</h6>
+              <a class="dd-item" href="ldna.html"><span class="dd-item-t"><span class="pill-free">Free</span> LDNA Assessment</span><span class="dd-item-d">See how you naturally lead in 6 minutes</span></a>
+              <a class="dd-item" href="foundations-report.html"><span class="dd-item-t">Leadership Foundations Report&trade;</span><span class="dd-item-d">Deep self-discovery and fit profile</span></a>
+            </div></div>
+          </div>
+          <a href="index.html#career" class="dd-cta">Explore Career Acceleration &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="eltscale.html" class="dd-trigger">Business Solutions <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid">
+            <div class="dd-col">
+              <div class="dd-group"><h6>Start Here</h6>
+                <a class="dd-item" href="scorecard.html"><span class="dd-item-t"><span class="pill-free">Free</span> ELT Risk Assessment</span><span class="dd-item-d">Score your executive leadership team in 7 minutes</span></a></div>
+              <div class="dd-group"><h6>Diagnose &amp; Scale</h6>
+                <a class="dd-item" href="elt-diagnostic.html"><span class="dd-item-t">ELT Diagnostic</span><span class="dd-item-d">Data-backed audit of your executive team</span></a>
+                <a class="dd-item" href="ELT-Scaling-Suite.html"><span class="dd-item-t">ELT Scaling Suite</span><span class="dd-item-d">Ongoing executive team performance system</span></a></div>
+            </div>
+            <div class="dd-col"><div class="dd-group"><h6>Ongoing Services</h6>
+              <a class="dd-item" href="executive-coaching.html"><span class="dd-item-t">Executive Coaching</span><span class="dd-item-d">1:1 coaching for your leadership team</span></a>
+              <a class="dd-item" href="outplacement.html"><span class="dd-item-t">Executive Outplacement</span><span class="dd-item-d">Transition exiting executives with care</span></a>
+              <a class="dd-item" href="ceo-advisory.html"><span class="dd-item-t">CEO Advisory</span><span class="dd-item-d">On-call strategic counsel for the CEO</span></a>
+            </div></div>
+            <div class="dd-col">
+              <div class="dd-group"><h6>Assessments</h6>
+                <a class="dd-item" href="ldna-biz.html"><span class="dd-item-t">LDNA &amp; Team Foundations Reports</span><span class="dd-item-d">Map your team's drivers and dynamics</span></a></div>
+              <div class="dd-group"><h6>Specialized</h6>
+                <a class="dd-item" href="baic.html"><span class="dd-item-t">BAIC (The Saunter Group)</span><span class="dd-item-d">Partner-delivered advisory suite</span></a></div>
+            </div>
+          </div>
+          <a href="index.html#scaling" class="dd-cta">Explore Enterprise Solutions &rarr;</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="about.html" class="dd-trigger">About <span class="caret">&#9660;</span></a>
+        <div class="dropdown-panel">
+          <div class="dd-grid"><div class="dd-col"><div class="dd-group"><h6>About Vertical Motion</h6>
+            <a class="dd-item" href="about.html#why"><span class="dd-item-t">Our Why</span><span class="dd-item-d">Tom's story and the mission behind VM</span></a>
+            <a class="dd-item" href="about.html#team"><span class="dd-item-t">Our Team</span><span class="dd-item-d">Meet the coaches behind Vertical Motion</span></a>
+            <a class="dd-item" href="speaking.html"><span class="dd-item-t">Book Tom to Speak</span><span class="dd-item-d">Bring Tom to your event or stage</span></a>
+          </div></div></div>
+        </div>
+      </div>
+      <a href="https://community.vmleader.com/">Member Login</a>
+      <a href="contact-us.html">Contact</a>
+    </div>
+    <div class="nav-cta-group">
+      <a href="exec.html" class="btn-nav-outline" style="background:var(--blue); border-color:var(--blue); color:#fff;">Advance Your Career &rarr;</a>
+      <a href="eltscale.html" class="btn-nav-cta">Scale Your Team &rarr;</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<div style="background:var(--navy); padding:118px 0 70px; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 100% 0%, rgba(91,124,153,0.2) 0%, transparent 60%); pointer-events:none;"></div>
+  <div class="container" style="position:relative; z-index:1; text-align:center;">
+    <div style="width:60px; height:60px; border-radius:50%; background:rgba(207,232,239,0.15); border:1px solid rgba(207,232,239,0.35); display:flex; align-items:center; justify-content:center; font-size:1.9rem; color:var(--icy); margin:0 auto 22px;">&darr;</div>
+    <p class="eyebrow" style="color:rgba(207,232,239,0.75); margin-bottom:12px;">The Executive Career Handbook</p>
+    <h1 style="color:white; margin:0 0 18px; font-size:clamp(1.9rem, 3.6vw, 2.85rem);">Next Step</h1>
+    <p style="color:rgba(207,232,239,0.85); max-width:600px; margin:0 auto; font-size:1.0625rem; line-height:1.7;">Thank you for your order. Add the address where you want your physical copy shipped, and your digital bonuses will unlock on the next screen.</p>
+  </div>
+</div>
+
+<!-- ========== SHIPPING FORM ========== -->
+<section id="ship-section" style="padding:56px 0 80px;">
+  <div class="container">
+    <div class="ship-wrap">
+      <div class="ship-card">
+        <h2>Where should we ship your book?</h2>
+        <p class="ship-sub">Enter the mailing address for your physical copy of The Executive Career Handbook. As soon as you submit, your digital bonuses appear right below.</p>
+        <form id="ship-form" novalidate>
+          <div class="form-err" id="ship-error"></div>
+          <div class="field-row">
+            <div class="field">
+              <label for="s-first">First name <span class="req">*</span></label>
+              <input type="text" id="s-first" name="first_name" autocomplete="given-name" required>
+            </div>
+            <div class="field">
+              <label for="s-last">Last name <span class="req">*</span></label>
+              <input type="text" id="s-last" name="last_name" autocomplete="family-name" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="s-email">Email <span class="req">*</span></label>
+              <input type="email" id="s-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="s-phone">Phone</label>
+              <input type="tel" id="s-phone" name="phone" autocomplete="tel">
+            </div>
+          </div>
+          <div class="field">
+            <label for="s-addr1">Street address <span class="req">*</span></label>
+            <input type="text" id="s-addr1" name="address1" autocomplete="address-line1" placeholder="Street address (no PO Boxes)" required>
+          </div>
+          <div class="field">
+            <label for="s-addr2">Apartment, suite, unit (optional)</label>
+            <input type="text" id="s-addr2" name="address2" autocomplete="address-line2">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="s-city">City <span class="req">*</span></label>
+              <input type="text" id="s-city" name="city" autocomplete="address-level2" required>
+            </div>
+            <div class="field">
+              <label for="s-state">State / Province <span class="req">*</span></label>
+              <input type="text" id="s-state" name="state" autocomplete="address-level1" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="s-zip">ZIP / Postal code <span class="req">*</span></label>
+              <input type="text" id="s-zip" name="zip" autocomplete="postal-code" required>
+            </div>
+            <div class="field">
+              <label for="s-country">Country <span class="req">*</span></label>
+              <input type="text" id="s-country" name="country" autocomplete="country-name" value="United States" required>
+            </div>
+          </div>
+          <p class="ship-note">We ship physical copies to street addresses only. PO Boxes are not accepted. For shipping outside the US, we will follow up about any additional cost before your book goes out.</p>
+          <button type="submit" class="btn btn-primary btn-lg">Submit Address &amp; Unlock My Bonuses &rarr;</button>
+          <p class="ship-privacy">Your address is used only to ship your book. See our <a href="privacy.html">Privacy Policy</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== RESOURCES (revealed after submit) ========== -->
+<section id="resources" style="padding:56px 0 90px;">
+  <div class="container">
+    <div class="res-intro">
+      <div style="width:52px; height:52px; border-radius:50%; background:var(--blue-soft); border:1px solid var(--blue); display:flex; align-items:center; justify-content:center; font-size:1.45rem; color:var(--blue-dk); margin-bottom:18px;">&#10003;</div>
+      <p class="eyebrow" style="color:var(--blue-dk); margin-bottom:10px;">Address received</p>
+      <h2 style="margin:0 0 8px; font-size:1.75rem;">Welcome to your Executive Career Handbook resources.</h2>
+      <p style="color:var(--ink-mid); font-size:1.02rem; line-height:1.7; margin:0 0 6px;">Your physical book is queued for shipping. Below are the digital bonuses that come with the book, ready to open now.</p>
+    </div>
+
+    <div class="res-list">
+      <div style="background:var(--navy); border-radius:16px; padding:22px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+        <div>
+          <div style="color:#fff; font-family:var(--font-head); font-weight:700; font-size:1.05rem;">Join the reader community on Circle</div>
+          <div style="color:rgba(207,232,239,0.8); font-size:0.85rem; margin-top:3px;">Discussion, updates, and the full handbook experience.</div>
+        </div>
+        <a href="https://community.vmleader.com/c/the-executive-career-handbook" target="_blank" rel="noopener" class="btn btn-primary btn-pill">Open the Book on Circle &rarr;</a>
+      </div>
+
+      <div class="res-group-label">The Book</div>
+      <div class="res-item">
+        <div><div class="res-item-t">The Executive Career Handbook</div><div class="res-item-d">Full book in PDF form</div></div>
+        <a href="https://drive.google.com/file/d/1GCjJnttIEjcCyRLj5t3LSmEpU7YUJ864/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-blue btn-pill">Open PDF &rarr;</a>
+      </div>
+
+      <div class="res-group-label">Bonus 1 &middot; The Companion Workbook</div>
+      <div class="res-item">
+        <div><div class="res-item-t">Companion Workbook</div><div class="res-item-d">Worksheets and activities, editable Google Doc</div></div>
+        <a href="https://docs.google.com/document/d/1tEDMXXV9IhV0M9eu1p3mMj1kf0ecZnAthxunSmeoXOU/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-blue btn-pill">Open Doc &rarr;</a>
+      </div>
+      <div class="res-item">
+        <div><div class="res-item-t">Companion Workbook</div><div class="res-item-d">Same workbook in PDF form</div></div>
+        <a href="https://drive.google.com/file/d/1n1JslcgR3_bVZRzN8mZnLVM2YkMAHJCu/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-blue btn-pill">Open PDF &rarr;</a>
+      </div>
+
+      <div class="res-group-label">Bonus 2 &middot; Key Influencer Diagram</div>
+      <div class="res-item">
+        <div><div class="res-item-t">Key Influencer Diagram</div><div class="res-item-d">Instructions, Google Doc</div></div>
+        <a href="https://docs.google.com/document/d/1cHqB39QRL6hmCbLnfuA54pjZb10I5cA-HjNNJhOOIEk/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-blue btn-pill">Open Doc &rarr;</a>
+      </div>
+      <div class="res-item">
+        <div><div class="res-item-t">Key Influencer Diagram</div><div class="res-item-d">Editable PowerPoint template</div></div>
+        <a href="https://docs.google.com/presentation/d/14nUjuXfAsqc7uZyLntIy0fJ6kN9QfQqh/edit?usp=sharing&amp;ouid=116656178319064929403&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="btn btn-blue btn-pill">Open Slides &rarr;</a>
+      </div>
+
+      <div class="res-group-label">Bonus 3 &middot; The Audiobook</div>
+      <div class="res-item">
+        <div><div class="res-item-t">The Audiobook</div><div class="res-item-d">Audio files, includes a secret extra chapter</div></div>
+        <a href="https://drive.google.com/drive/folders/1vCNGidCiThq6Q0T8Z1PYLmH7imBOX6gN?usp=sharing" target="_blank" rel="noopener" class="btn btn-blue btn-pill">Open Audiobook &rarr;</a>
+      </div>
+    </div>
+
+    <div class="signoff">
+      <p style="margin:0 0 14px;">If you have any issues or concerns, or could use some help in your executive career journey, reach out to us at <a href="mailto:support@vmleader.com" style="color:var(--blue-dk); text-decoration:underline;">support@vmleader.com</a> anytime.</p>
+      <p style="margin:0;">Cheers,<br><span class="name">Tom Cox</span><br>Author, The Executive Career Handbook</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <img src="vm-icon.png" alt="" style="height:36px; width:auto;">
+          <img src="vm-wordmark.png" alt="Vertical Motion" style="height:22px; width:auto;">
+        </div>
+        <p>We help good people become great leaders.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Executive Career</h5>
+        <ul>
+          <li><a href="eca.html">The Accelerator</a></li>
+          <li><a href="cfa.html">Corporate Freedom Accelerator</a></li>
+          <li><a href="elevate.html">Elevate Membership</a></li>
+          <li><a href="ldna.html">LDNA Assessment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="speaking.html">Book Tom to Speak</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Organizations</h5>
+        <ul>
+          <li><a href="index.html#scaling">ELT Scaling System</a></li>
+          <li><a href="https://eltscale.com">eltscale.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vertical Motion LLC. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html" style="color:inherit; opacity:0.6;">Privacy Policy</a></p>
+      <p><a href="https://vmleader.com" style="color:rgba(255,255,255,0.3);">vmleader.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+(function(){
+  var ham=document.getElementById('nav-hamburger');
+  var links=document.getElementById('nav-links');
+  if(!ham||!links) return;
+  links.addEventListener('scroll',function(){if(links.scrollLeft!==0){links.scrollLeft=0;}},{passive:true});
+  function setOpen(o){
+    links.classList.toggle('open', o);
+    document.body.classList.toggle('nav-open', o);
+    ham.setAttribute('aria-expanded', o?'true':'false');
+    if(o){ links.scrollTop=0; }
+  }
+  ham.addEventListener('click', function(e){ e.stopPropagation(); setOpen(!links.classList.contains('open')); });
+  links.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', function(e){
+    if(links.classList.contains('open') && !links.contains(e.target) && !ham.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') setOpen(false); });
+  var x0=null,y0=null;
+  links.addEventListener('touchstart', function(e){ x0=e.touches[0].clientX; y0=e.touches[0].clientY; }, {passive:true});
+  links.addEventListener('touchend', function(e){
+    if(y0===null) return;
+    var dy=e.changedTouches[0].clientY - y0, dx=e.changedTouches[0].clientX - x0;
+    if(dy < -80 && Math.abs(dx) < 40 && links.scrollTop <= 0) setOpen(false);
+    x0=y0=null;
+  }, {passive:true});
+})();
+
+// ===== Shipping form submit + gating =====
+(function(){
+  var form = document.getElementById('ship-form');
+  if(!form) return;
+  var PO_BOX = /\b(p\.?\s*o\.?\s*b(?:ox)?|post\s*office\s*box)\b/i;
+  var GAS_URL = "https://script.google.com/macros/s/AKfycbxMU4VK_ikUEgTLsdGeMZ1rR8r4y7HJWCqvrGDJ_FT091fJpuueeNSZrOCaevAGhvqy/exec";
+
+  function val(id){ return (document.getElementById(id).value || '').trim(); }
+  function showErr(msg){ var e=document.getElementById('ship-error'); e.textContent=msg; e.style.display='block'; e.scrollIntoView({behavior:'smooth', block:'center'}); }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var first=val('s-first'), last=val('s-last'), email=val('s-email'), phone=val('s-phone');
+    var addr1=val('s-addr1'), addr2=val('s-addr2'), city=val('s-city'), state=val('s-state'), zip=val('s-zip'), country=val('s-country');
+
+    if(!first || !last){ return showErr('Please add your first and last name.'); }
+    if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ return showErr('Please enter a valid email address.'); }
+    if(!addr1){ return showErr('Please enter your street address.'); }
+    if(PO_BOX.test(addr1) || PO_BOX.test(addr2)){ return showErr('We can only ship to a street address. PO Boxes are not accepted, so please enter a physical street address.'); }
+    if(!city){ return showErr('Please enter your city.'); }
+    if(!state){ return showErr('Please enter your state or province.'); }
+    if(!zip){ return showErr('Please enter your ZIP or postal code.'); }
+    if(!country){ return showErr('Please enter your country.'); }
+    document.getElementById('ship-error').style.display='none';
+
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true; btn.textContent = 'Submitting…';
+
+    var payload = {
+      type: "book_shipping",
+      source: "book_shipping",
+      timestamp: new Date().toISOString(),
+      name: first + ' ' + last,
+      first_name: first,
+      last_name: last,
+      email: email,
+      phone: phone,
+      address1: addr1,
+      address2: addr2,
+      city: city,
+      state: state,
+      zip: zip,
+      country: country
+    };
+
+    fetch(GAS_URL, { method:"POST", body: JSON.stringify(payload) }).then(done).catch(done);
+
+    function done(){
+      try{ if(typeof fbq==='function'){ fbq('track','SubmitApplication',{content_name:'book_shipping'}); } }catch(e){}
+      document.getElementById('ship-section').style.display='none';
+      var res = document.getElementById('resources');
+      res.style.display='block';
+      res.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+})();
+</script>
+</body>
+</html>

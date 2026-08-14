@@ -41,6 +41,13 @@
     .ec-dark h2, .ec-dark h3, .ec-dark h4 { color:#fff; }
     .ec-dark .section-head p { color:rgba(207,232,239,0.72); }
 
+    /* hero scroll cue to the video */
+    .hero-cue { display:inline-flex; flex-direction:column; align-items:center; gap:9px; margin-top:30px; color:var(--icy); font-family:var(--font-head); font-weight:700; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; transition:color 0.2s ease; }
+    .hero-cue:hover { color:#fff; }
+    .hero-cue-arrow { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; border:2px solid var(--orange); color:var(--orange); font-size:1.15rem; line-height:1; animation:heroCueBounce 1.6s ease-in-out infinite; }
+    @keyframes heroCueBounce { 0%,100% { transform:translateY(0); } 50% { transform:translateY(7px); } }
+    @media (prefers-reduced-motion: reduce) { .hero-cue-arrow { animation:none; } }
+
     /* video (VSL) facade */
     .vsl-wrap { max-width:840px; margin:0 auto; }
     .vsl-eyebrow { display:inline-flex; align-items:center; gap:9px; font-size:0.72rem; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--orange); }
@@ -303,11 +310,12 @@
     <h1 style="color:white; margin:0 0 14px; font-size:clamp(1.9rem, 3.6vw, 2.85rem);">Strategy Call Booked</h1>
     <p style="color:#fff; font-family:var(--font-display); font-size:1.5rem; margin:0 0 16px;">You're on the calendar.</p>
     <p style="color:rgba(207,232,239,0.85); max-width:560px; margin:0 auto; font-size:1.0625rem; line-height:1.7;">Check your email for the confirmation and a couple of things to think about before we talk.</p>
+    <a href="#video" class="hero-cue"><span>Watch the video</span><span class="hero-cue-arrow" aria-hidden="true">&#8595;</span></a>
   </div>
 </div>
 
 <!-- NEXT STEP: VIDEO -->
-<section style="padding:64px 0 72px;">
+<section id="video" style="padding:64px 0 72px; scroll-margin-top:90px;">
   <div class="container">
     <div class="section-head" style="margin-bottom:30px;">
       <span class="vsl-eyebrow">Next step</span>

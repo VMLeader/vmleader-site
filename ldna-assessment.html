@@ -1956,8 +1956,33 @@ async function submit() {
   // Clear local cache (assessment is complete)
   try { localStorage.removeItem(STORAGE_KEY); } catch(_) {}
   if (THANK_YOU_URL) { window.location.assign(THANK_YOU_URL); return; }
-  if (typeof fbq === 'function') { fbq('track', 'Lead'); }
   showStep(4);
+  /* ---- VM customization: virtual thank-you URL + conversion tracking ----
+     The results screen renders in place, so the URL never changed and no
+     analytics platform could see a "thank you" pageview. Swap the address
+     bar to the real thank-you page path, then fire an explicit pageview to
+     GA4 and Meta for that URL. Re-apply after every Saunter build. */
+  try {
+    var VM_THANKYOU_PATH  = "/submitted-ldna.html";
+    var VM_THANKYOU_TITLE = "Thank You | LDNA Assessment Received | Vertical Motion";
+    if (window.history && history.pushState && location.pathname !== VM_THANKYOU_PATH) {
+      history.pushState({ ldna: "submitted" }, "", VM_THANKYOU_PATH);
+    }
+    document.title = VM_THANKYOU_TITLE;
+    if (typeof gtag === "function") {
+      gtag("event", "page_view", {
+        page_location: location.origin + VM_THANKYOU_PATH,
+        page_path: VM_THANKYOU_PATH,
+        page_title: VM_THANKYOU_TITLE
+      });
+      gtag("event", "generate_lead", { form_source: "ldna_assessment", lead_channel: "ldna" });
+    }
+    if (typeof fbq === "function") {
+      fbq("track", "PageView");
+      fbq("track", "CompleteRegistration", { content_name: "LDNA Assessment" });
+    }
+  } catch (_) {}
+  if (typeof fbq === 'function') { fbq('track', 'Lead'); }
 }
 document.getElementById("submitBtn").addEventListener("click", submit);
 

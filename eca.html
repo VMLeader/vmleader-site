@@ -136,6 +136,12 @@
     .ec-hero-sub { color:rgba(207,232,239,0.82); font-size:1.12rem; line-height:1.7; margin-bottom:30px; }
     .ec-hero-cta { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
     .ec-hero-photo img { width:100%; display:block; border-radius:var(--radius-md); }
+    .ec-hero-video { position:relative; display:block; width:100%; aspect-ratio:16/9; padding:0; border:0; cursor:pointer; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md); background:#000; }
+    .ec-hero-video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+    .ec-hero-poster { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+    .ec-hero-play { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:74px; height:52px; border-radius:14px; background:rgba(0,0,0,0.55); display:flex; align-items:center; justify-content:center; transition:background 0.15s ease, transform 0.15s ease; }
+    .ec-hero-video:hover .ec-hero-play { background:var(--blue); transform:translate(-50%,-50%) scale(1.06); }
+    .ec-hero-play::before { content:''; width:0; height:0; border-style:solid; border-width:10px 0 10px 17px; border-color:transparent transparent transparent #fff; margin-left:3px; }
     .ec-social { display:flex; align-items:center; gap:14px; margin-top:26px; flex-wrap:wrap; }
     .ec-avatars { display:flex; }
     .ec-avatars img { width:38px; height:38px; border-radius:50%; object-fit:cover; object-position:center top; border:2px solid var(--navy); margin-left:-10px; }
@@ -536,7 +542,10 @@ src="https://www.facebook.com/tr?id=1103250585705776&ev=PageView&noscript=1"
         </div>
       </div>
       <div class="ec-hero-photo fade-up fade-up-delay-2">
-        <img src="images/career/product-suite.png" alt="The Executive Career Accelerator program on desktop, laptop, tablet, and phone">
+        <button type="button" class="ec-hero-video" onclick="vmPlayHero(this)" aria-label="Play video: How to Go from Manager to Director">
+          <img class="ec-hero-poster" src="https://i.ytimg.com/vi/Z6kHI_RplWc/maxresdefault.jpg" alt="How to Go from Manager to Director, with Tom Cox" loading="lazy" width="1280" height="720">
+          <span class="ec-hero-play" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
   </div>
@@ -1372,6 +1381,18 @@ document.getElementById('qForm').addEventListener('submit', function(e){
     go();
   }
 });
+</script>
+<script>
+function vmPlayHero(btn){
+  var f=document.createElement('iframe');
+  f.src='https://www.youtube-nocookie.com/embed/Z6kHI_RplWc?rel=0&autoplay=1';
+  f.title='Executive Career Accelerator';
+  f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+  f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+  f.setAttribute('allowfullscreen','');
+  var wrap=document.createElement('div'); wrap.className='ec-hero-video'; wrap.appendChild(f);
+  btn.replaceWith(wrap);
+}
 </script>
 </body>
 </html>

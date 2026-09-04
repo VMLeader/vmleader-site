@@ -1394,5 +1394,23 @@ function vmPlayHero(btn){
   btn.replaceWith(wrap);
 }
 </script>
+
+<!-- VM: on-load deep-link scroll fix (e.g. /eca#book) -->
+<script>
+(function(){
+  function jump(){
+    var h=location.hash; if(!h||h.length<2) return;
+    var el=document.getElementById(decodeURIComponent(h.slice(1))); if(!el) return;
+    var nav=document.getElementById("main-nav");
+    var off=(nav?nav.getBoundingClientRect().height:64)+14;
+    var prev=document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior="auto";
+    var y=el.getBoundingClientRect().top+document.documentElement.scrollTop-off;
+    document.documentElement.scrollTop=y; window.scrollTo(0,y);
+    document.documentElement.style.scrollBehavior=prev;
+  }
+  window.addEventListener("load",function(){jump();setTimeout(jump,250);setTimeout(jump,700);});
+})();
+</script>
 </body>
 </html>

@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your ELT Risk Results | Vertical Motion</title>
   <meta name="robots" content="noindex, nofollow">
-  <link rel="canonical" href="https://vmleader.com/results.html">
+  <link rel="canonical" href="https://vmleader.com/results">
   <meta name="description" content="Your personalized ELT Risk Scorecard results across five leadership team dimensions.">
   <!-- Open Graph -->
   <meta property="og:title" content="Your ELT Risk Results">
   <meta property="og:description" content="Your personalized ELT Risk Scorecard results across five leadership team dimensions.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vmleader.com/results.html">
+  <meta property="og:url" content="https://vmleader.com/results">
   <meta property="og:image" content="https://vmleader.com/assets/og/scorecard-og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -223,7 +223,7 @@ src="https://www.facebook.com/tr?id=1103250585705776&ev=PageView&noscript=1"
 const CONFIG = {
   // Where the primary "Book a Risk Review" button points (Tom/VM's scheduler).
   BOOK_CALL_URL: "https://verticalmotion.zohobookings.com/#/ELTRiskReview",
-  CONTACT_URL:   "https://vmleader.com/contact.html",
+  CONTACT_URL:   "https://vmleader.com/contact",
   DIAGNOSTIC_URL:   "https://eltscale.com", // secondary "Explore the ELT Diagnostic" link — homepage until a dedicated ELT Diagnostic page exists
   PRACTITIONER_URL: "https://verticalmotion.zohobookings.com/#/ELTRiskReview",
 
@@ -437,7 +437,7 @@ function render(result){
   <div class="note">
     This snapshot reflects what one leader can see and report today — that's its limit and its honesty. The most expensive team failures hide in exactly what a single-perspective questionnaire can't surface: the blind spot you can't report because you can't see it. The full ELT Diagnostic measures every leader directly (two structured profiles each), then rolls them into a team map of fit, coverage, and load. It is an insight and development instrument grounded in behavioral science — not a clinical, diagnostic, or predictive test.
   </div>
-  <p class="noprint"><a href="scorecard.html">← Start over</a></p>`;
+  <p class="noprint"><a href="/scorecard">← Start over</a></p>`;
 
   document.getElementById("app").innerHTML = html;
 
@@ -513,7 +513,7 @@ function renderCTA(route, lowestLabel){
     document.getElementById("app").innerHTML =
       `<h1>No results to show yet</h1>
        <p>Your scorecard results expired or weren't found. Please take the 7-minute scorecard to see your snapshot.</p>
-       <p><a class="btn btn-primary" href="scorecard.html">Take the ELT Risk Scorecard →</a></p>`;
+       <p><a class="btn btn-primary" href="/scorecard">Take the ELT Risk Scorecard →</a></p>`;
     return;
   }
   render(result);

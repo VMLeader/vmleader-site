@@ -437,7 +437,7 @@ function render(result){
   <div class="note">
     This snapshot reflects what one leader can see and report today — that's its limit and its honesty. The most expensive team failures hide in exactly what a single-perspective questionnaire can't surface: the blind spot you can't report because you can't see it. The full ELT Diagnostic measures every leader directly (two structured profiles each), then rolls them into a team map of fit, coverage, and load. It is an insight and development instrument grounded in behavioral science — not a clinical, diagnostic, or predictive test.
   </div>
-  <p class="noprint"><a href="/scorecard">← Start over</a></p>`;
+  <p class="noprint"><a href="scorecard">← Start over</a></p>`;
 
   document.getElementById("app").innerHTML = html;
 
@@ -513,7 +513,7 @@ function renderCTA(route, lowestLabel){
     document.getElementById("app").innerHTML =
       `<h1>No results to show yet</h1>
        <p>Your scorecard results expired or weren't found. Please take the 7-minute scorecard to see your snapshot.</p>
-       <p><a class="btn btn-primary" href="/scorecard">Take the ELT Risk Scorecard →</a></p>`;
+       <p><a class="btn btn-primary" href="scorecard">Take the ELT Risk Scorecard →</a></p>`;
     return;
   }
   render(result);

@@ -94,6 +94,17 @@
     .cmp .yes { color:#0b8f42; font-weight:800; font-size:1.12rem; line-height:1; }
     .cmp .no { color:var(--ink-faint); font-weight:700; font-size:1.05rem; }
     .cmp-matrix tbody td.us { background:rgba(6,147,216,0.13); color:var(--navy); font-weight:700; }
+    /* mobile matrix: clean scroll with a swipe hint and a right-edge fade */
+    .cmp-swipe { display:none; }
+    .cmp-wrap { position:relative; }
+    @media (max-width:640px){
+      .cmp-swipe { display:block; text-align:center; font-size:0.78rem; color:var(--ink-faint); font-weight:600; margin:0 0 12px; }
+      .cmp-wrap::after { content:''; position:absolute; top:0; right:0; bottom:0; width:34px; pointer-events:none; background:linear-gradient(90deg, rgba(248,250,252,0), rgba(248,250,252,0.95)); }
+      .cmp-matrix { min-width:600px; }
+      .cmp-matrix th, .cmp-matrix td { padding:12px 8px; font-size:0.78rem; }
+      .cmp-matrix td.rowlab { font-size:0.82rem; }
+      .cmp td.us .yes { width:24px; height:24px; }
+    }
     .cmp td.us .yes { display:inline-grid; place-items:center; width:27px; height:27px; border-radius:50%; background:var(--orange); color:#fff; font-size:0.92rem; font-weight:800; box-shadow:0 2px 6px rgba(252,101,2,0.32); }
     .cmp td.us .q { color:var(--blue-dk); }
 
@@ -117,7 +128,7 @@
     .asset .artifact b { color:var(--orange); }
     .assets-layout { display:grid; grid-template-columns:0.62fr 1.38fr; gap:24px; align-items:stretch; }
     .assets-photo img { width:100%; height:100%; object-fit:cover; border-radius:var(--radius-md); box-shadow:var(--shadow-lg); display:block; }
-    @media (max-width:820px){ .assets-layout{ grid-template-columns:1fr; } .assets-photo{ max-width:340px; margin:0 auto; } .assets-photo img{ height:auto; } }
+    @media (max-width:980px){ .assets-layout{ grid-template-columns:1fr; } .assets-photo{ max-width:420px; margin:0 auto; } .assets-photo img{ height:auto; } }
 
     /* included list */
     .incl { display:grid; grid-template-columns:repeat(2,1fr); gap:16px 30px; max-width:960px; margin:0 auto; }
@@ -369,6 +380,7 @@
       <h2>We looked at 45 programs in this price range. Not one helps you move up AND build your own.</h2>
       <p>Every other program makes you choose a lane first. Career coaches stop at the offer letter. Fractional courses won't take you until you have already quit. The Independent Executive is the only one that keeps every lane open.</p>
     </div>
+    <p class="cmp-swipe">Swipe to compare all programs &rarr;</p>
     <div class="cmp-wrap">
       <table class="cmp cmp-matrix">
         <thead>

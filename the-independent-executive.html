@@ -129,6 +129,8 @@
     .assets-layout { display:grid; grid-template-columns:0.62fr 1.38fr; gap:24px; align-items:stretch; }
     .assets-photo img { width:100%; height:100%; object-fit:cover; border-radius:var(--radius-md); box-shadow:var(--shadow-lg); display:block; }
     @media (max-width:980px){ .assets-layout{ grid-template-columns:1fr; } .assets-photo{ max-width:420px; margin:0 auto; } .assets-photo img{ height:auto; } }
+    /* "Why you can build all four in 90 days": stack the text and the rarity box on mobile */
+    @media (max-width:860px){ .wantrap{ grid-template-columns:1fr !important; gap:28px !important; } }
 
     /* included list */
     .incl { display:grid; grid-template-columns:repeat(2,1fr); gap:16px 30px; max-width:960px; margin:0 auto; }
@@ -230,7 +232,8 @@
     .mr-total { background:var(--gray-bg); font-weight:700; color:var(--ink); }
     .mr-us { background:var(--navy); color:#fff; border-color:var(--navy); border-radius:0 0 var(--radius-md) var(--radius-md); }
     .mr-us b { color:var(--orange); font-size:1.15rem; }
-    .mr-note { margin:14px 0 0; font-size:0.95rem; color:var(--ink-mid); line-height:1.55; }
+    .mr-note { margin:14px 0 0; font-size:1.02rem; color:var(--ink); font-weight:700; line-height:1.55; }
+    .mr-note .mr-star { color:var(--orange); font-weight:800; }
     .mr-note .mr-scroll { color:var(--blue); font-weight:700; white-space:nowrap; }
     .mr-layout { max-width:980px; margin:0 auto; display:grid; grid-template-columns:0.8fr 1.2fr; gap:44px; align-items:center; }
     .mr-photo img { width:100%; border-radius:var(--radius-md); box-shadow:var(--shadow-lg); display:block; }
@@ -482,8 +485,8 @@
         <div class="mr-row"><span>An executive career service, about 4 months</span><b>$12,000</b></div>
         <div class="mr-row"><span>An AI-for-leaders program</span><b>$8,000</b></div>
         <div class="mr-row mr-total"><span>Bought separately</span><b>$30,500</b></div>
-        <div class="mr-row mr-us"><span>The Independent Executive, all of it plus the guarantee</span><b style="text-decoration:line-through; opacity:0.6;">$10,000</b></div>
-        <p class="mr-note">And that $10,000 is the list price, not what you pay today. <span class="mr-scroll">Scroll down for the Masterclass price &darr;</span></p>
+        <div class="mr-row mr-us"><span>The Independent Executive, all of it plus the guarantee</span><b style="white-space:nowrap;"><b style="text-decoration:line-through; opacity:0.6; color:var(--orange);">$10,000</b><sup style="color:var(--orange); font-weight:800; font-size:0.7em; margin-left:2px;">*</sup></b></div>
+        <p class="mr-note"><span class="mr-star">*</span> And that $10,000 is the list price, not what you pay today. <span class="mr-scroll">Scroll down for the Masterclass price &darr;</span></p>
       </div>
     </div>
   </div>

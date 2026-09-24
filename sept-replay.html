@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masterclass Replay | Vertical Motion</title>
+  <link rel="canonical" href="https://vmleader.com/sept-replay">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Watch the replay of the Vertical Motion masterclass: Income Independence in 2027 and Beyond, with Tom Cox.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Masterclass Replay: Income Independence in 2027">
+  <meta property="og:description" content="Watch the replay, then learn how to enroll in The Independent Executive.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vmleader.com/sept-replay">
+  <meta property="og:site_name" content="Vertical Motion">
+  <link rel="icon" type="image/png" href="vm-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#0693d8; --blue-dk:#057bb5; --blue-soft:#e6f4fb;
+      --navy:#081e2b; --orange:#fc6502;
+      --ink:#12222c; --ink-mid:#4a5b66; --ink-faint:#8595a0;
+      --border:#e2e8f0; --radius:16px;
+      --shadow:0 18px 44px rgba(8,30,43,0.14);
+      --head:Arial, "Helvetica Neue", sans-serif;
+      --ui:"Inter", system-ui, Arial, sans-serif;
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;}
+    body{font-family:var(--ui); color:var(--ink); background:#ffffff; line-height:1.6; -webkit-font-smoothing:antialiased;}
+    .wrap{max-width:1180px; margin:0 auto; padding:40px 24px 72px;}
+
+    .topbar{display:flex; justify-content:center; margin-bottom:8px;}
+    .topbar img{height:34px; width:auto;}
+    .brandword{font-family:var(--head); font-weight:800; font-size:1.15rem; color:var(--navy); letter-spacing:-0.01em;}
+    .brandword span{color:var(--blue);}
+
+    h1.page-title{font-family:var(--head); font-weight:800; font-size:clamp(2rem, 4.4vw, 3.1rem); line-height:1.08; text-align:center; color:var(--navy); margin:18px 0 40px; letter-spacing:-0.02em;}
+    h1.page-title span{color:var(--blue);}
+
+    .layout{display:grid; grid-template-columns:0.92fr 1.08fr; gap:52px; align-items:center;}
+
+    .lead-eyebrow{font-family:var(--ui); font-weight:700; font-size:0.8rem; letter-spacing:0.11em; text-transform:uppercase; color:var(--orange); margin:0 0 10px;}
+    h2.lead-title{font-family:var(--head); font-weight:800; font-size:clamp(1.35rem, 2.4vw, 1.85rem); line-height:1.18; color:var(--navy); margin:0 0 26px; letter-spacing:-0.01em;}
+
+    .points{list-style:none; margin:0 0 32px; padding:0;}
+    .points li{position:relative; padding:0 0 20px 42px;}
+    .points li:last-child{padding-bottom:0;}
+    .points .ico{position:absolute; left:0; top:1px; width:28px; height:28px; border-radius:50%; background:var(--blue-soft); color:var(--blue); display:grid; place-items:center; font-weight:800; font-size:0.95rem;}
+    .points b{display:block; font-size:1.08rem; color:var(--ink); font-weight:700; line-height:1.35;}
+    .points span{display:block; color:var(--ink-mid); font-size:0.98rem; margin-top:3px;}
+
+    .cta-btn{display:inline-flex; align-items:center; gap:12px; background:var(--blue); color:#fff; font-family:var(--ui); font-weight:800; font-size:1.18rem; text-decoration:none; padding:20px 40px; border-radius:60px; box-shadow:0 12px 30px rgba(6,147,216,0.32); transition:transform .15s ease, background .15s ease, box-shadow .15s ease;}
+    .cta-btn:hover{background:var(--blue-dk); transform:translateY(-2px); box-shadow:0 16px 38px rgba(6,147,216,0.40);}
+    .cta-btn .arw{font-size:1.25rem; line-height:1;}
+    .cta-sub{margin:16px 2px 0; font-size:0.92rem; color:var(--ink-faint);}
+    .cta-sub b{color:var(--orange); font-weight:700;}
+
+    .video-col{width:100%;}
+    .watch-label{font-family:var(--head); font-weight:800; font-size:1.05rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--navy); text-align:center; margin:0 0 14px;}
+    .video-frame{background:var(--navy); border-radius:var(--radius); padding:14px; box-shadow:var(--shadow);}
+    .video-ratio{position:relative; width:100%; padding-top:56.25%; border-radius:8px; overflow:hidden; background:#000;}
+    .video-ratio iframe, .video-ratio video{position:absolute; inset:0; width:100%; height:100%; border:0; display:block;}
+    /* Placeholder shown until the real embed is dropped in */
+    .video-ph{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; background:linear-gradient(160deg,#0d2634,#081e2b); color:#cfe8ef; text-align:center; padding:20px;}
+    .video-ph .play{width:66px; height:66px; border-radius:50%; background:var(--blue); display:grid; place-items:center; box-shadow:0 8px 24px rgba(6,147,216,0.45);}
+    .video-ph .play::after{content:''; margin-left:5px; border-style:solid; border-width:13px 0 13px 21px; border-color:transparent transparent transparent #fff;}
+    .video-ph p{margin:0; font-size:0.9rem; color:#9fb8c4;}
+    .video-ph b{color:#fff; font-family:var(--head); font-size:1.05rem; font-weight:800;}
+
+    /* second CTA under the video: shown on mobile, where the video stacks on top */
+    .cta-under{display:none;}
+
+    /* sticky CTA bar that appears once they scroll / while watching */
+    .sticky-cta{position:fixed; left:0; right:0; bottom:0; z-index:100; background:var(--navy); display:flex; align-items:center; justify-content:center; gap:20px; padding:13px 20px; box-shadow:0 -8px 26px rgba(0,0,0,0.22); transform:translateY(130%); transition:transform .3s ease;}
+    .sticky-cta.show{transform:translateY(0);}
+    .sticky-cta .sc-txt{color:#fff; font-weight:700; font-size:1.02rem;}
+    .sticky-cta a{background:var(--blue); color:#fff; text-decoration:none; font-family:var(--ui); font-weight:800; font-size:1.02rem; padding:12px 30px; border-radius:50px; white-space:nowrap; transition:background .15s ease;}
+    .sticky-cta a:hover{background:var(--blue-dk);}
+
+    @media (max-width:900px){
+      .layout{grid-template-columns:1fr; gap:34px;}
+      .video-col{order:-1;}
+      h1.page-title{margin-bottom:28px;}
+      .cta-btn{width:100%; justify-content:center; font-size:1.08rem; padding:18px 24px;}
+      .cta-under{display:flex; margin-top:18px;}
+    }
+    @media (max-width:640px){
+      .sticky-cta .sc-txt{display:none;}
+      .sticky-cta{padding:10px 14px;}
+      .sticky-cta a{width:100%; text-align:center;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar"><span class="brandword">Vertical <span>Motion</span></span></div>
+    <h1 class="page-title">Here's the <span>Masterclass Replay</span></h1>
+
+    <div class="layout">
+      <!-- LEFT: copy + CTA -->
+      <div class="copy-col">
+        <p class="lead-eyebrow">Income Independence in 2027 &amp; Beyond</p>
+        <h2 class="lead-title">How mid-career leaders build income they control, whether they move up, move on, or build their own.</h2>
+        <ul class="points">
+          <li>
+            <span class="ico">&#10003;</span>
+            <b>The four lanes to income independence</b>
+            <span>Move up, move on, bridge the gap, or build your own, so you are never one decision away from your family's financial security.</span>
+          </li>
+          <li>
+            <span class="ico">&#10003;</span>
+            <b>The four assets you build while still employed</b>
+            <span>Your brand, executive presence, network, and career plus business skills, built in about five hours a week.</span>
+          </li>
+          <li>
+            <span class="ico">&#10003;</span>
+            <b>What income independence looks like in 2027</b>
+            <span>Agentic AI, fractional consulting, and a network that brings the opportunities to you.</span>
+          </li>
+        </ul>
+        <a class="cta-btn" href="https://vmleader.com/the-independent-executive">Learn How To Enroll Here <span class="arw">&rarr;</span></a>
+        <p class="cta-sub">Founding enrollment closes <b>Sunday, September 27 at 11:59pm ET</b>.</p>
+      </div>
+
+      <!-- RIGHT: video -->
+      <div class="video-col">
+        <p class="watch-label">Watch Here:</p>
+        <div class="video-frame">
+          <div class="video-ratio">
+            <!-- ===== REPLAY VIDEO ===== -->
+            <!-- When the YouTube unlisted link is ready, replace the whole .video-ph block below with:
+                 <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="Masterclass Replay" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            -->
+            <div class="video-ph">
+              <div class="play"></div>
+              <b>Replay video goes here</b>
+              <p>YouTube (unlisted) embed will drop in once the link is ready.</p>
+            </div>
+          </div>
+        </div>
+        <a class="cta-btn cta-under" href="https://vmleader.com/the-independent-executive">Learn How To Enroll Here <span class="arw">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sc-txt">Ready to take control of your income?</span>
+    <a href="https://vmleader.com/the-independent-executive">Learn How To Enroll Here &rarr;</a>
+  </div>
+  <script>
+    (function(){
+      var bar=document.getElementById('stickyCta');
+      function onScroll(){ if(window.pageYOffset>360){bar.classList.add('show');}else{bar.classList.remove('show');} }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+    })();
+  </script>
+</body>
+</html>

@@ -161,6 +161,11 @@
     .fcard p { color:rgba(207,232,239,0.72); font-size:0.9rem; line-height:1.6; margin:0; }
     .fcard .bio-link { display:inline-block; margin-top:14px; color:var(--blue); font-family:var(--font-head); font-weight:700; font-size:0.85rem; }
     a.fcard:hover .bio-link { color:#fff; }
+    .ben-bio { position:relative; max-height:7.2em; overflow:hidden; transition:max-height .3s ease; }
+    .ben-bio.open { max-height:2000px; }
+    .ben-bio:not(.open)::after { content:''; position:absolute; left:0; right:0; bottom:0; height:2.4em; background:linear-gradient(rgba(8,30,43,0), var(--navy)); }
+    .bio-toggle { margin-top:12px; background:none; border:0; padding:0; cursor:pointer; color:var(--blue); font-family:var(--font-head); font-weight:700; font-size:0.85rem; }
+    .bio-toggle:hover { color:#fff; }
 
     /* proof */
     .proof { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; max-width:1000px; margin:0 auto; }
@@ -680,8 +685,11 @@
         <div>
           <h4>Ben Maida</h4>
           <div class="role">Legal</div>
+          <div class="ben-bio" id="benBio">
           <p>Ben Maida is an attorney, startup executive, and entrepreneur who advises founders and emerging companies at the intersection of law, business, and growth. A graduate of the U.S. Naval Academy and Boston College Law School, Ben began his career as a U.S. Navy officer before practicing corporate law at leading firms including Jones Day and Cooley. He has since served as General Counsel, Chief Business Officer, and strategic advisor to venture-backed technology and life sciences companies, helping founders navigate company formation, fundraising, commercial agreements, partnerships, governance, labor and employment, intellectual property, and the other legal issues that arise as businesses launch and scale.</p>
           <p style="margin-top:10px;">Ben also works extensively with founders building consulting, fractional, and other independent businesses. As a trusted advisor to Tom and the Vertical Motion community, he holds monthly office hours focused on helping members identify and navigate the practical legal issues that come with building a 0 to 1 business around their expertise.</p>
+          </div>
+          <button type="button" class="bio-toggle" aria-expanded="false" onclick="toggleBio(this,'benBio')">Read more &darr;</button>
         </div>
       </div>
       <div class="fcard">
@@ -1005,6 +1013,9 @@ window.addEventListener('scroll',upd,{passive:true});window.addEventListener('re
   var els = document.querySelectorAll('.seats-left');
   for (var i=0;i<els.length;i++){ els[i].textContent = SEATS_LEFT; }
 })();
+
+/* Read more / read less toggle for long faculty bios */
+function toggleBio(btn,id){var b=document.getElementById(id);var open=b.classList.toggle('open');btn.setAttribute('aria-expanded',open);btn.innerHTML=open?'Read less &uarr;':'Read more &darr;';}
 
 /* Fast-action bonus expires Fri Sept 25, 2026 at 11:59pm ET (EDT, UTC-4) = Sept 26 03:59 UTC */
 (function(){
